@@ -4,7 +4,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 
 ## Supported Mapsets and Total Conversions
 | Mapsets / Total Conversions | Authors | Download Links |
-|--------------------------------------------------------|
+| --------------------------- | ------- | -------------- |
 | Bikini Bottom Massacre | ContrastSaturation | N/A |
 | Chex Quest: Galactic Conflict | Tifosi 92 | [Link](http://ipfsnet.com/tifosi92/chexquest/Chex_Quest_GC_v1.2.zip) |
 | Chex Quest: The Penultimate Breakfast | Andrea Rovenski | [Link](https://www.doomworld.com/idgames/themes/chex/chextpb) |
@@ -50,3 +50,8 @@ If you follow these instructions correctly, you will create a pk3 file that corr
 The personal views and actions of the authors of the mapsets are not reflective of the Samsara Reincarnation dev team, and they do not have any responsibility for any bugs or glitches caused by using these patches. If you need to report a bug on a mapset and you have Samsara Reincarnation loaded, DO NOT contact the author. Instead, create an issue on the repository and put your report there. The Reincarnation team will look into the report and fix any oddities if they are deemed game-breaking.
 
 Although the team makes their best efforts to contact the author first before making the patch, there may be cases where the team cannot establish a connection or the author is unavailable. In the event that you are an author of one of the supported mapsets and you don't want a patch made for them, please raise an issue stating your request for removal.
+
+## Screenshots
+![Screenshot_Doom_20250515_064317](https://github.com/user-attachments/assets/ee7ed845-5c73-4682-b2dd-e7a846e959ee)
+![Screenshot_Chex_20250515_062544](https://github.com/user-attachments/assets/7fa36c53-d329-4a38-8df3-3b6e5cfbddb3)
+![Screenshot_Heretic_20250515_063810](https://github.com/user-attachments/assets/15f187e1-9b5b-4051-8526-72c43706f318)
