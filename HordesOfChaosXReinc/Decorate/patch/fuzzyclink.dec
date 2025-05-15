@@ -1,0 +1,7 @@
+actor FuzzClink_Samsara : Clink2 replaces FuzzClink 
+{
+	Game Heretic
+	RenderStyle Fuzzy
+	Obituary "%o was sliced up by a Stealth Clink."
+	Tag "Stealth Clink"
+}

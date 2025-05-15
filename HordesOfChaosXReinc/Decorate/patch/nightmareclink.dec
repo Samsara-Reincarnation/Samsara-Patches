@@ -1,0 +1,14 @@
+actor NightmareClink_Samsara : Clink2 replaces NightmareClink 
+{
+	Game Heretic
+	+DONTMORPH
+	+DONTSQUASH
+	Health 100
+	Speed 26
+	MeleeDamage 80
+    SeeSound "NightmareClinkSight"
+    ActiveSound "NightmareClinkActive"
+	RenderStyle Fuzzy
+	Obituary "%o was massacred by a Nightmare Clink."
+	Tag "Nightmare Clink"
+}

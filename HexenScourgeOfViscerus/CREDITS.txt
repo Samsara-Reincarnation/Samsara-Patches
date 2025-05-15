@@ -4,7 +4,7 @@ Samsara Reincarnation Compatibility Patch Credits
 
 Mapset/Total Conversion: Hexen: Scourge of Viscerus
 Authors: Matt Tropiano
-Link: N/A
+Link: https://www.doomworld.com/idgames/levels/hexen/v-z/viscerus
 
 Resources used:
 ---------------

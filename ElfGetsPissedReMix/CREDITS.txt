@@ -4,7 +4,7 @@ Samsara Reincarnation Compatibility Patch Credits
 
 Mapset/Total Conversion: Elf Gets Pissed
 Authors: Matt Cibulas
-Link: N/A
+Link: https://www.doomworld.com/idgames/levels/heretic/Ports/elfgp
 
 Resources used:
 ---------------

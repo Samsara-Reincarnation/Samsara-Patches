@@ -4,7 +4,7 @@ Samsara Reincarnation Compatibility Patch Credits
 
 Mapset/Total Conversion: Day of the Acolyte
 Authors: Samuel Villarreal
-Link: N/A
+Link: https://www.doomworld.com/idgames/levels/strife/kaiser_23
 
 Resources used:
 ---------------

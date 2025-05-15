@@ -1,1 +1,3 @@
 #include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/fuzzyclink.dec"
+#include "Decorate/patch/nightmareclink.dec"

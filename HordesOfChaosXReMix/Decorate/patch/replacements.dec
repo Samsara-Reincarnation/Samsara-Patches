@@ -11,6 +11,8 @@ actor SerpentHOC_Samsara : SerpentReplacer replaces SerpentHOC { Game Heretic }
 actor SerpentLeaderHOC_Samsara : SerpentLeaderReplacer replaces SerpentLeaderHOC { Game Heretic }
 actor WendigoHOC_Samsara : IceGuyReplacer replaces WendigoHOC { Game Heretic }
 actor HeresiarchHOC_Samsara : HeresiarchReplacer replaces HeresiarchHOC { Game Heretic }
+actor FuzzClink_Samsara : ClinkReplacer replaces FuzzClink { Game Heretic }
+actor NightmareClink_Samsara : ClinkReplacer replaces NightmareClink { Game Heretic }
 
 actor MancubusHOC_Samsara : FatsoSpawner replaces MancubusHOC { Game Hexen }
 actor RevenantHOC_Samsara : CacodemonSpawner replaces RevenantHOC { Game Hexen }
