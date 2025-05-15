@@ -1,0 +1,106 @@
+flickerlight ANGELGLOW_X1
+{
+    color 1.0 0.9 0.0
+    size 164
+    secondarySize 140
+    chance 0.3
+}
+
+flickerlight ANGELGLOW_X2
+{
+    color 1.0 0.9 0.0
+    size 164
+    secondarySize 140
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X1
+{
+    color 1.0 1.0 1.0
+    size 164
+    secondarySize 140
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X2
+{
+    color 1.0 1.0 1.0
+    size 196
+    secondarySize 164
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X3
+{
+    color 1.0 1.0 1.0
+    size 256
+    secondarySize 196
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X4
+{
+    color 1.0 1.0 1.0
+    size 320
+    secondarySize 256
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X5
+{
+    color 1.0 1.0 0.9
+    size 512
+    secondarySize 450
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X6
+{
+    color 1.0 1.0 0.9
+    size 320
+    secondarySize 256
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X7
+{
+    color 0.9 0.9 0.8
+    size 256
+    secondarySize 196
+    chance 0.3
+}
+
+flickerlight ANGELDIE_X8
+{
+    color 0.6 0.6 0.3
+    size 196
+    secondarySize 128
+    chance 0.3
+}
+
+object ArchangelusA_Samsara
+{
+	frame BBRNJ { light ANGELGLOW_X1 }
+	frame BBRNK { light ANGELGLOW_X2 }
+}
+
+object ArchangelusB_Samsara
+{
+	frame BBRNJ { light ANGELGLOW_X1 }
+	frame BBRNK { light ANGELGLOW_X2 }
+	
+	frame BBRNL { light ANGELDIE_X1 }
+	frame BBRNM { light ANGELDIE_X2 }
+	frame BBRNN { light ANGELDIE_X3 }
+	frame BBRNO { light ANGELDIE_X4 }
+	frame BBRNP { light ANGELDIE_X5 }
+	frame BBRNQ { light ANGELDIE_X6 }
+	frame BBRNR { light ANGELDIE_X7 }
+	frame BBRNS { light ANGELDIE_X8 }
+	
+	frame BBRNV { light ANGELDIE_X3 }
+	frame BBRNW { light ANGELDIE_X4 }
+	frame BBRNX { light ANGELDIE_X3 }
+	frame BBRNY { light ANGELDIE_X2 }
+	frame BBRNZ { light ANGELDIE_X1 }
+}

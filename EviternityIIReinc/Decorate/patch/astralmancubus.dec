@@ -1,0 +1,268 @@
+Actor AstralMancubus_Samsara : SamsaraMonsterGhost replaces AstralMancubus
+{
+	Health 1400
+	Speed 5
+	Radius 40
+	Height 64
+	ReactionTime 8
+	PainChance 6
+	Mass 2000
+	Monster
+	SeeSound "afatso/alert"
+	PainSound "afatso/pain"
+	DeathSound "afatso/death"
+	ActiveSound "afatso/active"
+	Obituary "$OB_ASTRALFATSO"
+	+NOBLOOD
+	Tag "Astral Mancubus"
+	States
+	{
+	Spawn:
+		SP19 AB 10 A_Look
+		loop
+	See:
+		SP19 AABBCCDDEEFF 2 A_Chase
+		loop
+	Pain:
+		SP19 P 3
+		SP19 P 3 A_Pain
+		goto See
+	Pain.DoomDamageTypeStunner:
+		SP19 P 2 A_ChangeFlag("NOPAIN",true)
+		SP19 P 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		SP19 P 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		SP19 P 16 A_Pain
+		Goto See
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		SP19 A 4 A_FaceTarget
+		SP19 A 0 A_Jump(256, "Missile1","Missile2", "Missile3")
+		goto See
+	Missile1:
+		SP19 G 0 A_PlaySoundEx ("afatso/attack1", Auto, False, 0)
+		SP19 G 15 Bright A_FaceTarget
+		SP19 G 15 Bright A_FaceTarget
+		SP19 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 11, CMF_OFFSETPITCH , -11)
+		SP19 HI 4 Bright A_FaceTarget
+		SP19 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 11, CMF_OFFSETPITCH , -11)
+		SP19 HI 4 Bright A_FaceTarget
+		SP19 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 1, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , -0.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 1, CMF_OFFSETPITCH , -1)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 5, CMF_OFFSETPITCH , -1.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 3, CMF_OFFSETPITCH , -3)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 7, CMF_OFFSETPITCH , 0)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 9, CMF_OFFSETPITCH , -3.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 7, CMF_OFFSETPITCH , -7)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, -11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, 31, 11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 13, CMF_OFFSETPITCH , -5.5)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, -11, CMF_OFFSETPITCH , -11)
+		SP19 H 0 Bright A_SpawnProjectile ("Energybolt2", 32, -31, 11, CMF_OFFSETPITCH , -11)
+		SP19 HI 4 Bright A_FaceTarget
+		SP19 IG 5 Bright
+		goto See
+	Missile2:
+		SP19 J 0 A_PlaySoundEx ("afatso/attack2", Auto, False, 0)
+		SP19 J 15 Bright A_FaceTarget
+		SP19 J 15 Bright A_FaceTarget
+		SP19 K 0 Bright A_SpawnProjectile ("NACFireball", 32, 31, -20)
+		SP19 K 10 Bright A_SpawnProjectile ("NACFireball", 32, -31, 0)
+		SP19 LJ 5 Bright A_FaceTarget
+		SP19 K 0 Bright A_SpawnProjectile ("NACFireball", 32, 31, 0)
+		SP19 K 10 Bright A_SpawnProjectile ("NACFireball", 32, -31, 20)
+		SP19 LJ 5 Bright A_FaceTarget
+		SP19 K 0 Bright A_SpawnProjectile ("NACFireball", 32, 31, -10)
+		SP19 K 10 Bright A_SpawnProjectile ("NACFireball", 32, -31, 10)
+		SP19 LJ 5 Bright A_FaceTarget
+		goto See
+	Missile3:
+		SP19 M 0 A_PlaySoundEx ("afatso/attack3", Auto, False, 0)
+		SP19 M 15 Bright A_FaceTarget
+		SP19 M 15 Bright A_FaceTarget
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, 31, -10)
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, -31, 10)
+		SP19 NOM 2 Bright A_FaceTarget
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, 31, -18)
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, -31, 18)
+		SP19 NOM 2 Bright A_FaceTarget
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, 31, -26)
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, -31, 26)
+		SP19 NOM 2 Bright A_FaceTarget
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, 31, -34)
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, -31, 34)
+		SP19 NOM 2 Bright A_FaceTarget
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, 31, -26)
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, -31, 26)
+		SP19 NOM 2 Bright A_FaceTarget
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, 31, -18)
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, -31, 18)
+		SP19 NOM 2 Bright A_FaceTarget
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, 31, -10)
+		SP19 N 0 Bright A_SpawnProjectile ("HeavyEnergyBolt_Samsara", 32, -31, 10)
+		SP19 NOM 2 Bright A_FaceTarget
+		goto See
+	Death:
+		SP19 Q 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP19 R 6 A_Scream
+		SP19 S 6 A_Fall
+		SP19 TUVWXY 6
+		SP19 Z -1
+		stop
+	Raise:
+		SP19 A 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		SP19 XWVUTSRQ 5
+		goto See
+	}
+}
+
+Actor HeavyEnergyBolt_Samsara
+{
+	Radius 13
+	Height 8
+	Speed 24
+	Damage 7
+	Mass 100
+	Projectile
+	Decal HBoltScorch
+	RenderStyle Add
+	Alpha 1.0
+	SeeSound "ebolt2/spawn"
+	DeathSound "ebolt2/death"
+	States
+	{
+	Spawn:
+		SP20 H 1 Bright A_SpawnItem ("HBoltTrail", 0)
+		loop
+	Death:
+		SP20 IJKLMN 3 Bright
+		stop
+	}
+}

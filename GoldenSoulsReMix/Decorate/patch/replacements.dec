@@ -1,0 +1,41 @@
+actor OverandUnder_Samsara : RandomSpawner replaces OverandUnder { DropItem "SamsaraSlotTwoPickup" }
+actor AutoShotgun_Samsara : RandomSpawner replaces AutoShotgun { DropItem "SamsaraSlotThreePickup" }
+actor AK47_Samsara : RandomSpawner replaces AK47 { DropItem "SamsaraSlotFourPickup" }
+actor Cannon_Samsara : RandomSpawner replaces Cannon { DropItem "SamsaraSlotFivePickup" }
+actor SpikeGun_Samsara : RandomSpawner replaces SpikeGun { DropItem "SamsaraSlotSixPickup" }
+actor RailBow_Samsara : RandomSpawner replaces RailBow { DropItem "SamsaraSlotSevenPickup" }
+
+actor Revolver_Samsara : DoomMultiAmmo1SmallReplacingPistol replaces Revolver {}
+actor Ak_Mag_Samsara : MultiAmmo1Big replaces Ak_Mag {}
+actor Spikeammo_Samsara : MultiAmmo4Small replaces Spikeammo {}
+actor RainbowAmmo_Samsara : MultiAmmo4Big replaces RainbowAmmo {}
+
+actor Droppable_Armor_5_Samsara : ArmorScrapDump replaces Droppable_Armor_5 {}
+actor GSBanana_Samsara : HealPack1 replaces GSBanana {}
+actor GSBananaBunch_Samsara : HealPack1 replaces GSBananaBunch {}
+actor 1UPMedkit_Samsara : SuperHealth replaces 1UPMedkit {}
+
+actor Golden_Caco_Samsara : CacodemonSpawner replaces Golden_Caco {}
+actor CacoLich1_Samsara : CacodemonSpawner replaces CacoLich1 {}
+actor Cacolich_Samsara : CacodemonSpawner replaces Cacolich {}
+actor GSWizard_Samsara : CacolanternSpawner replaces GSWizard {}
+actor MovingCactus_Samsara : RevenantSpawner replaces MovingCactus {}
+actor GSMummy_Samsara : DarkImpSpawner replaces GSMummy {}
+actor GhostSoul_Samsara : LostSoulSpawner replaces GhostSoul {}
+actor Snifit_Red_Samsara : DarkImpSpawner replaces Snifit_Red {}
+actor Snifit_Green_Samsara : DarkImpSpawner replaces Snifit_Green {}
+actor Snifit_Blue_Samsara : DarkImpSpawner replaces Snifit_Blue {}
+actor Mini_Gargoyle_Samsara : CacodemonSpawner replaces Mini_Gargoyle {}
+actor Bloodfiend_Samsara : BloodDemonSpawner replaces Bloodfiend {}
+actor Lurker_Samsara : BloodDemonSpawner replaces Lurker {}
+
+actor SpiderMastermindNew_Samsara : SpiderMastermindSpawner replaces SpiderMastermindNew {}
+actor FatsoNew_Samsara : FatsoSpawner replaces FatsoNew {}
+actor ArachnotronNew_Samsara : ArachnotronSpawner replaces ArachnotronNew {}
+actor DoomImpNew_Samsara : DoomImpSpawner replaces DoomImpNew {}
+actor DemonNew_Samsara : DemonSpawner replaces DemonNew {}
+actor CacodemonNew_Samsara : CacodemonSpawner replaces CacodemonNew {}
+actor HellKnightNew_Samsara : HellKnightSpawner replaces HellKnightNew {}
+actor BaronOfHellNew_Samsara : BaronOfHellSpawner replaces BaronOfHellNew {}
+actor CyberdemonNew_Samsara : CyberdemonSpawner replaces CyberdemonNew {}
+actor RevenantNew_Samsara : RevenantSpawner replaces RevenantNew {}

@@ -1,0 +1,22 @@
+actor DoomImpHOC_Samsara : RandomSpawner replaces DoomImpHOC { Game Heretic DropItem "DoomImp2" }
+actor LostSoulHOC_Samsara : RandomSpawner replaces LostSoulHOC { Game Heretic DropItem "LostSoul2" }
+actor PainElementalHOC_Samsara : RandomSpawner replaces PainElementalHOC { Game Heretic DropItem "PainElemental2" }
+actor CacodemonHOC_Samsara : RandomSpawner replaces CacodemonHOC { Game Heretic DropItem "CacodemonTwo" }
+actor BaronOfHellHOC_Samsara : RandomSpawner replaces BaronOfHellHOC { Game Heretic DropItem "BaronOfHell2" }
+actor CentaurHOC_Samsara : RandomSpawner replaces CentaurHOC { Game Heretic DropItem "Centaur2" }
+actor CentaurLeaderHOC_Samsara : RandomSpawner replaces CentaurLeaderHOC { Game Heretic DropItem "CentaurLeader2" }
+actor BishopHOC_Samsara : RandomSpawner replaces BishopHOC { Game Heretic DropItem "Bishop2" }
+actor ArchvileHOC_Samsara : RandomSpawner replaces ArchvileHOC { Game Heretic DropItem "Archvile2" }
+actor SerpentHOC_Samsara : RandomSpawner replaces SerpentHOC { Game Heretic DropItem "Serpent2" }
+actor SerpentLeaderHOC_Samsara : RandomSpawner replaces SerpentLeaderHOC { Game Heretic DropItem "SerpentLeader2" }
+actor WendigoHOC_Samsara : RandomSpawner replaces WendigoHOC { Game Heretic DropItem "IceGuy2" }
+actor HeresiarchHOC_Samsara : RandomSpawner replaces HeresiarchHOC { Game Heretic DropItem "Heresiarch2" }
+
+actor MancubusHOC_Samsara : RandomSpawner replaces MancubusHOC { Game Hexen DropItem "Fatso2" }
+actor RevenantHOC_Samsara : RandomSpawner replaces RevenantHOC { Game Hexen DropItem "CacodemonTwo" }
+actor SnakeHOC_Samsara : RandomSpawner replaces SnakeHOC { Game Hexen DropItem "Snake2" }
+actor CyberdemonHOC_Samsara : RandomSpawner replaces CyberdemonHOC { Game Hexen DropItem "Cyberdemon2" }
+actor DemonHOC_Samsara : RandomSpawner replaces DemonHOC { Game Hexen DropItem "DoomDemon2" }
+actor SpectreHOC_Samsara : RandomSpawner replaces SpectreHOC { Game Hexen DropItem "Spectre2" }
+actor WizardHOC_Samsara : RandomSpawner replaces WizardHOC { Game Hexen DropItem "Wizard2" }
+actor Demon3_Samsara : RandomSpawner replaces Demon3 { Game Hexen DropItem "Demon1B" }

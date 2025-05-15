@@ -1,0 +1,3 @@
+actor GoldenSpatula_Samsara : RandomSpawner replaces GoldenSpatula { DropItem "SamsaraSlotOnePickup" }
+actor Wumbo_Samsara : RandomSpawner replaces Wumbo { DropItem "SamsaraSlotTwoPickup" }
+actor Sauce_Samsara : Ammo1Small replaces Sauce {}

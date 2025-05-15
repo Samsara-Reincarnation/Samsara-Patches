@@ -1,0 +1,14 @@
+Actor RepellentPack_Samsara : ArmorPackBonusLight replaces RepellentPack {}
+Actor UltraArmor_Samsara : InvulnPowerup replaces UltraArmor {}
+Actor StealthSuit_Samsara : PartialInvisibility replaces StealthSuit {}
+Actor LifeForce_Samsara : MegaPack replaces LifeForce {}
+Actor ZorchReactor_Samsara : ArmorPack3 replaces ZorchReactor {}
+Actor ScubaSuit_Samsara : BioSuit replaces ScubaSuit {}
+
+Actor FusionZorch_Samsara : Ammo4Small replaces FusionZorch {}
+Actor FusionZorchPack_Samsara : Ammo4Big replaces FusionZorchPack {}
+Actor BeamZorcherV4_Samsara : RandomSpawner replaces BeamZorcherV4 { DropItem "SamsaraSlotSixSkulltagPickup" }
+
+Actor MultiStealth_Samsara : PartialInvisibility replaces MultiStealth {}
+Actor MultiGoggles_Samsara : Visor replaces MultiGoggles {}
+Actor MultiInvulnerability_Samsara : InvulnPowerup replaces MultiInvulnerability {}

@@ -1,0 +1,26 @@
+actor BossEye2Resurgence : BossEye replaces BossEye2
+{
+	States
+	{
+	Spawn:
+		KEEN C 3 Bright A_Chase
+		KEEN DAB 3 Bright A_Chase
+		goto Spawn
+	See:
+		KEEN DAB 3 Bright A_Chase
+		KEEN C 3 Bright A_Chase
+		goto See
+	}
+}
+
+actor BossBrain2Resurgence : BossBrain2 replaces BossBrain2
+{
+	States
+	{
+	Death:
+		BBRN A 7 A_BrainScream
+		BBRN AA 7 
+		BBRN A -1 A_BrainDie
+		stop
+	}
+}

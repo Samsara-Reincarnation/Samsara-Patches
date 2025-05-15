@@ -1,0 +1,69 @@
+actor REKKRFormerHuman_Samsara : ZombiemanSpawner replaces ZombieMan 3004 {}
+actor REKKRHusk_Samsara : DemonSpawner replaces Demon 3002 {}
+actor REKKRMeanHusk_Samsara : SpectreSpawner replaces Spectre 58 {}
+actor REKKREyeball_Samsara : LostSoulSpawner replaces LostSoul 3006 {}
+actor REKKRImp_Samsara : DoomImpSpawner replaces DoomImp 3001 {}
+actor REKKRMeanImp_Samsara : RevenantSpawner replaces Revenant 671 {}
+actor REKKRGrotesque_Samsara : ChaingunGuySpawner replaces WolfensteinSS 672 {}
+actor RERRKFormerDuke_Samsara : FatsoSpawner replaces Fatso 673 {}
+actor REKKRSorrow_Samsara : CacodemonSpawner replaces Cacodemon 3005 {}
+actor REKKRTreebeast_Samsara : BaronOfHellSpawner replaces BaronOfHell 3003 {}
+actor REKKRSkellyBelly_Samsara : HellKnightSpawner replaces HellKnight 668 {}
+actor REKKRSkelespider_Samsara : PainElementalSpawner replaces HangNoGuts 73 {}
+
+actor REKKRFormerKing_Samsara : CyberdemonSpawner replaces ChaingunGuy 666
+{
+	States
+	{
+		Death:
+			TNT1 A 6 A_KeenDie
+			Stop
+	}
+}
+
+actor REKKRFormerKing2_Samsara : CyberdemonSpawner replaces Chaingun 2002
+{
+	States
+	{
+		Death:
+			TNT1 A 6 A_KeenDie
+			Stop
+	}
+}
+
+actor REKKRDeathRaven_Samsara : SpiderMastermindSpawner replaces SpiderMastermind 7
+{
+	States
+	{
+		Death:
+			TNT1 A 6 A_KeenDie
+			Stop
+	}
+}
+
+actor REKKRDeathRaven2_Samsara : SpiderMastermindSpawner replaces Cyberdemon 16
+{
+	States
+	{
+		Death:
+			TNT1 A 6 A_KeenDie
+			Stop
+	}
+}
+
+actor REKKRFormerHuman_SamsaraGenerator : REKKRFormerHuman_Samsara {}
+actor REKKRHusk_SamsaraGenerator : REKKRHusk_Samsara {}
+actor REKKRMeanHusk_SamsaraGenerator : REKKRMeanHusk_Samsara {}
+actor REKKREyeball_SamsaraGenerator : REKKREyeball_Samsara {}
+actor REKKRImp_SamsaraGenerator : REKKRImp_Samsara {}
+actor REKKRMeanImp_SamsaraGenerator : REKKRMeanImp_Samsara {}
+actor REKKRGrotesque_SamsaraGenerator : REKKRGrotesque_Samsara {}
+actor RERRKFormerDuke_SamsaraGenerator : RERRKFormerDuke_Samsara {}
+actor REKKRSorrow_SamsaraGenerator : REKKRSorrow_Samsara {}
+actor REKKRTreebeast_SamsaraGenerator : REKKRTreebeast_Samsara {}
+actor REKKRSkellyBelly_SamsaraGenerator : REKKRSkellyBelly_Samsara {}
+actor REKKRSkelespider_SamsaraGenerator : REKKRSkelespider_Samsara {}
+actor REKKRFormerKing_SamsaraGenerator : REKKRFormerKing_Samsara { -BOSSDEATH }
+actor REKKRFormerKing2_SamsaraGenerator : REKKRFormerKing2_Samsara { -BOSSDEATH }
+actor REKKRDeathRaven_SamsaraGenerator : REKKRDeathRaven_Samsara { -BOSSDEATH }
+actor REKKRDeathRaven2_SamsaraGenerator : REKKRDeathRaven2_Samsara { -BOSSDEATH }

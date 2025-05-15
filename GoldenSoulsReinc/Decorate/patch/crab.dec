@@ -1,0 +1,43 @@
+actor Crab_Samsara : SamsaraMonsterFlemoid replaces Crab 
+{
+	Health 2
+	PainChance 0
+	Speed 10
+	Radius 8
+	Height 8
+	Mass 400
+	Monster
+	BloodColor gold
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+NOTARGET
+	+NOINFIGHTING
+	meleedamage 1
+	meleerange 32
+	meleesound ""
+	Obituary "A crab squeezed %o's wanger."
+	Tag "Crab"
+	States
+	{
+	Spawn:
+		CRAB AB 1 A_Wander
+		CRAB AB 1 A_LookEx(LOF_NOSOUNDCHECK, 0, 256, 0, 0, "See")
+		Loop
+	See:
+		CRAB AB 1 A_Wander
+		CRAB AB 1 A_Chase
+		Loop
+	Melee:
+		CRAB C 3 A_FaceTarget
+		CRAB D 3 A_MeleeAttack
+		Goto See
+	Pain:
+		TNT1 A 0 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CRAB D 1 A_NoBlocking
+		TNT1 A -1
+		Stop
+	}
+}

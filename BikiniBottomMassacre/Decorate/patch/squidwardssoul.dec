@@ -1,0 +1,67 @@
+ACTOR SquidwardsSoul_Samsara : SamsaraMonsterDemonicBoss replaces SquidwardsSoul
+{
+	Health 3000
+	Radius 220
+	Height 200
+	Mass 1000
+	Speed 0
+	PainChance 50
+	Monster
+	MeleeThreshold 8
+	+MISSILEMORE 
+	+FLOORCLIP
+	+BOSS
+	+BOSSDEATH
+	+DONTMORPH
+	SeeSound "skeleton/sight"
+	PainSound "skeleton/pain"
+	DeathSound "DSSQUIDE"
+	ActiveSound "skeleton/active"
+	MeleeSound "skeleton/melee"
+	Obituary "%o was destroyed by Squidward's Soul"
+	HitObituary "%o was destroyed by Squidward's Soul"
+	Tag "Squidward's Soul"
+	States
+	{
+	Spawn:
+		SQID AB 10 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		SQID AABBCCDDEEFF 2 A_Chase
+		Loop
+	Melee:
+		SQID G 0 A_FaceTarget
+		SQID G 6 A_SkelWhoosh
+		SQID H 6 A_FaceTarget
+		SQID I 6 A_SkelFist
+		Goto See2
+	Missile:
+		SQID J 0 Bright A_FaceTarget
+		SQID J 10 Bright A_FaceTarget
+		SQID K 10 A_SkelMissile
+		SQID K 10 A_SkelMissile
+		SQID K 10 A_SkelMissile
+		SQID K 10 A_SkelMissile
+		SQID K 10 A_FaceTarget
+		Goto See2
+	Pain:
+		SQID L 5
+		SQID L 5 A_Pain
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SQID LM 7
+		SQID N 7 A_Scream
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		SQID O 7 A_NoBlocking
+		SQID P 7
+		SQID Q -1
+		Stop
+	Raise:
+		SQID Q 5
+		SQID PONML 5
+		Goto See
+	}
+}

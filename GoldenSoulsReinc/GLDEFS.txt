@@ -1,0 +1,24 @@
+Pointlight Goldensoullight1
+{
+	Color 1.0 0.8 0.0
+	Size 56
+}
+
+Pointlight Goldensoullight2
+{
+	Color 1.0 0.8 0.0
+	Size 53
+}
+
+Pointlight Goldensoullight3
+{
+	Color 1.0 0.8 0.0
+	Size 50
+}
+
+Object Star_Soul_pickup_Samsara
+{
+	Frame STSLA { Light Goldensoullight1}
+	Frame STSLB { Light Goldensoullight2}
+	Frame STSLC { Light Goldensoullight3}
+}

@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Chex Quest: The Penultimate Breakfast
+Authors: Andrea Rovenski
+Link: https://www.doomworld.com/idgames/themes/chex/chextpb
+
+Resources used:
+---------------
+N/A

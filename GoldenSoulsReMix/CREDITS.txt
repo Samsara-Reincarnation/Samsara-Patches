@@ -1,0 +1,14 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Doom: The Golden Souls Remastered
+Authors: Andrea Gori
+Link: https://batandy.itch.io/goldensouls
+
+Resources used:
+---------------
+Original DECORATE for monsters - Andrea Gori
+Barrel sprites - Andrea "Batandy" Gori
+Coin sprites - Andrea "Batandy" Gori
+MAP00 - Andrea Gori

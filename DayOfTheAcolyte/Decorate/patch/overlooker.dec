@@ -1,0 +1,6 @@
+actor K23OverLooker_Samsara : AcolyteLGreen2 replaces K23OverLooker
+{
+	Health 2000
+	PainChance 100
+	Speed 18
+}

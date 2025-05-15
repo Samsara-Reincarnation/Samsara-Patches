@@ -1,0 +1,39 @@
+actor soulcube_Samsara : RandomSpawner replaces soulcube { DropItem "SamsaraSlotSevenPickup" }
+actor eviscerator_Samsara : RandomSpawner replaces eviscerator { DropItem "SamsaraSlotThreePickup" }
+actor plasmacannon_Samsara : RandomSpawner replaces plasmacannon { DropItem "SamsaraSlotSixPickup" }
+
+actor BurningSoul_Samsara : LostSoulSpawner replaces BurningSoul {}
+actor LordofHeresy_Samsara : BelphegorSpawner replaces LordofHeresy {}
+actor Demonyy_Samsara : DemonSpawner replaces Demonyy {}
+actor spidertron_Samsara : ArachnotronSpawner replaces spidertron {}
+actor Arachnobaron_Samsara : ArachnotronSpawner replaces Arachnobaron {}
+actor bloodElemental_Samsara : CacodemonSpawner replaces bloodElemental {}
+actor ArchonOfHell_Samsara : BelphegorSpawner replaces ArchonOfHell {}
+actor illusionmanip_Samsara : CacodemonSpawner replaces illusionmanip {}
+actor mireimp_Samsara : DoomImpSpawner replaces mireimp {}
+actor evilperson_Samsara : DoomImpSpawner replaces evilperson {}
+actor deathspeaker_Samsara : CacodemonSpawner replaces deathspeaker {}
+actor spirit1_Samsara : DoomImpSpawner replaces spirit1 {}
+actor spirit2_Samsara : LostSoulSpawner replaces spirit2 {}
+actor hellfirebaron_Samsara : BaronOfHellSpawner replaces hellfirebaron {}
+actor vialthion_Samsara : ArchvileSpawner replaces vialthion {}
+actor dreadcaco_Samsara : CacolanternSpawner replaces dreadcaco {}
+actor oozy_Samsara : LostSoulSpawner replaces oozy {}
+actor corrupter_Samsara : HellKnightSpawner replaces corrupter {}
+actor Fusionar_Samsara : BloodDemonSpawner replaces Fusionar {}
+actor XWizard_Samsara : LostSoulSpawner replaces XWizard {}
+actor felknight_Samsara : HellKnightSpawner replaces felknight {}
+actor arachnosion_Samsara : CacodemonSpawner replaces arachnosion {}
+actor illusionmanip2_Samsara : CacodemonSpawner replaces illusionmanip2 {}
+actor magler_Samsara : DarkImpSpawner replaces magler {}
+actor BurningSoul_Samsara : LostSoulSpawner replaces BurningSoul {}
+actor rambler_Samsara : CacodemonSpawner replaces rambler {}
+actor retard_Samsara : BloodDemonSpawner replaces retard {}
+actor snackfairy_Samsara : CacolanternSpawner replaces snackfairy {}
+actor happycloud_Samsara : AbaddonSpawner replaces happycloud {}
+actor retardedkirby_Samsara : BaronOfHellSpawner replaces retardedkirby {}
+actor shitdemon_Samsara : BaronOfHellSpawner replaces shitdemon {}
+actor Lavademon_Samsara : HellKnightSpawner replaces Lavademon {}
+actor Hellcubus_Samsara : HectebusSpawner replaces Hellcubus {}
+
+actor satan_Samsara : satan replaces satan { damagefactor normal, 1.0 }

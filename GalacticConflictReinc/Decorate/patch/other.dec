@@ -1,0 +1,63 @@
+Actor SnotFlembrane_Samsara : FlembraneV3_2 replaces SnotFlembrane
+{
+	+NEVERRESPAWN
+	+LOOKALLAROUND
+}
+
+Actor SnotStealthMaximus_Samsara : MaximusBoss_Samsara replaces SnotStealthMaximus
+{
+	+STEALTH
+	+LOOKALLAROUND
+}
+
+Actor E4M8Strid_Samsara : StealthStridicus_Samsara replaces E4M8Strid {}
+
+Actor E4M9Strid_Samsara : StridicusV4_Samsara replaces E4M9Strid
+{
+	+NEVERRESPAWN
+}
+
+Actor E4M9Armored_Samsara : ArmoredBipedicusV4_Samsara replaces E4M9Armored
+{
+	+NEVERRESPAWN
+}
+
+Actor E4M9Quad_Samsara : Quadrumpus_2 replaces E4M9Quad
+{
+	+NEVERRESPAWN
+}
+
+Actor E4M9Super_Samsara : SuperCycloptis_2 replaces E4M9Super
+{
+	+NEVERRESPAWN
+}
+
+Actor E4M9Cycloptis_Samsara : CycloptisV4_Samsara replaces E4M9Cycloptis
+{
+	+NEVERRESPAWN
+}
+
+Actor ZorchRailPuff_Samsara : ZorchRailPuff replaces ZorchRailPuff
+{
+	+BLOODLESSIMPACT
+}
+
+Actor BlueShot_Samsara : BlueShot replaces BlueShot
+{
+	+BLOODLESSIMPACT
+}
+
+Actor PurpleShot_Samsara : PurpleShot replaces PurpleShot
+{
+	+BLOODLESSIMPACT
+}
+
+Actor GreenShot_Samsara : GreenShot replaces GreenShot
+{
+	+BLOODLESSIMPACT
+}
+
+Actor OrangeShot_Samsara : OrangeShot replaces OrangeShot
+{
+	+BLOODLESSIMPACT
+}

@@ -1,0 +1,7 @@
+#include "Decorate/patch/spawners.dec"
+#include "Decorate/patch/other.dec"
+#include "Decorate/patch/astralcaco.dec"
+#include "Decorate/patch/eviternatus.dec"
+#include "Decorate/patch/goldenastralcaco.dec"
+#include "Decorate/patch/nightmareastralcaco.dec"
+#include "Decorate/patch/necromenace.dec"

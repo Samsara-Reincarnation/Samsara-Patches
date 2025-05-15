@@ -1,0 +1,14 @@
+actor AccuracyBonus_Samsara : CustomInventory replaces AccuracyBonus
+{
+	+COUNTITEM
+	+INVENTORY.QUIET
+	States
+	{
+	Spawn:
+		ACCU A -1
+		Stop
+	Pickup:
+		TNT1 A 0 A_SpawnItem("UpgradeAccuracy")
+		Stop
+	}
+}

@@ -1,0 +1,6 @@
+#include "Decorate/patch/modifiedenemies.dec"
+#include "Decorate/patch/annihilator.dec"
+#include "Decorate/patch/archangelus.dec"
+#include "Decorate/patch/astralcaco.dec"
+#include "Decorate/patch/formercaptain.dec"
+#include "Decorate/patch/nightmaredemon.dec"

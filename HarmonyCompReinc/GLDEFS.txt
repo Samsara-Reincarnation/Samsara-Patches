@@ -1,0 +1,358 @@
+flickerlight Harm-Shot-1
+{
+    color 1.0 1.0 0.5
+    size 48
+    secondarySize 64
+    chance 0.3
+    offset 0 32 0
+}
+
+object Follower_Samsara 
+{
+    frame SPOSF { light Harm-Shot-1 }
+}
+
+object Soldier_Samsara
+{
+    frame CPOSF { light Harm-Shot-1 }
+}
+
+object FallingFollower_Samsara
+{
+    frame SPOSF { light Harm-Shot-1 }
+}
+
+object WalkingPredator_Samsara 
+{
+    frame CYBRR { light Harm-Shot-1 }
+    frame CYBRF { light Harm-Shot-1 }
+}
+
+object Echida_Samsara
+{
+    frame SPIDH { light Harm-Shot-1 }
+}
+
+object Echida2_Samsara
+{
+    frame SPIDH { light Harm-Shot-1 }
+}
+
+pointlight Harm-Blue-Aerosol1
+{
+    color 0.0 0.4 0.7
+    size 48
+    offset 0 48 0
+	dontlightself 1
+}
+
+flickerlight Harm-Blue-Aerosol2
+{
+    color 0.4 0.3 1.0
+    size 112
+    secondarySize 120
+    chance 0.5
+    offset 0 48 0
+	dontlightself 1
+}
+
+flickerlight Harm-Blue-Aerosol3
+{
+    color 0.4 0.3 1.0
+    size 64
+    secondarySize 72
+    chance 0.5
+    offset 0 48 0
+	dontlightself 1
+}
+
+flickerlight Harm-Blue-Aerosol4
+{
+    color 0.4 0.3 1.0
+    size 32
+    secondarySize 40
+    chance 0.5
+    offset 0 48 0
+	dontlightself 1
+}
+
+object Aerosol_Samsara
+{
+    frame HEADA { light Harm-Blue-Aerosol1 }
+    frame HEADF { light Harm-Blue-Aerosol1 }
+    frame HEADE { light Harm-Blue-Aerosol1 }
+    frame HEADC { light Harm-Blue-Aerosol1 }
+    frame HEADD { light Harm-Blue-Aerosol3 }
+    frame TFOGC { light Harm-Blue-Aerosol3 }
+    frame TFOGD { light Harm-Blue-Aerosol2 }
+    frame TFOGE { light Harm-Blue-Aerosol2 }
+    frame TFOGF { light Harm-Blue-Aerosol3 }
+    frame TFOGG { light Harm-Blue-Aerosol4 }
+}
+
+flickerlight Harm-Purple-white
+{
+    color 0.4 0.0 1.0
+    size 48
+    secondarySize 64
+    chance 0.3
+    offset 0 32 0
+}
+
+object WalkingPhage_Samsara
+{
+    frame BOSSF { light Harm-Purple-white }
+}
+
+object WalkingPhage_Samsara
+{
+    frame SKELI { light Harm-Purple-white }
+}
+
+object Echida_Samsara
+{
+    frame POSSB { light Harm-Purple-white }
+    frame POSSD { light Harm-Purple-white }
+}
+
+object Echida2_Samsara
+{
+    frame POSSB { light Harm-Purple-white }
+    frame POSSD { light Harm-Purple-white }
+}
+
+pointlight Harm-Purple-white-2
+{
+    color 0.4 0.0 1.0
+    size 16
+    offset 0 40 0
+	dontlightself 1
+}
+
+pointlight Harm-Purple-white-3
+{
+    color 0.4 0.0 1.0
+    size 32
+    offset 0 40 0
+	dontlightself 1
+}
+
+pointlight Harm-Purple-white-4
+{
+    color 0.4 0.0 1.0
+    size 16
+    offset 0 20 0
+	dontlightself 1
+}
+
+pointlight Harm-Purple-white-5
+{
+    color 0.4 0.0 1.0
+    size 16
+    offset 0 0 0
+	dontlightself 1
+}
+
+object WalkingCentaur_Samsara
+{
+    frame BOS2E { light Harm-Purple-white-2 }
+    frame CYBRB { light Harm-Purple-white-2 }
+    frame CYBRC { light Harm-Purple-white-2 }
+    frame CYBRD { light Harm-Purple-white-2 }
+    frame CYBRG { light Harm-Purple-white-2 }
+    frame CYBRH { light Harm-Purple-white-2 }
+    frame CYBRI { light Harm-Purple-white-2 }
+    frame CYBRJ { light Harm-Purple-white-4 }
+    frame CYBRK { light Harm-Purple-white-5 }
+    frame SKELG { light Harm-Purple-white-2 }
+    frame SKELH { light Harm-Purple-white-3 }
+    frame SKELI { light Harm-Purple-white }
+}
+
+pointlight Harm-Glow-Red-Small-1
+{
+    color 1.0 0.4 0.0
+    size 12
+	dontlightself 1
+}
+
+pointlight Harm-Glow-Red-Small-2
+{
+    color 1.0 0.4 0.0
+    size 16
+	dontlightself 1
+}
+
+object Critter_Samsara
+{
+    frame BOSSJ { light Harm-Glow-Red-Small-1 }
+    frame BOSSK { light Harm-Glow-Red-Small-2 }
+    frame BOSSL { light Harm-Glow-Red-Small-1 }
+}
+
+pointlight Harm-Red-Glow-Mine
+{
+    color 0.7 0.0 0.0
+    size 24
+    offset 0 10 0
+	dontlightself 1
+}
+
+pointlight Harm-Pink-Glow-Mine
+{
+    color 0.5 0.0 0.3
+    size 24
+    offset 0 10 0
+	dontlightself 1
+}
+
+pointlight Harm-Purple-Glow-Mine
+{
+    color 0.4 0.0 0.6
+    size 24
+    offset 0 10 0
+	dontlightself 1
+}
+
+object Mine_Samsara
+{
+    frame SKULA { light Harm-Red-Glow-Mine }
+    frame SKULB { light Harm-Pink-Glow-Mine }
+    frame SKULC { light Harm-Purple-Glow-Mine }
+    frame SKULD { light Harm-Pink-Glow-Mine }
+}
+
+pointlight Harm-Purple-High
+{
+    color 0.4 0.0 1.0
+    size 16
+    offset 0 40 0
+	dontlightself 1
+}
+
+object RedBarrel_Samsara
+{
+    frame BAR1 { light Harm-Purple-High }
+}
+
+pointlight PLASMABALL
+{
+    color 0.4 0.0 1.0
+    size 32
+}
+
+flickerlight ROCKET_X1
+{
+    color 1.0 1.0 0.5
+    size 96
+    secondarySize 108
+    chance 0.3
+}
+
+flickerlight ROCKET_X2
+{
+    color 0.5 0.5 0.2
+    size 120
+    secondarySize 132
+    chance 0.3
+}
+
+flickerlight ROCKET_X3
+{
+    color 0.3 0.3 0.1
+    size 144
+    secondarySize 156
+    chance 0.3
+}
+
+flickerlight Harm-Fire1
+{
+    color 1.0 0.6 0.1
+    size 64
+    secondarySize 72
+    chance 0.3  
+    offset 0 48 0
+}
+
+flickerlight Harm-Fire2
+{
+    color 1.0 0.6 0.1
+    size 80
+    secondarySize 88
+    chance 0.3  
+    offset 0 48 0 
+}
+
+flickerlight Harm-Fire3
+{
+    color 1.0 0.6 0.1
+    size 72
+    secondarySize 80
+    chance 0.3 
+    offset 0 48 0 
+}
+
+flickerlight Harm-Fire4
+{
+    color 1.0 0.6 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+    offset 0 48 0
+}
+
+flickerlight Harm-Fire5
+{
+    color 1.0 0.6 0.1
+    size 24
+    secondarySize 32
+    chance 0.5
+    offset 0 48 0
+}
+
+object Neutron_Samsara
+{
+    frame PLSSA { light PLASMABALL }
+    frame PLSSB { light PLASMABALL }    
+    frame MISLB { light ROCKET_X1 }
+    frame MISLC { light ROCKET_X2 }
+    frame MISLD { light ROCKET_X3 }
+    frame BAL2D { light Harm-Fire4 }
+    frame BAL2E { light Harm-Fire5 }
+}
+
+object Echida_Samsara
+{
+    frame SPIDL { light ROCKET_X1 }
+    frame SPIDM { light ROCKET_X2 }
+    frame SPIDN { light ROCKET_X3 }
+    frame SPIDO { light ROCKET_X2 }
+    frame SPIDP { light ROCKET_X1 }
+}
+
+object Echida2_Samsara
+{
+    frame SPIDL { light ROCKET_X1 }
+    frame SPIDM { light ROCKET_X2 }
+    frame SPIDN { light ROCKET_X3 }
+    frame SPIDO { light ROCKET_X2 }
+    frame SPIDP { light ROCKET_X1 }
+}
+
+object Mine_Samsara   
+{
+    frame MISLB { light Harm-Fire1 }
+    frame MISLC { light Harm-Fire2 }
+    frame MISLD { light Harm-Fire3 }
+    frame BAL2D { light Harm-Fire4 }
+    frame BAL2E { light Harm-Fire5 }
+}
+
+object RedBarrel_Samsara
+{
+    frame MISLB { light Harm-Fire1 }
+    frame MISLC { light Harm-Fire2 }
+    frame MISLD { light Harm-Fire3 }
+    frame BAL2D { light Harm-Fire4 }
+    frame BAL2E { light Harm-Fire5 }
+}

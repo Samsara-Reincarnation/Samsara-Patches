@@ -1,0 +1,32 @@
+actor ChexPBExplosiveBarrel : ExplosiveBarrel replaces FlemoidPowerStrand_Samsara
+{
+    Tag "Explosive Barrel"
+	+DONTRIP
+	States
+	{
+	Death:
+		BEXP A 5 bright
+		TNT1 A 0 A_Scream
+		BEXP BC 5 bright
+		TNT1 A 0 A_SetDamageType("Explosive")
+	DeathContinue:
+		TNT1 A 0 A_Explode
+		TNT1 A 0 A_ChangeFlag("BLOODLESSIMPACT",false)
+		BEXP DE 10 bright
+		TNT1 A 1050 bright A_BarrelDestroy
+		TNT1 A 5 A_Respawn
+		Wait
+
+	Death.ZorchPistol:
+	Death.Zorch:
+	Death.ZorchKamikaze:
+	Death.PhasingZorch:
+	Death.ZorchSpectral:
+		BEXP A 5 bright
+		TNT1 A 0 A_Scream
+		BEXP BC 5 bright
+		TNT1 A 0 A_SetDamageType("Zorch")
+		TNT1 A 0 A_ChangeFlag("BLOODLESSIMPACT",true)
+		Goto DeathContinue
+	}
+}

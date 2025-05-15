@@ -1,0 +1,45 @@
+Actor REKKRTurret_Samsara : SamsaraMonsterRobotic replaces Archvile 699
+{
+	SpawnID 111
+	Health 200
+	Radius 16
+	Height 55
+	Mass 100000
+	Speed 0
+	PainChance 0
+	Monster
+	MaxTargetRange 896
+	+QUICKTORETALIATE
+	+FLOORCLIP
+	+NOTARGET
+	+FIREDAMAGE
+	+DONTRIP
+	+NOICEDEATH
+	+NOBLOOD
+	SeeSound ""
+	PainSound ""
+	DeathSound "world/barrelx"
+	ActiveSound ""
+	MeleeSound "vile/stop"
+	Obituary "$OB_VILE"
+	Tag "Turret"
+	States
+	{
+	Spawn:
+		TRED A 2 A_Look
+		goto Spawn
+	See:
+		TRED A 2 A_Chase
+		TRED B 8 Bright A_TroopAttack
+		TRED A 20
+		goto See
+	Pain:
+		TRED B 10 Bright A_Pain
+		goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TRED BCD 8 Bright
+		TNT1 A -1
+		stop
+	}
+}

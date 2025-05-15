@@ -1,0 +1,4 @@
+object Beast2_Samsara
+{
+	frame BEASI { light BEASTATK }
+}

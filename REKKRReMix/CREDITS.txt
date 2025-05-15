@@ -1,0 +1,14 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: REKKR
+Authors: Revae
+Link: https://mockingbirdsoftworks.com/modversion.html
+
+Resources used:
+---------------
+Former Human soul sprites - Revae
+Mana sprite sprites - Revae
+Original DEHACKED for monsters - Revae
+Original GLDEFS for monsters - Revae, Popsoap10

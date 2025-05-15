@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Resurgence
+Authors: Josh Sealy
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/resurge
+
+Resources used:
+---------------
+Original DEHACKED for monsters - Josh Sealy

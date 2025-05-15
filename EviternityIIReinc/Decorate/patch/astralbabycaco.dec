@@ -1,0 +1,177 @@
+Actor AstralBabyCaco_Samsara : SamsaraMonsterGhost replaces AstralBabycaco
+{
+	Health 60
+	Speed 16
+	Radius 16
+	Height 56
+	ReactionTime 8
+	PainChance 80
+	Mass 42
+	Monster
+	+NOGRAVITY
+	+FLOAT
+	-COUNTKILL
+	+NOBLOOD
+	Species AstralCaco
+	SeeSound "xkirby/alert"
+	PainSound "xkirby/pain"
+	DeathSound "xkirby/death"
+	Obituary "$OB_ASTRALKIRBY"
+	Tag "Astral Babycaco"
+	States
+	{
+	Spawn:
+		SP11 A 10 A_Look
+		loop
+	See:
+		SP11 A 3 A_Chase
+		loop
+	Pain:
+		SP11 H 3 
+		SP11 I 3 A_Pain
+		goto See
+	Pain.DoomDamageTypeStunner:
+		SP11 H 2 A_ChangeFlag("NOPAIN",true)
+		SP11 H 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		SP11 H 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		SP11 H 16 A_Pain
+		Goto See
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		SP11 E 1 A_FaceTarget
+		SP11 E 1 A_PlaySoundEx ("xkirby/charge", Auto, False, 0)
+		SP11 EEEEEEEEE 1 A_Chase
+		SP11 F 5 A_FaceTarget
+		SP11 G 0 A_SpawnProjectile ("AstralBabyFireball", 32, 0, 0)
+		SP11 G 0 A_SpawnProjectile ("AstralBabyFireball", 32, 0, 8)
+		SP11 G 2 A_SpawnProjectile ("AstralBabyFireball", 32, 0, -8)
+		goto See
+	Death:
+		SP11 J 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP11 K 6 A_Scream
+		SP11 LMNOP 6 
+		SP11 Q 6 A_Fall
+		SP11 R 6 
+		SP11 S -1 A_KeenDie
+		stop
+	Raise:
+		SP11 A 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		SP11 RQPONMLK 4
+		goto See
+
+		// SamsaraMonsterGhost states
+		Death.ZorchPistol:
+		Death.Zorch:
+		Death.ZorchKamikaze:
+		Death.PhasingZorch:
+		Death.ZorchSpectral:
+			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
+			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_Stop
+			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
+			"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
+			"####" "#" 0 A_NoGravity
+			"####" "#" 3 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 0)
+			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
+			"####" "#" 3 A_SetTranslucent(0.9,0)
+			"####" "#" 0 A_Scream
+			"####" "#" 3 A_SetTranslucent(0.8,0)
+			"####" "#" 0 A_NoBlocking
+			"####" "#" 3 A_SetTranslucent(0.7,0)
+			"####" "#" 3 A_SetTranslucent(0.6,0)
+			"####" "#" 3 A_SetTranslucent(0.5,0)
+			"####" "#" 3 A_SetTranslucent(0.4,0)
+			"####" "#" 3 A_SetTranslucent(0.3,0)
+			"####" "#" 3 A_SetTranslucent(0.2,0)
+			"####" "#" 3 A_SetTranslucent(0.1,0)
+			TNT1 A 1 A_SetTranslucent(1,0)
+			TNT1 A 0 A_Gravity
+			TNT1 A -1 A_KeenDie
+			Stop
+		Death.DukePlasma:
+			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
+			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
+			"####" "#" 0 A_Stop
+			"####" "#" 0 A_NoGravity
+			"####" "#" 1 A_NoBlocking
+			"####" "#" 0 A_Jump(218,2)
+			"####" "#" 0 A_GiveToTarget("DukeKillTaunt",1)
+			"####" "#" 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 12)
+			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
+			"####" "#" 27 A_Scream
+			TNT1 A 1 A_SetTranslucent(1,0)
+			TNT1 A 0 A_Gravity
+			TNT1 A -1 A_KeenDie
+			Stop
+		Death.RottDisintegrate:
+			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
+			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
+			"####" "#" 0 A_Stop
+			"####" "#" 0 A_NoGravity
+			"####" "#" 0 A_Scream
+			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
+			"####" "#" 3 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 8)
+			"####" "#" 3 A_SetTranslucent(0.9,0)
+			"####" "#" 3 A_SetTranslucent(0.8,0)
+			"####" "#" 3 A_SetTranslucent(0.7,0)
+			"####" "#" 3 A_SetTranslucent(0.6,0)
+			"####" "#" 3 A_SetTranslucent(0.5,0)
+			"####" "#" 3 A_SetTranslucent(0.4,0)
+			"####" "#" 3 A_SetTranslucent(0.3,0)
+			"####" "#" 3 A_SetTranslucent(0.2,0)
+			"####" "#" 3 A_SetTranslucent(0.1,0)
+			TNT1 A 0 A_SetTranslucent(1,0)
+			TNT1 A 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 9000)
+			TNT1 A 0 A_Gravity
+			TNT1 A 0 A_NoBlocking
+			TNT1 A -1 A_KeenDie
+			Stop
+		Disintegrate:
+			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
+			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
+			"####" "#" 0 A_Stop
+			"####" "#" 0 A_NoGravity
+			"####" "#" 0 A_Scream
+			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
+			"####" "#" 3 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 10)
+			"####" "#" 3 A_SetTranslucent(0.9,0)
+			"####" "#" 3 A_SetTranslucent(0.8,0)
+			"####" "#" 0 A_NoBlocking
+			"####" "#" 3 A_SetTranslucent(0.7,0)
+			"####" "#" 3 A_SetTranslucent(0.6,0)
+			"####" "#" 3 A_SetTranslucent(0.5,0)
+			"####" "#" 2 A_SetTranslucent(0.4,0)
+			"####" "#" 2 A_SetTranslucent(0.3,0)
+			"####" "#" 2 A_SetTranslucent(0.2,0)
+			"####" "#" 2 A_SetTranslucent(0.1,0)
+			TNT1 A 1 A_SetTranslucent(1,0)
+			TNT1 A 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 9000)
+			TNT1 A 0 A_Gravity
+			TNT1 A -1 A_KeenDie
+			Stop
+		Death.Nuke:
+			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
+			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
+			"####" "#" 0 A_Stop
+			"####" "#" 0 A_NoGravity
+			"####" "#" 0 A_Scream
+			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
+			"####" "#" 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 11)
+			"####" "#" 0 A_NoBlocking
+			"####" "#################" 3 A_Fadeout(0.05)
+			TNT1 A 0 A_Gravity
+			TNT1 A -1 A_KeenDie
+			Stop
+	}
+}

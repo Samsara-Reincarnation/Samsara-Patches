@@ -1,0 +1,171 @@
+actor fakemedi_Samsara replaces fakemedi
+{
+	RenderStyle "Add"
+	+FLOATBOB
+	Alpha 0.9
+	Scale 0.75
+	States
+	{
+	Spawn:
+		MED3 A 35 Bright Light("SAMSARA_RED_HEALTH") ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 4, 100, 90)
+		loop
+	}
+}
+
+actor fakearmorgreen_Samsara replaces fakearmorgreen
+{
+	RenderStyle "Add"
+	+FLOATBOB
+	Alpha 0.9
+	States
+	{
+	Spawn:
+        RMR1 A 35 Bright Light("SAMSARA_GREEN_ARMOR") ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 4, 100, 90)
+        loop
+	}
+}
+
+actor fakearmorblue_Samsara replaces fakearmorblue
+{
+	RenderStyle "Add"
+	+FLOATBOB
+	Alpha 0.98
+	States
+	{
+	Spawn:
+		RMR2 A 35 Bright Light("SAMSARA_BLUE_ARMOR") ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 4, 100, 98)
+		loop
+	}
+}
+
+actor fake1up_Samsara replaces fake1up
+{
+	RenderStyle "Add"
+	+FLOATBOB
+	Alpha 0.95
+	Scale 0.75
+	States
+	{
+	Spawn:
+		SOUL A 2 Bright Light("SAMSARA_SUPER_HEALTH") ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 4, 100, 95)
+		SOUL BCDEFGHI 2 Bright Light("SAMSARA_SUPER_HEALTH")
+		loop
+	}
+}
+
+actor fakebackpack_Samsara replaces fakebackpack
+{
+	States
+	{
+	Spawn:
+		AMPK A 20 Light("SAMSARA_AMMO_BACKPACK")
+		AMPK A 20 Bright Light("SAMSARA_AMMO_BACKPACK")
+		loop
+	}
+}
+
+actor fakeammo_Samsara replaces fakeammo
+{
+	States
+	{
+	Spawn:
+		AMMB J 10 Light("SAMSARA_LARGE_AMMO_1")
+		AMMB J 10 Light("SAMSARA_LARGE_AMMO_2")
+		AMMB J 10 Bright Light("SAMSARA_LARGE_AMMO_3")
+		AMMB J 10 Bright Light("SAMSARA_LARGE_AMMO_4")
+		loop
+	}
+}
+
+actor DKBarrel_lvl0_Samsara : DKBarrel_lvl0 replaces DKBarrel_lvl0 
+{
+	States
+	{
+	Spawn:
+		DXBR A 1
+		Loop
+	Death:
+		TNT1 A 0 A_Scream
+		DXBR BCD 2
+		TNT1 A 0 A_NoBlocking
+		DXBR E -1
+		Stop
+	}
+}
+
+actor DKBarrel_lvl1_Samsara : DKBarrel_lvl1 replaces DKBarrel_lvl1
+{
+	States
+	{
+	Spawn:
+		DXBR A 1
+		Loop
+	Death:
+		TNT1 A 0 A_Scream
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		DXBR BCD 2
+		TNT1 A 0 A_NoBlocking
+		DXBR E -1
+		Stop
+	}
+}
+
+actor DKBarrel_lvl2_Samsara : DKBarrel_lvl2 replaces DKBarrel_lvl2
+{
+	States
+	{
+	Spawn:
+		DXBR A 1
+		Loop
+	Death:
+		TNT1 A 0 A_Scream
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		DXBR BCD 2
+		TNT1 A 0 A_NoBlocking
+		DXBR E -1
+		Stop
+	}
+}
+
+actor DKBarrel_lvl3_Samsara : DKBarrel_lvl3 replaces DKBarrel_lvl3
+{
+	States
+	{
+	Spawn:
+		DXBR A 1
+		Loop
+	Death:
+		TNT1 A 0 A_Scream
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBananaBunch_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBananaBunch_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBananaBunch_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("GSBanana_Samsara", 4 * random(-6, 6), 4 * random(-6, 6), 4 * random(1, 8), 0, 0, 0, 0)
+		DXBR BCD 2
+		TNT1 A 0 A_NoBlocking
+		DXBR E -1
+		Stop
+	}
+}
+
+actor DKBarrel_TNT_Samsara : DKBarrel_TNT replaces DKBarrel_TNT
+{
+	States
+	{
+	Spawn:
+		DXBR A 1
+		Loop
+	Death:
+		TNT1 A 0 A_Scream
+		DXBR B 1
+		TNT1 A 0 A_SpawnItemEx("DKBarrel_TNT_Exp", 0, 0, 30, 0, 0, 0, 0)
+		TNT1 A 0 A_NoBlocking
+		TNT1 A -1
+		Stop
+	}
+}

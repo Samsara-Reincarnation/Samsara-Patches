@@ -1,0 +1,20 @@
+actor Beastling_Samsara : DemonSpawner replaces Demon {}
+actor FallingFollower_Samsara : ShotgunGuySpawner replaces Archvile {}
+actor Follower_Samsara : ShotgunGuySpawner replaces ShotgunGuy {}
+actor WalkingCentaur_Samsara : RevenantSpawner replaces Revenant {}
+actor Soldier_Samsara : ChaingunGuySpawner replaces ChaingunGuy {}
+actor Critter_Samsara : ZombiemanSpawner replaces BaronOfHell {}
+actor Aerosol_Samsara : CacodemonSpawner replaces Cacodemon {}
+actor WalkingPhage_Samsara : ArachnotronSpawner replaces Arachnotron {}
+actor WalkingPredator_Samsara : CyberDemonSpawner replaces Cyberdemon {}
+
+actor Beastling_SamsaraGenerator : Beastling_Samsara {}
+actor FallingFollower_SamsaraGenerator : FallingFollower_Samsara {}
+actor Follower_SamsaraGenerator : Follower_Samsara {}
+actor WalkingCentaur_SamsaraGenerator : WalkingCentaur_Samsara {}
+actor Soldier_SamsaraGenerator : Soldier_Samsara {}
+actor WalkingPhage_SamsaraGenerator : WalkingPhage_Samsara {}
+actor Critter_SamsaraGenerator : Critter_Samsara {}
+actor Aerosol_SamsaraGenerator : Aerosol_Samsara {}
+actor WalkingPredator_SamsaraGenerator : WalkingPredator_Samsara {}
+actor Echida_SamsaraGenerator : Echida_Samsara { -BOSSDEATH }

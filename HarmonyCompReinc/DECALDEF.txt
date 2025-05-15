@@ -1,0 +1,3 @@
+generator Neutron_Samsara			Scorch
+generator PhageNeutron_Samsara		ArachnotronScorch
+generator GuidedChaos_Samsara		RevenantScorch

@@ -1,0 +1,376 @@
+actor SamsaraRandomItemSpawnerREKKR : RandomSpawner
+{
+	// Health pickups
+	DropItem "SamsaraHealPack0_REKKR", 255, 300
+	DropItem "SamsaraHealPack1_REKKR", 255, 50
+	DropItem "HealPack2", 255, 40
+	DropItem "SamsaraSuperHealth_REKKR", 255, 10
+
+	// Armor pickups
+	DropItem "SamsaraArmorScrap_REKKR", 255, 150
+	DropItem "SamsaraArmorPack1_REKKR", 255, 40
+	DropItem "SamsaraArmorPack3_REKKR", 255, 10
+
+	// Ammo pickups
+	DropItem "SamsaraAmmo1Small_REKKR2", 255, 75
+	DropItem "Ammo2Small", 255, 75
+	DropItem "Ammo3Small", 255, 35
+	DropItem "SamsaraAmmo4Small_REKKR", 255, 35
+	DropItem "SamsaraAmmo1Big_REKKR", 255, 25
+	DropItem "Ammo2Big", 255, 25
+	DropItem "Ammo3Big", 255, 10
+	DropItem "SamsaraAmmo4Big_REKKR", 255, 10
+	DropItem "AmmoBackpack", 255, 10
+
+	// Equipment pickups
+	DropItem "SamsaraSlotOnePickup", 255, 6
+	DropItem "SamsaraSlotTwoPickup", 255, 6
+	DropItem "SamsaraSlotThreePickup", 255, 4
+	DropItem "SamsaraSlotFourPickup", 255, 4
+	DropItem "SamsaraSlotFourSkulltagPickup", 255, 4
+	DropItem "SamsaraSlotFivePickup", 255, 3
+	DropItem "SamsaraSlotFiveSkulltagPickup", 255, 3
+	DropItem "SamsaraSlotSixPickup", 255, 3
+	DropItem "SamsaraSlotSixSkulltagPickup", 255, 3
+	DropItem "SamsaraSlotSevenPickup", 255, 2
+	DropItem "SamsaraSlotSevenSkulltagPickup", 255, 2
+	DropItem "SamsaraUniquePickupRandom", 255, 10
+
+	// Powerups
+	DropItem "SamsaraPartialInvisibility_REKKR", 255, 12
+	DropItem "BioSuit", 255, 12
+	DropItem "SamsaraVisor_REKKR", 255, 12
+	DropItem "SamsaraAllMap", 255, 12
+	DropItem "SamsaraInvulnPowerup_REKKR", 255, 2
+}
+
+Actor REKKRExplosiveBarrel_Samsara : ExplosiveBarrel replaces ExplosiveBarrel 2035
+{
+	Health 60
+	Mass 55
+	+DONTRIP
+	States
+	{
+	Death:
+		BEXP A 5
+		BEXP B 5 Bright A_Scream
+		BEXP C 5 Bright
+		TNT1 A 0 A_SetDamageType("Explosive")
+	DeathContinue:
+		BEXP D 10 Bright A_Explode
+		BEXP E 10 Bright
+		stop
+	Death.ZorchPistol:
+	Death.Zorch:
+	Death.ZorchKamikaze:
+	Death.PhasingZorch:
+	Death.ZorchSpectral:
+		BEXP A 5
+		BEXP B 5 Bright A_Scream
+		BEXP C 5 Bright
+		TNT1 A 0 A_SetDamageType("Zorch")
+		TNT1 A 0 A_ChangeFlag("BLOODLESSIMPACT",true)
+		goto DeathContinue
+	}
+}
+
+actor DH_SuperShotgun replaces SuperShotgun 693
+{
+	Mass 100000
+	-SPECIAL
+	+SOLID
+	States
+	{
+	Spawn:
+		CBRA BB 4 A_Look
+		goto Spawn
+	See:
+		CBRA B 12 A_PosAttack
+		CBRA B 12 A_Chase
+		CBRA B 2 A_FaceTarget
+		goto See
+	Missile:
+		CBRA B 12 A_Chase
+		CBRA B 2 A_FaceTarget
+		CBRA B 12 A_PosAttack
+		goto Missile
+	}
+}
+
+Actor DH_BossEye : BossEye replaces BossEye 669
+{
+	States
+	{
+	Spawn:
+		POL1 A 64 A_Brainspit("DH_SpawnShot")
+		goto Spawn
+	}
+}
+
+Actor DH_SpawnShot : SpawnShot replaces SpawnShot
+{
+	Speed 2
+	SeeSound ""
+	DeathSound ""
+	States
+	{
+	Spawn:
+		BOSF A 24 A_SpawnSound
+		BOSF B 20 A_SpawnFly
+		BOSF CD 16 A_SpawnFly
+		stop
+	}
+}
+
+Actor DH_SpawnFire : SpawnFire replaces SpawnFire 4000
+{
+	States
+	{
+	Spawn:
+		TFOG A 4 Bright A_Fire
+		BFE2 A 4 Bright A_Fire
+		TFOG A 4 Bright A_Fire
+		BFE2 A 4 Bright A_Fire
+		TFOG A 4 Bright A_Fire
+		BFE2 A 4 Bright A_Fire
+		TFOG A 4 Bright A_Fire
+	SpawnLoop:
+		FSKU AC 8 Bright A_Tracer
+		goto SpawnLoop
+	}
+}
+
+Actor DH_PlasmaBall : PlasmaBall replaces PlasmaBall
+{
+	Speed 33
+	Radius 2
+	Damage 12
+	States
+	{
+	Spawn:
+		PLSS AB 1 Bright A_Tracer
+		goto Spawn
+	Death:
+		PLSE A 8 Bright
+		PLSE BC 4 Bright
+		PLSE DE 4
+		stop
+	}
+}
+
+Actor DH_BFGBall : BFGBall replaces BFGBall
+{
+	Speed 35
+	Radius 1
+	Height 10
+	Damage 70
+	DeathSound ""
+	States
+	{
+	Spawn:
+		BFE1 B 2 Bright
+		BFE1 C 2 Bright A_BFGSpray
+		stop
+	Death:
+		BFE1 B 2 Bright
+		BFE1 C 2 Bright A_BFGSpray
+		stop
+	}
+}
+
+Actor DH_BulletPuff : BulletPuff replaces BulletPuff
+{
+	States
+	{
+	Spawn:
+		PUFF ABCD 4 Bright
+		stop
+	}
+}
+
+Actor DH_TeleportFog : TeleportFog replaces TeleportFog
+{
+	States
+	{
+	Spawn:
+		TFOG ABAB 2 Bright
+		TFOG CDE 3 Bright
+		TFOG FGH 4 Bright
+		TFOG IJ 5 Bright
+		stop
+	}
+}
+
+Actor DH_BFGExtra : BFGExtra replaces BFGExtra
+{
+	States
+	{
+	Spawn:
+		BFE2 ABC 3 Bright
+		BFE2 DEF 4 Bright
+		stop
+	}
+}
+
+Actor DH_DeadLostSoul : DeadLostSoul replaces DeadLostSoul 23
+{
+	Health 3
+	Speed 20
+	Radius 16
+	Height 56
+	+SOLID
+	States
+	{
+	Spawn:
+		SKUL M 8 A_Look
+		goto Spawn
+	See:
+		SKUL M 70 A_PainAttack
+		goto See
+	}
+}
+
+Actor DH_BossBrain : BossBrain replaces BossBrain 750
+{
+	PainSound "weapons/sshotf"
+	DeathSound "weapons/sshotf"
+	States
+	{
+	Spawn:
+		BLUD A 8 
+		SSWV D 8 
+		SSWV E -1 
+		stop
+	Pain:
+		BLUD A 36 A_BrainPain
+		BLUD A 8 
+		SSWV D 8 
+		SSWV E -1 
+		stop
+	Death:
+		BLUD A 100 A_BrainScream
+		SSWV D 8 
+		SSWV E -1 
+		stop
+	}
+}
+
+Actor DH_CacodemonBall : CacodemonBall replaces CacodemonBall
+{
+	Speed 16
+	Radius 4
+	Height 4
+	Damage 0
+	-NOBLOCKMAP
+	-NOGRAVITY
+	+NOCLIP
+	+FLOAT
+	RenderStyle "Normal"
+	SeeSound ""
+	DeathSound ""
+	States
+	{
+	Spawn:
+		SOUL EFGH 4 
+		goto Spawn
+	Death:
+		SOUL E 4 
+		stop
+	}
+}
+
+actor Rocket3 : Rocket replaces Rocket
+{
+	painchance 256
+	height 6
+	radius 2
+	damage 20
+	speed 34
+	deathsound "cyber/hoof"
+	painsound "world/barrelx"
+	projectile
+	
+	+nodamagethrust
+	-NOGRAVITY	
+	
+	states
+		{
+		Spawn:
+			APLS B 0 bright
+			APLS B -1 bright A_ChangeVelocity (velx, vely, velz*1.24, CVF_REPLACE) 
+			stop
+			
+		Death:
+			APLS A 12 bright a_fall 
+			APLS BABABABA 2 bright
+			APBX A 4 bright a_explode
+			APBX B 1 bright a_explode
+			APBX B 6 bright a_pain
+			APBX C 6 bright
+			APBX DE 6
+			stop
+		}
+}
+
+Actor REKKRTurret_Samsara : SamsaraMonsterRobotic replaces Archvile 699
+{
+	SpawnID 111
+	Health 200
+	Radius 16
+	Height 55
+	Mass 100000
+	Speed 0
+	PainChance 0
+	Monster
+	MaxTargetRange 896
+	+QUICKTORETALIATE
+	+FLOORCLIP
+	+NOTARGET
+	+FIREDAMAGE
+	+DONTRIP
+	+NOICEDEATH
+	+NOBLOOD
+	SeeSound ""
+	PainSound ""
+	DeathSound "world/barrelx"
+	ActiveSound ""
+	MeleeSound "vile/stop"
+	Obituary "$OB_VILE"
+	Tag "Turret"
+	States
+	{
+	Spawn:
+		TRED A 2 A_Look
+		goto Spawn
+	See:
+		TRED A 2 A_Chase
+		TRED B 8 Bright A_TroopAttack
+		TRED A 20
+		goto See
+	Pain:
+		TRED B 10 Bright A_Pain
+		goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TRED BCD 8 Bright
+		TNT1 A -1
+		stop
+	}
+}
+
+Actor REKKRImpBall_Samsara : DoomImpBall replaces DoomImpBall
+{
+	Damage 5
+	+THRUGHOST
+	+FIREDAMAGE
+	States
+	{
+	Spawn:
+		BAL1 AB 6 Bright
+		loop
+	}
+}
+
+#include "Decorate/patch/spawners.dec"
+#include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/decorations.dec"

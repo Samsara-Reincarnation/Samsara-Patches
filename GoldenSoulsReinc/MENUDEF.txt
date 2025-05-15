@@ -1,0 +1,96 @@
+DEFAULTLISTMENU
+{
+    Font "DBIGFONT", "Untranslated"
+        Selector "GS_SEL", -20, -1
+        Linespacing 20
+        Font "DBIGFONT", "White"
+}
+
+LISTMENU "MainMenu"
+{
+        size clean
+        StaticPatch 94, 2, "M_DOOM"
+        Position 97, 72
+        IfOption(ReadThis)
+        {
+            Position 97, 64
+        }
+    
+
+        PatchItem "GS_NEW", "n", "PlayerclassMenu"
+        ifOption(SwapMenu)
+        {
+            PatchItem "GS_LOAD", "l", "LoadGameMenu"
+            PatchItem "GS_SAVE", "s", "SaveGameMenu"
+            PatchItem "GS_OPT","o", "GSMainOptions"
+        }
+        else
+        {
+            PatchItem "GS_OPT","o", "GSMainOptions"
+            PatchItem "GS_LOAD", "l", "LoadGameMenu"
+            PatchItem "GS_SAVE", "s", "SaveGameMenu"
+        }
+        ifOption(ReadThis)
+        {
+            PatchItem "M_RDTHIS","r", "ReadThisMenu"
+        }
+        PatchItem "GS_QUIT", "q", "QuitMenu"
+
+    
+}
+
+ListMenu "SkillMenu"
+{
+        //StaticPatch 96, 14, "GS_NG"
+        StaticPatch 88, 30, "GS_SKILL"
+        Position 108, 63
+}
+
+ListMenu "EpisodeMenu"
+{
+		Position 108, 63
+		StaticPatch 64, 30, "GS_STORY", 0 , "$MNU_EPISODE"
+	// items will be filled in by MAPINFO
+}
+
+
+OptionMenu "GSMainOptions"
+{
+	Title "OPTIONS"
+    Submenu "Samsara Clientside Options",    "SamsaraClientOptions"
+    Submenu "Samsara Serverside Options",    "SamsaraServerSideOptions"
+	StaticText ""
+    StaticText "--General Settings--"
+	StaticText "It is highly recommended to enable always run and disable autoaim.", "Gs3TextLightPurple"
+    StaticText ""
+    Option "Weapon Recoil Screen Shake", "cl_weaponshake",			"OnOff"
+    StaticText "Disables screen shake effects for all the weapons. Doesn't affect weapon behavior.", "Gs2Text"
+    StaticText ""
+	PlayerNameField "$PLYRMNU_NAME"
+    Option "$PLYRMNU_ALWAYSRUN", cl_run, "OnOff"
+    Slider "$PLYRMNU_AUTOAIM", "Autoaim", 0, 35, 1
+	PlayerSwitchOnPickupItem "$PLYRMNU_SWITCHONPICKUP", "OffOn"
+    StaticText ""
+	StaticText "--Set texture filtering to ''none'' (trilinear) to display the game correctly.--", "Gs2Text"
+    StaticText ""
+	Option "$GLTEXMNU_TEXFILTER",		gl_texture_filter,				"FilterModes"
+	Option "$GLTEXMNU_ANISOTROPIC",		gl_texture_filter_anisotropic,	"Anisotropy"
+    StaticText ""
+	Submenu "$OPTMNU_CONTROLS",			"CustomizeControls"
+	Submenu "$OPTMNU_MOUSE",			"MouseOptions"
+	Submenu "$OPTMNU_JOYSTICK",			"JoystickOptions"
+	StaticText " "
+	Submenu "Miscellaneous Options",	"MiscOptions"
+    Submenu "Sound Options",			"SoundOptions"
+	Submenu "Display Options",			"VideoOptions"
+	Submenu "Set video mode",			"VideoModeMenu"
+	StaticText " "
+    StaticText "These are the standard GZDoom Options.", "Gs3TextLightPurple"
+    StaticText "Only for advanced users.", "Gs3TextLightPurple"
+	StaticText " "
+	Submenu "Advanced Options",	"OptionsMenu"
+	StaticText " "
+	SafeCommand "Reset to defaults",	"reset2defaults"
+	SafeCommand	"Reset to last saved",	"reset2saved"
+	Command "Go to console",			"menuconsole"
+}

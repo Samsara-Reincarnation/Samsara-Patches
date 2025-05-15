@@ -1,0 +1,101 @@
+pointlight Harm-Red-Glow-Mine
+{
+    color 0.7 0.0 0.0
+    size 24
+    offset 0 10 0
+	dontlightself 1
+}
+
+pointlight Harm-Pink-Glow-Mine
+{
+    color 0.5 0.0 0.3
+    size 24
+    offset 0 10 0
+	dontlightself 1
+}
+
+pointlight Harm-Purple-Glow-Mine
+{
+    color 0.4 0.0 0.6
+    size 24
+    offset 0 10 0
+	dontlightself 1
+}
+
+object Mine_Samsara
+{
+    frame SKULA { light Harm-Red-Glow-Mine }
+    frame SKULB { light Harm-Pink-Glow-Mine }
+    frame SKULC { light Harm-Purple-Glow-Mine }
+    frame SKULD { light Harm-Pink-Glow-Mine }
+}
+flickerlight ROCKET_X3
+{
+    color 0.3 0.3 0.1
+    size 144
+    secondarySize 156
+    chance 0.3
+}
+
+flickerlight Harm-Fire1
+{
+    color 1.0 0.6 0.1
+    size 64
+    secondarySize 72
+    chance 0.3  
+    offset 0 48 0
+}
+
+flickerlight Harm-Fire2
+{
+    color 1.0 0.6 0.1
+    size 80
+    secondarySize 88
+    chance 0.3  
+    offset 0 48 0 
+}
+
+flickerlight Harm-Fire3
+{
+    color 1.0 0.6 0.1
+    size 72
+    secondarySize 80
+    chance 0.3 
+    offset 0 48 0 
+}
+
+flickerlight Harm-Fire4
+{
+    color 1.0 0.6 0.1
+    size 48
+    secondarySize 56
+    chance 0.3
+    offset 0 48 0
+}
+
+flickerlight Harm-Fire5
+{
+    color 1.0 0.6 0.1
+    size 24
+    secondarySize 32
+    chance 0.5
+    offset 0 48 0
+}
+
+object Mine_Samsara   
+{
+    frame MISLB { light Harm-Fire1 }
+    frame MISLC { light Harm-Fire2 }
+    frame MISLD { light Harm-Fire3 }
+    frame BAL2D { light Harm-Fire4 }
+    frame BAL2E { light Harm-Fire5 }
+}
+
+object RedBarrel_Samsara
+{
+    frame MISLB { light Harm-Fire1 }
+    frame MISLC { light Harm-Fire2 }
+    frame MISLD { light Harm-Fire3 }
+    frame BAL2D { light Harm-Fire4 }
+    frame BAL2E { light Harm-Fire5 }
+}

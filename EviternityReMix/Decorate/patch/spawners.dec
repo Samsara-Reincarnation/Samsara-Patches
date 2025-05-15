@@ -1,0 +1,4 @@
+Actor Annihilator_Samsara : BelphegorSpawner replaces BaronOfHell {}
+Actor AstralCaco_Samsara : CacolanternSpawner replaces CommanderKeen {}
+Actor FormerCaptain_Samsara : SuperShotgunGuySpawner replaces WolfensteinSS {}
+Actor NightmareDemon_Samsara : BloodDemonSpawner replaces MBFHelperDog {}

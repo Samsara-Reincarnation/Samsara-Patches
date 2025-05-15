@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Satan's Covenant
+Authors: Unholypimpin
+Link: https://allfearthesentinel.com/zandronum/download.php?file=satanscovenantv5.3.wad
+
+Resources used:
+---------------
+MAP30 - Unholypimpin

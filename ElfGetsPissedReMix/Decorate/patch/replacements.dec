@@ -1,0 +1,4 @@
+actor Lightbringer_Samsara : RandomSpawner replaces Lightbringer { DropItem "SamsaraSlotSixSkulltagPickup" }
+actor LightbringerAmmo_Samsara : HereticAmmo4Small replaces LightbringerAmmo {}
+actor LightbringerHefty_Samsara : HereticAmmo4Big replaces LightbringerHefty {}
+actor Beast2_Samsara : BeastReplacer replaces Beast2 {}

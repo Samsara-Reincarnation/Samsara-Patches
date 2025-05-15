@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Chex Quest: Galactic Conflict
+Authors: Tifosi 92
+Link: http://ipfsnet.com/tifosi92/chexquest/Chex_Quest_GC_v1.2.zip
+
+Resources used:
+---------------
+Original DECORATE for monsters - Tifosi 92

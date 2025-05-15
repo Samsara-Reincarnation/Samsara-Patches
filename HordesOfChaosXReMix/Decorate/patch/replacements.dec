@@ -1,0 +1,22 @@
+actor DoomImpHOC_Samsara : DoomImpSpawner replaces DoomImpHOC { Game Heretic }
+actor LostSoulHOC_Samsara : LostSoulSpawner replaces LostSoulHOC { Game Heretic }
+actor PainElementalHOC_Samsara : PainElementalSpawner replaces PainElementalHOC { Game Heretic }
+actor CacodemonHOC_Samsara : CacodemonSpawner replaces CacodemonHOC { Game Heretic }
+actor BaronOfHellHOC_Samsara : BaronOfHellSpawner replaces BaronOfHellHOC { Game Heretic }
+actor CentaurHOC_Samsara : CentaurReplacer replaces CentaurHOC { Game Heretic }
+actor CentaurLeaderHOC_Samsara : CentaurLeaderReplacer replaces CentaurLeaderHOC { Game Heretic }
+actor BishopHOC_Samsara : BishopReplacer replaces BishopHOC { Game Heretic }
+actor ArchvileHOC_Samsara : ArchvileSpawner replaces ArchvileHOC { Game Heretic }
+actor SerpentHOC_Samsara : SerpentReplacer replaces SerpentHOC { Game Heretic }
+actor SerpentLeaderHOC_Samsara : SerpentLeaderReplacer replaces SerpentLeaderHOC { Game Heretic }
+actor WendigoHOC_Samsara : IceGuyReplacer replaces WendigoHOC { Game Heretic }
+actor HeresiarchHOC_Samsara : HeresiarchReplacer replaces HeresiarchHOC { Game Heretic }
+
+actor MancubusHOC_Samsara : FatsoSpawner replaces MancubusHOC { Game Hexen }
+actor RevenantHOC_Samsara : CacodemonSpawner replaces RevenantHOC { Game Hexen }
+actor SnakeHOC_Samsara : SnakeReplacer replaces SnakeHOC { Game Hexen }
+actor CyberdemonHOC_Samsara : CyberDemonSpawner replaces CyberdemonHOC { Game Hexen }
+actor DemonHOC_Samsara : DemonSpawner replaces DemonHOC { Game Hexen }
+actor SpectreHOC_Samsara : SpectreSpawner replaces SpectreHOC { Game Hexen }
+actor WizardHOC_Samsara : WizardReplacer replaces WizardHOC { Game Hexen }
+actor Demon3_Samsara : Demon1Replacer replaces Demon3 { Game Hexen }

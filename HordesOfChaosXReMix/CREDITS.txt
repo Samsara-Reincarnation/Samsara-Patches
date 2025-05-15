@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Hordes of Chaos X / Ressurection of Chaos
+Authors: Udderdude, Vermil, and Hobomaster
+Link: https://www.doomworld.com/idgames/levels/heretic/Ports/hocx / https://www.doomworld.com/idgames/levels/hexen/p-r/roc
+
+Resources used:
+---------------
+N/A

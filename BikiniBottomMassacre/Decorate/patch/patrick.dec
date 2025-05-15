@@ -1,0 +1,63 @@
+ACTOR Patrick_Samsara : SamsaraMonsterDemonicBoss replaces Patrick
+{
+	SpawnID 250
+	Health 6000
+	Radius 32
+	Height 110
+	Mass 10000
+	Speed 0
+	PainChance 100
+	Monster
+	+FLOORCLIP
+	+BOSS
+	+BOSSDEATH
+	+DONTMORPH
+	SeeSound "DSPATSEE"
+	PainSound "DSPATPAN"
+	DeathSound "DSPATDTH"
+	ActiveSound "DSPATACT"
+	HitObituary "%o was destroyed by Patrick"
+	Obituary "%o was destroyed by Patrick"
+	Tag "Patrick"
+	Scale 2.2
+	States
+	{
+	Spawn:
+		PATR AB 10 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		PATR AABBCCDD 3 A_Chase
+		Loop
+	Melee:
+	Missile:
+		PATR EF 8 A_FaceTarget
+		PATR G 6 A_HeadAttack
+		PATR G 6 A_HeadAttack
+		PATR G 6 A_HeadAttack
+		PATR G 6 A_HeadAttack
+		PATR G 6 A_HeadAttack
+		PATR G 6 A_HeadAttack
+		PATR G 6 A_HeadAttack
+		PATR G 6 A_HeadAttack
+		Goto See2
+	Pain:
+		PATR H 2
+		PATR H 2 A_Pain
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		PATR I 8
+		PATR J 8 A_Scream
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		PATR K 6
+		PATR L 6 A_NoBlocking
+		PATR M -1
+		Stop
+	Raise:
+		PATR ML 8
+		PATR KJI 6
+		Goto See
+	}
+}

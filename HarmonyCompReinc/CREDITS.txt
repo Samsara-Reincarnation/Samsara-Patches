@@ -1,0 +1,12 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Harmony Compatible
+Authors: Thomas van der Velden
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/g-i/harmonyc
+
+Resources used:
+---------------
+Original DEHACKED for monsters - Xaser Acheron
+Original GLDEFS for monsters - Thomas van der Velden

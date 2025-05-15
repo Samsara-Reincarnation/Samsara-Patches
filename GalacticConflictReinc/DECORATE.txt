@@ -1,0 +1,6 @@
+#include "Decorate/patch/items.dec"
+#include "Decorate/patch/modifiedenemies.dec"
+#include "Decorate/patch/newenemies.dec"
+#include "Decorate/patch/stealthenemies.dec"
+#include "Decorate/patch/bosses.dec"
+#include "Decorate/patch/other.dec"

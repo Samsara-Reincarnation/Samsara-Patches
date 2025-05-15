@@ -1,0 +1,10 @@
+Actor Annihilator_Samsara : BelphegorSpawner replaces Annihilator {}
+Actor AstralArachno_Samsara : ArachnotronSpawner replaces AstralArachnotron {}
+Actor AstralBabyCaco_Samsara : LostSoulSpawner replaces AstralBabycaco {}
+Actor AstralMancubus_Samsara : HectebusSpawner replaces AstralMancubus {}
+Actor CyberdemonMAP24_Samsara : CyberdemonSpawner replaces CyberdemonMAP24 {}
+Actor DukeOfHell_Samsara : BaronOfHellSpawner replaces DukeOfHell {}
+Actor FormerCorporal_Samsara : ShotgunGuySpawner replaces FormerCorporal {}
+Actor LostSoulEviternity2_Samsara : LostSoulSpawner replaces LostSoulCount {}
+Actor NightmareDemon_Samsara : BloodDemonSpawner replaces NightmareDemon {}
+Actor Veilimp_Samsara : DarkImpSpawner replaces Veilimp {}

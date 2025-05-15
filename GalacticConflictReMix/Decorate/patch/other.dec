@@ -1,0 +1,24 @@
+Actor ZorchRailPuff_Samsara : ZorchRailPuff replaces ZorchRailPuff
+{
+	+BLOODLESSIMPACT
+}
+
+Actor BlueShot_Samsara : BlueShot replaces BlueShot
+{
+	+BLOODLESSIMPACT
+}
+
+Actor PurpleShot_Samsara : PurpleShot replaces PurpleShot
+{
+	+BLOODLESSIMPACT
+}
+
+Actor GreenShot_Samsara : GreenShot replaces GreenShot
+{
+	+BLOODLESSIMPACT
+}
+
+Actor OrangeShot_Samsara : OrangeShot replaces OrangeShot
+{
+	+BLOODLESSIMPACT
+}

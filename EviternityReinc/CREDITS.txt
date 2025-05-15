@@ -1,0 +1,13 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Eviternity
+Authors: Joshua O'Sullivan et al.
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity
+
+Resources used:
+---------------
+Original DECORATE for monsters - antares031
+Original GLDEFS for monsters - Bauul
+Nightmare Demon death sound - Amuscaria (Sourced from Hellforged, edited by Eris Falling)

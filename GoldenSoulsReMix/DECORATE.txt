@@ -1,0 +1,8 @@
+#include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/bosses.dec"
+#include "Decorate/patch/coins.dec"
+#include "Decorate/patch/decorations.dec"
+#include "Decorate/patch/blot.dec"
+#include "Decorate/patch/crab.dec"
+#include "Decorate/patch/drybones.dec"
+#include "Decorate/patch/plants.dec"

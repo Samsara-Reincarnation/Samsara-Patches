@@ -1,0 +1,1339 @@
+//=====LIGHTS=====//
+
+// -------------------
+// -- REKKR Weapons --
+// -------------------
+
+// Soul Bow and Soul Gun
+pointlight SOULSHOT
+{
+    color 0.8 0.0 0.0
+    size 40
+    dontlightself 1
+}
+
+pointlight SOULSHOT_X1
+{
+    color 0.3 0.0 0.0
+    size 32
+    dontlightself 1
+}
+
+pointlight SOULSHOT_X2
+{
+    color 0.1 0.0 0.0
+    size 24
+    dontlightself 1
+}
+
+object PlasmaBall
+{
+    frame PLSS  { light SOULSHOT    }
+
+    frame PLSEA { light SOULSHOT_X1 }
+    frame PLSEB { light SOULSHOT_X2 }
+}
+
+// Steel-shot Launcher and Holy Relic
+flickerlight SHOTPUFF1
+{
+    color 0.8 0.0 0.0
+    size 6
+    secondarySize 8
+    chance 0.8
+    dontlightself 1
+}
+
+flickerlight SHOTPUFF2
+{
+    color 0.8 0.0 0.0
+    size 3
+    secondarySize 4
+    chance 0.8
+    dontlightself 1
+}
+
+object BulletPuff
+{
+    frame PUFFA { light SHOTPUFF1 }
+    frame PUFFB { light SHOTPUFF2 }
+}
+
+// Runic Staff
+pointlight RUNICSHOT
+{
+    color 1.0 0.4 0.1
+    size 32
+    dontlightself 1
+}
+
+pointlight RUNICSHOT_X1
+{
+    color 1.0 0.33 0.1
+    size 64
+    dontlightself 1
+}
+
+pointlight RUNICSHOT_X2
+{
+    color 0.875 0.29 0.1
+    size 52
+    dontlightself 1
+}
+
+pointlight RUNICSHOT_X3
+{
+    color 0.75 0.25 0.1
+    size 40
+    dontlightself 1
+}
+
+object Rocket3
+{
+    frame APLS  { light RUNICSHOT    }
+
+    frame APBXA { light RUNICSHOT_X1 }
+    frame APBXB { light RUNICSHOT_X2 }
+    frame APBXC { light RUNICSHOT_X3 }
+}
+
+// Blessing of the Gods
+flickerlight2 BLESSINGSHOT
+{
+    color 1.0 0.0 0.0
+    size 56
+    secondarySize 64
+    interval 0.015
+    offset 0 24 0
+    dontlightself 1
+}
+
+flickerlight2 BLESSINGEXTRA
+{
+    color 1.0 0.0 0.0
+    size 24
+    secondarySize 32
+    interval 0.015
+    offset 0 24 0
+    dontlightself 1
+}
+
+object BFGBall
+{
+    frame BFE1 { light BLESSINGSHOT }
+}
+
+object BFGExtra
+{
+    frame BFE2 { light BLESSINGEXTRA }
+}
+
+
+// -----------------------
+// -- REKKR Decorations --
+// -----------------------
+
+// Barrel
+flickerlight2 BARREL_X1
+{
+    color 0.33 0.25 0.0
+    size 30
+    secondarySize 34
+    interval 0.015
+    dontlightself 1
+}
+
+flickerlight2 BARREL_X2
+{
+    color 1.0 0.75 0.1
+    size 38
+    secondarySize 42
+    interval 0.015
+    dontlightself 1
+}
+
+flickerlight2 BARREL_X3
+{
+    color 0.8 0.6 0.0
+    size 54
+    secondarySize 58
+    interval 0.015
+    dontlightself 1
+}
+
+flickerlight2 BARREL_X4
+{
+    color 0.64 0.48 0.0
+    size 62
+    secondarySize 66
+    interval 0.015
+    dontlightself 1
+}
+
+object ExplosiveBarrel
+{
+    frame BEXPB { light BARREL_X1 }
+    frame BEXPC { light BARREL_X2 }
+    frame BEXPD { light BARREL_X3 }
+    frame BEXPE { light BARREL_X4 }
+}
+
+// Sconce
+flickerlight2 SCONCELIGHT
+{
+    color 0.8 0.6 0.0
+    size 32
+    secondarySize 36
+    offset 0 62 0
+    interval 0.01
+    dontlightself 1
+}
+
+object Column
+{
+    frame COLU { light SCONCELIGHT }
+}
+
+// Lamp
+pointlight CBRALIGHT
+{
+    color 0.8 0.8 0.0
+    size 40
+    offset 0 58 0
+    dontlightself 1
+}
+
+object Candelabra
+{
+    frame CBRA { light CBRALIGHT }
+}
+
+// Fire
+flickerlight2 FIRELIGHT
+{
+    color 1.0 0.75 0.0
+    size 56
+    secondarySize 64
+    interval 0.015
+    offset 0 24 0
+    dontlightself 1
+}
+
+object ShortGreenTorch
+{
+    frame SMGT { light FIRELIGHT }
+}
+
+// Campfire
+object FloatingSkull
+{
+    frame FSKU { light FIRELIGHT }
+}
+
+// Candle
+flickerlight2 CANDLELIGHT
+{
+    color 0.75 0.75 0.15
+    size 24
+    secondarySize 32
+    interval 0.01
+    offset 0 16 0
+    dontlightself 1
+}
+
+object Candlestick
+{
+    frame CAND { light CANDLELIGHT }
+}
+
+// Chandelier
+flickerlight2 CHANDELIERLIGHT
+{
+    color 0.75 0.75 0.15
+    size 48
+    secondarySize 56
+    interval 0.01
+	offset 0 -58 0
+    dontlightself 1
+}
+
+object TechLamp2
+{
+    frame ELEC { light CHANDELIERLIGHT }
+}
+
+
+// -----------------
+// -- REKKR Items --
+// -----------------
+
+// Blue Key
+pulselight BLUEKEYLIGHT
+{
+    color 0.0 0.0 0.6
+    size 16
+    secondarySize 18
+    interval 2.0
+    dontlightself 1
+}
+
+object BlueCard
+{
+    frame BKEY { light BLUEKEYLIGHT }
+}
+
+object BlueSkull
+{
+    frame BSKU { light BLUEKEYLIGHT }
+}
+
+// Yellow Key
+pulselight YELLOWKEYLIGHT
+{
+    color 0.6 0.6 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+    dontlightself 1
+}
+
+object YellowCard
+{
+    frame YKEY { light YELLOWKEYLIGHT }
+}
+
+object YellowSkull
+{
+    frame YSKU { light YELLOWKEYLIGHT }
+}
+
+// Red Key
+pulselight REDKEYLIGHT
+{
+    color 0.6 0.0 0.0
+    size 16
+    secondarySize 18
+    interval 2.0
+    dontlightself 1
+}
+
+object RedCard
+{
+    frame RKEY { light REDKEYLIGHT }
+}
+
+object RedSkull
+{
+    frame RSKU { light REDKEYLIGHT }
+}
+
+// Souls
+pointlight SOULAMMO
+{
+    color 0.6 0.0 0.0
+    size 16
+    dontlightself 1
+}
+
+pointlight SOULAMMO_X1
+{
+    color 0.2 0.0 0.0
+    size 20
+    dontlightself 1
+}
+
+pointlight SOULAMMO_X2
+{
+    color 0.4 0.0 0.0
+    size 24
+    offset 0 4 0
+    dontlightself 1
+}
+
+pointlight SOULAMMO_X3
+{
+    color 0.6 0.0 0.0
+    size 28
+    offset 0 8 0
+    dontlightself 1
+}
+
+pointlight SOULAMMO_X4
+{
+    color 0.4 0.0 0.0
+    size 24
+    offset 0 12 0
+    dontlightself 1
+}
+
+object HeadCandles
+{
+    frame CLIP { light SOULAMMO }
+}
+
+object SamsaraAmmo1Small_REKKR
+{
+    frame CLIPG { light SOULAMMO_X1 }
+    frame CLIPH { light SOULAMMO_X2 }
+    frame CLIPI { light SOULAMMO_X3 }
+    frame CLIPJ { light SOULAMMO_X4 }
+}
+
+object ClipBox
+{
+    frame AMMO { light SOULAMMO }
+}
+
+// Mana
+pointlight MANASPRITE
+{
+    color 0.5 0.0 0.0
+    size 24
+    offset 0 36 0
+    dontlightself 1
+}
+
+pointlight MANASEAL
+{
+    color 0.5 0.0 0.0
+    size 28
+    dontlightself 1
+}
+
+object SamsaraAmmo4Small_REKKR
+{
+    frame CELL { light MANASPRITE }
+}
+
+object CellPack
+{
+    frame CELP { light MANASEAL }
+}
+
+// Fate
+pointlight FATESHOT
+{
+    color 1.0 0.0 0.0
+    size 56
+    dontlightself 1
+}
+
+flickerlight FATESHOT_X1
+{
+    color 0.8 0.0 0.0
+    size 64
+    secondarySize 72
+    chance 0.25
+    dontlightself 1
+}
+
+flickerlight FATESHOT_X2
+{
+    color 0.6 0.0 0.0
+    size 80
+    secondarySize 88
+    chance 0.25
+    dontlightself 1
+}
+
+object ArachnotronPlasma
+{
+    frame BAL1F { light FATESHOT    }
+    frame BAL1G { light FATESHOT    }
+
+    frame BAL1H { light FATESHOT_X1 }
+    frame BAL1I { light FATESHOT_X2 }
+}
+
+// -------------------
+// -- REKKR Effects --
+// -------------------
+
+// Teleport fog
+flickerlight REKKRTFOG1
+{
+    color 1.0 0.4 0.0
+    size 56
+    secondarySize 64
+    chance 0.4
+}
+
+flickerlight REKKRTFOG2
+{
+    color 1.0 0.4 0.0
+    size 40
+    secondarySize 48
+    chance 0.4
+}
+
+flickerlight REKKRTFOG3
+{
+    color 1.0 0.4 0.0
+    size 24
+    secondarySize 32
+    chance 0.4
+}
+
+flickerlight REKKRTFOG4
+{
+    color 1.0 0.4 0.0
+    size 10
+    secondarySize 16
+    chance 0.4
+}
+
+object TeleportFog
+{
+    frame TFOGA { light REKKRTFOG1 }
+    frame TFOGB { light REKKRTFOG1 }
+    frame TFOGC { light REKKRTFOG1 }
+    frame TFOGD { light REKKRTFOG2 }
+    frame TFOGE { light REKKRTFOG3 }
+    frame TFOGF { light REKKRTFOG2 }
+	frame TFOGG { light REKKRTFOG3 }
+    frame TFOGH { light REKKRTFOG4 }
+    frame TFOGJ { light REKKRTFOG4 }
+}
+
+//////////////////////
+// Disable DoomDefs //
+//////////////////////
+
+// Bullet puff
+flickerlight BPUFF1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.8
+}
+
+flickerlight BPUFF2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.8
+}
+
+// Rocket
+pointlight ROCKET
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+flickerlight ROCKET_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight ROCKET_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight ROCKET_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+// Plasma
+pointlight PLASMABALL
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+flickerlight PLASMA_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}
+
+flickerlight PLASMA_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}
+
+flickerlight PLASMA_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}
+
+flickerlight PLASMA_X4
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}
+
+
+// BFG
+pointlight BFGBALL
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+flickerlight BFGBALL_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight BFGBALL_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight BFGBALL_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight BFGBALL_X4
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight BFGBALL_X5
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+
+// ----------------------
+// -- Doom Decorations --
+// ----------------------
+
+// Barrel
+pulselight BARREL
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.5
+    offset 0 36 0
+	dontlightself 1
+}
+
+// Floor lamp
+pointlight LAMP
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 44 0
+}
+
+// Short tech lamp
+pulselight SMALLLAMP
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.4
+    offset 0 44 0
+}
+
+// Tall tech lamp
+pulselight BIGLAMP
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.4
+    offset 0 72 0
+}
+
+// Tall red torch
+flickerlight2 BIGREDTORCH
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 60 0
+}
+
+// Tall green torch
+flickerlight2 BIGGREENTORCH
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 60 0
+}
+
+// Tall blue torch
+flickerlight2 BIGBLUETORCH
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 60 0
+}
+
+// Small red torch
+flickerlight2 SMALLREDTORCH
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 35 0
+}
+
+// Small green torch
+flickerlight2 SMALLGREENTORCH
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 35 0
+}
+
+// Small blue torch
+flickerlight2 SMALLBLUETORCH
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 35 0
+}
+
+// Burning barrel
+flickerlight2 FIREBARREL
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 32 0
+}
+
+// Skulls w/candles
+flickerlight2 SKULLCANDLES
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.1
+    offset 0 24 0
+}
+
+// Candle
+pointlight CANDLE
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+// Candelabra
+pointlight CANDELABRA
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 52 0
+}
+
+// ----------------
+// -- Doom Items --
+// ----------------
+
+// Soul Sphere
+pulselight SOULSPHERE
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 2.0
+    offset 0 16 0
+}
+
+// Invulnerability Sphere
+pulselight INVULN
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 2.0
+    offset 0 16 0
+}
+
+// Blur Sphere
+pointlight BLURSPHERE1
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE2
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE3
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE4
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+pointlight BLURSPHERE5
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+// Mega Sphere
+pointlight MEGASPHERE1
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+pointlight MEGASPHERE2
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+pointlight MEGASPHERE3
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+pointlight MEGASPHERE4
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 16 0
+}
+
+// Health Potion
+pulselight HEALTHPOTION
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 2.0
+}
+
+// Armour Helmet
+pulselight ARMORBONUS
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 1.0
+	dontlightself 1
+}
+
+// Yellow Keys
+pulselight YELLOWKEY
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 2.0
+}
+
+// Red Keys
+pulselight REDKEY
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 2.0
+}
+
+// Green armour
+pointlight GREENARMOR1
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+pointlight GREENARMOR2
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+// Blue armour
+pointlight BLUEARMOR1
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+pointlight BLUEARMOR2
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+// ------------------
+// -- Doom Enemies --
+// ------------------
+
+// Zombies
+flickerlight2 ZOMBIEATK
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 1
+    offset 0 40 0
+}
+
+// Doom Imp Fireball
+pointlight IMPBALL
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+// Doom imp fireball explosion
+flickerlight IMPBALL_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight IMPBALL_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight IMPBALL_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+pointlight SPECTRE
+{
+    color 0.0 0.0 0.0
+    size 0
+    offset 0 24 0
+    subtractive 1
+}
+
+// Cacodemon fireball
+flickerlight CACOBALL
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.5
+}
+
+flickerlight CACOBALL_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight CACOBALL_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight CACOBALL_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+// Baron / Hell Knight fireball
+pointlight BARONBALL
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+flickerlight BARONBALL_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight BARONBALL_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight BARONBALL_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+// Lost Soul
+flickerlight LOSTSOUL
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarysize 0
+    chance 0.1
+}
+
+flickerlight LOSTSOUL_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight LOSTSOUL_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight LOSTSOUL_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight LOSTSOUL_X4
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+// Arachnotron Fireball
+pointlight ARACHPLAS
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+flickerlight ARACHPLAS_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight ARACHPLAS_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight ARACHPLAS_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+flickerlight ARACHPLAS_X4
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+}
+
+// Revenant tracer
+pointlight TRACER
+{
+    color 0.0 0.0 0.0
+    size 0
+}
+
+flickerlight TRACER_X1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight TRACER_X2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+flickerlight TRACER_X3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.25
+}
+
+// Arch Vile Fire
+flickerlight ARCHFIRE1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 8 0
+}
+
+flickerlight ARCHFIRE2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 24 0
+}
+
+flickerlight ARCHFIRE3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 32 0
+}
+
+flickerlight ARCHFIRE4
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 40 0
+}
+
+flickerlight ARCHFIRE5
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 48 0
+}
+
+flickerlight ARCHFIRE6
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 64 0
+}
+
+flickerlight ARCHFIRE7
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 72 0
+}
+
+flickerlight ARCHFIRE8
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 80 0
+}
+
+// Arch-vile
+flickerlight ARCHATK1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 80 0
+}
+
+flickerlight ARCHATK2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 80 0
+}
+
+flickerlight ARCHATK3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 64 0
+}
+
+flickerlight ARCHATK4
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 48 0
+}
+
+flickerlight ARCHATK5
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 40 0
+}
+
+flickerlight ARCHATK6
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 40 0
+}
+
+flickerlight ARCHATK7
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.3
+    offset 0 40 0
+}
+
+pulselight ARCHRES
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    interval 0.5
+    offset 0 36 0
+}
+
+// ------------------
+// -- Doom Effects --
+// ------------------
+
+// Doom Teleport fog
+flickerlight DTFOG1
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}
+
+flickerlight DTFOG2
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}
+
+flickerlight DTFOG3
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}
+
+flickerlight DTFOG4
+{
+    color 0.0 0.0 0.0
+    size 0
+    secondarySize 0
+    chance 0.4
+}

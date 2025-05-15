@@ -1,0 +1,1 @@
+actor satan_Samsara : satan replaces satan { damagefactor normal, 1.0 }

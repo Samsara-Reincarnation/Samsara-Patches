@@ -1,0 +1,56 @@
+Actor FlemoidusCommonus2_2 : FlemoidusCommonusSpawner replaces CommonusV4 {}
+Actor BipedicusV4_Samsara : FlemoidusBipedicusSpawner replaces FlemoidusBipedicus2 {}
+Actor BipedicusV4_Samsara_2 : FlemoidusBipedicusSpawner replaces BipedicusV4 {}
+Actor ArmoredBipedicusV4_Samsara : ArmoredFlemoidusBipedicusSpawner replaces ArmoredFlemoidusBipedicusV3_2 {}
+Actor ArmoredBipedicusV4_Samsara_2 : ArmoredFlemoidusBipedicusSpawner replaces ArmoredBipedicusV4 {}
+Actor Quadrumpus_2_2 : QuadrumpusSpawner replaces QuadrumpusV4 {}
+Actor StridicusV4_Samsara : FlemoidusStridicusSpawner replaces FlemoidusStridicus2 {}
+Actor StridicusV4_Samsara_2 : FlemoidusStridicusSpawner replaces StridicusV4 {}
+Actor CycloptisV4_Samsara : FlemoidusCycloptisCommonusSpawner replaces FlemoidusCycloptisCommonusV3_2 {}
+Actor CycloptisV4_Samsara_2 : FlemoidusCycloptisCommonusSpawner replaces CycloptisV4 {}
+Actor LarvaV4_Samsara : LarvaSpawner replaces Larva_2 {}
+Actor LarvaV4_Samsara_2 : LarvaSpawner replaces LarvaV4 {}
+Actor SuperCycloptis_2_2 : SuperCycloptisSpawner replaces SuperCycloptisV4 {}
+Actor FlemMine_2_2 : FlemMineSpawner replaces FlemMineV4 {}
+Actor MaximusV4_Samsara : FlemoidusMaximusSpawner replaces FlemoidusMaximus_2 {}
+Actor MaximusV4_Samsara_2 : FlemoidusMaximusSpawner replaces MaximusV4 {}
+
+Actor FlyingBipedicus_Samsara : FlemMineSpawner replaces FlyingBipedicusV4 {}
+Actor MaximusBoss_Samsara : FlemoidusMaximusSpawner replaces MaximusBoss {}
+
+Actor StealthCommonus_Samsara : FlemoidusCommonusSpawner replaces StealthCommonus {}
+Actor StealthBipedicus_Samsara : FlemoidusBipedicusSpawner replaces StealthBipedicus {}
+Actor StealthArmoredBipedicus_Samsara : ArmoredFlemoidusBipedicusSpawner replaces StealthArmoredBipedicus {}
+Actor StealthQuadrumpus_Samsara : QuadrumpusSpawner replaces StealthQuadrumpus {}
+Actor StealthStridicus_Samsara : FlemoidusStridicusSpawner replaces StealthStridicus {}
+Actor StealthCycloptis_Samsara : FlemoidusCycloptisCommonusSpawner replaces StealthCycloptis {}
+Actor StealthLarva_Samsara : LarvaSpawner replaces StealthLarva {}
+Actor StealthSuperCycloptis_Samsara : SuperCycloptisSpawner replaces StealthSuperCycloptis {}
+Actor StealthMaximus_Samsara : FlemoidusMaximusSpawner replaces StealthMaximus {}
+Actor StealthFlyingBipedicus_Samsara : FlemMineSpawner replaces StealthFlyingBipedicus {}
+
+Actor SnotFlembrane_Samsara : FlembraneSpawner replaces SnotFlembrane {}
+Actor SnotStealthMaximus_Samsara : FlemoidusMaximusSpawner replaces SnotStealthMaximus {}
+Actor E4M8Strid_Samsara : FlemoidusStridicusSpawner replaces E4M8Strid {}
+Actor E4M9Strid_Samsara : FlemoidusStridicusSpawner replaces E4M9Strid {}
+Actor E4M9Armored_Samsara : ArmoredFlemoidusBipedicusSpawner replaces E4M9Armored {}
+Actor E4M9Quad_Samsara : QuadrumpusSpawner replaces E4M9Quad {}
+Actor E4M9Super_Samsara : SuperCycloptisSpawner replaces E4M9Super {}
+Actor E4M9Cycloptis_Samsara : FlemoidusCycloptisCommonusSpawner replaces E4M9Cycloptis {}
+
+Actor FlembraneBossEasiest_Samsara : FlembraneSpawner replaces FlembraneBossEasiest {}
+Actor FlembraneBossEasy_Samsara : FlembraneSpawner replaces FlembraneBossEasy {}
+Actor FlembraneBossMedium_Samsara : FlembraneSpawner replaces FlembraneBossMedium {}
+Actor FlembraneBossHard_Samsara : FlembraneSpawner replaces FlembraneBossHard {}
+Actor FlembraneBossHardest_Samsara : FlembraneSpawner replaces FlembraneBossHardest {}
+Actor FlembraneV3_2_2 : FlembraneSpawner replaces FlembraneV4 {}
+Actor FlembominationBossEasiest_Samsara : FlembominationSpawner replaces FlembominationBossEasiest {}
+Actor FlembominationBossEasy_Samsara : FlembominationSpawner replaces FlembominationBossEasy {}
+Actor FlembominationBossMedium_Samsara : FlembominationSpawner replaces FlembominationBossMedium {}
+Actor FlembominationBossHard_Samsara : FlembominationSpawner replaces FlembominationBossHard {}
+Actor FlembominationBossHardest_Samsara : FlembominationSpawner replaces FlembominationBossHardest {}
+Actor SnotfolusBossEasiest_Samsara : SnotfolusSpawner replaces SnotfolusBossEasiest {}
+Actor SnotfolusBossEasy_Samsara : SnotfolusSpawner replaces SnotfolusBossEasy {}
+Actor SnotfolusBossMedium_Samsara : SnotfolusSpawner replaces SnotfolusBossMedium {}
+Actor SnotfolusBossHard_Samsara : SnotfolusSpawner replaces SnotfolusBossHard {}
+Actor SnotfolusBossHardest_Samsara : SnotfolusSpawner replaces SnotfolusBossHardest {}

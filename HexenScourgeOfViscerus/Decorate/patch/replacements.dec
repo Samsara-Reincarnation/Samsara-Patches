@@ -1,0 +1,3 @@
+actor _FighterBoss_Samsara : FighterBoss2 replaces _FighterBoss { +NOTELEOTHER +NOTARGET }
+actor _ClericBoss_Samsara : ClericBoss2 replaces _ClericBoss { +NOTELEOTHER +NOTARGET }
+actor _MageBoss_Samsara : MageBoss2 replaces _MageBoss { +NOTELEOTHER +NOTARGET }

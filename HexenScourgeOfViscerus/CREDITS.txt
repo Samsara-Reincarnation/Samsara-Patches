@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Hexen: Scourge of Viscerus
+Authors: Matt Tropiano
+Link: N/A
+
+Resources used:
+---------------
+Original DECORATE for monsters - Matt Tropiano

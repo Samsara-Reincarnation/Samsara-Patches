@@ -1,0 +1,63 @@
+actor Afrit_Samsara : SamsaraMonsterGhost replaces CommanderKeen
+{
+	Health 1000
+	Radius 20
+	Height 64
+	Mass 400
+	Speed 8
+	PainChance 30
+	Monster
+	+FLOAT
+	+NOGRAVITY
+	+NOBLOOD
+	SeeSound "baron/sight"
+	PainSound "demon/pain"
+	DeathSound "baron/death"
+	ActiveSound "demon/active"
+	Tag "Afrit"
+	States
+	{
+	Spawn:
+		KEEN A 10 Bright A_Look
+		Loop
+	See:
+		KEEN ABCD 3 Bright A_Chase
+		Loop
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		KEEN EF 6 Bright A_FaceTarget
+		KEEN G 1 Bright A_FatAttack1
+		KEEN G 1 Bright A_FatAttack2
+		KEEN G 1 Bright A_FatAttack3
+		KEEN G 1 Bright A_FaceTarget
+		KEEN GG 1 Bright A_SkelMissile
+		KEEN G 8 Bright A_SkelMissile
+		Goto See
+	Pain:
+		KEEN H 8 Bright 
+		KEEN A 3 Bright A_Pain
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		KEEN H 2 A_ChangeFlag("NOPAIN",true)
+		KEEN H 300 Bright A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		KEEN H 2 Bright A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		KEEN H 16 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		KEEN I 5 Bright
+		KEEN J 5 Bright A_Scream
+		KEEN K 5 Bright
+		KEEN L 5 Bright A_Fall
+		KEEN MNOPQ 5 Bright
+		KEEN R 5 Bright A_BossDeath
+		KEEN R 1 Bright
+		Stop
+	}
+}

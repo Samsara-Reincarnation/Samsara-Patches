@@ -1,0 +1,105 @@
+Actor FlembraneBossEasiest_Samsara : FlembraneV3_2 replaces FlembraneBossEasiest
+{
+	PainChance 100
+	+NEVERRESPAWN
+	+NOFEAR
+	+SEEINVISIBLE
+	+THRUSPECIES
+	+MTHRUSPECIES
+	+QUICKTORETALIATE
+}
+
+Actor FlembraneBossEasy_Samsara : FlembraneBossEasiest_Samsara replaces FlembraneBossEasy
+{
+	Health 3000
+	PainChance 75
+}
+
+Actor FlembraneBossMedium_Samsara : FlembraneBossEasy_Samsara replaces FlembraneBossMedium
+{
+	Health 3500
+	PainChance 50
+}
+
+Actor FlembraneBossHard_Samsara : FlembraneBossMedium_Samsara replaces FlembraneBossHard
+{
+	Health 4000
+	PainChance 40
+}
+
+Actor FlembraneBossHardest_Samsara : FlembraneBossHard_Samsara replaces FlembraneBossHardest
+{
+	Health 5000
+	PainChance 30
+}
+
+Actor FlembraneV3_2_2 : FlembraneV3_2 replaces FlembraneV4 {}
+
+Actor FlembominationBossEasiest_Samsara : Flembomination_2 replaces FlembominationBossEasiest
+{
+	PainChance 50
+	+MISSILEEVENMORE
+	+NOTELEFRAG
+	+NEVERRESPAWN
+	+LOOKALLAROUND
+	+NOFEAR
+	+SEEINVISIBLE
+}
+
+Actor FlembominationBossEasy_Samsara : FlembominationBossEasiest_Samsara replaces FlembominationBossEasy
+{
+	Health 5000
+	PainChance 45
+	Speed 12
+}
+
+Actor FlembominationBossMedium_Samsara : FlembominationBossEasy_Samsara replaces FlembominationBossMedium
+{
+	Health 6000
+	PainChance 40
+	Speed 14
+}
+
+Actor FlembominationBossHard_Samsara : FlembominationBossMedium_Samsara replaces FlembominationBossHard
+{
+	Health 7000
+	PainChance 35
+	Speed 16
+}
+
+Actor FlembominationBossHardest_Samsara : FlembominationBossHard_Samsara replaces FlembominationBossHardest
+{
+	Health 7500
+	PainChance 30
+	Speed 20
+}
+
+Actor SnotfolusBossEasiest_Samsara : Snotfolus_2 replaces SnotfolusBossEasiest
+{
+	PainChance 35
+}
+
+Actor SnotfolusBossEasy_Samsara : SnotfolusBossEasiest_Samsara replaces SnotfolusBossEasy
+{
+	Health 12500
+	PainChance 30
+}
+
+Actor SnotfolusBossMedium_Samsara : SnotfolusBossEasy_Samsara replaces SnotfolusBossMedium
+{
+	Health 15000
+	Speed 18
+	PainChance 25
+}
+
+Actor SnotfolusBossHard_Samsara : SnotfolusBossMedium_Samsara replaces SnotfolusBossHard
+{
+	Health 17500
+	PainChance 20
+}
+
+Actor SnotfolusBossHardest_Samsara : SnotfolusBossHard_Samsara replaces SnotfolusBossHardest
+{
+	Health 20000
+	PainChance 15
+}

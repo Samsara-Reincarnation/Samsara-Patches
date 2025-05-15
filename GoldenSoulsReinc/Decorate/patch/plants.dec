@@ -1,0 +1,223 @@
+actor Red_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces Red_Plant 
+{
+	Health 350
+	Radius 31
+	Height 56
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	Monster
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+NOTARGET
+	+NOINFIGHTING
+	BloodColor gold
+	SeeSound "PLNTSEE"
+	PainSound "PLNTHURT"
+	DeathSound "PLNTDIE"
+	ActiveSound "PLNTIDLE"
+	HitObituary "$OB_IMPHIT"
+	Obituary "%o was killed by an evil Plant"
+	Tag "Red Plant"
+	States
+	{
+	Spawn:
+		PIRN A 3 A_Look
+		Loop
+	See:
+		PIRN A 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		PIRN CD 4 A_FaceTarget
+		PIRN D 3 A_CustomMissile("Plantball",48,0)
+		Goto See
+	Pain:
+		PIRN E 2
+		PIRN E 2 A_Pain
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		PIRN E 2 A_ChangeFlag("NOPAIN",true)
+		PIRN E 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		PIRN A 0 A_Scream
+		PIRN EFGHI 8
+		PIRN I 1 A_NoBlocking
+		PIRN I -1
+		Stop
+	}
+}
+
+actor White_Small_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces White_Small_Plant 
+{
+	Health 150
+	Radius 21
+	Height 24
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	Monster
+	Scale 0.5
+	translation "176:191=80:95", "16:31=80:95", "168:175=80:95", "32:47=80:95"
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+NOTARGET
+	+NOINFIGHTING
+	BloodColor gold
+	SeeSound "PLNTSEE"
+	PainSound "PLNTHURT"
+	DeathSound "PLNTDIE"
+	ActiveSound "PLNTIDLE"
+	HitObituary "$OB_IMPHIT"
+	Obituary "%o was killed by an evil Plant"
+	Tag "White Plant"
+	States
+	{
+	Spawn:
+		PIRN A 3 A_Look
+		Loop
+	See:
+		PIRN A 35
+		TNT1 A 0 A_Jump (256, "Missile")
+		PIRN A 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		PIRN CD 4 A_FaceTarget
+		PIRN D 3 A_CustomMissile("Plantball_small",48,0)
+		Goto See
+	Pain:
+		PIRN E 2
+		PIRN E 2 A_Pain
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		PIRN E 2 A_ChangeFlag("NOPAIN",true)
+		PIRN E 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		PIRN A 0 A_Scream
+		PIRN EFGHI 8
+		PIRN I 1 A_NoBlocking
+		PIRN I -1
+		Stop
+	}
+}
+
+actor UpsideDown_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces UpsideDown_Plant 
+{
+	Health 350
+	Radius 31
+	Height 56
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	Monster
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+NOGRAVITY
+	+SPAWNCEILING
+	+CEILINGHUGGER
+	+DONTFALL
+	+NOTARGET
+	+NOINFIGHTING
+	BloodColor gold
+	SeeSound "PLNTSEE"
+	PainSound "PLNTHURT"
+	DeathSound "PLNTDIE"
+	ActiveSound "PLNTIDLE"
+	HitObituary "$OB_IMPHIT"
+	Obituary "%o was killed by an evil upside-down Plant"
+	Tag "Red Plant"
+	States
+	{
+	Spawn:
+		UPIR A 3 A_Look
+		Loop
+	See:
+		UPIR A 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		UPIR CD 4 A_FaceTarget
+		UPIR D 3 A_CustomMissile("Plantball",-10,0)
+		Goto See
+	Pain:
+		UPIR E 2
+		UPIR E 2 A_Pain
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		UPIR E 2 A_ChangeFlag("NOPAIN",true)
+		UPIR E 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		UPIR A 0 A_Scream
+		UPIR EFGHI 8
+		UPIR I 1 A_NoBlocking
+		UPIR I -1
+		Stop
+	}
+}
+
+actor Venom_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces Venom_Plant 
+{
+	Health 350
+	Radius 31
+	Height 56
+	Mass 10000000
+	Speed 0
+	PainChance 200
+	Monster
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+NOTARGET
+	+NOINFIGHTING
+	BloodColor gold
+	SeeSound "PLNTSEE"
+	PainSound "PLNTHURT"
+	DeathSound "PLNTDIE"
+	ActiveSound "PLNTIDLE"
+	HitObituary "$OB_IMPHIT"
+	Obituary "%o was killed by a venomous Plant"
+	Tag "Venomous Plant"
+	States
+	{
+	Spawn:
+		PIRV A 3 A_Look
+		Loop
+	See:
+		PIRV A 1 A_Chase
+		Loop
+	Melee:
+	Missile:
+		PIRV CD 4 A_FaceTarget
+		PIRV D 3 A_CustomMissile("Plantvenomball",48,0)
+		Goto See
+	Pain:
+		PIRV E 2
+		PIRV E 2 A_Pain
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		PIRV E 2 A_ChangeFlag("NOPAIN",true)
+		PIRV E 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		PIRV A 0 A_Scream
+		PIRV EFGHI 8
+		PIRV I 1 A_NoBlocking
+		PIRV I -1
+		Stop
+	}
+}

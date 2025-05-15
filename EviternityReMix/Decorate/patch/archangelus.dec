@@ -1,0 +1,172 @@
+// The Archangelus boss fight is split between two boss phases, so some
+// accommodations will need to be made for each of the actors.
+
+Actor Archangelus_Samsara replaces BossBrain2
+{
+	Radius 48
+	Height 80
+	Mass 1000
+	+SOLID
+	Tag "Archangelus, The Light Eternal"
+	States
+	{
+	Spawn:
+		BBRN D 1
+		BBRN D 1 ACS_NamedExecute("AngelTag", 0, 0, 0, 0)
+		goto Idle
+	Idle:
+		BBRN T 2 A_Look
+		goto Idle
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		BBRN T 240 A_PlaySoundEx ("brain/sight", Auto, False, 1)
+		BBRN [ 8
+		BBRN \ 8
+		BBRN ] 8
+		BBRN A 0 A_Fall
+		BBRN A 1 A_SpawnItem ("ArchangelusA_Samsara", 8, 0)
+		stop
+	}
+}
+
+Actor ArchangelusA_Samsara : SamsaraMonsterGenericBoss replaces ArchangelusA
+{
+	Health 10000
+	Speed 24
+	Radius 44
+	Height 72
+	PainChance 5
+	Mass 5000
+	Monster
+	+NOGRAVITY
+	+FLOAT
+	+BOSS
+	BloodColor "FFDD00"
+	SeeSound ""
+	PainSound ""
+	DeathSound ""
+	Obituary "$OB_ANGEL1"
+	Tag "Archangelus, The Light Eternal"
+	States
+	{
+	Spawn:
+		BBRN A 2 A_Look
+		goto Spawn
+	See:
+		BBRN AABBCCDD 2 A_Chase
+		goto See
+	Pain:
+		BBRN EJK 8 Bright A_FaceTarget
+		BBRN IIII 0 Bright A_BrainSpit
+		BBRN I 8 Bright A_BrainSpit
+		goto See
+	Missile:
+		BBRN FG 6 A_FaceTarget
+		BBRN H 0 A_FatAttack1
+		BBRN H 0 A_FatAttack2
+		BBRN H 6 A_FatAttack3
+		BBRN H 0 A_Jump (128, "Archie")
+		BBRN JK 6 A_FaceTarget
+		BBRN HHHHHHHH 1 A_BspiAttack
+		BBRN I 10 A_FaceTarget
+		goto See
+	Archie:
+		BBRN J 0 Bright A_VileStart
+		BBRN J 10 Bright A_PlaySoundEx ("brain/pain", Auto, False, 1)
+		BBRN J 40 Bright A_VileTarget
+		BBRN KH 8 Bright A_FaceTarget
+		BBRN I 12 Bright A_VileAttack
+		BBRN JK 6 A_FaceTarget
+		BBRN HHHHHHHH 1 A_BspiAttack
+		BBRN I 10 A_FaceTarget
+		goto See
+	Death:
+		BBRN V 0 A_Fall
+		BBRN V 1 A_SpawnItem ("ArchangelusB_Samsara", 8, 0)
+		BBRN U 0
+		stop
+	}
+}
+
+Actor ArchangelusB_Samsara : SamsaraMonsterGenericBoss replaces ArchangelusB
+{
+	Health 5000
+	Speed 48
+	Radius 36
+	Height 72
+	Damage 32
+	PainChance 4
+	Mass 5000
+	Monster
+	+NOGRAVITY
+	+FLOAT
+	+BOSS
+	BloodColor "FFDD00"
+	DeathSound "brain/death"
+	Obituary "$OB_ANGEL2"
+	Tag "Archangelus, The Light Eternal"
+	States
+	{
+	Spawn:
+		BBRN V 1 A_Look
+		goto Spawn
+	See:
+		BBRN V 9 A_PlaySoundEx ("brain/cube", Auto, False, 1)
+		BBRN WXY 9 
+		BBRN Z 9 A_KeenDie
+		BBRN L 9
+		goto See2
+	See2:
+		BBRN AABBCCDD 2 A_Chase
+		goto See2
+	Pain:
+		BBRN EJK 8 Bright A_FaceTarget
+		BBRN IIII 0 Bright A_BrainSpit
+		BBRN I 8 Bright A_BrainSpit
+		BBRN AABBCCDD 2 A_Chase
+		goto See2
+	Missile:
+		BBRN FG 6 A_FaceTarget
+	Missile2:
+		BBRN H 2 Bright A_FatAttack1
+		BBRN H 2 Bright A_FatAttack3
+		BBRN H 2 Bright A_FatAttack2
+		BBRN I 0 A_Jump (176, "Missile2")
+		goto Missile3
+	Missile3:
+		BBRN JK 6 A_FaceTarget
+		goto Missile4
+	Missile4:
+		BBRN H 0 Bright A_BspiAttack
+		BBRN H 1 Bright A_Chase
+		BBRN I 0 A_Jump (248, "Missile4")
+		goto Archie
+	Archie:
+		BBRN J 0 Bright A_VileStart
+		BBRN J 10 Bright A_PlaySoundEx ("brain/pain", Auto, False, 1)
+		BBRN J 40 Bright A_VileTarget
+		BBRN KH 8 Bright A_FaceTarget
+		BBRN I 12 Bright A_VileAttack
+		BBRN JK 6 A_FaceTarget
+		BBRN HHHHHHHH 1 A_BspiAttack
+		BBRN I 10 A_FaceTarget
+		goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		BBRN L 8 Bright A_PlaySoundEx ("brain/death", Auto, False, 1)
+		BBRN M 8 Bright A_Fall
+		BBRN NO 8 Bright
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		BBRN P 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 1.0, 0.5)
+		BBRN P 4 Bright A_Mushroom ("ArachnotronPlasma2", 0, MSF_Classic, 0.4, 1.25)
+		BBRN Q 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 2.0, 0.5)
+		BBRN Q 4 Bright A_Mushroom ("ArachnotronPlasma2", 0, MSF_Classic, 0.8, 1.25)
+		BBRN R 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 3.0, 0.5)
+		BBRN R 4 Bright A_Mushroom ("ArachnotronPlasma2", 0, MSF_Classic, 1.2, 1.25)
+		BBRN S 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 4.0, 0.5)
+		BBRN U 224 Bright 
+		BBRN U -1 Bright A_BrainDie
+		stop
+	}
+}

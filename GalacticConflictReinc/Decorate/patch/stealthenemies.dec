@@ -1,0 +1,59 @@
+Actor StealthCommonus_Samsara : FlemoidusCommonus2 replaces StealthCommonus
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Commonus."
+}
+
+Actor StealthBipedicus_Samsara : BipedicusV4_Samsara replaces StealthBipedicus
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Bipedicus."
+}
+
+Actor StealthArmoredBipedicus_Samsara : ArmoredBipedicusV4_Samsara replaces StealthArmoredBipedicus
+{
+	+STEALTH
+	Obituary "%o thought %g saw an armored Bipedicus."
+}
+
+Actor StealthQuadrumpus_Samsara : Quadrumpus_2 replaces StealthQuadrumpus
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Quadrumpus."
+}
+
+Actor StealthStridicus_Samsara : StridicusV4_Samsara replaces StealthStridicus
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Stridicus."
+}
+
+Actor StealthCycloptis_Samsara : CycloptisV4_Samsara replaces StealthCycloptis
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Cycloptis."
+}
+
+Actor StealthLarva_Samsara : LarvaV4_Samsara replaces StealthLarva
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Larva."
+}
+
+Actor StealthSuperCycloptis_Samsara : SuperCycloptis_2 replaces StealthSuperCycloptis
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Super Cycloptis."
+}
+
+Actor StealthMaximus_Samsara : MaximusV4_Samsara replaces StealthMaximus
+{
+	+STEALTH
+	Obituary "%o thought %g saw a Maximus."
+}
+
+Actor StealthFlyingBipedicus_Samsara : FlyingBipedicus_Samsara replaces StealthFlyingBipedicus
+{
+	+STEALTH
+	Obituary "%o thought %g saw a flying armored Bipedicus."
+}

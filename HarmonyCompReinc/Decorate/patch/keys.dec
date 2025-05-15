@@ -1,0 +1,113 @@
+actor GreenKeycard_Samsara : CustomInventory replaces BlueCard
+{
+	radius 20
+	height 16
+	inventory.pickupmessage "$GOTBLUECARD"
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+		Spawn:
+			BKEY AB 6 Bright 
+			goto Spawn
+		Pickup:
+			TNT1 A 1 A_GiveInventory("BlueCard")
+			stop
+	}
+}
+
+actor PurpleKeycard_Samsara : CustomInventory replaces RedCard
+{
+	radius 20
+	height 16
+	inventory.pickupmessage "$GOTREDCARD"
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+		Spawn:
+			RKEY AB 6 Bright 
+			goto Spawn
+		Pickup:
+			TNT1 A 1 A_GiveInventory("RedCard")
+			stop
+	}
+}
+
+actor YellowKeycard_Samsara : CustomInventory replaces YellowCard
+{
+	radius 20
+	height 16
+	inventory.pickupmessage "$GOTYELWCARD"
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+		Spawn:
+			YKEY AB 6 Bright 
+			goto Spawn
+		Pickup:
+			TNT1 A 1 A_GiveInventory("YellowCard")
+			stop
+	}
+}
+
+actor YellowPPKey_Samsara : CustomInventory replaces YellowSkull
+{
+	radius 20
+	height 16
+	inventory.pickupmessage "$GOTYELWSKUL"
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+		Spawn:
+			YSKU AB 6 bright
+			loop
+		Pickup:
+			TNT1 A 1 A_GiveInventory("YellowSkull")
+			stop
+	}
+}
+
+actor PurplePPKey_Samsara : CustomInventory replaces RedSkull
+{
+	radius 20
+	height 16
+	inventory.pickupmessage "$GOTREDSKUL"
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+		Spawn:
+			RSKU AB 6 bright
+			loop
+		Pickup:
+			TNT1 A 1 A_GiveInventory("RedSkull")
+			stop
+	}
+}
+
+actor GreenPPKey_Samsara : CustomInventory replaces BlueSkull
+{
+	radius 20
+	height 16
+	inventory.pickupmessage "$GOTBLUESKUL"
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+		Spawn:
+			BSKU AB 6 bright
+			loop
+		Pickup:
+			TNT1 A 1 A_GiveInventory("BlueSkull")
+			stop
+	}
+}

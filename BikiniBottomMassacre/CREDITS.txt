@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: The Bikini Bottom Massacre
+Authors: ContrastSaturation
+Link: N/A
+
+Resources used:
+---------------
+Original DECORATE and GLDEFS for monsters - ContrastSaturation

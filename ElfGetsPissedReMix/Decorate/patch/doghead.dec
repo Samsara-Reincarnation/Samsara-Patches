@@ -1,0 +1,50 @@
+actor DOGHEAD_Samsara : SamsaraMonsterGhost replaces DOGHEAD
+{
+	Health 2000
+	Height 192
+	Radius 32
+	Mass 100000
+	scale 4
+	Speed 0
+	PainChance 0
+	Obituary "%o was blasted by a giant dog head"
+	+TELESTOMP
+	+SHOOTABLE
+	+ISMONSTER
+	+COUNTKILL
+	+DONTGIB
+	+DONTBLAST
+	+LOOKALLAROUND
+	+NOPAIN
+	+NOBLOOD
+	MinMissileChance 150
+	DeathSound "drakdog/death"
+	PainSound "drakdog/pain"
+	Tag "Dog Head"
+	States
+	{
+	Spawn:
+		DDOG ABCDCB 15 A_LookEX
+		Loop
+	See:
+		DDOG A 1 A_Chase
+		Loop
+	Missile:
+		DDOG A 1 A_Playsound("drakdog/dognoise",0,3,0,0)
+		DDOG A 14 A_CustomMissile("DOGLASER",192,0,0,0,0)
+		DDOG B 15 A_CPosRefire
+		DDOG C 15 A_CustomMissile("DOGLASER",192,0,0,0,0)
+		DDOG D 1 A_Playsound("drakdog/dognoise",0,3,0,0)
+		DDOG D 14 A_CPosRefire
+		DDOG C 15 A_CustomMissile("DOGLASER",192,0,0,0,0)
+		DDOG B 15 A_CPosRefire
+		Loop
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		DDOG A 1 A_SpawnItemEx("PhoenixRodHefty", 0, 0, 0, 6, 2, 7, 145, 0, SXF_ABSOLUTEANGLE)
+		DDOG A 1 A_SpawnItemEx("CrossbowHefty", 0, 0, 0, 2, 8, 3, 55, 0, SXF_ABSOLUTEANGLE)
+		DDOG A 1 A_SpawnItemEx("ArtiSuperHealth", 0, 0, 0, 4, 6, 12, 25, 0, SXF_ABSOLUTEANGLE)
+		DDOG A 25 A_Playsound("drakdog/death",0,3,0,0)
+		Stop
+	}
+}

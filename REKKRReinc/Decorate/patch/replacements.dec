@@ -1,0 +1,154 @@
+actor SamsaraSlotOne_REKKR : RandomSpawner replaces Chainsaw { DropItem "SamsaraSlotOnePickup" }
+actor SamsaraSlotTwo_REKKR : RandomSpawner replaces TechPillar 48 { DropItem "SamsaraSlotTwoPickup" }
+
+actor SamsaraSlotFour_REKKR replaces DeadDoomImp 20
+{
+    +NOTIMEFREEZE // allow the scripts to process during time freeze
+    +THRUACTORS // not a pickup, but just in case
+    States
+    {
+      Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteWithResult("Samsara_SpawnSlot", 3, 1)
+        TNT1 A 0 ACS_NamedExecuteWithResult("Samsara_SpawnSlot", 4, 1)
+        stop
+    }
+}
+
+actor SamsaraSlotFive_REKKR : RandomSpawner replaces RocketLauncher 2003 { DropItem "SamsaraSlotFivePickup" }
+actor SamsaraSlotSix_REKKR : RandomSpawner replaces PlasmaRifle 2004 { DropItem "SamsaraSlotSixPickup" }
+actor SamsaraSlotSeven_REKKR : RandomSpawner replaces BFG9000 { DropItem "SamsaraSlotSevenPickup" }
+
+Actor SamsaraArmorScrap_REKKR : ArmorScrap replaces RK_ArmorBonus { }
+Actor SamsaraArmorPack1_REKKR : ArmorPack1 replaces DH_GreenArmor { }
+Actor SamsaraArmorPack3_REKKR : ArmorPack3 replaces DH_BlueArmor { }
+
+Actor SamsaraHealPack0_REKKR : HealPack0 replaces HealthBonus { }
+Actor SamsaraHealPack1_REKKR : HealPack1 replaces Stimpack { }
+
+Actor SamsaraHealPack2_REKKR2LoopInitCount : Counter { Inventory.MaxAmount 7 }
+Actor SamsaraHealPack2_REKKR2 replaces CommanderKeen 690
+{
+    RenderStyle "Add"
+    Alpha 0.9
+    Scale 0.75
+    +FLOATBOB
+    +LOOKALLAROUND
+    +NOTIMEFREEZE // allow the checks and sprite to process during time freeze
+    States
+    {
+      Spawn:
+        MED3 A 0 Bright Light("SAMSARA_RED_HEALTH")
+      SpawnGameModeCheck:
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 19), "SpawnNothing") // Prevent spawning in LMS
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 29), "SpawnNothing") // Prevent spawning in instagib
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 32), "SpawnNothing") // Prevent spawning with health disabled
+      SpawnActual:
+        TNT1 A 0 A_ChangeFlag("NOTIMEFREEZE",false)
+      SpawnActualAnimInit:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHealPack2_REKKR2LoopInitCount",0,"SpawnActualAnimInitReset")
+        TNT1 A 0 A_JumpIfInventory("SamsaraHealPack2_REKKR2LoopInitCount",1,"SpawnActualAnimInitIncrement")
+      SpawnActualAnimInitReset:
+        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 4, 100, 90)
+        TNT1 A 0 A_TakeInventory("SamsaraHealPack2_REKKR2LoopInitCount")
+        TNT1 A 0 A_GiveInventory("SamsaraHealPack2_REKKR2LoopInitCount")
+        goto SpawnActualAnim // most code pointers are not called on the first tic
+
+      SpawnActualAnimInitIncrement:
+        TNT1 A 0 A_GiveInventory("SamsaraHealPack2_REKKR2LoopInitCount")
+        goto SpawnActualAnim // most code pointers are not called on the first tic
+
+      SpawnActualAnimRestartInit:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHealPack2_REKKR2LoopInitCount",0,"SpawnActualAnimRestartInitReset")
+        TNT1 A 0 A_JumpIfInventory("SamsaraHealPack2_REKKR2LoopInitCount",1,"SpawnActualAnimRestartInitIncrement")
+      SpawnActualAnimRestartInitReset:
+        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 4, 100, 90)
+        TNT1 A 0 A_TakeInventory("SamsaraHealPack2_REKKR2LoopInitCount")
+        TNT1 A 0 A_GiveInventory("SamsaraHealPack2_REKKR2LoopInitCount")
+        goto SpawnActualAnimRestart
+
+      SpawnActualAnimRestartInitIncrement:
+        TNT1 A 0 A_GiveInventory("SamsaraHealPack2_REKKR2LoopInitCount")
+        goto SpawnActualAnimRestart
+
+      SpawnActualAnimRestart:
+        TNT1 A 0 A_Look
+      SpawnActualAnim:
+        MED3 A 5 Bright Light("SAMSARA_RED_HEALTH")
+        goto SpawnActualAnimRestartInit
+
+      Idle:
+        goto SpawnActualAnimRestartInit
+
+      See:
+        MED3 A 5 Bright Light("SAMSARA_RED_HEALTH") A_JumpIfCloser(196,"ActivateTrap")
+        goto SpawnActualAnimRestartInit
+
+      ActivateTrap:
+        TNT1 A 0 A_SpawnItemEx("TeleportFog",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+        TNT1 A -1 A_SpawnItemEx("REKKRHusk_Samsara",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+        stop
+
+      SpawnNothing:
+        TNT1 A 0 A_SpawnItemEx("REKKRHusk_Samsara",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+        stop
+    }
+}
+
+Actor SamsaraSuperHealth_REKKR : SuperHealth replaces Soulsphere { +COUNTITEM }
+
+Actor SamsaraInvulnPowerup_REKKR : InvulnPowerup replaces InvulnerabilitySphere 2022 { +COUNTITEM }
+Actor SamsaraPartialInvisibility_REKKR : PartialInvisibility replaces BlurSphere 2024 { +COUNTITEM }
+Actor SamsaraVisor_REKKR : Visor replaces Infrared 2045 { +COUNTITEM }
+
+Actor SamsaraAmmo1Small_REKKR : Clip2 replaces Clip 2007
+{
+    States
+    {
+      Spawn:
+        CLIP G 0 Bright
+        goto SpawnGameModeCheck
+
+      SpawnActual:
+        TNT1 A 0 A_ChangeFlag("THRUACTORS",false)
+        TNT1 A 0 A_ChangeFlag("NOTIMEFREEZE",false)
+      SpawnActualAnim:
+        CLIP GHI 18 Bright
+        CLIP J 22 Bright
+        stop
+    }
+}
+
+Actor SamsaraAmmo1Small_REKKR2 : Ammo1Small replaces HeadCandles 29 {}
+Actor SamsaraAmmo1Big_REKKR : Ammo1Big replaces ClipBox 2048 { }
+Actor SamsaraAmmo4Small_REKKR : Ammo4Small replaces Cell 2047
+{
+    Speed -16
+    Height 40
+    States
+    {
+      Spawn:
+        CELL C 0 Bright
+        goto SpawnGameModeCheck
+
+      SpawnActual:
+        TNT1 A 0 A_ChangeFlag("THRUACTORS",false)
+        TNT1 A 0 A_ChangeFlag("NOTIMEFREEZE",false)
+        goto SpawnActualAnim // most code pointers are not called on the first tic
+
+      SpawnActualAnimRestart:
+        TNT1 A 0 A_Look
+      SpawnActualAnim:
+        CELL C 3 Bright
+        CELL D 3 Bright A_Look
+        goto SpawnActualAnimRestart
+
+      Idle:
+        goto SpawnActualAnimRestart
+
+      See:
+        CELL CD 3 Bright A_Chase
+        loop
+    }
+}
+
+Actor SamsaraAmmo4Big_REKKR : Ammo4Big replaces CellPack 17 { }
