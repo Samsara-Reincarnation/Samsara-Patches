@@ -12,7 +12,6 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Doom: The Golden Souls Remastered | Andrea Gori | [Link](https://batandy.itch.io/goldensouls) |
 | Elf Gets Pissed | Matt Cibulas | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/elfgp) |
 | Eviternity | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity) |
-| Eviternity II | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternityii) |
 | Harmony Compatible | Thomas van der Velden | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/g-i/harmonyc) |
 | Hexen: Scourge of Viscerus | Matt Tropiano | [Link](https://www.doomworld.com/idgames/levels/hexen/v-z/viscerus) |
 | Hordes of Chaos X | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/hocx) |
