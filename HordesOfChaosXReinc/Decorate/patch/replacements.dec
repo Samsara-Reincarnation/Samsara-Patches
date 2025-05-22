@@ -1,4 +1,4 @@
-actor DoomImpHOC_Samsara : RandomSpawner replaces DoomImpHOC { Game Heretic DropItem "DoomImp2" }
+actor DoomImpHOC_Samsara : RandomSpawner replaces DoomImpHOC { Game Heretic DropItem "DoomImpTwo" }
 actor LostSoulHOC_Samsara : RandomSpawner replaces LostSoulHOC { Game Heretic DropItem "LostSoul2" }
 actor PainElementalHOC_Samsara : RandomSpawner replaces PainElementalHOC { Game Heretic DropItem "PainElemental2" }
 actor CacodemonHOC_Samsara : RandomSpawner replaces CacodemonHOC { Game Heretic DropItem "CacodemonTwo" }

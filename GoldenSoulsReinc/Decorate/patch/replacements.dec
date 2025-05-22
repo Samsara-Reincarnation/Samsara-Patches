@@ -19,14 +19,14 @@ actor SpiderMastermindNew_Samsara : SpiderMastermind2 replaces SpiderMastermind2
 actor SpiderMastermindNew_Samsara2 : SpiderMastermindNew_Samsara replaces SpiderMastermindNew { Health 18000 }
 actor FatsoNew_Samsara : Fatso2 replaces FatsoNew {}
 actor ArachnotronNew_Samsara : Arachnotron2 replaces ArachnotronNew {}
-actor DoomImpNew_Samsara : DoomImp2 replaces DoomImpNew {}
+actor DoomImpNew_Samsara : DoomImpTwo replaces DoomImpNew {}
 actor DemonNew_Samsara : DoomDemon2 replaces DemonNew {}
 actor CacodemonNew_Samsara : CacodemonTwo replaces CacodemonNew {}
 actor HellKnightNew_Samsara : HellKnight2 replaces HellKnightNew {}
 actor BaronOfHellNew_Samsara : BaronOfHell2 replaces BaronOfHellNew {}
 actor CyberdemonNew_Samsara : Cyberdemon2 replaces CyberdemonNew {}
 
-actor RevenantNew_Samsara : Revenant2 replaces Revenant2 
+actor RevenantNew_Samsara : RevenantTwo replaces RevenantTwo 
 {
 	States
 	{
