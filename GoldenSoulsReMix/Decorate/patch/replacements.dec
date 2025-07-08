@@ -5,10 +5,10 @@ actor Cannon_Samsara : RandomSpawner replaces Cannon { DropItem "SamsaraSlotFive
 actor SpikeGun_Samsara : RandomSpawner replaces SpikeGun { DropItem "SamsaraSlotSixPickup" }
 actor RailBow_Samsara : RandomSpawner replaces RailBow { DropItem "SamsaraSlotSevenPickup" }
 
-actor Revolver_Samsara : DoomMultiAmmo1SmallReplacingPistol replaces Revolver {}
-actor Ak_Mag_Samsara : MultiAmmo1Big replaces Ak_Mag {}
-actor Spikeammo_Samsara : MultiAmmo4Small replaces Spikeammo {}
-actor RainbowAmmo_Samsara : MultiAmmo4Big replaces RainbowAmmo {}
+actor Revolver_Samsara : DoomAmmo1SmallReplacingPistol replaces Revolver {}
+actor Ak_Mag_Samsara : Ammo1Big replaces Ak_Mag {}
+actor Spikeammo_Samsara : Ammo4Small replaces Spikeammo {}
+actor RainbowAmmo_Samsara : Ammo4Big replaces RainbowAmmo {}
 
 actor Droppable_Armor_5_Samsara : ArmorScrapDump replaces Droppable_Armor_5 {}
 actor GSBanana_Samsara : HealPack1 replaces GSBanana {}
