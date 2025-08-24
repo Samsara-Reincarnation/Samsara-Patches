@@ -116,7 +116,7 @@ actor StrifeguyPlayer : StrifePlayer
 	Player.JumpZ 9//Default is 8
 	Species "Player"
 	+NOSKIN
-	Player.ColorRange 241, 246
+	Player.ColorRange 96, 111
 	Player.RunHealth 0
 	BloodType "SamsaraBloodyHellBlood"
 	var int user_scalex;
