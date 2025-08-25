@@ -5,7 +5,7 @@ SET /p userDirectory=Type one of the directory names:
 
 REM Set the filename for the pk3 file
 SET pk3Name=SamsaraPatch-%userDirectory%
-SET pk3Version=_v2.1
+SET pk3Version=_v2.1a
 
 REM Check if the user inputs are valid
 if exist %userDirectory% GOTO CONTINUEPATCH
