@@ -477,6 +477,7 @@ actor MarathonPlayer : SamsaraPlayerPawnNormalRedBlood
 			SOPL Z 4 A_Pain
 			Goto Spawn
 		Pain.HereNitrogolem:
+		Pain.DoomGhoul:
 			TNT1 A 0 A_TakeInventory("Hexen2EnemyFireDetector", 1)
 			SOPL Z 4 A_SetBlend("E6B426",0.8,8) // Yellow chocolate
 			SOPL Z 4 A_Pain
