@@ -1910,6 +1910,9 @@ ACTOR StrifePeasant1 : Peasant
 		XDeath.GoldeneyeTorso:
 			TNT1 A -1 A_Jump(256, "Death")
 			Wait
+		CheckMale:
+			TNT1 A 0
+			Stop
 	}
 }
 
@@ -4831,6 +4834,9 @@ ACTOR StrifeBeggar : Beggar
 		XDeath.GoldeneyeTorso:
 			TNT1 A -1 A_Jump(256, "Death")
 			Wait
+		CheckMale:
+			TNT1 A 0
+			Stop
 	}
 }
 
