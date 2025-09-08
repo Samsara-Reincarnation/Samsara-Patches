@@ -15,6 +15,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Harmony Compatible | Thomas van der Velden | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/g-i/harmonyc) |
 | Hexen: Scourge of Viscerus | Matt Tropiano | [Link](https://www.doomworld.com/idgames/levels/hexen/v-z/viscerus) |
 | Hordes of Chaos X | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/hocx) |
+| Legacy of Rust | Nightdive Studios & MachineGames | N/A |
 | REKKR | Revae | [Link](https://mockingbirdsoftworks.com/modversion.html) |
 | Ressurection of Chaos | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/hexen/p-r/roc) |
 | Resurgence | Josh Sealy | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/resurge) |

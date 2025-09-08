@@ -1,0 +1,9 @@
+#include "decorate/patch/replacements.dec"
+
+// Change the monster inheritances back to their ID24 names after GZDoom's next update
+#include "decorate/patch/banshee.dec"
+#include "decorate/patch/ghoul.dec"
+#include "decorate/patch/mindweaver.dec"
+#include "decorate/patch/shocktrooper.dec"
+#include "decorate/patch/tyrant.dec"
+#include "decorate/patch/vassago.dec"

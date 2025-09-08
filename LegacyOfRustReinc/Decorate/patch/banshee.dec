@@ -1,0 +1,55 @@
+Actor Banshee_Samsara : SamsaraMonsterGhost replaces Deh_Actor_151
+{
+	Health 100
+	Speed 8
+	Radius 20
+	Height 56
+	ReactionTime 8
+	PainChance 64
+	Mass 500
+	Monster
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+FLOAT
+	+NOGRAVITY
+	SeeSound "monsters/banshee/sight"
+	PainSound "monsters/banshee/pain"
+	DeathSound "monsters/banshee/death"
+	//SelfObituary "$ID24_OB_BANSHEE"
+	Tag "Banshee"
+	States
+	{
+	Spawn:
+		BSHE AB 10 Bright A_Look
+		loop
+	See:
+		BSHE A 0 Bright A_PlaySound("monsters/banshee/active")
+		BSHE AAABBBCCCAAABBBCCC 2 Bright A_Chase
+		loop
+	Melee:
+        TNT1 A 0 A_SetDamageType("Explosive")
+		BSHE D 1 Bright A_Explode(100,8)
+		loop
+	Pain:
+		BSHE D 3 Bright
+		BSHE D 3 Bright A_Pain
+		goto see
+	Pain.MightyBoot:
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		BSHE D 2 bright A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		BSHE D 16 bright A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		BSHE D 4 Bright A_Scream
+        TNT1 A 0 A_SetDamageType("Explosive")
+		BSHE E 6 Bright A_Explode(128,128)
+		BSHE F 8 Bright A_Fall
+		BSHE G 6 Bright
+		BSHE H 4 Bright
+		TNT1 A 20
+		stop
+	}
+}

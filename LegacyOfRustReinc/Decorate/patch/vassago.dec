@@ -1,0 +1,138 @@
+Actor Vassago_Samsara : SamsaraMonsterGhost replaces Deh_Actor_154
+{
+	Health 1000
+	Speed 8
+	Radius 24
+	Height 64
+	ReactionTime 8
+	PainChance 100
+	Mass 1000
+	Monster
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+NOBLOOD
+	+DONTHARMCLASS
+	SeeSound "monsters/vassago/sight"
+	ActiveSound "monsters/vassago/active"
+	PainSound "monsters/vassago/pain"
+	DeathSound "monsters/vassago/death"
+	Obituary "$ID24_OB_VASSAGO"
+	Tag "Vassago"
+	States
+	{
+	Spawn:
+		VASS AB 10 A_Look
+		loop
+	See:
+		VASS AABBCCDD 3 A_Chase
+		loop
+	Melee:
+	Missile:
+		VASS E 0 Bright A_PlaySound("monsters/vassago/attack")
+		VASS E 8 Bright A_FaceTarget
+		VASS FG 4 Bright A_FaceTarget
+		VASS H 8 Bright A_CustomMissile("VassagoFlame_Samsara",32,0,0)
+		goto see
+	Pain:
+		VASS I 2
+		VASS I 2 A_Pain
+		goto see
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		VASS I 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(10)
+		VASS I 16 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		VASS J 8 Bright
+		VASS K 8 Bright A_Scream
+		VASS L 7 Bright
+		VASS M 6 Bright A_Fall
+		VASS NO 6 Bright
+		VASS P 7 Bright
+		VASS Q -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
+		stop
+	Raise:
+		VASS A 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		VASS P 8
+		VASS ONMLKJ 8
+		goto see
+	}
+}
+
+Actor VassagoFlame_Samsara
+{
+	Damage 5
+	Speed 15
+	FastSpeed 20
+	//SplashGroup SPLASH_GROUP_VASSAGO
+	Radius 6
+	Height 16
+	Projectile
+	+NOBLOCKMAP
+	+NOGRAVITY
+	+DROPOFF
+	+MISSILE
+	RenderStyle Add
+	SeeSound "monsters/vassago/shot"
+	DeathSound "monsters/vassago/shotx"
+    DamageType "Fire"
+	states
+	{
+	Spawn:
+		VFLM AB 4 Bright
+		loop
+	Death:
+		VFLM C 0 Bright A_ChangeFlag("NOGRAVITY",0)
+		VFLM C 0 Bright A_ChangeFlag("NOBLOCKMAP",0)
+		VFLM C 0 Bright A_Jump(128, "DeathSound2")
+		VFLM C 0 Bright A_PlaySound("monsters/vassago/hot1")
+		goto Burninate
+	DeathSound2:
+		VFLM C 0 Bright A_PlaySound("monsters/vassago/hot2")
+		goto Burninate
+	Burninate:
+		VFLM C 4 bright A_Explode(10, 128)
+		VFLM D 4 bright
+		VFLM E 4 bright
+		VFLM F 0 bright A_PlaySound("monsters/vassago/hot3")
+		VFLM F 4 bright A_Explode(10, 128)
+		VFLM G 4 bright
+		VFLM H 4 bright
+		VFLM F 0 bright A_PlaySound("monsters/vassago/hot2")
+		VFLM F 4 bright A_Explode(10, 128)
+		VFLM G 4 bright
+		VFLM H 4 bright
+		VFLM F 0 bright A_PlaySound("monsters/vassago/hot3")
+		VFLM F 4 bright A_Explode(10, 128)
+		VFLM G 4 bright
+		VFLM H 4 bright
+		VFLM F 0 bright A_PlaySound("monsters/vassago/hot1")
+		VFLM F 4 bright A_Explode(10, 128)
+		VFLM G 4 bright
+		VFLM H 4 bright
+		VFLM F 0 bright A_PlaySound("monsters/vassago/hot2")
+		VFLM F 4 bright A_Explode(10, 128)
+		VFLM G 4 bright
+		VFLM H 4 bright
+		VFLM F 0 bright A_PlaySound("monsters/vassago/hot1")
+		VFLM F 4 bright A_Explode(10, 128)
+		VFLM G 4 bright
+		VFLM H 4 bright
+		VFLM F 0 bright A_PlaySound("monsters/vassago/hot2")
+		VFLM F 4 bright A_Explode(10, 128)
+		VFLM G 4 bright
+		VFLM H 4 bright
+		VFLM I 0 bright A_PlaySound("monsters/vassago/hot3")
+		VFLM I 4 bright A_Explode(10, 128)
+		VFLM J 4 bright
+		VFLM K 4 bright
+		VFLM L 4 bright A_Explode(10, 128)
+		VFLM MNOPQ 4 bright
+		stop
+	}
+}
