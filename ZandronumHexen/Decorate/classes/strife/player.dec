@@ -1491,6 +1491,10 @@ ACTOR StrifePeasant1 : Peasant
 			TNT1 A 0 A_GiveToTarget("JonDMTaunt1", 1)
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
+		Death.RTCWFire:
+			TNT1 A 0 A_PlaySound("RTCW/Enemy/Burn",CHAN_7,1.0)
+			TNT1 A -1 A_Jump(256, "Burn")
+			Wait
 		Death.DeusExPistolFire:
 			TNT1 A 0 ACS_NamedExecuteAlways("DeusEx_KillScript", 0, 0, 1)
 			TNT1 A -1 A_Jump(256, "Burn")
@@ -1910,9 +1914,6 @@ ACTOR StrifePeasant1 : Peasant
 		XDeath.GoldeneyeTorso:
 			TNT1 A -1 A_Jump(256, "Death")
 			Wait
-		CheckMale:
-			TNT1 A 0
-			Stop
 	}
 }
 
@@ -4415,6 +4416,10 @@ ACTOR StrifeBeggar : Beggar
 			TNT1 A 0 A_GiveToTarget("JonDMTaunt1", 1)
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
+		Death.RTCWFire:
+			TNT1 A 0 A_PlaySound("RTCW/Enemy/Burn",CHAN_7,1.0)
+			TNT1 A -1 A_Jump(256, "Burn")
+			Wait
 		Death.DeusExPistolFire:
 			TNT1 A 0 ACS_NamedExecuteAlways("DeusEx_KillScript", 0, 0, 1)
 			TNT1 A -1 A_Jump(256, "Burn")
@@ -4834,9 +4839,6 @@ ACTOR StrifeBeggar : Beggar
 		XDeath.GoldeneyeTorso:
 			TNT1 A -1 A_Jump(256, "Death")
 			Wait
-		CheckMale:
-			TNT1 A 0
-			Stop
 	}
 }
 
