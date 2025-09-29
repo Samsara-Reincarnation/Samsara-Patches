@@ -96,7 +96,6 @@ Actor JamesBond : SamsaraPlayerPawnTotalGibRedBlood
 	Player.StartItem "Goldfinger_GoldMagnumMagazine", 6
 	Player.StartItem "Goldfinger_GoldMagnumDualMagazine", 6
 	Player.StartItem "Goldeneye_TankMagazine", 1
-	//Player.StartItem "Goldfinger_TankMagazine", 1
 	BloodType "SamsaraBloodyHellBlood"
 	Player.DamageScreenColor "White", 0.0
 	Player.SoundClass "JamesBond"
