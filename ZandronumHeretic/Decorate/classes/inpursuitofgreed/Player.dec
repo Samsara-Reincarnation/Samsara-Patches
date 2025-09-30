@@ -229,9 +229,6 @@ Actor POGreedPlayer : SamsaraPlayerPawnTotalGibRedBlood
 			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
 			Goto DeathAnim
 		DeathAnim:
-			TNT1 A 0 A_TakeInventory("IPOGAtt2",999)
-			TNT1 A 0 A_TakeInventory("IPOGAtt3",999)
-			TNT1 A 0 A_TakeInventory("IPOGAtt4",999)	
 			TNT1 A 0 A_JumpIfInventory("IPoGMode",4,"DeathDominatrix")
 			TNT1 A 0 A_JumpIfInventory("IPoGMode",3,"DeathSpecimen")
 			TNT1 A 0 A_JumpIfInventory("IPoGMode",2,"DeathLizard")
