@@ -9,6 +9,7 @@ actor DukePlayer : SamsaraPlayerPawnNormalColoredBlood
 	Player.StartItem "IsSamsaraClass", 1
 	Player.StartItem "SamsaraTipsChecker", 1
 	Player.StartItem "Clip", 50
+	Player.StartItem "DukeM16ReloadAmmo", 30
 	Player.StartItem "DukeGoldEagleReload", 8
 	Player.SoundClass "DukePlayer"
 	Player.ForwardMove 0.95, 0.925
