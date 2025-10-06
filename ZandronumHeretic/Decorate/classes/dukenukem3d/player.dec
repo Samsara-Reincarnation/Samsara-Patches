@@ -9,6 +9,7 @@ actor DukePlayer : SamsaraPlayerPawnNormalColoredBlood
 	Player.StartItem "IsSamsaraClass", 1
 	Player.StartItem "SamsaraTipsChecker", 1
 	Player.StartItem "Clip", 50
+	Player.StartItem "DukePistolDumDumReload", 0 // custom hud purposes
 	Player.StartItem "DukeM16ReloadAmmo", 30
 	Player.StartItem "DukeGoldEagleReload", 8
 	Player.SoundClass "DukePlayer"
