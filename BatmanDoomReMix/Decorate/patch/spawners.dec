@@ -1,0 +1,16 @@
+ACTOR BadBird : LostSoulSpawner replaces Candlestick 34 {}
+ACTOR Terrorist : ZombiemanSpawner replaces HellKnight 3004 {}
+ACTOR TerroristGrey : ZombiemanSpawner replaces TechLamp2 86 {}
+ACTOR TerroristBrown : RandomSpawner replaces ShotgunGuy 36 { DropItem "BlueKey" DropItem "ZombiemanSpawner" }
+ACTOR TerroristRed : ZombiemanSpawner replaces TallGreenColumn 30 {}
+ACTOR ShotgunThief : ShotgunGuySpawner replaces Fatso 9 {}
+ACTOR GangWarShotgunThief : ShotgunThief replaces RocketBox 2046 {}
+ACTOR Cheung : DoomImpSpawner replaces DoomImp 3001 {}
+ACTOR GangWarCheung : Cheung 2010 {}
+ACTOR StrakeGreen : DemonSpawner replaces Demon 3002 {}
+ACTOR StrakeGray : StrakeGreen replaces TechLamp 85 {}
+ACTOR Ninja : SpectreSpawner replaces Arachnotron 68 {}
+ACTOR FlameMan : HellKnightSpawner replaces Archvile 69 {}
+ACTOR Clown : RevenantSpawner replaces ShortRedTorch 57 {}
+ACTOR Zeke : RevenantSpawner replaces HeartColumn 67 {}
+ACTOR RocketMan : CacodemonSpawner replaces BossTarget 87 {}

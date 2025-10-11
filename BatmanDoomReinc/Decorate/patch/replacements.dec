@@ -1,0 +1,17 @@
+ACTOR RandomBonus : SamsaraRandomPowerup replaces YellowSkull 39 { SpawnID 143 }
+ACTOR BatmanBlastgun : RandomSpawner replaces BlueCard 5 { SpawnID 163 DropItem "SamsaraSlotTwoPickup" }
+
+ACTOR BatmanSmokeBomb replaces RocketLauncher 2003
+{
+	States
+	{
+	Spawn:
+		TNT1 A 0 NoDelay A_SpawnItemEx("SamsaraSlotFiveSkulltagPickup", 0, 0, 0, 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("Ammo3Small", random(-32, 32), random(-32, 32), 0, 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("Ammo3Small", random(-32, 32), random(-32, 32), 0, 0, 0, 0, 0)
+		TNT1 A 0 A_SpawnItemEx("Ammo3Small", random(-32, 32), random(-32, 32), 0, 0, 0, 0, 0)
+		Stop
+	}
+}
+
+ACTOR BatmanFinalGloveItem replaces BFG9000 2006 { SpawnID 168 }

@@ -1,0 +1,67 @@
+ACTOR EyeBall : SamsaraMonsterBeastTotalGib replaces Meat4 52
+{
+	SpawnID 30
+	obituary "%o died ... somehow."
+	health 500
+	radius 13
+	height 56
+	mass 100
+	speed 8
+	painchance 100
+	DeathSound "vile/active"
+	Monster
+	-COUNTKILL
+	+NOGRAVITY
+	+FLOAT
+	+AMBUSH //makes the eyes come out better
+	+DONTMORPH
+	DropItem "SamsaraDropItemKeenDie"
+	Tag "???"
+	states
+	{
+	Spawn:
+		BFS1 B 10 A_Look
+		loop
+	See:
+		BFS1 B 5
+		KEEN IJ 5
+		KEEN K 45
+		KEEN J 4
+		KEEN I 4
+		BFS1 B 4
+		KEEN I 4 Bright
+		KEEN J 4 Bright
+		KEEN K 4 Bright A_Chase
+		Goto See+9
+	Pain:
+		KEEN JI 4 Bright
+		BFS1 B 4 Bright
+		KEEN IJ 4 Bright
+		Goto See+9
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySoundEx("duke/kickhit","body",0,0)
+		KEEN J 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		KEEN J 16 A_Pain
+		Goto See+9
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		KEEN L 5 Bright
+		KEEN N 5 Bright A_CyberAttack
+		KEEN L 5 Bright
+		Goto See+9
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		BFE2 A 4 Bright A_Scream
+		PLSE DE 6 Bright
+		BFE2 B 6 Bright A_NoBlocking //A_KeenDie
+		stop
+	Death.ExpanderDMG:
+	XDeath.ExpanderDMG:
+	Death.ExpanderDMGCoop:
+	XDeath.ExpanderDMGCoop:
+		Goto Death.DukeDamage
+	}
+}

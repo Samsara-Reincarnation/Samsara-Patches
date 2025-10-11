@@ -1,0 +1,23 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Batman Doom
+Authors: ACE Team, Batman Doom Easy Patch by Ozymandias81
+Links: https://www.doomworld.com/idgames/themes/batman/batman,
+https://forum.zdoom.org/viewtopic.php?f=19&t=32722&start=45#p809421
+
+Resources used:
+---------------
+Entire basis for patch - Ozymandias81
+
+********************
+Original CREDITS.txt
+********************
+
+Thankx to ACE Team in doing this beautiful Batman Doom for Doom2!
+Thankx a lot to Evil Space Tomato in doing this painstakingly patch!
+Thankx to Ed The Bat for removing decorate warnings!
+... and many thankx to Tormentor667 & Blue Shadow for feedbacks & suggestions!
+
+... I know, there are some many "thanx" and sentences... :-)

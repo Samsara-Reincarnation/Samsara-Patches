@@ -1,0 +1,55 @@
+ACTOR BlueKey : CustomInventory replaces Shotgun 2001
+{
+	SpawnID 145
+	inventory.pickupmessage "Picked up a blue key."
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+	Spawn:
+		BKEY A 0 bright
+		BKEY A 0 bright A_ChangeFlag("DROPPED", 0)//fixme for multiplayer to keep blue key when blue key guy dies
+		BKEY A -1 bright
+		loop
+	Pickup:
+		TNT1 A 1 A_GiveInventory("BlueCard")
+		stop
+	}
+}
+
+ACTOR RedKey : CustomInventory replaces RedCard 13
+{
+	SpawnID 146
+	inventory.pickupmessage "Picked up a red key."
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+	Spawn:
+		RKEY A -1 bright
+		loop
+	Pickup:
+		TNT1 A 1 A_GiveInventory("RedCard")
+		stop
+	}
+}
+
+ACTOR YellowKey : CustomInventory replaces YellowCard 6
+{
+	SpawnID 147
+	inventory.pickupmessage "Picked up a yellow key."
+	inventory.pickupsound "misc/k_pkup"
+    +NOTDMATCH
+    +DONTGIB
+	states
+	{
+	Spawn:
+		YKEY A -1 bright
+		loop
+	Pickup:
+		TNT1 A 1 A_GiveInventory("YellowCard")
+		stop
+	}
+}

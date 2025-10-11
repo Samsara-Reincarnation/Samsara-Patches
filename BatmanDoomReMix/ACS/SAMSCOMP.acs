@@ -1,0 +1,13 @@
+#library "SAMSCOMP"
+#include "zcommon.acs"
+
+Script "SamsaraCompatibilityPatchEnter" enter { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff", 0,0,0); }
+Script "SamsaraCompatibilityPatchRespawn" respawn { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff", 0,0,0); }
+Script "SamsaraCompatibilityPatchReturn" return { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff", 0,0,0); }
+
+Script "SamsaraCompatibilityPatchStuff" (void)
+{
+	// The Batman Doom easy patch had the CANPASS flag disabled
+	// for the player, so it's also given here just in case
+	GiveInventory("SamsaraBatmanDoomPlayerFlag", 1);
+}

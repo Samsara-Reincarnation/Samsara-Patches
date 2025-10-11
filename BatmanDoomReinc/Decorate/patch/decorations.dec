@@ -1,0 +1,951 @@
+ACTOR Bell replaces RedSkull 38
+{
+SpawnID 101
++SOLID
++SPAWNCEILING
++NOGRAVITY
+States
+	{
+	Spawn:
+	YSKU A -1
+	Loop
+	}
+}
+
+ACTOR ScarecrowOnPole replaces BlurSphere 2024
+{
+SpawnID 103
+Health 1
+MAss 1000000
++SHOOTABLE
+States
+	{
+	Spawn:
+	BSKU A -1
+	Loop
+	Death:
+	BSKU B -1
+	Loop
+	}
+}
+
+ACTOR ChemicalBarrel replaces ExplosiveBarrel 2035
+{
+SpawnID 104
+Game Doom
+SpawnID 125
+Health 20
+Radius 10
+Height 34
++SOLID
++SHOOTABLE
++NOBLOOD
++ACTIVATEMCROSS
++DONTGIB
++NOICEDEATH
++OLDRADIUSDMG
++DONTRIP
+DeathSound "world/barrelx"
+Obituary "$OB_BARREL" // "%o went boom."
+States
+	{
+	Spawn:
+	BAR1 A 10
+	Loop
+	Death:
+	SPOS M 3 BRIGHT
+	SPOS N 3 BRIGHT A_Scream
+	DeathContinue:
+	SPOS O 3 BRIGHT A_Explode(128)
+	SPOS PQRS 3 BRIGHT
+	GOR1 ABC 4 BRIGHT
+	SSWV NOPQ 4 BRIGHT
+	stop
+
+	Death.ZorchPistol:
+	Death.Zorch:
+	Death.ZorchKamikaze:
+	Death.PhasingZorch:
+	Death.ZorchSpectral:
+	SPOS M 3 BRIGHT
+	SPOS N 3 BRIGHT A_Scream
+	TNT1 A 0 A_SetDamageType("Zorch")
+	TNT1 A 0 A_ChangeFlag("BLOODLESSIMPACT",true)
+	Goto DeathContinue
+	}
+}
+
+ACTOR AxisBarrel : ChemicalBarrel replaces ShortBlueTorch 55
+{
+SpawnID 105
+States
+	{
+	Spawn:
+	BAR1 B 10
+	Loop
+	}
+}
+
+ACTOR DoorSmash replaces EvilEye 41
+{
+SpawnID 106
+Game Doom
+SeeSound "vile/sight"
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	SSWV IJKLM 5
+	Stop
+	}
+}
+
+ACTOR OfficePlant replaces ChaingunGuy 65
+{
+SpawnID 107
++SOLID
+radius 9
+height 56
+states
+	{
+	Spawn:
+	HDB4 A -1
+	loop
+	}
+}
+
+ACTOR StoneFloor replaces Stalagtite 47 //stones for killer croc to throw (must be killed first)
+{
+SpawnID 108
+Health 1
++SHOOTABLE
++NOBLOOD
+Radius 16
+Height 56
+Mass 1000000
+Speed 0
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	POL5 A 10 A_Chase
+	Loop
+	Death:
+	HEAD G 8
+	HEAD H 8 A_Scream
+	HEAD IJ 8
+	HEAD K 8 A_NoBlocking
+	HEAD L -1
+	stop
+	Raise:
+	POL5 A 0 A_Scream
+	POL5 A 0 A_NoBlocking
+	POL5 A 1
+	stop
+	}
+}
+
+ACTOR Tree replaces WolfensteinSS 48
+{
+SpawnID 109
++SOLID
+radius 20
+height 56
+states
+	{
+	Spawn:
+	ELEC A -1
+	loop
+	}
+}
+
+ACTOR Toilet replaces CommanderKeen 72
+{
+SpawnID 110
++SOLID
+radius 16
+height 56
+states
+	{
+	Spawn:
+	CBRA A -1
+	loop
+	}
+}
+
+ACTOR GargoyleStatue replaces BossBrain 88
+{
+SpawnID 111
++SOLID
+radius 30
+height 56
+states
+	{
+	Spawn:
+	YSKU B -1
+	loop
+	}
+}
+
+ACTOR BlockingCone replaces ShortGreenTorch 56
+{
+SpawnID 112
+Game Doom
+Radius 16
+Height 25
+Speed 8
++SOLID
+-CANPASS
+States
+	{
+	Spawn:
+	SMGT A 1 A_Look
+	Loop
+	See:
+	SMGT A 5 A_Chase
+	Loop
+	}
+}
+
+ACTOR LionStatue replaces Meat5 53
+{
+SpawnID 114
++SOLID
+Radius 30
+Height 56
+States
+	{
+	Spawn:
+	GOR5 A -1
+	loop
+	}
+}
+
+ACTOR GreenCar replaces DeadMarine 15
+{
+SpawnID 116
+
++SOLID
+Radius 48
+Height 64
+States
+	{
+	Spawn:
+	SKUL A -1
+	loop
+	}
+}
+
+ACTOR GrayCar : GreenCar replaces DeadCacodemon 22
+{SpawnID 117 Translation 0}
+
+ACTOR RedCar : GreenCar replaces HeadCandles 29
+{SpawnID 118 Translation 2}
+
+ACTOR Chair replaces  DeadZombieMan 18
+{
+SpawnID 119
+Health 15
+Radius 16
+Height 56
+DeathSound "vile/sight"
+Mass 100
++SOLID
++SHOOTABLE
++NOBLOOD
+States
+	{
+	Spawn:
+	BAL7 B -1
+	loop
+	Death:
+	SKUL F 6
+	SKUL G 6 A_Scream
+	SKUL I 6 A_NoBlocking
+	SKUL I -1
+	loop
+	}
+}
+
+ACTOR Table replaces DeadShotgunGuy 19
+{
+SpawnID 123
+Radius 30
+Height 56
++SOLID
+States
+	{
+	Spawn:
+	COLU A -1 Bright
+	loop
+	}
+}
+
+ACTOR TrashCan replaces LiveStick 26
+{
+SpawnID 124
+Radius 16
+Height 56
++SOLID
+States
+	{
+	Spawn:
+	POL6 A -1
+	loop
+	}
+}
+
+ACTOR ManStatue replaces HangNoGuts 73
+{
+SpawnID 126
+Radius 16
+Height 88
++SOLID
+States
+	{
+	Spawn:
+	POL6 B -1
+	loop
+	}
+}
+
+ACTOR TrafficLight replaces HangTNoBrain 78
+{
+SpawnID 127
+Radius 15
+Height 100
++SOLID
+States
+	{
+	Spawn:
+	HDB6 A -1
+	loop
+	}
+}
+
+ACTOR RobinSuit replaces ColonGibs 79
+{
+SpawnID 128
+Radius 19
+Height 19
+Mass 250
++SOLID
++SHOOTABLE
++NOBLOOD
+States
+	{
+	Spawn:
+	POB1 A -1
+	loop
+	Death:
+	APLS B -1
+	loop
+	}
+}
+
+ACTOR BookOnPillar replaces SmallBloodPool 80
+{
+SpawnID 129
+Radius 19
+Height 19
+Mass 250
+Health 50
++SOLID
++SHOOTABLE
++NOBLOOD
+States
+	{
+	Spawn:
+	POB2 A -1
+	loop
+	Death:
+	SHT2 H -1
+	loop
+	}
+}
+
+ACTOR PenguinDoll replaces BrainStem 81
+{
+SpawnID 130
+Radius 20
+Height 16
++SOLID
+States
+	{
+	Spawn:
+	BRS1 A -1
+	loop
+	}
+}
+
+ACTOR WeirdClockTree replaces BloodyTwitch 63
+{
+SpawnID 131
++SOLID
+Radius 30
+Height 56
+States
+	{
+	Spawn:
+	Keen H -1
+	Loop
+	}
+}
+
+ACTOR MacComputer replaces HeadOnAStick 27
+{
+SpawnID 133
++SOLID
+States
+	{
+	Spawn:
+	BSPI P -1
+	Loop
+	}
+}
+
+ACTOR StreetLight replaces ShortGreenColumn 31
+{
+Game Doom
+Radius 4
+Height 80
++SOLID
+States
+	{
+	Spawn:
+	COL2 A -1
+	Stop
+	}
+}
+
+ACTOR Batmobile replaces HeadsOnAStick 28
+{
+Game Doom
+Radius 16
+Height 64
++SOLID
+States
+	{
+	Spawn:
+	POL2 A -1
+	Stop
+	}
+}
+
+ACTOR ExplosionWallBlast
+{
+SpawnID 91
++NOGRAVITY
+States
+	{
+	Spawn:
+	MISL B 3 bright
+	MISL C 3 bright A_Explode(128)
+	MISL D 3 bright
+	APBX AB 3 bright
+	Stop
+	}
+}
+
+ACTOR ExplosionWall replaces BossEye 89//MAP22 only
+{
+SpawnID 92
+obituary "%o died in the explosion."
+health 10000
+radius 9
+height 56
+mass 1000
+speed 15
+painchance 255
+MONSTER
++SHOOTABLE
++NOCLIP
++NOGRAVITY
+states
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	loop
+	See:
+	POL5 A 1
+	Pain:
+	POL5 A 5 A_PlaySound("weapons/rocklx", 0, 1.0, 0, ATTN_NONE)
+	POL5 A 1 Teleport(0, 22, 0)
+	POL5 A 1 A_Recoil (-7)
+	POL5 A 1 A_UnSetShootable
+	Chase:
+	POL5 AAAAAAAAAAAAAA 0 A_SpawnItemEx("ExplosionWallBlast", 128, random(-512,512), random(0,512), 0, 0, 0, 0, 0, 0)
+	POL5 A 1 A_PlaySound("weapons/rocklx", 0, 1.0, 0, ATTN_NONE)
+	POL5 AAAAAAAAAAAAAA 0 A_SpawnItemEx("ExplosionWallBlast", 128, random(-512,512), random(0,512), 0, 0, 0, 0, 0, 0)
+	POL5 A 0 A_Stop
+	POL5 A 1 A_Recoil (-8)
+	POL5 AAAAAAAAAAAAAA 0 A_SpawnItemEx("ExplosionWallBlast", 128, random(-512,512), random(0,512), 0, 0, 0, 0, 0, 0)
+	POL5 A 0 A_Stop
+	POL5 A 1 A_Recoil (-7)
+	POL5 AAAAAAAAAAAAAA 0 A_SpawnItemEx("ExplosionWallBlast", 128, random(-512,512), random(0,512), 0, 0, 0, 0, 0, 0)
+	POL5 A 0 A_Stop
+	POL5 A 1 A_Recoil (-8)
+	POL5 AAAAAAAAAAAAAA 0 A_SpawnItemEx("ExplosionWallBlast", 128, random(-512,512), random(0,512), 0, 0, 0, 0, 0, 0)
+	POL5 A 0 A_Stop
+	POL5 A 1 A_Recoil (-7)
+	goto Chase
+	}
+}
+
+ACTOR HateBullet
+{
+Game Doom
+Radius 13
+Height 8
+Speed 100
+Damage 1
+Projectile
++BLOODLESSIMPACT
+RenderStyle Add
+Alpha 0.0
+states
+	{
+	Spawn:
+	TLP2 AAAA 1
+	stop
+	Death:
+	FIRE F 1
+	stop
+	}
+}
+
+ACTOR OneShotCauseHateTarget replaces HangBNoBrain 74
+{
+SpawnID 93
+Health 1000
+Mass 1000
+Radius 2
+Height 2
+Speed 0
++SHOOTABLE
+States
+	{
+	Spawn:
+	POL5 A 5 A_Look
+	Loop
+	See:
+	BOSS EF 7 A_FaceTarget
+	BOSS GGGGGG 1 A_CustomMissile("HateBullet",32,0,0,CMF_AIMDIRECTION)
+	TNT1 AAAAAA 3 A_Chase
+	Goto See+12
+	}
+}
+
+ACTOR FloorFireTrap replaces Megasphere 83
+{
+SpawnID 94
+Game Doom
+SeeSound "wolfss/sight"
++FIREDAMAGE
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	MEGA A 3 Bright
+	MEGA B 3 Bright A_SargAttack
+	MEGA CD 3 Bright
+	PLSE ABC 3 Bright
+	POL5 A 40 Bright
+	Goto Spawn
+	}
+}
+
+ACTOR FireShootTrap replaces GreenTorch 45
+{
+SpawnID 95
+Game Doom
+Health 7000000
+Radius 24
+Height 64
+Mass 1000000
+PainChance 255
++SHOOTABLE
++SOLID
++NOBLOOD
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	TLMP ABC 4 Bright
+	TLMP A 0 Bright A_Jump(128, "Melee")
+	BFE1 ABC 4 Bright
+	BFE1 A 0 Bright A_Jump(128, "Missile")
+	Loop
+	Melee:
+	BFE1 AB 4 Bright
+	BFE1 C 4 Bright A_CustomMissile("ArachnotronPlasma",32,0,0,CMF_AIMDIRECTION)
+	Goto See
+	Missile:
+	TLMP AB 4 Bright
+	TLMP C 4 Bright A_CustomMissile("ArachnotronPlasma",32,0,0,CMF_AIMDIRECTION)
+	Goto See+4
+	}
+}
+
+ACTOR LandMine replaces RedTorch 46
+{
+SpawnID 96
+Game Doom
+Health 1
+Radius 6
+Height 6
+Mass 1000000
++SHOOTABLE
++NOBLOOD
++OLDRADIUSDMG
+DeathSound "weapons/rocklx"
+States
+	{
+	Spawn:
+	POL4 A 10 A_Look
+	Loop
+	See:
+	POL4 A 2 A_Chase
+	Loop
+	Melee:
+	Death:
+	POSS M 5 Bright A_Scream
+	DeathContinue:
+	POSS N 2 Bright A_Explode
+	POSS OPQRSTU 5 Bright
+	Stop
+
+	Death.ZorchPistol:
+	Death.Zorch:
+	Death.ZorchKamikaze:
+	Death.PhasingZorch:
+	Death.ZorchSpectral:
+	POSS M 5 Bright A_Scream
+	TNT1 A 0 A_SetDamageType("Zorch")
+	TNT1 A 0 A_ChangeFlag("BLOODLESSIMPACT",true)
+	Goto DeathContinue
+	}
+}
+
+ACTOR Explosion replaces Cacodemon 3005 //KILLS STUFF IF PLAYER LOS
+{
+SpawnID 97
+Game Doom
+Radius 16
+Height 16
++INVISIBLE
++OLDRADIUSDMG
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	FIRE B 2 A_Explode(128)
+	stop
+	}
+}
+
+ACTOR ScareCrowPopup replaces Gibs 24
+{
+SpawnID 98
+Game Doom
+Height 63
+Radius 20
+seesound "skeleton/sight"
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	BKEY B 7 Bright
+	RKEY B 7 Bright
+	YKEY B 7 Bright
+	SMGT C 7 Bright
+	SMGT D 7 Bright
+	SCRC A 7 Bright A_SkelMissile
+	SMGT D 7 Bright
+	SMGT C 7 Bright
+	YKEY B 7 Bright
+	RKEY B 7 Bright
+	BKEY B 7 Bright
+	BKEY B 7 Bright
+	Stop
+	}
+}
+
+ACTOR FloorFire replaces TallRedColumn 32
+{
+SpawnID 99
+Game Doom
+SeeSound "brain/pain"
+DeathSound "brain/pain"
++FIREDAMAGE
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	TLMP ABC 4 Bright
+	BFE1 ABC 4 Bright A_Chase
+	Goto See+3
+	Melee:
+	BFE1 A 4 Bright A_SargAttack
+	BFE1 BC 4 Bright
+	Goto See+3
+	}
+}
+
+ACTOR WaterJumpSplash replaces InvulnerabilitySphere 2022
+{
+SpawnID 81
+SeeSound "fatso/sight"
++AMBUSH
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	PINV ABC 6
+	PINS AB 6
+	Stop
+	}
+}
+
+ACTOR SubwaySound replaces BlueTorch 44
+{
+SpawnID 82
+Game Doom
++SHOOTABLE
++SOLID
++NOBLOOD
+Radius 1
+Height 28
+DeathSound "spider/death"
+Health 1
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	POL5 A 55 A_BrainAwake
+	Loop
+	Death:
+	POL5 A 300 A_Scream
+	Stop
+	}
+}
+
+ACTOR PoliceSiren replaces Meat2 50
+{
+SpawnID 83
+Game Doom
++INVISIBLE
+SeeSound "baron/death"
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	TROO ABCD 4 A_Chase//fixme why
+	Loop
+	}
+}
+
+ACTOR FallSound replaces NonsolidMeat5 62
+{
+SpawnID 84
+Game Doom
++INVISIBLE
+SeeSound "player/male/xdeath1"
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	TROO ABCD 4 A_Chase//fixme why
+	Loop
+	}
+}
+
+ACTOR TwoFaceSound replaces GibbedMarine 10
+{
+SpawnID 85
+Game Doom
++INVISIBLE
+SeeSound "grunt/active"
+States
+	{
+	Spawn:
+	POL5 A 10 A_Look
+	Loop
+	See:
+	TROO ABCD 4 A_Chase//fixme why
+	Loop
+	}
+}
+
+ACTOR WeedWaterSound replaces HangTLookingDown 75
+{
+SpawnID 86
+Game Doom
+SeeSound "fatso/pain"
+ActiveSound "fatso/pain"
+States
+	{
+	Spawn:
+	SMRT A 3 A_Look
+	Loop
+	See:
+	SMRT A 4
+	Loop
+	}
+}
+
+ACTOR CrowdSound replaces HangTSkull 76
+{
+SpawnID 87
+Game Doom
++INVISIBLE
+States
+	{
+	Spawn:
+	POL5 A 3 A_Look
+	Loop
+	See:
+	FIRE A 33 A_PlaySound("vile/firestrt")
+	Loop
+	}
+}
+
+ACTOR NoFog : TeleportFog replaces TeleportFog
+{
+States
+	{
+	Spawn:
+	TNT1 A 1
+	stop
+	}
+}
+
+ACTOR Money replaces BlueSkull 40
+{
+SpawnID 102
+States
+	{
+	Spawn:
+	FCAN C -1
+	Loop
+	}
+}
+
+ACTOR Paper replaces DeadDemon 21
+{
+SpawnID 120
+States
+	{
+	Spawn:
+	FCAN B -1
+	loop
+	}
+}
+
+ACTOR Gotham replaces DeadLostSoul 23
+{
+SpawnID 121
+States
+	{
+	Spawn:
+	PINS C -1 Bright
+	loop
+	}
+}
+
+ACTOR CeilingLamp replaces NonsolidMeat3 61
+{
+SpawnID 132
++NOGRAVITY
++SPAWNCEILING
+States
+	{
+	Spawn:
+	GOR3 A -1
+	Loop
+	}
+}
+
+ACTOR BatDoomChandelier replaces NonsolidMeat2 59
+{
+SpawnID 134
++NOGRAVITY
++SPAWNCEILING
+States
+	{
+	Spawn:
+	GOR2 A -1
+	Loop
+	}
+}
+
+ACTOR DeadCop replaces BurningBarrel 70
+{
+SpawnID 125
+Radius 16
+Height 56
+States
+	{
+	Spawn:
+	FCAN A -1
+	loop
+	}
+}
+
+ACTOR WallLamp replaces DeadDoomImp 20
+{
+SpawnID 122
+States
+	{
+	Spawn:
+	CAND A -1 Bright
+	loop
+	}
+}
+
+ACTOR Stalactite replaces NonsolidMeat4 60
+{
+SpawnID 115
++SPAWNCEILING
++NOGRAVITY
+States
+	{
+	Spawn:
+	GOR4 A -1
+	loop
+	}
+}
+
+ACTOR TiedHostage replaces BloodyTwitch 49
+{
+SpawnID 113
++FLOORCLIP
+states
+	{
+	Spawn:
+	BFE2 CD 10
+	loop
+	}
+}
