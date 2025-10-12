@@ -5,6 +5,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 ## Supported Mapsets and Total Conversions
 | Mapsets / Total Conversions | Authors | Download Links |
 | --------------------------- | ------- | -------------- |
+| Batman Doom | ACE Team, Batman Doom Easy Patch by Ozymandias81 | [Link](https://www.doomworld.com/idgames/themes/batman/batman) |
 | Bikini Bottom Massacre | ContrastSaturation | N/A |
 | Chex Quest: Galactic Conflict | Tifosi 92 | [Link](http://ipfsnet.com/tifosi92/chexquest/Chex_Quest_GC_v1.2.zip) |
 | Chex Quest: The Penultimate Breakfast | Andrea Rovenski | [Link](https://www.doomworld.com/idgames/themes/chex/chextpb) |
