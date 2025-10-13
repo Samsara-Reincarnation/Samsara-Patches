@@ -1,0 +1,125 @@
+pointlight EBOLT
+{
+	color 1.0 1.0 0.3
+	size 48
+}
+
+flickerlight EBOLT_X1
+{
+	color 1.0 1.0 0.5
+	size 36
+	secondarySize 54
+	chance 0.3
+}
+
+flickerlight EBOLT_X2
+{
+	color 1.0 1.0 0.7
+	size 64
+	secondarySize 96
+	chance 0.3
+}
+
+flickerlight EBOLT_X3
+{
+	color 0.8 0.8 0.6
+	size 32
+	secondarySize 48
+	chance 0.3
+}
+
+flickerlight EBOLT_X4
+{
+	color 0.4 0.4 0.3
+	size 18
+	secondarySize 27
+	chance 0.3
+}
+
+object EnergyBolt_Samsara
+{
+	frame APLSA { light EBOLT }
+	frame APLSC { light EBOLT_X1 }
+	frame APLSD { light EBOLT_X2 }
+	frame APLSE { light EBOLT_X3 }
+	frame APLSF { light EBOLT_X4 }
+}
+
+pointlight EBOLT2
+{
+	color 1.0 1.0 0.3
+	size 64
+}
+
+flickerlight EBOLT2_X1
+{
+	color 1.0 1.0 0.5
+	size 48
+	secondarySize 64
+	chance 0.3
+}
+
+flickerlight EBOLT2_X2
+{
+	color 1.0 1.0 0.7
+	size 80
+	secondarySize 112
+	chance 0.3
+}
+
+flickerlight EBOLT2_X3
+{
+	color 0.8 0.8 0.6
+	size 48
+	secondarySize 64
+	chance 0.3
+}
+
+flickerlight EBOLT2_X4
+{
+	color 0.4 0.4 0.3
+	size 24
+	secondarySize 32
+	chance 0.3
+}
+
+object HeavyEnergyBolt_Samsara
+{
+	frame SP20H { light EBOLT2 }
+	frame SP20I { light EBOLT2_X1 }
+	frame SP20J { light EBOLT2_X2 }
+	frame SP20K { light EBOLT2_X3 }
+	frame SP20L { light EBOLT2_X4 }
+}
+
+object LostSoulEviternity_Samsara
+{
+	frame SKULA { light LOSTSOUL    }
+	frame SKULB { light LOSTSOUL    }
+	frame SKULC { light LOSTSOUL    }
+	frame SKULD { light LOSTSOUL    }
+	frame SKULE { light LOSTSOUL    }
+	frame SKULF { light LOSTSOUL    }
+	frame SKULG { light LOSTSOUL    }
+	
+	frame SKULH { light LOSTSOUL_X1 }
+	frame SKULI { light LOSTSOUL_X2 }
+	frame SKULJ { light LOSTSOUL_X3 }
+	frame SKULK { light LOSTSOUL_X4 }
+}
+
+object LostSoulEviternity2_Samsara
+{
+	frame SKULA { light LOSTSOUL    }
+	frame SKULB { light LOSTSOUL    }
+	frame SKULC { light LOSTSOUL    }
+	frame SKULD { light LOSTSOUL    }
+	frame SKULE { light LOSTSOUL    }
+	frame SKULF { light LOSTSOUL    }
+	frame SKULG { light LOSTSOUL    }
+	
+	frame SKULH { light LOSTSOUL_X1 }
+	frame SKULI { light LOSTSOUL_X2 }
+	frame SKULJ { light LOSTSOUL_X3 }
+	frame SKULK { light LOSTSOUL_X4 }
+}

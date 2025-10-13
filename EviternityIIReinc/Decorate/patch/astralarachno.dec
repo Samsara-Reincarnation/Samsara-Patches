@@ -1,0 +1,405 @@
+Actor AstralArachno_Samsara : SamsaraMonsterCyberneticTotalGib replaces AstralArachnotron
+{
+	Health 700
+	Speed 18
+	Radius 64
+	Height 64
+	ReactionTime 8
+	PainChance 96
+	Mass 600
+	Monster
+	+FLOORCLIP
+	SeeSound "xbaby/alert"
+	PainSound "baby/pain"
+	DeathSound "xbaby/death"
+	Obituary "$OB_ASTRALBABY"
+	Tag "Astral Arachnotron"
+	States
+	{
+	Spawn:
+		SP07 AB 10 A_Look
+		loop
+	See:
+		SP07 A 15
+		SP07 A 0 A_PlaySoundEx("xbaby/active", Auto, False, 0)
+		SP07 ABCDEF 2 A_Chase
+		goto See+1
+	Pain:
+		SP07 I 3 
+		SP07 I 3 A_Pain
+		goto See+1
+	Pain.DoomDamageTypeStunner:
+		SP07 I 2 A_ChangeFlag("NOPAIN",true)
+		SP07 I 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		SP07 I 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		SP07 I 16 A_Pain
+		Goto See
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		SP07 A 4 Bright A_FaceTarget
+		SP07 AA 8 Bright A_FaceTarget
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 0)
+		SP07 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 1)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 2, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 2)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 4, CMF_OFFSETPITCH, 0)
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 3)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 5, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 4)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 6, CMF_OFFSETPITCH, 0)
+		SP07 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP07 G 0 Bright A_FaceTarget
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 5)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 7, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 5.5)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 8, CMF_OFFSETPITCH, 0)
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 5)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 7, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 4)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 6, CMF_OFFSETPITCH, 0)
+		SP07 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP07 G 0 Bright A_FaceTarget
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 3)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 5, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 2)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 4, CMF_OFFSETPITCH, 0)
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 1)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 2, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, 0)
+		SP07 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP07 A 0 Bright A_FaceTarget
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -1)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -2, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -2)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -4, CMF_OFFSETPITCH, 0)
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -3)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -5, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -4)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -6, CMF_OFFSETPITCH, 0)
+		SP07 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP07 G 0 Bright A_FaceTarget
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -5)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -7, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -5.5)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -8, CMF_OFFSETPITCH, 0)
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -5)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -7, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -4)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -6, CMF_OFFSETPITCH, 0)
+		SP07 G 0 Bright A_PlaySoundEx ("xbolt/spawn", Auto, False, 0)
+		SP07 G 0 Bright A_FaceTarget
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -3)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -5, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -2)
+		SP07 G 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -4, CMF_OFFSETPITCH, 0)
+		SP07 G 2 Bright
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, 0, CMF_OFFSETPITCH, -1)
+		SP07 H 0 Bright A_SpawnProjectile ("EnergyBolt3", 32, 0, -2, CMF_OFFSETPITCH, 0)
+		SP07 H 2 Bright
+		SP07 G 1 Bright A_SpidRefire
+		goto Missile+2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP07 J 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		SP07 J 20 A_Scream 
+		SP07 K 6 A_Fall
+		SP07 L 6 A_SpawnItem("Ammo4Small", 0)
+		SP07 MNO 6
+		SP07 P -1 
+		stop
+	Raise:
+		SP07 A 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		SP07 PONMLKJ 5 
+		goto See
+	Pain.ShrinkerDMG:
+		SP07 I 0
+		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)
+		"####" "#" 0 A_SetUserVar("user_scaley", scaley*65536.0)
+		"####" "#" 0 A_ChangeFlag("NOPAIN", 1)
+		"####" "#" 0 A_ChangeFlag("NODAMAGE", 1)
+		"####" "#" 0 A_NoBlocking
+		"####" "#" 0 A_PlaySound("duke/shrink")
+		"####" "#" 1 A_SetScale(0.95*(user_scalex/65536.0),0.95*(user_scaley/65536.0))
+		"####" "#" 1 A_SetScale(0.9*(user_scalex/65536.0),0.9*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_ShrinkEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		"####" "#" 1 A_SetScale(0.85*(user_scalex/65536.0),0.85*(user_scaley/65536.0))
+		"####" "#" 1 A_SetScale(0.8*(user_scalex/65536.0),0.8*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_ShrinkEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		"####" "#" 1 A_SetScale(0.75*(user_scalex/65536.0),0.75*(user_scaley/65536.0))
+		"####" "#" 1 A_SetScale(0.7*(user_scalex/65536.0),0.7*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_ShrinkEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		"####" "#" 1 A_SetScale(0.65*(user_scalex/65536.0),0.65*(user_scaley/65536.0))
+		"####" "#" 1 A_SetScale(0.6*(user_scalex/65536.0),0.6*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_ShrinkEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		"####" "#" 1 A_SetScale(0.55*(user_scalex/65536.0),0.55*(user_scaley/65536.0))
+		"####" "#" 1 A_SetScale(0.5*(user_scalex/65536.0),0.5*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_ShrinkEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		"####" "#" 1 A_SetScale(0.45*(user_scalex/65536.0),0.45*(user_scaley/65536.0))
+		"####" "#" 1 A_SetScale(0.4*(user_scalex/65536.0),0.4*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_ShrinkEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		"####" "#" 1 A_SetScale(0.35*(user_scalex/65536.0),0.35*(user_scaley/65536.0))
+		"####" "#" 1 A_SetScale(0.3*(user_scalex/65536.0),0.3*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_ShrinkEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		"####" "#" 1 A_SetScale(0.25*(user_scalex/65536.0),0.25*(user_scaley/65536.0))
+		"####" "#" 4 A_SetScale(0.2*(user_scalex/65536.0),0.2*(user_scaley/65536.0))
+		"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara_Shrink", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_TRANSFERAMBUSHFLAG|SXF_SETMASTER,0,tid)
+		TNT1 A 2
+		TNT1 A 0 Thing_Remove(0)
+		Stop
+	}
+}
+
+actor AstralArachno_Samsara_Shrink : AstralArachno_Samsara
+{
+	+FRIGHTENED
+	+NOTRIGGER
+	-SHOOTABLE
+	+THRUACTORS
+	+NORADIUSDMG
+	+VULNERABLE
+	+QUICKTORETALIATE
+	-COUNTKILL
+	-NOGRAVITY
+	+NODAMAGE
+	+NOPAIN
+	MaxStepHeight 0
+	MaxDropOffHeight 0
+	MeleeRange 16
+	Height 16
+	Health 1
+	Speed 1
+	PainChance "ShrinkDMG", 0
+	DamageFactor "ShrinkDMG", 0.0
+	PainChance "ExpanderDMG", 0
+	DamageFactor "ExpanderDMG", 0.0
+	States
+	{
+		Spawn:
+			TNT1 A 0
+			TNT1 A 0 A_JumpIfInventory("ShrunkToken",1,"SpawnLoop")
+			TNT1 A 0 A_SetUserVar("user_scalex", scalex*65536.0)
+			TNT1 A 0 A_SetUserVar("user_scaley", scaley*65536.0)
+			TNT1 A 0 A_SetScale(scalex*0.2,scaley*0.2) // setting the scale in ACS does work, but the actor shows up at normal size for a split second
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_Shrinker", 0, 1)
+			SP07 I 10
+			Goto See
+		SpawnLoop:
+			SP07 AB 10 A_Look
+			Loop
+		See:
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 A 4
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 A 4
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 A 4
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 A 4
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 A 3
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 A 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 B 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 B 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 C 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 C 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 D 3
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 D 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 E 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 E 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 F 3 A_Chase("","")
+			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeClass", 1, 3)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("Squish")
+			"####" "#" 0 A_Jump(256, 2)
+			"####" "#" 0 A_JumpIfTargetInSideMeleeRange("DukeStomp")
+			SP07 F 3 A_Chase("","")
+			"####" "#" 0 A_JumpIf(CallACS("Samsara_Shrinker", 3) == 0, "Forget")
+			Goto See+24
+		Forget:
+			"####" "#" 0 A_ClearTarget
+			Goto See
+		Grow:
+			"####" "#" 4 A_SetScale(0.25*(user_scalex/65536.0),0.25*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.3*(user_scalex/65536.0),0.3*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.35*(user_scalex/65536.0),0.35*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.4*(user_scalex/65536.0),0.4*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.45*(user_scalex/65536.0),0.45*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.5*(user_scalex/65536.0),0.5*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.55*(user_scalex/65536.0),0.55*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.6*(user_scalex/65536.0),0.6*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.65*(user_scalex/65536.0),0.65*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.7*(user_scalex/65536.0),0.7*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.75*(user_scalex/65536.0),0.75*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.8*(user_scalex/65536.0),0.8*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.85*(user_scalex/65536.0),0.85*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.9*(user_scalex/65536.0),0.9*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.95*(user_scalex/65536.0),0.95*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(1.0*(user_scalex/65536.0),1.0*(user_scaley/65536.0))
+			"####" "#" 0 A_SpawnItemEx("AstralArachno_Samsara", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_TRANSFERSPECIAL|SXF_TRANSFERPOINTERS|SXF_TRANSFERAMBUSHFLAG|SXF_SETMASTER,0,tid)
+			TNT1 A 0 A_GiveToChildren("ShrunkPropertyTransfer",1)
+			TNT1 A 0 A_GiveToChildren("ShrunkPropertyTransfer",1)
+			TNT1 A 2 Thing_Remove(0)
+			Stop
+		Squish:
+			"####" "#" 0 A_GiveInventory("SquishToken", 1)
+			"####" "#" 0 A_JumpIfInTargetInventory("DukeStomp", 1, 2)
+			"####" "#" 0 A_Jump(256,3)
+			"####" "#" 2
+			"####" "#" 0 A_Jump(256,3)
+			"####" "#" 0
+			"####" "#" 2 A_Die("Squish")
+			"####" "#" 0
+			Loop
+		Death:
+		XDeath:
+		Death.Squish:
+		XDeath.Squish:
+			TNT1 A 0 A_Jump(64,2)
+			TNT1 A 0 A_GiveToTarget("DukeBootTaunt",1)
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)
+			TNT1 A 1 A_SpawnItemEx("DukeBloodPool",0,0,0,0,0,0,0,SXF_USEBLOODCOLOR|SXF_NOCHECKPOSITION)
+			TNT1 A 0 A_GiveInventory("MasterDeadToken", 1, AAPTR_Master)
+			TNT1 A 0
+			Stop
+		DukeStomp:
+			"####" "#" 0 A_GiveToTarget("DukeStomp", 1)
+			Goto Squish
+	}
+}
+
+actor AstralArachno_Samsara_ShrinkEffect : AstralArachno_Samsara
+{
+	-ISMONSTER
+	-COUNTKILL
+	-SHOOTABLE
+	-SOLID
+	+NOINTERACTION
+	-NOGRAVITY
+	Renderstyle Translucent
+	Alpha 0.4
+	States
+	{
+		Spawn:
+			SP07 I 0
+			SP07 I 0 A_SetUserVar("user_scalex", scalex*65536.0)
+			SP07 I 0 A_SetUserVar("user_scaley", scaley*65536.0)
+			"####" "#" 1 A_SetScale(0.95*(user_scalex/65536.0),0.95*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.9*(user_scalex/65536.0),0.9*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.85*(user_scalex/65536.0),0.85*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.8*(user_scalex/65536.0),0.8*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.75*(user_scalex/65536.0),0.75*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.7*(user_scalex/65536.0),0.7*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.65*(user_scalex/65536.0),0.65*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.6*(user_scalex/65536.0),0.6*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.55*(user_scalex/65536.0),0.55*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.5*(user_scalex/65536.0),0.5*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.45*(user_scalex/65536.0),0.45*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.4*(user_scalex/65536.0),0.4*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.35*(user_scalex/65536.0),0.35*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.3*(user_scalex/65536.0),0.3*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.25*(user_scalex/65536.0),0.25*(user_scaley/65536.0))
+			"####" "#" 1 A_SetScale(0.2*(user_scalex/65536.0),0.2*(user_scaley/65536.0))
+			Stop
+	}
+}

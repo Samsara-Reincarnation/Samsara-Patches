@@ -1,0 +1,70 @@
+Actor AstralBabyCaco_Samsara : SamsaraMonsterGhost replaces AstralBabycaco
+{
+	Health 60
+	Speed 16
+	Radius 16
+	Height 56
+	ReactionTime 8
+	PainChance 80
+	Mass 42
+	Monster
+	+NOGRAVITY
+	+FLOAT
+	-COUNTKILL
+	+NOBLOOD
+	DropItem "SamsaraDropItemKeenDie"
+	Species AstralCaco
+	SeeSound "xkirby/alert"
+	PainSound "xkirby/pain"
+	DeathSound "xkirby/death"
+	Obituary "$OB_ASTRALKIRBY"
+	Tag "Astral Babycaco"
+	States
+	{
+	Spawn:
+		SP11 A 10 A_Look
+		loop
+	See:
+		SP11 A 3 A_Chase
+		loop
+	Pain:
+		SP11 H 3 
+		SP11 I 3 A_Pain
+		goto See
+	Pain.DoomDamageTypeStunner:
+		SP11 H 2 A_ChangeFlag("NOPAIN",true)
+		SP11 H 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		SP11 H 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		SP11 H 16 A_Pain
+		Goto See
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		SP11 E 1 A_FaceTarget
+		SP11 E 1 A_PlaySoundEx ("xkirby/charge", Auto, False, 0)
+		SP11 EEEEEEEEE 1 A_Chase
+		SP11 F 5 A_FaceTarget
+		SP11 G 0 A_SpawnProjectile ("AstralBabyFireball", 32, 0, 0)
+		SP11 G 0 A_SpawnProjectile ("AstralBabyFireball", 32, 0, 8)
+		SP11 G 2 A_SpawnProjectile ("AstralBabyFireball", 32, 0, -8)
+		goto See
+	Death:
+		SP11 J 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP11 K 6 A_Scream
+		SP11 LMNOP 6 
+		SP11 Q 6 A_Fall
+		SP11 R 6 
+		SP11 S -1 A_KeenDie
+		stop
+	Raise:
+		SP11 A 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		SP11 RQPONMLK 4
+		goto See
+	}
+}

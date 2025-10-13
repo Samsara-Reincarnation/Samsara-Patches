@@ -1,0 +1,70 @@
+Actor NightmareCacodemon_Samsara : SamsaraMonsterGhost replaces NightmareCacodemon
+{
+	Health 700
+	Speed 24
+	Radius 31
+	Height 56
+	ReactionTime 8
+	PainChance 20
+	Mass 1000
+	MinMissileChance 160
+	Monster
+	+NOGRAVITY
+	+FLOAT
+	+NOBLOOD
+	SeeSound "nac/alert"
+	PainSound "nac/pain"
+	DeathSound "nac/death"
+	ActiveSound "nac/active"
+	Obituary "$OB_NAC"
+	DropItem "SamsaraDropItemKeenDie"
+	Tag "Nightmare Astral Cacodemon"
+	States
+	{
+	Spawn:
+		SP17 A 10 A_Look
+		loop
+	See:
+		SP17 A 3 A_Chase
+		loop
+	Pain:
+		SP17 H 3 
+		SP17 I 3 A_Pain
+		goto See
+	Pain.DoomDamageTypeStunner:
+		SP17 H 2 A_ChangeFlag("NOPAIN",true)
+		SP17 H 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		SP17 H 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		SP17 H 16 A_Pain
+		Goto See
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		SP17 E 1 A_FaceTarget
+		SP17 E 1 A_PlaySoundEx ("nac/charge", Auto, False, 0)
+		SP17 EEEEEEE 1 A_Chase
+		SP17 F 5 A_FaceTarget
+		SP17 G 0 A_SpawnProjectile ("NACCFireball", 32, 0, 0, CMF_OFFSETPITCH , -5)
+		SP17 G 0 A_SpawnProjectile ("NACFireball", 32, 0, 20, CMF_OFFSETPITCH , -5)
+		SP17 G 3 A_SpawnProjectile ("NACFireball", 32, 0, -20, CMF_OFFSETPITCH , -5)
+		goto See
+	Death:
+		SP17 J 8 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP17 K 8 A_Scream
+		SP17 LMNOP 8 
+		SP17 Q 8 A_Fall
+		SP17 R 8 
+		SP17 S -1 A_KeenDie
+		stop
+	Raise:
+		SP17 A 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		SP17 RQPONMLK 5 
+		goto See
+	}
+}

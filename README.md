@@ -13,6 +13,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Doom: The Golden Souls Remastered | Andrea Gori | [Link](https://batandy.itch.io/goldensouls) |
 | Elf Gets Pissed | Matt Cibulas | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/elfgp) |
 | Eviternity | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity) |
+| Eviternity II | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternityii) |
 | Harmony Compatible | Thomas van der Velden | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/g-i/harmonyc) |
 | Hexen: Scourge of Viscerus | Matt Tropiano | [Link](https://www.doomworld.com/idgames/levels/hexen/v-z/viscerus) |
 | Hordes of Chaos X | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/hocx) |
@@ -25,6 +26,9 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Strife: Absolute Order | Adam Woodmansey | [Link](https://www.doomworld.com/idgames/levels/strife/sabord) |
 
 There are also three patches that were designed only for Zandronum that bring the GZDoom player color support to Heretic, Hexen: Beyond Heretic, and Strife: Quest for the Sigil. They can be loaded with the corresponding IWAD and found along with the other prebuilt patches in the releases page.
+
+## Special Requirements/Notes For Some Patches
+Due to how Eviternity II combines DECORATE and DSDHacked, and the way the latest version of GZDoom handles DSDHacked actors, the mapset will require an older version of GZDoom, specifically [v4.12.2](https://github.com/ZDoom/gzdoom/releases/tag/g4.12.2). There has been reports of [an arbitrary code execution vulnerability](https://security.snyk.io/vuln/SNYK-UNMANAGED-ZDOOMGZDOOM-8731595) in this version, but as long as you only run the patch and required files with this mapset and nothing else, you should be safe.
 
 Some popular mapsets such as Ancient Aliens will not have patches created for them because of their availability on [The Sentinal's Lexicon](https://github.com/Mythotic-Tinker-Station/lexicon), a mapset compilation that aims to have compatibility with many gameplay mods such as Samsara Reincarnation. If they are already included in Lexicon, they will likely not have patches made for them.
 

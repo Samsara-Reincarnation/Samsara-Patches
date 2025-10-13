@@ -1,0 +1,3 @@
+[enu default]
+
+SAMSARAPATCH_CUSTOMWEAPON_NAME1 = "Perforator";
