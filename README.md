@@ -21,6 +21,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Ressurection of Chaos | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/hexen/p-r/roc) |
 | Resurgence | Josh Sealy | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/resurge) |
 | Satan's Covenant | Unholypimpin | [Link](https://allfearthesentinel.com/zandronum/download.php?file=satanscovenantv5.3.wad) |
+| Shadow of the Wool Ball | MSPaintR0cks | [Link](https://forum.zdoom.org/viewtopic.php?t=52301&) |
 | Strife: Absolute Order | Adam Woodmansey | [Link](https://www.doomworld.com/idgames/levels/strife/sabord) |
 
 There are also three patches that were designed only for Zandronum that bring the GZDoom player color support to Heretic, Hexen: Beyond Heretic, and Strife: Quest for the Sigil. They can be loaded with the corresponding IWAD and found along with the other prebuilt patches in the releases page.

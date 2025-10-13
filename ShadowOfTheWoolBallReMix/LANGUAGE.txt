@@ -1,0 +1,2 @@
+[enu default]
+OB_IMPHIT = "Whatchu lookin' at?"; // Was "You were burned by the wizard cat!", but had to be changed due to a bug

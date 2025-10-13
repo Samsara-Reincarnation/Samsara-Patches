@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Legacy of Rust
+Authors: Nightdive Studios & MachineGames
+Link: N/A
+
+Resources used:
+---------------
+N/A

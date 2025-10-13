@@ -1,0 +1,29 @@
+actor SamsaraSlotTwo_SOTWB : RandomSpawner replaces ShotgunNew { DropItem "SamsaraSlotTwoPickup" }
+actor SamsaraSlotThree_SOTWB : RandomSpawner replaces ShotgunBlack { DropItem "SamsaraSlotThreePickup" }
+actor SamsaraSlotFour_SOTWB : RandomSpawner replaces ChaingunNew { DropItem "SamsaraSlotFourPickup" }
+
+Actor SamsaraHealPack0_SOTWB : HealPack0Dump replaces FoodNomNom { }
+Actor SamsaraHealPack0_SOTWB2 : HealPack0Dump replaces FoodNomNom2 { }
+
+Actor SamsaraArmorPack3_SOTWB : ArmorScrapDump replaces Coffee { }
+
+Actor SamsaraAmmo1Small_SOTWB : Ammo1Small replaces ClipNew { }
+Actor SamsaraAmmo2Small_SOTWB : Ammo2Small replaces ShellNew { }
+Actor SamsaraAmmo2Small_SOTWB2 : Ammo2Small replaces BlackShell { }
+
+Actor SamsaraClip2_SOTWB : Clip2 {}
+
+Actor SamsaraShell2_SOTWB : Ammo2Small
+{
+    States
+    {
+      Spawn:
+        SHEL B 0
+        goto SpawnGameModeCheck
+
+      SpawnActual:
+        TNT1 A 0 A_ChangeFlag("THRUACTORS",false)
+        SHEL B -1 A_ChangeFlag("NOTIMEFREEZE",false)
+        stop
+    }
+}

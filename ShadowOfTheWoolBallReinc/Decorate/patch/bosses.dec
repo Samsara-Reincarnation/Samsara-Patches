@@ -1,0 +1,821 @@
+ACTOR OtgrossHard_Samsara : SamsaraMonsterBeastBoss replaces OtgrossHard
+{
+	Health 1600
+	PainChance 0
+	Speed 12
+	Radius 40
+	Height 56
+	Scale 0.8
+	Mass 9999
+	Monster
+	+FLOORCLIP
+	+LOOKALLAROUND
+	+BOSS
+	AttackSound "chainguy/attack"
+	PainSound "chainguy/attack"
+	DeathSound "MONSTERWALK"
+	ActiveSound "demon/active"
+	Tag "Otgross"
+	Obituary "You were no match for the almighty Otgross!"
+	States
+	{
+	Spawn:
+		MONS A 10 A_Look
+		MONS J 0 A_PlaySound("OTGROSS2")
+		MONS JKJ 10 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		MONS DDDDDD 1 A_CHASE
+		MONS D 0 A_FaceTarget
+		MONS BBBBBB 1 A_Chase
+		MONS D 0 A_FaceTarget
+		MONS D 3 A_Scream
+		MONS D 0 A_FaceTarget
+		MONS D 0 Radius_Quake(1,10,0,20,0)
+		MONS DDDDDD 1 A_Chase
+		MONS D 0 A_FaceTarget
+		MONS CCCCCC 1 A_Chase
+		MONS D 3 A_Scream
+		MONS D 0 A_FaceTarget
+		MONS D 0 Radius_Quake(1,10,0,20,0)
+		Loop
+	Missile:
+		MONS E 0 A_Pain	
+		MONS E 10 A_FaceTarget
+		MONS FGHI 2 BRIGHT A_CPosAttack
+		MONS E 0 Radius_Quake(1,10,0,70,0)
+		MONS E 1 A_CPosRefire
+		Goto Missile+2 
+	Pain:
+		SARG F 4 
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SARG F 5
+		SARG F 5 
+		SARG G 0 A_Scream
+		SARG G 100 
+		SARG G 0 A_NoBlocking
+		CHGF G -1
+		Stop
+	}
+}
+
+ACTOR Otgross_Samsara : SamsaraMonsterBeastBoss replaces Otgross
+{
+	Health 1200
+	PainChance 0
+	Speed 12
+	Radius 40
+	Height 56
+	Scale 0.8
+	Mass 9999
+	Monster
+	+FLOORCLIP
+	+LOOKALLAROUND
+	+BOSS
+	AttackSound "chainguy/attack"
+	PainSound "chainguy/attack"
+	DeathSound "MONSTERWALK"
+	ActiveSound "demon/active"
+	Tag "Otgross"
+	Obituary "You were no match for the almighty Otgross!"
+	States
+	{
+	Spawn:
+		MONS A 10 A_Look
+		MONS J 0 A_PlaySound("OTGROSS2")
+		MONS JKJ 10 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		MONS DDDDDD 1 A_CHASE
+		MONS D 0 A_FaceTarget
+		MONS BBBBBB 1 A_Chase
+		MONS D 0 A_FaceTarget
+		MONS D 3 A_Scream
+		MONS D 0 A_FaceTarget
+		MONS D 0 Radius_Quake(1,10,0,20,0)
+		MONS DDDDDD 1 A_Chase
+		MONS D 0 A_FaceTarget
+		MONS CCCCCC 1 A_Chase
+		MONS D 3 A_Scream
+		MONS D 0 A_FaceTarget
+		MONS D 0 Radius_Quake(1,10,0,20,0)
+		Loop
+	Missile:
+		MONS E 0 A_Pain	
+		MONS E 10 A_FaceTarget
+		MONS FGHI 2 BRIGHT A_CPosAttack
+		MONS E 0 Radius_Quake(1,10,0,70,0)
+		MONS E 1 A_CPosRefire
+		Goto Missile+2 
+	Pain:
+		SARG F 4 
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SARG F 5
+		SARG F 5 
+		SARG G 0 A_Scream
+		SARG G 100 
+		SARG G 0 A_NoBlocking
+		CHGF G -1
+		Stop
+	}
+}
+
+ACTOR OtgrossEasy_Samsara : SamsaraMonsterBeastBoss replaces OtgrossEasy
+{
+	Health 1400
+	PainChance 0
+	Speed 12
+	Radius 40
+	Height 56
+	Scale 0.8
+	Mass 9999
+	Monster
+	+FLOORCLIP
+	+LOOKALLAROUND
+	+BOSS
+	AttackSound "chainguy/attack"
+	PainSound "chainguy/attack"
+	DeathSound "MONSTERWALK"
+	ActiveSound "demon/active"
+	Tag "Otgross"
+	Obituary "You were no match for the almighty Otgross!"
+	States
+	{
+	Spawn:
+		MONS A 10 A_Look
+		MONS J 0 A_PlaySound("OTGROSS2")
+		MONS JKJ 10 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		MONS DDDDDD 1 A_CHASE
+		MONS D 0 A_FaceTarget
+		MONS BBBBBB 1 A_Chase
+		MONS D 0 A_FaceTarget
+		MONS D 3 A_Scream
+		MONS D 0 A_FaceTarget
+		MONS D 0 Radius_Quake(1,10,0,20,0)
+		MONS DDDDDD 1 A_Chase
+		MONS D 0 A_FaceTarget
+		MONS CCCCCC 1 A_Chase
+		MONS D 3 A_Scream
+		MONS D 0 A_FaceTarget
+		MONS D 0 Radius_Quake(1,10,0,20,0)
+		Loop
+	Missile:
+		MONS E 0 A_Pain	
+		MONS E 10 A_FaceTarget
+		MONS FGHI 2 BRIGHT A_CPosAttack
+		MONS E 0 Radius_Quake(1,10,0,70,0)
+		MONS E 1 A_CPosRefire
+		Goto Missile+2 
+	Pain:
+		SARG F 4 
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SARG F 5
+		SARG F 5 
+		SARG G 0 A_Scream
+		SARG G 100 
+		SARG G 0 A_NoBlocking
+		CHGF G -1
+		Stop
+	}
+}
+
+ACTOR Boss2_Samsara : SamsaraMonsterBeastBoss replaces Boss2
+{
+	Game Doom
+	SpawnID 20
+	Health 2500
+	Scale 1.0
+	Radius 20
+	Height 56
+	Mass 99999
+	Speed 12
+	PainChance 0
+	Monster
+	MeleeThreshold 196
+	+MISSILEMORE 
+	+FLOORCLIP
+	+LOOKALLAROUND
+	PainSound "PUNCH8"
+	DeathSound "CHAINCATDIE"
+	MeleeSound "skeleton/melee"
+	HitObituary "$OB_UNDEADHIT"
+	Tag "Horken"
+	Obituary "You were slower than the rockets!"
+	States
+	{
+	Spawn:
+		FATA A 1 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		FATA F 2 A_Chase
+		Goto Missile
+	Missile:
+		FATA C 0 BRIGHT A_PlaySOund("FATSHOT")
+		FATA C 5 BRIGHT A_FaceTarget
+		FATA D 10 BRIGHT A_FaceTarget
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA C 0 BRIGHT A_PlaySOund("FATSHOT")
+		FATA C 5 BRIGHT A_FaceTarget
+		FATA F 7 A_FaceTarget
+		FATA A 0 A_JumpIfCloser(56, "Melee")
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		Goto See2
+	Pain:
+		OFFI F 5
+		OFFI F 5 A_Pain
+		Goto See2
+	Melee:
+		FATA C 0 BRIGHT A_PlaySOund("DSPUNCH")
+		BMBE M 0 bright A_SpawnItem ("KamikaziDamage", 0, 40)
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		FATA A 4
+		CHGF G 4 A_Scream
+		CHGF H 4 A_NoBlocking
+		CHGF I 4
+		CHGF J -1
+		Stop
+	}
+}
+
+ACTOR Boss2Medium_Samsara : SamsaraMonsterBeastBoss replaces Boss2Medium
+{
+	Game Doom
+	SpawnID 20
+	Health 2000
+	Scale 1.0
+	Radius 20
+	Height 56
+	Mass 99999
+	Speed 12
+	PainChance 0
+	Monster
+	MeleeThreshold 196
+	+MISSILEMORE 
+	+FLOORCLIP
+	+LOOKALLAROUND
+	PainSound "PUNCH8"
+	DeathSound "CHAINCATDIE"
+	MeleeSound "skeleton/melee"
+	HitObituary "$OB_UNDEADHIT"
+	Tag "Horken"
+	Obituary "You were slower than the rockets!"
+	States
+	{
+	Spawn:
+		FATA A 1 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		FATA F 2 A_Chase
+		Goto Missile
+	Missile:
+		FATA C 0 BRIGHT A_PlaySOund("FATSHOT")
+		FATA C 5 BRIGHT A_FaceTarget
+		FATA D 10 BRIGHT A_FaceTarget
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA C 0 BRIGHT A_PlaySOund("FATSHOT")
+		FATA C 5 BRIGHT A_FaceTarget
+		FATA F 7 A_FaceTarget
+		FATA A 0 A_JumpIfCloser(56, "Melee")
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		Goto See2
+	Pain:
+		OFFI F 5
+		OFFI F 5 A_Pain
+		Goto See2
+	Melee:
+		FATA C 0 BRIGHT A_PlaySOund("DSPUNCH")
+		BMBE M 0 bright A_SpawnItem ("KamikaziDamage", 0, 40)
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		FATA A 4
+		CHGF G 4 A_Scream
+		CHGF H 4 A_NoBlocking
+		CHGF I 4
+		CHGF J -1
+		Stop
+	}
+}
+
+ACTOR Boss2Easy_Samsara : SamsaraMonsterBeastBoss replaces Boss2Easy
+{
+	Game Doom
+	SpawnID 20
+	Health 1500
+	Scale 1.0
+	Radius 20
+	Height 56
+	Mass 99999
+	Speed 12
+	PainChance 0
+	Monster
+	MeleeThreshold 196
+	+MISSILEMORE 
+	+FLOORCLIP
+	+LOOKALLAROUND
+	PainSound "PUNCH8"
+	DeathSound "CHAINCATDIE"
+	MeleeSound "skeleton/melee"
+	HitObituary "$OB_UNDEADHIT"
+	Tag "Horken"
+	Obituary "You were slower than the rockets!"
+	States
+	{
+	Spawn:
+		FATA A 1 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		FATA F 2 A_Chase
+		Goto Missile
+	Missile:
+		FATA C 0 BRIGHT A_PlaySOund("FATSHOT")
+		FATA C 5 BRIGHT A_FaceTarget
+		FATA D 10 BRIGHT A_FaceTarget
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA D 4 BRIGHT A_FaceTarget 
+		FATA E 4 A_SkelMissile
+		FATA C 0 BRIGHT A_PlaySOund("FATSHOT")
+		FATA C 5 BRIGHT A_FaceTarget
+		FATA F 7 A_FaceTarget
+		FATA A 0 A_JumpIfCloser(56, "Melee")
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 1 A_Recoil (-5)
+		FATA F 1 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA A 0 A_PlaySoundEx ("kamikazi/scream", "soundslot5", 1)
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		FATA B 2 A_Recoil (-5)
+		FATA F 2 A_FaceTarget
+		FATA B 0 A_JumpIfCloser(56, "Melee")
+		Goto See2
+	Pain:
+		OFFI F 5
+		OFFI F 5 A_Pain
+		Goto See2
+	Melee:
+		FATA C 0 BRIGHT A_PlaySOund("DSPUNCH")
+		BMBE M 0 bright A_SpawnItem ("KamikaziDamage", 0, 40)
+		Goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		FATA A 4
+		CHGF G 4 A_Scream
+		CHGF H 4 A_NoBlocking
+		CHGF I 4
+		CHGF J -1
+		Stop
+	}
+}
+
+ACTOR SpidercatBossHard_Samsara : SamsaraMonsterCyberneticBoss replaces SpidercatBossHard
+{
+	Game Doom
+	Health 1100
+	Radius 40
+	Height 64
+	Scale 1.2
+	Mass 400
+	Speed 35
+	PainChance 0
+	Monster
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+BOSSDEATH
+	SeeSound "baby/sight"
+	PainSound "LEGSHIT"
+	DeathSound "SPIDERDIE"
+	ActiveSound "SPIDERIDLE"
+	Tag "Spider Kitty"
+	Obituary "You were killed by the spider kitty!"
+	States
+	{
+	Spawn:
+		LEGS A 1 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		LEGS A 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS B 2 A_BabyMetal
+		LEGS B 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS C 2 A_BabyMetal
+		LEGS C 2 A_Chase
+		Goto See2+1
+	Missile:
+		LEGS A 20 BRIGHT A_FaceTarget
+		LEGS D 2 BRIGHT A_BspiAttack
+		LEGS E 2 BRIGHT
+		LEGS E 1 BRIGHT A_SpidRefire
+		Goto Missile+1
+	Pain:
+		LEGS F 3
+		LEGS F 3 A_Pain
+		Goto See2+1
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		LEGS A 3 A_Scream
+		LEGS A 3 A_Scream
+		LEGS F 4
+		LEGS G 4 A_NoBlocking
+		LEGS H 5 A_PlaySound("GROUND")
+		LEGS I -1
+		Stop
+	}
+}
+
+ACTOR SpidercatBossMedium_Samsara : SamsaraMonsterCyberneticBoss replaces SpidercatBossMedium
+{
+	Game Doom
+	Health 800
+	Radius 40
+	Height 64
+	Scale 1.2
+	Mass 400
+	Speed 35
+	PainChance 0
+	Monster
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+BOSSDEATH
+	SeeSound "baby/sight"
+	PainSound "LEGSHIT"
+	DeathSound "SPIDERDIE"
+	ActiveSound "SPIDERIDLE"
+	Tag "Spider Kitty"
+	Obituary "You were killed by the spider kitty!"
+	States
+	{
+	Spawn:
+		LEGS A 1 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		LEGS A 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS B 2 A_BabyMetal
+		LEGS B 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS C 2 A_BabyMetal
+		LEGS C 2 A_Chase
+		Goto See2+1
+	Missile:
+		LEGS A 20 BRIGHT A_FaceTarget
+		LEGS D 2 BRIGHT A_BspiAttack
+		LEGS E 2 BRIGHT
+		LEGS E 1 BRIGHT A_SpidRefire
+		Goto Missile+1
+	Pain:
+		LEGS F 3
+		LEGS F 3 A_Pain
+		Goto See2+1
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		LEGS A 3 A_Scream
+		LEGS A 3 A_Scream
+		LEGS F 4
+		LEGS G 4 A_NoBlocking
+		LEGS H 5 A_PlaySound("GROUND")
+		LEGS I -1
+		Stop
+	}
+}
+
+ACTOR SpidercatBossEasy_Samsara : SamsaraMonsterCyberneticBoss replaces SpidercatBossEasy
+{
+	Game Doom
+	Health 500
+	Radius 40
+	Height 64
+	Scale 1.2
+	Mass 400
+	Speed 35
+	PainChance 0
+	Monster
+	+LOOKALLAROUND
+	+FLOORCLIP
+	+BOSSDEATH
+	SeeSound "baby/sight"
+	PainSound "LEGSHIT"
+	DeathSound "SPIDERDIE"
+	ActiveSound "SPIDERIDLE"
+	Tag "Spider Kitty"
+	Obituary "You were killed by the spider kitty!"
+	States
+	{
+	Spawn:
+		LEGS A 1 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		LEGS A 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS B 2 A_BabyMetal
+		LEGS B 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS A 2 A_Chase
+		LEGS C 2 A_BabyMetal
+		LEGS C 2 A_Chase
+		Goto See2+1
+	Missile:
+		LEGS A 20 BRIGHT A_FaceTarget
+		LEGS D 2 BRIGHT A_BspiAttack
+		LEGS E 2 BRIGHT
+		LEGS E 1 BRIGHT A_SpidRefire
+		Goto Missile+1
+	Pain:
+		LEGS F 3
+		LEGS F 3 A_Pain
+		Goto See2+1
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		LEGS A 3 A_Scream
+		LEGS A 3 A_Scream
+		LEGS F 4
+		LEGS G 4 A_NoBlocking
+		LEGS H 5 A_PlaySound("GROUND")
+		LEGS I -1
+		Stop
+	}
+}

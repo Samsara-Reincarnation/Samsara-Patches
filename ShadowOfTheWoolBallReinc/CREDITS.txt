@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Shadow of the Wool Ball
+Authors: MSPaintR0cks
+Link: https://forum.zdoom.org/viewtopic.php?t=52301&
+
+Resources used:
+---------------
+Original DECORATE for monsters - MSPaintR0cks
