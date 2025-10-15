@@ -5,7 +5,7 @@ actor SamsaraSlotFour_SOTWB : RandomSpawner replaces ChaingunNew { DropItem "Sam
 Actor SamsaraHealPack0_SOTWB : HealPack0Dump replaces FoodNomNom { }
 Actor SamsaraHealPack0_SOTWB2 : HealPack0Dump replaces FoodNomNom2 { }
 
-Actor SamsaraArmorPack3_SOTWB : ArmorScrapDump replaces Coffee { }
+Actor SamsaraArmorScrapDump_SOTWB : ArmorScrapDump replaces Coffee { }
 
 Actor SamsaraAmmo1Small_SOTWB : Ammo1Small replaces ClipNew { }
 Actor SamsaraAmmo2Small_SOTWB : Ammo2Small replaces ShellNew { }
@@ -13,7 +13,7 @@ Actor SamsaraAmmo2Small_SOTWB2 : Ammo2Small replaces BlackShell { }
 
 Actor SamsaraClip2_SOTWB : Clip2 {}
 
-Actor SamsaraShell2_SOTWB : Ammo2Small
+Actor SamsaraShell_SOTWB2 : Ammo2Small
 {
     States
     {

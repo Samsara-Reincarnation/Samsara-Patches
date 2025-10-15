@@ -17,7 +17,7 @@ ACTOR ChaingunCat_Samsara : SamsaraMonsterBeastTotalGib replaces ChaingunCat
 	PainSound "PUNCH8"
 	DeathSound "CHAINCATDIE"
 	AttackSound "chainguy/attack"
-    DropItem "SamsaraShell2_SOTWB", 125, 2
+    DropItem "SamsaraShell_SOTWB2", 125, 2
 	Tag "Chaingun Cat"
 	Obituary "You were killed by the chaingun cat!"
 	States

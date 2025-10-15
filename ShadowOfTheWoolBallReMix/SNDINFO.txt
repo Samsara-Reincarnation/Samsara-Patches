@@ -1,0 +1,2 @@
+// This is basically the opposite of what was done for ROTWB
+$random CATSIGHTFEMALE		{ AFTERHER  catsight2  catsight3  catsight4}
