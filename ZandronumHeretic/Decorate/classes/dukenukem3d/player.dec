@@ -1106,6 +1106,7 @@ actor DukeBulletPuff : BulletPuff
 	VSpeed 0
 	-SOLID
 	+PUFFONACTORS
+	+THRUGHOST
 	Decal DukeBulletChip
 	States
 	{
