@@ -2,7 +2,7 @@
 
 REM Set the filename for the pk3 files
 SET pk3Name=SamsaraPatch-
-SET pk3Version=_v2.1.3
+SET pk3Version=_v2.2
 
 REM Go through each folder in the directory
 for /d %%a in (*) do (
