@@ -18,8 +18,6 @@ actor Eleena : SamsaraPlayerPawnNormalRedBlood
 	Player.StartItem "Clip", 50
 	Player.SoundClass "Eleena"
 	Player.JumpZ 10.63
-	Player.ForwardMove 1.105
-	Player.SideMove 1.105
 	Player.ColorRange 211, 216
 	DamageFactor "RebelMissile", 0
 	DamageFactor "DynamiteCoop", 0.0  
