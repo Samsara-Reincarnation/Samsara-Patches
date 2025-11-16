@@ -9,6 +9,7 @@ actor StrifeguyPlayer : StrifePlayer
 	Player.StartItem "   Pistol   ", 1
 	Player.StartItem "Punch Dagger", 1
 	Player.StartItem "StrifeClass", 1
+	Player.StartItem "StrifeGuyInStrife", 1
 	Player.StartItem "IsSamsaraClass", 1
 	Player.StartItem "SamsaraTipsChecker", 1
 	Player.StartItem "Clip", 50
