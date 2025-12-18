@@ -347,6 +347,8 @@ Actor JamesBond : SamsaraPlayerPawnTotalGibRedBlood
 		Death:
 		XDeath:
 			GE00 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		Death.Massacre:
+		XDeath.Massacre:
 			GE00 A 0 A_JumpIfInventory("Goldeneye_PlayerAltClassToken",1,"DeathGoldFinger")
 			GE00 A 0 A_Jump(256,"Death1","Death2","Death3","Death4","Death5")
 		Death1:
@@ -644,6 +646,8 @@ Actor JamesBond_Shrink : JamesBond
 		DeusXDeath:
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)

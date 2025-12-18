@@ -433,6 +433,8 @@ Actor ChexWarrior_Shrink : ChexWarrior
 		XDeath:
 		XDeath.Flem:
 		XDeath.Slime:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A -1

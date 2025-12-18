@@ -110,6 +110,7 @@ actor Corridor7Player : SamsaraPlayerPawnTotalGibRedBlood
             Goto Spawn
         Death:
             TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+        Death.Massacre:
             C7PY H 5 A_PlayerScream
             C7PY I 5 A_NoBlocking
             C7PY J 5
@@ -313,6 +314,8 @@ Actor Corridor7Player_Shrink : Corridor7Player
         DeusXDeath:
         Death:
         XDeath:
+        Death.Massacre:
+        XDeath.Massacre:
         Death.Squish:
         XDeath.Squish:
             TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)

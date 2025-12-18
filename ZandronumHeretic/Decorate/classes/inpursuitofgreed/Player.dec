@@ -228,6 +228,9 @@ Actor POGreedPlayer : SamsaraPlayerPawnTotalGibRedBlood
 			TNT1 A 0 A_KillChildren
 			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
 			Goto DeathAnim
+		Death.Massacre:
+			TNT1 A 0 A_KillChildren
+			Goto DeathAnim
 		DeathAnim:
 			TNT1 A 0 A_JumpIfInventory("IPoGMode",4,"DeathDominatrix")
 			TNT1 A 0 A_JumpIfInventory("IPoGMode",3,"DeathSpecimen")
@@ -587,6 +590,8 @@ Actor POGreedPlayer_Shrink : POGreedPlayer
 		DeusXDeath:
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)

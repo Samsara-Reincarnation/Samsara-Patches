@@ -120,8 +120,10 @@ Actor PettonEverhail : SamsaraPlayerPawnTotalGibRedBlood
 			CTPL H 4 A_Pain
 			Goto Spawn
 		Death:
-		XDeath:	
-			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")	  
+		XDeath:
+			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+		Death.Massacre:
+		XDeath.Massacre:
 			CTPL H 10 A_PlayerScream
 			CTPL I 10 A_NoBlocking
 			CTPL J -1
@@ -324,6 +326,8 @@ Actor PettonEverhail_Shrink : PettonEverhail
 		DeusXDeath:
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)

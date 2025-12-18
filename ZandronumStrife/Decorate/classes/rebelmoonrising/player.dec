@@ -160,6 +160,7 @@ Actor RebelMoonCommando : SamsaraPlayerPawnTotalGibRedBlood
             Goto Spawn
         Death:
             TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+        Death.Massacre:
             RMZ7 H 4 A_PlayerScream
             RMZ7 I 4 A_NoBlocking
             RMZ7 J 4
@@ -365,6 +366,8 @@ Actor RebelMoonCommando_Shrink : RebelMoonCommando
         DeusXDeath:
         Death:
         XDeath:
+        Death.Massacre:
+        XDeath.Massacre:
         Death.Squish:
         XDeath.Squish:
             TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)
@@ -486,6 +489,7 @@ actor RMRLDFGuard : SamsaraMiscCharHumanoidStatic
         Goto See
     Death:
         TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+    Death.Massacre:
         TNT1 A 0 A_SetScale(1.0,1.0)
         RM77 G 5
         RM77 H 5 A_Scream
@@ -645,6 +649,8 @@ actor RMRLDFGuard_Shrink : RMRLDFGuard
             loop
         Death:
         XDeath:
+        Death.Massacre:
+        XDeath.Massacre:
         Death.Squish:
         XDeath.Squish:
             TNT1 A 0 A_Jump(64,2)
@@ -759,6 +765,7 @@ actor RMRLDFMilitia : SamsaraMiscCharHumanoidStatic
         Goto See
     Death:
         TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+    Death.Massacre:
         TNT1 A 0 A_SetScale(1.0,1.0)
         RM78 G 5
         RM78 H 5 A_Scream
@@ -919,6 +926,8 @@ actor RMRLDFMilitia_Shrink : RMRLDFMilitia
             loop
         Death:
         XDeath:
+        Death.Massacre:
+        XDeath.Massacre:
         Death.Squish:
         XDeath.Squish:
             TNT1 A 0 A_Jump(64,2)

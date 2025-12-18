@@ -130,6 +130,7 @@ Actor CMPlayer : SamsaraPlayerPawnTotalGibRedBlood
 		Death:
 		DeathAnim:	  
 			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+		Death.Massacre:
 			CMPL T 5 A_PlayerScream
 			CMPL U 5 A_NoBlocking
 			CMPL UV 5
@@ -326,6 +327,8 @@ Actor CMPlayer_Shrink : CMPlayer
 		DeusXDeath:
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)

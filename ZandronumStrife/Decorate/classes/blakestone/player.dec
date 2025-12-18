@@ -130,6 +130,7 @@ Actor BlakeStone : SamsaraPlayerPawnTotalGibRedBlood
             Goto Spawn
         Death:
             TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+        Death.Massacre:
             BSTN J 5 A_PlayerScream
             BSTN K 5 A_NoBlocking
             BSTN L 5 
@@ -337,6 +338,8 @@ Actor BlakeStone_Shrink : BlakeStone
         DeusXDeath:
         Death:
         XDeath:
+        Death.Massacre:
+        XDeath.Massacre:
         Death.Squish:
         XDeath.Squish:
             TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)

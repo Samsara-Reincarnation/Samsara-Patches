@@ -242,6 +242,8 @@ Actor DescentPyroGX_Shrink : DescentPyroGX
 		DeusXDeath:
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A -1

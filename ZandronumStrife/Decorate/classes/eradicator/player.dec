@@ -162,10 +162,11 @@ actor Eleena : SamsaraPlayerPawnNormalRedBlood
 			MARE G 6
 			Goto Spawn
 		Death:
+			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+		Death.Massacre:
 			TNT1 A 0 A_JumpIfInventory("EradMode", 3, "DeathMarine")
 			TNT1 A 0 A_JumpIfInventory("EradMode", 2, "DeathDan")
 			TNT1 A 0 A_JumpIfInventory("EradMode", 1, "DeathKamchak")
-			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
 			ELEE N 8  	
 			ELEE O 8 A_GiveInventory("SamsaraPlayerBaseDeathSoundTrigger")
 			ELEE P 8 A_NoBlocking
@@ -176,7 +177,6 @@ actor Eleena : SamsaraPlayerPawnNormalRedBlood
 			ELEE S -1
 			Stop
 		DeathKamchak:
-			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
 			KAME O 8  	
 			KAME P 8 A_GiveInventory("SamsaraPlayerBaseDeathSoundTrigger")
 			KAME Q 8 A_NoBlocking
@@ -187,7 +187,6 @@ actor Eleena : SamsaraPlayerPawnNormalRedBlood
 			KAME T -1
 			Stop
 		DeathDan:
-			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
 			DANE R 8  	
 			DANE S 8 A_GiveInventory("SamsaraPlayerBaseDeathSoundTrigger")
 			DANE T 8 A_NoBlocking
@@ -198,7 +197,6 @@ actor Eleena : SamsaraPlayerPawnNormalRedBlood
 			DANE W -1
 			Stop
 		DeathMarine:
-			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
 			MARE O 8  	
 			MARE P 8 A_GiveInventory("SamsaraPlayerBaseDeathSoundTrigger")
 			MARE Q 8 A_NoBlocking
@@ -210,6 +208,7 @@ actor Eleena : SamsaraPlayerPawnNormalRedBlood
 			Stop
 		XDeath:
 			TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreXDeathEffect")
+		XDeath.Massacre:
 			TNT1 A 0 A_SpawnItemex("EleGibs1", 0, 0, random(8, 56), random(-4, 4), 0, random(0, 6))
 			TNT1 A 0 A_SpawnItemex("EleGibs1", 0, 0, random(8, 56), random(-4, 4), 0, random(0, 6))
 			TNT1 A 0 A_SpawnItemex("EleGibs1", 0, 0, random(8, 56), random(-4, 4), 0, random(0, 6))
@@ -654,6 +653,8 @@ Actor Eleena_Shrink : Eleena
 		DeusXDeath:
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_PlaySound("duke/enemygib", CHAN_BODY)
