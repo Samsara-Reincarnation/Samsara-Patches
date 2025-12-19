@@ -42,8 +42,9 @@ actor Red_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces Red_Plant
 		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		PIRN A 0 A_Scream
 		PIRN EFGHI 8
 		PIRN I 1 A_NoBlocking
@@ -100,8 +101,9 @@ actor White_Small_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces White_S
 		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		PIRN A 0 A_Scream
 		PIRN EFGHI 8
 		PIRN I 1 A_NoBlocking
@@ -158,8 +160,9 @@ actor UpsideDown_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces UpsideDo
 		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		UPIR A 0 A_Scream
 		UPIR EFGHI 8
 		UPIR I 1 A_NoBlocking
@@ -212,8 +215,9 @@ actor Venom_Plant_Samsara : SamsaraMonsterDemonicTotalGib replaces Venom_Plant
 		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		PIRV A 0 A_Scream
 		PIRV EFGHI 8
 		PIRV I 1 A_NoBlocking

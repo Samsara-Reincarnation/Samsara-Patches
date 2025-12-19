@@ -43,8 +43,10 @@ ACTOR Terrorist : SamsaraMonsterHumanoidTotalGib replaces HellKnight 3004
 		POSS F 8 bright Light(BDFOES1) A_PosAttack
 		goto See
 	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		POSS H 5 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		POSS H 5
 		POSS I 5 A_Scream
 		POSS J 5 A_NoBlocking
 		POSS K 5
@@ -271,6 +273,8 @@ actor Terrorist_Shrink : Terrorist
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

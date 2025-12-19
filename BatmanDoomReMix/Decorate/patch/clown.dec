@@ -45,8 +45,10 @@ ACTOR SuperClown : SamsaraMonsterHumanoidTotalGib replaces Meat3 51
 		VILE P 8 A_FatAttack2
 		goto See
 	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		PLAY O 7 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		PLAY O 7
 		PLAY P 7 A_Scream
 		PLAY Q 7 A_NoBlocking
 		PLAY RS 7

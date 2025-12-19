@@ -44,8 +44,9 @@ Actor REKKRDeathRaven_Samsara : SamsaraMonsterDemonicBoss replaces SpiderMasterm
 		SPID K 6 Bright A_BspiAttack
 		goto See2
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SPID I 20 A_Scream
 		SPID L 16 A_KeenDie
 		SPID M 12

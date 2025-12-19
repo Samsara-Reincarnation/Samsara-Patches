@@ -52,8 +52,10 @@ ACTOR FlameMan : SamsaraMonsterHumanoidTotalGib replaces Archvile 69
 		BSPI G 4 Bright Light(BDFMAN1) A_SpidRefire
 		goto Missile+3
 	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		BOS2 I 6 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		BOS2 I 6
 		BOS2 J 6 A_Scream
 		BOS2 K 6
 		BOS2 L 6 A_NoBlocking
@@ -233,6 +235,8 @@ actor FlameMan_Shrink : FlameMan
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

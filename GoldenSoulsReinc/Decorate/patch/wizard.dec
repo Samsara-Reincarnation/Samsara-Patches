@@ -69,8 +69,9 @@ ACTOR GSWizard_Samsara : SamsaraMonsterHumanoidTotalGib replaces GSWizard
 		KAMK A 16 bright A_Pain
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
         TNT1 A 0 A_UnHideThing
 		TNT1 A 0 A_SetTranslucent(1)
 		KAMK H 2 A_Scream
@@ -212,6 +213,8 @@ actor GSWizard_Samsara_Shrink : GSWizard_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

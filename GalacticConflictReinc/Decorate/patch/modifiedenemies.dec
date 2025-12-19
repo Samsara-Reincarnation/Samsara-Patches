@@ -169,6 +169,8 @@ actor BipedicusV4_Samsara_Shrink : BipedicusV4_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
@@ -392,6 +394,8 @@ actor ArmoredBipedicusV4_Samsara_Shrink : ArmoredBipedicusV4_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
@@ -633,6 +637,8 @@ actor StridicusV4_Samsara_Shrink : StridicusV4_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
@@ -873,6 +879,8 @@ actor CycloptisV4_Samsara_Shrink : CycloptisV4_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
@@ -1113,6 +1121,8 @@ actor LarvaV4_Samsara_Shrink : LarvaV4_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

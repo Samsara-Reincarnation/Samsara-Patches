@@ -68,7 +68,10 @@ Actor Veilimp_Samsara : SamsaraMonsterHumanoidTotalGib replaces Veilimp
 		SP02 L 12 Bright A_FaceTarget
 		goto Hide
 	Death:
-		SP02 M 8 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP02 M 8
 		SP02 N 12 A_Scream
 		SP02 O 8 A_Fall
 		SP02 PQRS 8
@@ -285,6 +288,8 @@ actor Veilimp_Samsara_Shrink : Veilimp_Samsara
 			loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

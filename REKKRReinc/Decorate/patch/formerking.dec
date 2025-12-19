@@ -47,6 +47,7 @@ Actor REKKRFormerKing_Samsara : SamsaraMonsterDemonicBoss replaces ChaingunGuy 6
 		goto See
 	Death:
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
 		CYBR H 16
 		CYBR I 10 A_Fall
 		CYBR J 6 A_Scream
@@ -239,8 +240,9 @@ Actor REKKRFormerKing2_Samsara : SamsaraMonsterDemonicBoss replaces Chaingun 200
 		BOS2 AABBCCDD 3 A_Chase
 		goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		BOS2 I 8 A_KeenDie
 		BOS2 J 8 A_Scream
 		BOS2 KLMN 8

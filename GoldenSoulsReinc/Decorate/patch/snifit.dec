@@ -40,8 +40,9 @@ ACTOR Snifit_Red_Samsara : SamsaraMonsterHumanoidTotalGib replaces Snifit_Red
 		SNFT D 16 A_Pain
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SNFT E 2 A_Scream
 		SNFT FGHI 2
 		SNFT JK 2 A_NoBlocking
@@ -211,6 +212,8 @@ actor Snifit_Red_Samsara_Shrink : Snifit_Red_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
@@ -309,8 +312,9 @@ ACTOR Snifit_Green_Samsara : SamsaraMonsterHumanoidTotalGib replaces Snifit_Gree
 		SNFT D 16 A_Pain
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SNFT E 2 A_Scream
 		SNFT FGHI 2
 		SNFT JK 2 A_NoBlocking
@@ -480,6 +484,8 @@ actor Snifit_Green_Samsara_Shrink : Snifit_Green_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
@@ -584,8 +590,9 @@ ACTOR Snifit_Blue_Samsara : SamsaraMonsterHumanoidTotalGib replaces Snifit_Blue
 		SNFT D 16 A_Pain
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SNFT E 2 A_Scream
 		SNFT FGHI 2
 		SNFT JK 2 A_NoBlocking
@@ -755,6 +762,8 @@ actor Snifit_Blue_Samsara_Shrink : Snifit_Blue_Samsara
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

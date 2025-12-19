@@ -58,7 +58,10 @@ ACTOR Golden_Caco_Samsara : SamsaraMonsterGhost replaces Golden_Caco
 		2CAC E 16 bright A_Pain
 		Goto See
 	Death:
-        2CAC G 8 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+        2CAC G 8
 		TNT1 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("Coin_disappear_Samsara", 0, 0, random (8, 40), random (8, 12), 0, random (4, 6), random(0, 360))
 		2CAC G 4
 		2CAC H 8 A_Scream

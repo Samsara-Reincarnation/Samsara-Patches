@@ -43,8 +43,10 @@ ACTOR RocketMan : SamsaraMonsterCyberneticTotalGib replaces BossTarget 87
 		FATT I 4 bright Light(BDFOES2) A_CPosRefire
 		goto Missile
 	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		HDB3 A 7 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		HDB3 A 7
 		BOSF A 7 A_Scream
 		BOSF B 7 A_NoBlocking
 		KEEN G 7
@@ -190,6 +192,8 @@ actor RocketMan_Shrink : RocketMan
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
