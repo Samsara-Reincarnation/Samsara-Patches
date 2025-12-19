@@ -25,6 +25,7 @@ actor HalfLifePlayer : SamsaraPlayerPawnNormalRedBlood
 	Player.Startitem "HLPythonCounter", 6
 	Player.Startitem "HLDeagleCounter", 7
 	Player.Startitem "HLMP5Counter", 50
+	Player.Startitem "HLUziCounter", 32
 	Player.Startitem "HLRPGCounter", 1
 	Player.Startitem "HLSporeCounter", 10
 	Player.Startitem "HLSAWCounter", 100
