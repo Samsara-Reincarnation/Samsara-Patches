@@ -379,6 +379,14 @@ object SamsaraAmmo1Small_REKKR
     frame CLIPJ { light SOULAMMO_X4 }
 }
 
+object SamsaraMultiAmmo1Small_REKKR
+{
+    frame CLIPG { light SOULAMMO_X1 }
+    frame CLIPH { light SOULAMMO_X2 }
+    frame CLIPI { light SOULAMMO_X3 }
+    frame CLIPJ { light SOULAMMO_X4 }
+}
+
 object ClipBox
 {
     frame AMMO { light SOULAMMO }
@@ -401,6 +409,11 @@ pointlight MANASEAL
 }
 
 object SamsaraAmmo4Small_REKKR
+{
+    frame CELL { light MANASPRITE }
+}
+
+object SamsaraMultiAmmo4Small_REKKR
 {
     frame CELL { light MANASPRITE }
 }
