@@ -56,6 +56,15 @@ Actor Tyrant_Samsara : SamsaraMonsterDemonicBoss replaces Deh_Actor_155
 		CYB2 P 30
 		CYB2 P -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 		stop
+	Death.Massacre:
+		CYB2 H 10 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CYB2 I 10 A_Scream
+		CYB2 JKL 10
+		CYB2 M 10 A_Fall
+		CYB2 NO 10
+		CYB2 P 30
+		CYB2 P -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
+		stop
 
 		// SamsaraMonsterDemonicBoss states
 		Death.ZorchPistol:
