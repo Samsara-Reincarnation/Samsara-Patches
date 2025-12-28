@@ -56,6 +56,14 @@ Actor REKKRImp_Samsara : SamsaraMonsterDemonicTotalGib replaces DoomImp 3001
 		TROO L 6 Bright
 		TROO L 1 Bright
 		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TROO I 8
+		TROO J 8 Bright A_Scream
+		TROO K 6 Bright A_Explode
+		TROO L 6 Bright
+		TROO L 1 Bright
+		stop
 	Pain.ShrinkerDMG:
 		TROO H 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)
@@ -390,6 +398,14 @@ Actor REKKRMeanImp_Samsara : SamsaraMonsterDemonicTotalGib replaces Revenant 671
 		TROO I 8
 		TROO J 8 Bright A_Scream
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TROO K 6 Bright A_Explode
+		TROO L 6 Bright
+		TROO L 1 Bright
+		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TROO I 8
+		TROO J 8 Bright A_Scream
 		TROO K 6 Bright A_Explode
 		TROO L 6 Bright
 		TROO L 1 Bright

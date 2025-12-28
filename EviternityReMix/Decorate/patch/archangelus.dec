@@ -168,5 +168,20 @@ Actor ArchangelusB_Samsara : SamsaraMonsterGenericBoss replaces ArchangelusB
 		BBRN U 224 Bright 
 		BBRN U -1 Bright A_BrainDie
 		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		BBRN L 8 Bright A_PlaySoundEx ("brain/death", Auto, False, 1)
+		BBRN M 8 Bright A_Fall
+		BBRN NO 8 Bright
+		BBRN P 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 1.0, 0.5)
+		BBRN P 4 Bright A_Mushroom ("ArachnotronPlasma2", 0, MSF_Classic, 0.4, 1.25)
+		BBRN Q 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 2.0, 0.5)
+		BBRN Q 4 Bright A_Mushroom ("ArachnotronPlasma2", 0, MSF_Classic, 0.8, 1.25)
+		BBRN R 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 3.0, 0.5)
+		BBRN R 4 Bright A_Mushroom ("ArachnotronPlasma2", 0, MSF_Classic, 1.2, 1.25)
+		BBRN S 4 Bright A_Mushroom ("FatShot2", 0, MSF_Classic, 4.0, 0.5)
+		BBRN U 224 Bright 
+		BBRN U -1 Bright A_BrainDie
+		stop
 	}
 }

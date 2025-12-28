@@ -106,6 +106,15 @@ Actor SamsaraAmmo1Small_REKKR : Clip2 replaces Clip 2007
     {
       Spawn:
         CLIP G 0 Bright
+        TNT1 A 6 ACS_NamedExecuteAlways("SamsaraDecorate", 0, 21)
+        TNT1 A 0 A_TakeInventory("MultiplyToken",1)
+        TNT1 A 0 A_JumpIfInventory("MultiplyToken",1,"SpawnMultiplyAmmo")
+        goto SpawnGameModeCheck
+
+      SpawnMultiplyAmmo:
+        TNT1 A 0 A_TakeInventory("MultiplyToken",1)
+        TNT1 A 1 A_SpawnItemEx("SamsaraMultiAmmo1Small_REKKR",0,0,0,random(-1,1),random(-1,1),0,0,SXF_ABSOLUTEVELOCITY|SXF_NOCHECKPOSITION)
+        TNT1 A 0 A_JumpIfInventory("MultiplyToken",1,"SpawnMultiplyAmmo")
         goto SpawnGameModeCheck
 
       SpawnActual:
@@ -115,6 +124,16 @@ Actor SamsaraAmmo1Small_REKKR : Clip2 replaces Clip 2007
         CLIP GHI 18 Bright
         CLIP J 22 Bright
         stop
+    }
+}
+
+Actor SamsaraMultiAmmo1Small_REKKR : SamsaraAmmo1Small_REKKR
+{
+    States
+    {
+      Spawn:
+        CLIP G 0 Bright
+        goto SpawnGameModeCheck
     }
 }
 
@@ -128,6 +147,15 @@ Actor SamsaraAmmo4Small_REKKR : Ammo4Small replaces Cell 2047
     {
       Spawn:
         CELL C 0 Bright
+        TNT1 A 6 ACS_NamedExecuteAlways("SamsaraDecorate", 0, 21)
+        TNT1 A 0 A_TakeInventory("MultiplyToken",1)
+        TNT1 A 0 A_JumpIfInventory("MultiplyToken",1,"SpawnMultiplyAmmo")
+        goto SpawnGameModeCheck
+
+      SpawnMultiplyAmmo:
+        TNT1 A 0 A_TakeInventory("MultiplyToken",1)
+        TNT1 A 1 A_SpawnItemEx("SamsaraMultiAmmo4Small_REKKR",0,0,0,random(-1,1),random(-1,1),0,0,SXF_ABSOLUTEVELOCITY|SXF_NOCHECKPOSITION)
+        TNT1 A 0 A_JumpIfInventory("MultiplyToken",1,"SpawnMultiplyAmmo")
         goto SpawnGameModeCheck
 
       SpawnActual:
@@ -148,6 +176,16 @@ Actor SamsaraAmmo4Small_REKKR : Ammo4Small replaces Cell 2047
       See:
         CELL CD 3 Bright A_Chase
         loop
+    }
+}
+
+Actor SamsaraMultiAmmo4Small_REKKR : SamsaraAmmo4Small_REKKR
+{
+    States
+    {
+      Spawn:
+        CELL C 0 Bright
+        goto SpawnGameModeCheck
     }
 }
 

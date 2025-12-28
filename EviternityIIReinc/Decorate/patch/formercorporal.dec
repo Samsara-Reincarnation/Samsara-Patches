@@ -56,8 +56,7 @@ Actor FormerCorporal_Samsara : SamsaraMonsterHumanoid replaces FormerCorporal
 	Death:
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
 	Death.Massacre:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		SP03 H 5
+		SP03 H 5 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SP03 I 5 A_Scream
 		SP03 J 5 A_Fall
 		SP03 K 5 A_SpawnItem("ArmorScrap", 12)
@@ -77,8 +76,9 @@ Actor FormerCorporal_Samsara : SamsaraMonsterHumanoid replaces FormerCorporal
 		SP03 G 2
 		Loop
 	XDeath:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		SP03 M 5 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	XDeath.Massacre:
+		SP03 M 5 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SP03 N 5 A_XScream
 		SP03 O 5 A_Fall
 		SP03 P 5 A_SpawnItemEx("ArmorScrap", 0, 0, 20)
@@ -414,8 +414,9 @@ Actor FormerCaptain_Samsara : SamsaraMonsterHumanoid replaces FormerCaptain
 		SP57 EE 5 A_FaceTarget
 		goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		SP57 H 5 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		SP57 H 5 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SP57 I 5 A_Scream
 		SP57 J 5 A_Fall
 		SP57 K 2 A_SpawnItemEx("ArmorScrap", 0, 0, 20)
@@ -437,8 +438,9 @@ Actor FormerCaptain_Samsara : SamsaraMonsterHumanoid replaces FormerCaptain
 		SP57 G 2
 		Loop
 	XDeath:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		SP57 O 2 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	XDeath.Massacre:
+		SP57 O 2 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SP57 O 1 A_XScream
 		SP57 O 2 A_Fall
 		SP57 P 1 A_SpawnItemEx("ArmorScrap", 0, 0, 16, 1.5, 1.5, 6.0)

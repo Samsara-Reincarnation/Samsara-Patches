@@ -64,8 +64,9 @@ Actor REKKRFormerHuman_Samsara : SamsaraMonsterHumanoid replaces ZombieMan 3004
 		TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 		Stop
 	XDeath:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	XDeath.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		POSS M 7
 		POSS N 7 A_XScream
 		POSS O 7 A_Fall

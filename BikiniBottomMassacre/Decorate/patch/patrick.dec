@@ -55,6 +55,14 @@ ACTOR Patrick_Samsara : SamsaraMonsterDemonicBoss replaces Patrick
 		PATR L 6 A_NoBlocking
 		PATR M -1
 		Stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		PATR I 8
+		PATR J 8 A_Scream
+		PATR K 6
+		PATR L 6 A_NoBlocking
+		PATR M -1
+		Stop
 	Raise:
 		PATR ML 8
 		PATR KJI 6

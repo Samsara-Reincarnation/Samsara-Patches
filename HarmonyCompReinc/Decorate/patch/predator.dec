@@ -63,6 +63,14 @@ actor WalkingPredator_Samsara : SamsaraMonsterBeastBoss replaces Cyberdemon
 			SKEL P 7
 			SKEL Q -1
 			Stop
+		Death.Massacre:
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			SKEL M 7
+			SKEL N 7 A_Scream
+			SKEL O 7 A_Fall
+			SKEL P 7
+			SKEL Q -1
+			Stop
 	}
 }
 

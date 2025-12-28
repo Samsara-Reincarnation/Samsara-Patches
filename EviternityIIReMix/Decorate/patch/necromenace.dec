@@ -57,6 +57,17 @@ Actor NecromenaceA_Samsara : SamsaraMonsterDemonicBoss replaces NecromenaceA
 		SP21 Y 5 A_LineEffect(24707, 300) //SR Floor Down to the Lowest Adjacent Floor
 		SP21 Z -1
 		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP21 H 5
+		SP21 I 5 A_Scream
+		SP21 IIII 0 Bright A_SpawnItem("NecroMinionA")
+		SP21 JKLMNO 5
+		SP21 P 5 A_Fall
+		SP21 QRSTUVWX 5
+		SP21 Y 5 A_LineEffect(24707, 300) //SR Floor Down to the Lowest Adjacent Floor
+		SP21 Z -1
+		stop
 		
 	// SamsaraMonsterDemonicBoss states
 		Death.ZorchPistol:
@@ -205,7 +216,18 @@ Actor NecromenaceB_Samsara : NecromenaceA_Samsara replaces NecromenaceB
 		SP21 JKLMNO 5
 		SP21 P 5 A_Fall
 		SP21 QRSTUVWX 5
-		SP21 Y 5 A_LineEffect (24707, 301) //SR Floor Down to the Lowest Adjacent Floor
+		SP21 Y 5 A_LineEffect(24707, 301) //SR Floor Down to the Lowest Adjacent Floor
+		SP21 Z -1
+		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP21 H 5
+		SP21 I 5 A_Scream
+		SP21 IIII 0 Bright A_SpawnItem("NecroMinionA")
+		SP21 JKLMNO 5
+		SP21 P 5 A_Fall
+		SP21 QRSTUVWX 5
+		SP21 Y 5 A_LineEffect(24707, 301) //SR Floor Down to the Lowest Adjacent Floor
 		SP21 Z -1
 		stop
 
@@ -359,6 +381,17 @@ Actor NecromenaceC_Samsara : NecromenaceA_Samsara replaces NecromenaceC
 		SP21 Y 5 A_LineEffect(24707, 133) //SR Floor Down to the Lowest Adjacent Floor
 		SP21 Z -1
 		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP21 H 5
+		SP21 I 5 A_Scream
+		SP21 IIII 0 Bright A_SpawnItem("NecroMinionA")
+		SP21 JKLMNO 5
+		SP21 P 5 A_Fall
+		SP21 QRSTUVWX 5
+		SP21 Y 5 A_LineEffect(24707, 133) //SR Floor Down to the Lowest Adjacent Floor
+		SP21 Z -1
+		stop
 		
 	// SamsaraMonsterDemonicBoss states
 		Death.ZorchPistol:
@@ -504,6 +537,17 @@ Actor NecromenaceD_Samsara : NecromenaceA_Samsara replaces NecromenaceD
 		SP21 I 5 A_Scream
 		SP21 IIII 0 Bright A_SpawnItem("NecroMinionA")
 		SP21 I 0 Bright A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		SP21 JKLMNO 5
+		SP21 P 5 A_Fall
+		SP21 QRSTUVWX 5
+		SP21 Y 5 A_LineEffect(24707, 134) //SR Floor Down to the Lowest Adjacent Floor
+		SP21 Z -1
+		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SP21 H 5
+		SP21 I 5 A_Scream
+		SP21 IIII 0 Bright A_SpawnItem("NecroMinionA")
 		SP21 JKLMNO 5
 		SP21 P 5 A_Fall
 		SP21 QRSTUVWX 5

@@ -58,8 +58,7 @@ Actor DukeOfHell_Samsara : SamsaraMonsterDemonicTotalGib replaces DukeOfHell
 	Death:
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
 	Death.Massacre:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		SP10 O 6
+		SP10 O 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SP10 P 6 Bright A_Scream
 		SP10 QRS 6 Bright
 		SP10 T 6 Bright A_Fall
@@ -354,8 +353,9 @@ Actor GrandDukeofHell_Samsara : SamsaraMonsterDemonicTotalGib replaces GrandDuke
 		SP58 M 6 A_FaceTarget
 		goto Hide
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		SP58 O 6 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		SP58 O 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SP58 P 6 Bright A_Scream
 		SP58 QRS 6 Bright
 		SP58 T 6 Bright A_Fall

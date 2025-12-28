@@ -56,7 +56,16 @@ actor Echida_Samsara : SamsaraMonsterBeastBoss replaces SpiderMastermind
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			SPID J 20 A_Scream
 			SPID K 10 A_Fall
-			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)	
+			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+			SPID LMNOP 10 Bright
+			SPID QR 10
+			SPID S 30
+			SPID S -1 A_BossDeath
+			stop
+		Death.Massacre:
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			SPID J 20 A_Scream
+			SPID K 10 A_Fall
 			SPID LMNOP 10 Bright
 			SPID QR 10
 			SPID S 30

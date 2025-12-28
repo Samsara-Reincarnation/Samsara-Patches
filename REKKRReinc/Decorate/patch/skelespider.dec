@@ -55,6 +55,14 @@ Actor REKKRSkelespider_Samsara : SamsaraMonsterDemonicTotalGib replaces HangNoGu
 		SKEL MN 8
 		SKEL O -1
 		stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SKEL J 14
+		SKEL K 10
+		SKEL L 12 A_PainDie
+		SKEL MN 8
+		SKEL O -1
+		stop
 	Pain.ShrinkerDMG:
 		SKEL I 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)

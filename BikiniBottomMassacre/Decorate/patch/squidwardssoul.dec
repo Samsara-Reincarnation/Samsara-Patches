@@ -59,6 +59,14 @@ ACTOR SquidwardsSoul_Samsara : SamsaraMonsterDemonicBoss replaces SquidwardsSoul
 		SQID P 7
 		SQID Q -1
 		Stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SQID LM 7
+		SQID N 7 A_Scream
+		SQID O 7 A_NoBlocking
+		SQID P 7
+		SQID Q -1
+		Stop
 	Raise:
 		SQID Q 5
 		SQID PONML 5
