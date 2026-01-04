@@ -520,128 +520,131 @@ actor ChexPuffThruGhostCoop : ChexPuffThruGhost { +MTHRUSPECIES }
 
 // XDeath Stuff
 
-ACTOR Chexbit1 // Borrowed from DemonSteele's Steel Beast code
+actor Chexbit1 // Borrowed from DemonSteele's Steel Beast code
 {
-   Radius 2
-   Height 2
-   BounceFactor 0.55
-   BounceCount 5
-   Mass 10
-   Speed 8
-   +DOOMBOUNCE
-   PROJECTILE
-   +NOTELEPORT
-   -NOGRAVITY
-   -SOLID
-   -SKYEXPLODE
-   +NOBLOCKMAP
-   +MOVEWITHSECTOR
-   +CLIENTSIDEONLY
-   States
-   {
+    Radius 2
+    Height 2
+    BounceFactor 0.55
+    BounceCount 5
+    Mass 10
+    Speed 8
+    +DOOMBOUNCE
+    Projectile
+    +NOTELEPORT
+    -NOGRAVITY
+    -SOLID
+    -SKYEXPLODE
+    +NOBLOCKMAP
+    +MOVEWITHSECTOR
+    +CLIENTSIDEONLY
+    States
+    {
       Spawn:
-       CERE ABCD 5
+        CERE ABCD 5
         loop
+
       Death:
-       TNT1 A 0 A_Jump(256,"Death1","Death2")
-      Death1:
-       CERE A -1
-        stop
-      Death2:
-       CERE C -1
-        stop
-   }
+        TNT1 A 0 A_Jump(256,1,2)
+        CERE A 0
+        goto DeathLoop
+        CERE C 0
+        goto DeathLoop
+
+      DeathLoop:
+        "####" "#" 2100
+        "####" "#" 0 A_JumpIf(CallACS("SamsaraClientDecorate", 13), "DeathLoop")
+        "####" "#" 1 A_FadeOut(0.1)
+        wait
+    }
 }
 
-ACTOR Chexbit2 : Chexbit1
+actor Chexbit2 : Chexbit1
 {
-   States
-   {
+    States
+    {
       Spawn:
-       CERE EFGH 5
+        CERE EFGH 5
         loop
+
       Death:
-       TNT1 A 0 A_Jump(256,"Death1","Death2")
-      Death1:
-       CERE E -1
-        stop
-      Death2:
-       CERE G -1
-        stop
-   }
+        TNT1 A 0 A_Jump(256,1,2)
+        CERE E 0
+        goto DeathLoop
+        CERE G 0
+        goto DeathLoop
+    }
 }
 
-ACTOR Chexbit3 : Chexbit1
+actor Chexbit3 : Chexbit1
 {
-   States
-   {
+    States
+    {
       Spawn:
-       CERE IJKL 5
+        CERE IJKL 5
         loop
+
       Death:
-       TNT1 A 0 A_Jump(256,"Death1","Death2")
-      Death1:
-       CERE I -1
-        stop
-      Death2:
-       CERE K -1
-        stop
-   }
+        TNT1 A 0 A_Jump(256,1,2)
+        CERE I 0
+        goto DeathLoop
+        CERE K 0
+        goto DeathLoop
+    }
 }
 
-ACTOR Chexbit4 : Chexbit1
+actor Chexbit4 : Chexbit1
 {
-   States
-   {
+    States
+    {
       Spawn:
-       CERE MNOP 5
+        CERE MNOP 5
         loop
+
       Death:
-       TNT1 A 0 A_Jump(256,"Death1","Death2")
-      Death1:
-       CERE M -1
-        stop
-      Death2:
-       CERE O -1
-        stop
-   }
+        TNT1 A 0 A_Jump(256,1,2)
+        CERE M 0
+        goto DeathLoop
+        CERE O 0
+        goto DeathLoop
+    }
 }
 
-ACTOR Chexcrumb
+actor Chexcrumb
 {
-   Radius 2
-   Height 2
-   Mass 10
-   Speed 18
-   Scale 0.75
-   Gravity 0.75
-   PROJECTILE
-   +NOTELEPORT
-   -NOGRAVITY
-   -SOLID
-   -SKYEXPLODE
-   +NOBLOCKMAP
-   +MOVEWITHSECTOR
-   +CLIENTSIDEONLY
-   States
-   {
+    Radius 2
+    Height 2
+    Mass 10
+    Speed 18
+    Scale 0.75
+    Gravity 0.75
+    Projectile
+    +NOTELEPORT
+    -NOGRAVITY
+    -SOLID
+    -SKYEXPLODE
+    +NOBLOCKMAP
+    +MOVEWITHSECTOR
+    +CLIENTSIDEONLY
+    States
+    {
       Spawn:
-       TNT1 A 0 
-       TNT1 A 10 A_Jump(256,"Crumb1","Crumb2","Crumb3")
+        TNT1 A 0 
+        TNT1 A 0 A_Jump(256,1,2,3)
+        CERE Q 0
+        goto SpawnLoop
+        CERE R 0
+        goto SpawnLoop
+        CERE S 0
+        goto SpawnLoop
+
+      SpawnLoop:
+        "####" "#" 10
         loop
-      Crumb1:
-       CERE Q 10
-        loop
-      Crumb2:
-       CERE R 10
-        loop
-      Crumb3:
-       CERE S 10
-        loop
+
       Death:
-       TNT1 A 1
+        TNT1 A 1
         stop
-   }
+    }
 }
 
 // Unique Chex Blood - Family Friendly!
