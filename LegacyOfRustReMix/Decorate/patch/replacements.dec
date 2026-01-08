@@ -4,11 +4,11 @@ Actor SamsaraAmmo4Small_LegacyOfRust : Ammo4Small replaces ID24Fuel { }
 Actor SamsaraAmmo4Big_LegacyOfRust : Ammo4Big replaces ID24FuelTank { }
 
 // Change the monster inheritances back to their ID24 names after GZDoom's next update
-actor Banshee_SamsaraRemixer : LostSoulSpawner replaces Deh_Actor_152 {}
-actor Ghoul_SamsaraRemixer : LostSoulSpawner replaces Deh_Actor_151 {}
-actor Mindweaver_SamsaraRemixer : ArachnotronSpawner replaces Deh_Actor_153 {}
-actor Shocktrooper_SamsaraRemixer : DarkImpSpawner replaces Deh_Actor_154 {}
-actor Tyrant_SamsaraRemixer : BaronOfHellSpawner replaces Deh_Actor_156 {}
-actor TyrantBoss1_SamsaraRemixer : BaronOfHellSpawner replaces Deh_Actor_157 {}
-actor TyrantBoss2_SamsaraRemixer : BaronOfHellSpawner replaces Deh_Actor_158 {}
-actor Vassago_SamsaraRemixer : BelphegorSpawner replaces Deh_Actor_155 {}
+actor Banshee_SamsaraRemixer : LegacyOfRustBansheeSpawner replaces Deh_Actor_152 {}
+actor Ghoul_SamsaraRemixer : LegacyOfRustGhoulSpawner replaces Deh_Actor_151 {}
+actor Mindweaver_SamsaraRemixer : LegacyOfRustMindweaverSpawner replaces Deh_Actor_153 {}
+actor Shocktrooper_SamsaraRemixer : LegacyOfRustShocktrooperSpawner replaces Deh_Actor_154 {}
+actor Tyrant_SamsaraRemixer : LegacyOfRustTyrantSpawner replaces Deh_Actor_156 {}
+actor TyrantBoss1_SamsaraRemixer : LegacyOfRustTyrantSpawner replaces Deh_Actor_157 {}
+actor TyrantBoss2_SamsaraRemixer : LegacyOfRustTyrantSpawner replaces Deh_Actor_158 {}
+actor Vassago_SamsaraRemixer : LegacyOfRustVassagoSpawner replaces Deh_Actor_155 {}
