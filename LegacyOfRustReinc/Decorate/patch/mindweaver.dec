@@ -17,6 +17,7 @@ Actor Mindweaver_Samsara : SamsaraMonsterCyberneticTotalGib replaces Deh_Actor_1
 	DeathSound "monsters/mindweaver/death"
 	Obituary "$ID24_OB_MINDWEAVER"
 	Tag "Mindweaver"
+	Decal BulletChip
 	States
 	{
 	Spawn:

@@ -42,10 +42,10 @@ Actor Tyrant_Samsara : SamsaraMonsterDemonicBoss replaces Deh_Actor_155
 		CYB2 F 12 Bright A_CyberAttack
 		CYB2 E 12 A_FaceTarget
 		CYB2 F 12 Bright A_CyberAttack
-		goto see
+		goto see2
 	Pain:
 		CYB2 G 10 A_Pain
-		goto see
+		goto see2
 	Death:
 		CYB2 H 10 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		CYB2 I 10 A_Scream
