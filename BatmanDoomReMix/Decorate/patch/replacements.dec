@@ -6,7 +6,7 @@ ACTOR BatmanSmokeBomb replaces RocketLauncher 2003
 	States
 	{
 	Spawn:
-		TNT1 A 0 NoDelay A_SpawnItemEx("SamsaraSlotFiveSkulltagPickup", 0, 0, 0, 0, 0, 0, 0)
+		TNT1 A 0 NoDelay A_SpawnItemEx("SamsaraSlotFivePickup", 0, 0, 0, 0, 0, 0, 0)
 		TNT1 A 0 A_SpawnItemEx("Ammo3Small", 0, 0, 0, 0, 0, 0, 0)
 		Stop
 	}
