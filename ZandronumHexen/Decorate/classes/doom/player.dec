@@ -121,6 +121,7 @@ DamageType DoomDamageTypeRepeaterNoSelfDamage
 }
 
 actor DoomguyClass : Boolean {}
+actor SamsaraDoomguyInDoom64CE : Boolean {}
 actor DoomClassMode : Counter { Inventory.MaxAmount 2 }
 actor SamsaraDoom64StartingUnmakerArtifactsGiven : Boolean {}
 
