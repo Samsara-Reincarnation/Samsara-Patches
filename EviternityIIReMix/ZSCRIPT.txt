@@ -1,0 +1,161 @@
+version "3.7"
+
+class SamsaraEviternityIIPostProcessor : LevelPostProcessor
+{
+    protected void Apply(Name checksum, String mapname)
+    {
+        for (int i = 0; i < GetThingCount(); i++)
+        {
+            int ednum = GetThingEdNum(i);
+
+			// Brute-force Samsara replacements for Eviternity actors;
+			switch(ednum)
+			{
+				// Formal Corporal
+				case 8001:
+				SetThingEdNum(i, 8301);
+				break;
+				// Astral Arachnotron
+				case 8002:
+				SetThingEdNum(i, 8302);
+				break;
+				// Nightmare Demon
+				case 8003:
+				SetThingEdNum(i, 8303);
+				break;
+				// Annihilator
+				case 8004:
+				SetThingEdNum(i, 8304);
+				break;
+				// Astral Cacodemon
+				case 8005:
+				SetThingEdNum(i, 8305);
+				break;
+				// Astral Arachnotron
+				case 8006:
+				SetThingEdNum(i, 8306);
+				break;
+				// Veil Imp
+				case 8011:
+				SetThingEdNum(i, 8311);
+				break;
+				// Golden Astral Cacodemon
+				case 8021:
+				SetThingEdNum(i, 8321);
+				break;
+				// Duke of Hell
+				case 8022:
+				SetThingEdNum(i, 8322);
+				break;
+				// Astral Babycaco
+				case 8023:
+				SetThingEdNum(i, 8323);
+				break;
+				// Nightmare Astral Cacodemon
+				case 8028:
+				SetThingEdNum(i, 8328);
+				break;
+				// Astral Mancubus
+				case 8029:
+				SetThingEdNum(i, 8329);
+				break;
+				// Necromenace A
+				case 8030:
+				SetThingEdNum(i, 8330);
+				break;
+				// Necromenace A
+				case 8033:
+				SetThingEdNum(i, 8333);
+				break;
+				// Effect Trigger 1
+				case 8163:
+				SetThingEdNum(i, 8463);
+				break;
+				// Effect Trigger 2
+				case 8164:
+				SetThingEdNum(i, 8464);
+				break;
+				// Effect Trigger 3
+				case 8165:
+				SetThingEdNum(i, 8465);
+				break;
+				// The Origin 1 Spawner
+				case 8166:
+				SetThingEdNum(i, 8466);
+				break;
+				// The Origin 1
+				case 8167:
+				SetThingEdNum(i, 8467);
+				break;
+				// The Origin 2
+				case 8168:
+				SetThingEdNum(i, 8468);
+				break;
+				// The Origin 3
+				case 8169:
+				SetThingEdNum(i, 8469);
+				break;
+				// Barrel Spawner
+				case 8170:
+				SetThingEdNum(i, 8470);
+				break;
+				// Timed Barrel
+				case 8171:
+				SetThingEdNum(i, 8471);
+				break;
+				// Cyberdemon MAP24 variant
+				case 8209:
+				SetThingEdNum(i, 8509);
+				break;
+				// The Origin 2 Spawner
+				case 8217:
+				SetThingEdNum(i, 8517);
+				break;
+				// The Origin 3 Spawner
+				case 8218:
+				SetThingEdNum(i, 8518);
+				break;
+				// Golden Astral Cacodemon Boss
+				case 8174:
+				SetThingEdNum(i, 8474);
+				break;
+				// Former Captain
+				case 8228:
+				SetThingEdNum(i, 8528);
+				break;
+				// Spectral Astral Cacodemon
+				case 8229:
+				SetThingEdNum(i, 8629);
+				break;
+				// Grand Duke of Hell
+				case 8230:
+				SetThingEdNum(i, 8630);
+				break;
+				// The Absolute Origin 1 Spawner
+				case 8231:
+				SetThingEdNum(i, 8466);
+				break;
+				// The Absolute Origin 1
+				case 8232:
+				SetThingEdNum(i, 8467);
+				break;
+				// The Absolute Origin 2 Spawner
+				case 8233:
+				SetThingEdNum(i, 8517);
+				break;
+				// The Absolute Origin 2
+				case 8234:
+				SetThingEdNum(i, 8468);
+				break;
+				// The Absolute Origin 3 Spawner
+				case 8235:
+				SetThingEdNum(i, 8518);
+				break;
+				// The Absolute Origin 3
+				case 8236:
+				SetThingEdNum(i, 8469);
+				break;
+			}
+        }
+    }
+}

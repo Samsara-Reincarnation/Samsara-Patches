@@ -28,8 +28,6 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 There are also three patches that were designed only for Zandronum that bring the GZDoom player color support to Heretic, Hexen: Beyond Heretic, and Strife: Quest for the Sigil. They can be loaded with the corresponding IWAD and found along with the other prebuilt patches in the releases page.
 
 ## Special Requirements/Notes For Some Patches
-Due to how Eviternity II combines DECORATE and DSDHacked, and the way the latest version of GZDoom handles DSDHacked actors, the mapset will require an older version of GZDoom, specifically [v4.12.2](https://github.com/ZDoom/gzdoom/releases/tag/g4.12.2). There has been reports of [an arbitrary code execution vulnerability](https://security.snyk.io/vuln/SNYK-UNMANAGED-ZDOOMGZDOOM-8731595) in this version, but as long as you only run the patch and required files with this mapset and nothing else, you should be safe.
-
 Some popular mapsets such as Ancient Aliens will not have patches created for them because of their availability on [The Sentinal's Lexicon](https://github.com/Mythotic-Tinker-Station/lexicon), a mapset compilation that aims to have compatibility with many gameplay mods such as Samsara Reincarnation. If they are already included in Lexicon, they will likely not have patches made for them.
 
 ## How to Play
@@ -55,7 +53,7 @@ The releases page has prebuilt patches that coincide with Samsara Reincarnation'
 If you follow these instructions correctly, you will create a pk3 file that corresponds to the patch directory you typed in. The created patch can then be loaded just like the patches in the releases page.
 
 ## Disclaimers
-The personal views and actions of the authors of the mapsets are not reflective of the Samsara Reincarnation dev team, and they do not have any responsibility for any bugs or glitches caused by using these patches. If you need to report a bug on a mapset and you have Samsara Reincarnation loaded, DO NOT contact the author. Instead, create an issue on the repository and put your report there. The Reincarnation team will look into the report and fix any oddities if they are deemed game-breaking.
+The personal views and actions of the authors of the mapsets are not reflective of the Samsara Reincarnation dev team, and they do not have any responsibility for any bugs or glitches caused by using these patches. If you need to report a bug on a mapset and you have Samsara Reincarnation loaded, DO NOT contact the author. Instead, create an issue on this repository and put your report there. The Reincarnation team will look into the report and fix any oddities if they are deemed game-breaking.
 
 Although the team makes their best efforts to contact the author first before making the patch, there may be cases where the team cannot establish a connection or the author is unavailable. In the event that you are an author of one of the supported mapsets and you don't want a patch made for them, please raise an issue stating your request for removal.
 

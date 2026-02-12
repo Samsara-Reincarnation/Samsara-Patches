@@ -1,0 +1,38 @@
+// This is required in order for newer GZDoom versions to properly work with the patch.
+// Don't ask me why I couldn't just replace them through decorate, GZDoom just didn't
+// want to cooperate.
+
+DoomEdNums
+{
+	8301 = FormerCorporal_Samsara
+	8302 = AstralArachno_Samsara
+	8303 = NightmareDemon_Samsara
+	8304 = Annihilator_Samsara
+	8305 = AstralCacodemon_Samsara
+	8306 = AstralArachno_Samsara
+	8311 = Veilimp_Samsara
+	8321 = GoldenAstralCaco_Samsara
+	8322 = DukeOfHell_Samsara
+	8323 = AstralBabyCaco_Samsara
+	8328 = NightmareCacodemon_Samsara
+	8329 = AstralMancubus_Samsara
+	8330 = NecromenaceA_Samsara
+	8333 = NecromenaceB_Samsara
+	8463 = EffectTrigger1_Samsara
+	8464 = EffectTrigger2_Samsara
+	8465 = EffectTrigger3_Samsara
+	8466 = The_Origin_Phase_1_Spawner_Samsara
+	8467 = The_Origin_Phase_1_Samsara
+	8468 = The_Origin_Phase_2_Samsara
+	8469 = The_Origin_Phase_3_Samsara
+	8470 = BarrelSpawner_Samsara
+	8471 = TimedBarrel_Samsara
+	8507 = LostSoulEviternity2_Samsara
+	8509 = CyberdemonMAP24_Samsara
+	8517 = The_Origin_Phase_2_Spawner_Samsara
+	8518 = The_Origin_Phase_3_Spawner_Samsara
+	8528 = FormerCaptain_Samsara
+	8628 = GoldenAstralCacoBoss_Samsara
+	8629 = SpectralAstralCacodemon_Samsara
+	8630 = GrandDukeofHell_Samsara
+}
