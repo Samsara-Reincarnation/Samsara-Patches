@@ -1,0 +1,5 @@
+actor DarkestHourExplosiveBarrel : DoomExplosiveBarrel replaces DoomExplosiveBarrel { Health 45 }
+
+#include "Decorate/patch/modifiedenemies.dec"
+#include "Decorate/patch/mandalorian.dec"
+#include "Decorate/patch/roguejedi.dec"

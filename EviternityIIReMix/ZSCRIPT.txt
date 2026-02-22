@@ -8,7 +8,7 @@ class SamsaraEviternityIIPostProcessor : LevelPostProcessor
         {
             int ednum = GetThingEdNum(i);
 
-			// Brute-force Samsara replacements for Eviternity actors;
+			// Brute-force Samsara replacements for Eviternity actors
 			switch(ednum)
 			{
 				// Formal Corporal

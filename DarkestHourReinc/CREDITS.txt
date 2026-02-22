@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: The Darkest Hour + Dawn: A Prelude
+Authors: Rex Claussen
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkhour + https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkpack
+
+Resources used:
+---------------
+N/A
