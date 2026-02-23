@@ -1,6 +1,8 @@
 actor DarkestHourExplosiveBarrel : DoomExplosiveBarrel replaces DoomExplosiveBarrel { Health 45 }
-Actor Jawa_Samsara : ChaingunGuySpawner replaces Nazi2 { }
+Actor PhaseOneDarkTrooper_Samsara : BaronOfHellSpawner replaces Arachnotron { }
+Actor ShockTrooperDarkestHour_Samsara : SuperShotgunGuySpawner replaces Fatso { }
+Actor Jawa_Samsara : ChaingunGuySpawner replaces WolfensteinSS { }
 
-#include "Decorate/patch/imperialofficer.dec"
+#include "Decorate/patch/modifiedenemies.dec"
 #include "Decorate/patch/mandalorian.dec"
 #include "Decorate/patch/roguejedi.dec"
