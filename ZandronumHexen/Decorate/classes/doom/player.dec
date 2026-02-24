@@ -707,8 +707,6 @@ actor Doomguy64_ShrinkEffect : DoomguyPlayer
 	}
 }
 
-actor SamsaraImprovedDoomguyBalance : Boolean { Inventory.RestrictedTo "DoomguyPlayer", "ChexWarrior" }
-
 actor DoomBulletPuff : BulletPuff
 {
 	Decal "BulletChip"
