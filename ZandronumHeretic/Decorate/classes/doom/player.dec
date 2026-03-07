@@ -875,8 +875,8 @@ actor SamsaraDoomguyStrBulletPuff : BulletPuff
 	States
 	{
 	Spawn:
-		DPFF A 4 Bright Light("BPUFF1")
-		DPFF B 4 Bright Light("BPUFF2")
+		DPFF A 4 Bright Light("DOOMBPUFF1")
+		DPFF B 4 Bright Light("DOOMBPUFF2")
 	Melee:
 		DPFF CD 4
 		stop
@@ -891,7 +891,7 @@ actor SamsaraDoomguyStrBulletPuffBallistic : SamsaraDoomguyStrBulletPuff
 	States
 	{
 	Spawn:
-		DPFF A 0 Bright NoDelay Light("BPUFF1") A_SpawnItemEx("SamsaraDoomguyStrBulletPuffBallisticEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,128)
+		DPFF A 0 Bright NoDelay Light("DOOMBPUFF1") A_SpawnItemEx("SamsaraDoomguyStrBulletPuffBallisticEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION,128)
 		goto Super::Spawn
 	}
 }
