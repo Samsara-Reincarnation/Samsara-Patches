@@ -766,8 +766,8 @@ actor Doom64BulletPuff : BulletPuff
 	states
 	{
 	Spawn:
-		64PF A 4 bright
-		64PF B 4 bright
+		64PF A 4 Bright Light("DOOMBPUFF1")
+		64PF B 4 Bright Light("DOOMBPUFF2")
 		// Intentional fall-through
 	Melee:
 		64PF CDEF 4
