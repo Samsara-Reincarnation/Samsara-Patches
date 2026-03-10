@@ -713,8 +713,8 @@ actor DoomBulletPuff : BulletPuff
 	States
 	{
 	Spawn:
-		DPFF A 4 bright
-		DPFF B 4
+		DPFF A 4 Bright Light("DOOMBPUFF1")
+		DPFF B 4 Light("DOOMBPUFF2")
 
 	Melee:
 		DPFF CD 4
