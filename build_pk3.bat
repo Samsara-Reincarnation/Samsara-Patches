@@ -6,7 +6,7 @@ SET /p userDirectory=Type one of the directory names (or type all for every patc
 REM Set the filename for the pk3 file
 SET pk3Name=SamsaraPatch-%userDirectory%
 SET pk3NameAll=SamsaraPatch-
-SET pk3Version=_v2.2.1
+SET pk3Version=_v2.2.1-PublicBeta
 
 REM Check if the user inputs are valid
 if %userDirectory% == all GOTO ALLPATCHES
