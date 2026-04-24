@@ -1322,3 +1322,14 @@ ACTOR Quake_BloodParticle
 }
 
 Actor AxeChecker : CustomInventory { Inventory.MaxAmount 99 }
+
+// "No self damage" powerup
+
+actor SamsaraRangerNoSelfDamage : SamsaraPowerupGiver { Powerup.Type "SamsaraRangerNoSelfDamage" }
+
+actor PowerSamsaraRangerNoSelfDamage : PowerProtection
+{
+	DamageFactor "QuakeExplosive", 0
+	DamageFactor "NotQuadded", 0
+	DamageFactor "QuakeElectric", 0
+}
