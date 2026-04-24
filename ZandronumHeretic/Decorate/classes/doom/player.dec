@@ -835,9 +835,9 @@ actor SamsaraDoomguyNoSelfDamage : SamsaraPowerupGiver { Powerup.Type "SamsaraDo
 
 actor PowerSamsaraDoomguyNoSelfDamage : PowerProtection
 {
-    DamageFactor "DoomDamageType", 0
+    //DamageFactor "DoomDamageType", 0
     DamageFactor "DoomDamageTypePlasma", 0
-    DamageFactor "DoomDamageTypeBFG", 0
+    //DamageFactor "DoomDamageTypeBFG", 0
     DamageFactor "DoomDamageTypeRepeater", 0
 }
 
