@@ -30,12 +30,6 @@ DamageType DoomDamageType
 	ReplaceFactor
 }
 
-DamageType DoomDamageTypeNoSelfDamage
-{
-	Factor 1
-	ReplaceFactor
-}
-
 DamageType DoomDamageTypeFist
 {
 	Factor 1
@@ -72,12 +66,6 @@ DamageType DoomDamageTypePlasma
 	ReplaceFactor
 }
 
-DamageType DoomDamageTypePlasmaNoSelfDamage
-{
-	Factor 1
-	ReplaceFactor
-}
-
 DamageType DoomDamageTypeStunner
 {
 	Factor 1
@@ -85,12 +73,6 @@ DamageType DoomDamageTypeStunner
 }
 
 DamageType DoomDamageTypeBFG
-{
-	Factor 1
-	ReplaceFactor
-}
-
-DamageType DoomDamageTypeBFGNoSelfDamage
 {
 	Factor 1
 	ReplaceFactor
@@ -109,12 +91,6 @@ DamageType DoomDamageTypeDevastator
 }
 
 DamageType DoomDamageTypeRepeater
-{
-	Factor 1
-	ReplaceFactor
-}
-
-DamageType DoomDamageTypeRepeaterNoSelfDamage
 {
 	Factor 1
 	ReplaceFactor
@@ -859,10 +835,10 @@ actor SamsaraDoomguyNoSelfDamage : SamsaraPowerupGiver { Powerup.Type "SamsaraDo
 
 actor PowerSamsaraDoomguyNoSelfDamage : PowerProtection
 {
-	DamageFactor "DoomDamageTypeNoSelfDamage", 0
-	DamageFactor "DoomDamageTypePlasmaNoSelfDamage", 0
-	DamageFactor "DoomDamageTypeBFGNoSelfDamage", 0
-	DamageFactor "DoomDamageTypeRepeaterNoSelfDamage", 0
+    DamageFactor "DoomDamageType", 0
+    DamageFactor "DoomDamageTypePlasma", 0
+    DamageFactor "DoomDamageTypeBFG", 0
+    DamageFactor "DoomDamageTypeRepeater", 0
 }
 
 // Bullet puff (base)
