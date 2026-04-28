@@ -194,8 +194,7 @@ actor StrifeguyPlayer : StrifePlayer
 	Death.PhosFire:
 	Death.PhosFireCoop:
 	Burn:
-		SBRN A 3 bright
-		TNT1 A 0 bright A_PlaySound("*burndeath", CHAN_VOICE)
+		SBRN A 3 bright A_PlaySound("*burndeath", CHAN_VOICE)
 		SBRN B 3 bright A_DropFire
 		SBRN C 3 bright
 		SBRN D 3 bright A_NoBlocking
