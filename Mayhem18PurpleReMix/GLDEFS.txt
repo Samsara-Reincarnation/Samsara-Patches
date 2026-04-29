@@ -1,0 +1,117 @@
+pulselight BARREL_MAYHEM18P
+{
+	color 0.5 0.0 0.5
+	size 20
+	secondarySize 21
+	interval 0.5
+	offset 0 36 0
+}
+
+object Mayhem18PExplosiveBarrel
+{
+	frame BAR1 { light BARREL_MAYHEM18P }
+
+	frame BEXPC { light ROCKET_X1 }
+	frame BEXPD { light ROCKET_X2 }
+	frame BEXPE { light ROCKET_X3 }
+}
+
+pointlight BARONBALL_MAYHEM18P
+{
+	color 1.0 0.0 1.0
+	size 64
+}
+
+flickerlight BARONBALL_MAYHEM18P_X1
+{
+	color 0.7 0.0 0.7
+	size 80
+	secondarySize 88
+	chance 0.25
+}
+
+flickerlight BARONBALL_MAYHEM18P_X2
+{
+	color 0.4 0.0 0.4
+	size 96
+	secondarySize 104
+	chance 0.25
+}
+
+flickerlight BARONBALL_MAYHEM18P_X3
+{
+	color 0.2 0.0 0.2
+	size 112
+	secondarySize 120
+	chance 0.25
+}
+
+object BaronBallMayhem18P_Samsara
+{
+	frame BAL7A { light BARONBALL_MAYHEM18P }
+	frame BAL7B { light BARONBALL_MAYHEM18P }
+
+	frame BAL7C { light BARONBALL_MAYHEM18P_X1 }
+	frame BAL7D { light BARONBALL_MAYHEM18P_X2 }
+	frame BAL7E { light BARONBALL_MAYHEM18P_X3 }
+}
+
+object BaronBallMayhem18P_Samsara2
+{
+	frame BAL7A { light BARONBALL_MAYHEM18P }
+	frame BAL7B { light BARONBALL_MAYHEM18P }
+
+	frame BAL7C { light BARONBALL_MAYHEM18P_X1 }
+	frame BAL7D { light BARONBALL_MAYHEM18P_X2 }
+	frame BAL7E { light BARONBALL_MAYHEM18P_X3 }
+}
+
+pointlight ARACHPLAS_MAYHEM18P
+{
+	color 1.0 0.0 1.0
+	size 56
+}
+
+flickerlight ARACHPLAS_MAYHEM18P_X1
+{
+	color 0.8 0.0 0.8
+	size 72
+	secondarySize 80
+	chance 0.3
+}
+
+flickerlight ARACHPLAS_MAYHEM18P_X2
+{
+	color 0.6 0.0 0.6
+	size 88
+	secondarySize 96
+	chance 0.3
+}
+
+flickerlight ARACHPLAS_MAYHEM18P_X3
+{
+	color 0.4 0.0 0.4
+	size 48
+	secondarySize 32
+	chance 0.3
+}
+
+flickerlight ARACHPLAS_MAYHEM18P_X4
+{
+	color 0.2 0.0 0.2
+	size 24
+	secondarySize 16
+	chance 0.3
+}
+
+object ArachnotronPlasmaMayhem18P_Samsara
+{
+	frame APLSA { light ARACHPLAS_MAYHEM18P }
+	frame APLSB { light ARACHPLAS_MAYHEM18P }
+
+	frame APBXA { light ARACHPLAS_MAYHEM18P_X1 }
+	frame APBXB { light ARACHPLAS_MAYHEM18P_X2 }
+	frame APBXC { light ARACHPLAS_MAYHEM18P_X2 }
+	frame APBXD { light ARACHPLAS_MAYHEM18P_X3 }
+	frame APBXE { light ARACHPLAS_MAYHEM18P_X4 }
+}

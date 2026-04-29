@@ -1,0 +1,2 @@
+Actor DangerousWorld_Samsara : ZombiemanSpawner replaces WolfensteinSS {}
+Actor ZBloodyHellMime_Samsara : RandomSpawner replaces Mime { DropItem "BloodInnocentMime" }

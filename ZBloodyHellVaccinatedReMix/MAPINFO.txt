@@ -1,0 +1,13 @@
+DoomEdNums
+{
+	15 = DeadACultist
+	6132 = ZBloodyHellMotherSpider_Samsara
+	6133 = Cerberus
+	6134 = ZBloodyHellTchernobog_Samsara
+	6231 = RedArmor
+	7000 = Cheogh
+	7002 = Cheogh_2
+	10309 = ZombiemanSpawner
+	15171 = Ammo3Small
+	17112 = Ammo3Small
+}

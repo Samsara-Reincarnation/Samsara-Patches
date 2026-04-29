@@ -1,0 +1,1 @@
+actor SamsaraMayhem18OChainsawSpawner : RandomSpawner replaces Chainsaw { DropItem "SamsaraSlotFivePickup" }

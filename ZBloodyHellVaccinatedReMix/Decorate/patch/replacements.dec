@@ -1,0 +1,40 @@
+Actor ZBloodyHellTchernobog_Samsara : Tchernobog
+{
+	Health 4400
+	States
+	{
+	Spawn:
+		TCHR A 0
+		TNT1 A 1 A_JumpIfInventory("AlreadySpawned",1,"Spawn2")
+		TNT1 A 1 ACS_NamedExecuteAlways("ReMixerSpawnScript",0,1,0)
+		TNT1 A 0 A_GiveInventory("AlreadySpawned",1)
+		goto Idle
+	}
+}
+
+Actor ZBloodyHellMotherSpider_Samsara : MotherSpider_2
+{
+	Radius 34
+	Height 40
+	Health 2000
+	+DONTMORPH
+	+MISSILEEVENMORE
+	States
+	{
+	Pain.ShrinkerDMG:
+		Goto Pain
+	Death.ExpanderDMG:
+	XDeath.ExpanderDMG:
+	Death.ExpanderDMGCoop:
+	XDeath.ExpanderDMGCoop:
+		Goto Death.DukeDamage
+	}
+}
+
+Actor JumpingBoots_Samsara : HealPack2 replaces JumpingBoots {} // Replaced with a health pickup for now
+Actor DoctorBag_Samsara : SuperHealth replaces DoctorBag {}
+Actor DivingSuit_Samsara : BioSuit replaces DivingSuit {}
+Actor DivingSuit2_Samsara : BioSuit replaces DivingSuit2 {}
+Actor FlyingBlood_Samsara : SamsaraBloodyHellBlood replaces FlyingBlood {}
+Actor OrganDebris_Samsara : SamsaraBloodyHellBlood replaces OrganDebris {}
+Actor ZBlood_GibGenerator_Samsara : UniversalBloodyHellGoreXDeathEffect replaces ZBlood_GibGenerator {}

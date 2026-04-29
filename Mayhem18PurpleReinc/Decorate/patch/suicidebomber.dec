@@ -1,0 +1,57 @@
+Actor SuicideBomber_Samsara : SamsaraMonsterHumanoidTotalGib replaces CommanderKeen
+{
+	Health 60
+	Speed 12
+	Radius 20
+	Height 56
+	PainChance 0
+	Mass 100
+	Monster
+	+SOLID
+	+SHOOTABLE
+	+COUNTKILL
+	+NOICEDEATH
+	+ISMONSTER
+	+NOPAIN
+	SeeSound "grunt/sight"
+	PainSound "wolfss/sight"
+	DeathSound "world/barrelx"
+	ActiveSound "grunt/active"
+	Tag "Suicide Bomber"
+	States
+	{
+	Spawn:
+		KEEN AB 10 A_Look
+		goto Spawn
+	See:
+		KEEN A 0 A_Pain
+		KEEN AABBCCDD 3 A_Chase
+		goto See
+	Melee:
+		KEEN A -1 A_Die("Massacre")
+		Loop
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		KEEN E 0 Bright A_Explode
+		KEEN E 5 Bright A_Scream
+		KEEN F 5 Bright 
+		KEEN G 5 Bright A_Fall
+		POSS PQRST 5 
+		POSS U -1 
+		stop
+	Death.CalebFire:
+	Death.LifeLeech:
+		TNT1 A 0 A_Jump(218, 2)
+		TNT1 A 0 A_GiveToTarget("CalebDMTaunt1", 1)
+		TNT1 A 0 A_SpawnItemEx("BloodBurningCorpse_Silent", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_SETMASTER)
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 5 A_NoBlocking
+		TNT1 A -1
+		Stop
+	StakeDeath:
+		KEEN A 2
+		Loop
+	}
+}

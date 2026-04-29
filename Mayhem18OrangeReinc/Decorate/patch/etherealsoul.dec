@@ -1,0 +1,66 @@
+ACTOR EtherealSoul_Samsara : SamsaraMonsterGhost replaces DeadLostSoul
+{
+	Health 180
+	Speed 5
+	Radius 16
+	Height 32
+	Damage 5
+	PainChance 128
+	Mass 400
+	Monster
+	+SOLID
+	+SHOOTABLE
+	+NOGRAVITY
+	+FLOAT
+	+COUNTKILL
+	+NOBLOOD
+	RenderStyle "Translucent"
+	Alpha 0.5
+	AttackSound "skull/melee"
+	PainSound "keen/pain"
+	DeathSound "keen/death"
+	Tag "Ethereal Soul"
+	Obituary "$OB_SKULL"
+	States
+	{
+	Spawn:
+		KEEN A 10 Bright A_Look
+		Loop
+	See:
+		KEEN AABBCCDD 4 Bright A_Chase
+		KEEN C 6 Bright A_FaceTarget
+		KEEN E 4 Bright A_SkullAttack
+		KEEN E 0 Bright A_FaceTarget
+		KEEN F 4 Bright A_SkullAttack
+		KEEN F 0 Bright A_FaceTarget
+		KEEN E 4 Bright A_SkullAttack
+		KEEN E 0 Bright A_FaceTarget
+		KEEN F 4 Bright A_SkullAttack
+		goto See
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		KEEN P 3 Bright A_FaceTarget
+		KEEN Q 4 Bright A_FaceTarget
+		KEEN R 5 Bright A_BspiAttack
+		KEEN E 4 Bright 
+		Goto See
+	Pain:
+		KEEN G 3 Bright 
+		KEEN G 3 Bright A_Pain
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		KEEN G 2 bright A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		KEEN G 16 bright A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+	Death.Massacre:
+		KEEN H 4 Bright 
+		KEEN I 4 Bright A_Scream
+		KEEN J 4 Bright A_Fall
+		KEEN KLMN 4 Bright 
+		stop
+	}
+}

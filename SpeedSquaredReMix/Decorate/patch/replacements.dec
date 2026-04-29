@@ -1,0 +1,26 @@
+actor FixedCrack_Samsara : Crack_Samsara replaces Crack_Samsara
+{
+	DamageFactor "Vacuum", 0.0
+}
+
+actor FixedTNTCrate_Samsara : TNTCrate_Samsara replaces TNTCrate_Samsara
+{
+    DamageFactor "Vacuum", 0.0
+}
+
+actor FixedCrate_Samsara : Crate_Samsara replaces Crate_Samsara
+{
+    DamageFactor "Vacuum", 0.0
+}
+
+actor FixedNukageCrate_Samsara : NukageCrate_Samsara replaces NukageCrate_Samsara
+{
+    DamageFactor "Vacuum", 0.0
+}
+
+actor FixedFizzoPopCrate_Samsara : FizzoPopCrate_Samsara replaces FizzoPopCrate_Samsara
+{
+    DamageFactor "Vacuum", 0.0
+}
+
+actor PawnchGloves_Samsara : SamsaraUniquePickupRandom_Square replaces PawnchGloves { }

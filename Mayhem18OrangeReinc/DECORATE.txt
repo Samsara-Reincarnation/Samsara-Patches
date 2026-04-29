@@ -1,0 +1,8 @@
+actor Mayhem18OExplosiveBarrel : DoomExplosiveBarrel replaces DoomExplosiveBarrel { }
+
+#include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/modifiedenemies.dec"
+#include "Decorate/patch/cybruiser.dec"
+#include "Decorate/patch/etherealsoul.dec"
+#include "Decorate/patch/hadessphere.dec"
+#include "Decorate/patch/shadow.dec"

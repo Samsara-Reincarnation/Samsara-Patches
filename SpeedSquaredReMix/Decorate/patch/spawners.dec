@@ -1,0 +1,12 @@
+Actor ContractDemon_Samsara : ZombiemanSpawner replaces ContractDemon {}
+Actor Commando_Samsara : ShotgunGuySpawner replaces Commando {}
+Actor Predator_Samsara : DoomImpSpawner replaces Predator {}
+Actor Minime_Samsara : ArachnotronSpawner replaces Minime {}
+Actor Speeddemon_Samsara : DemonSpawner replaces Speeddemon {}
+Actor Terminator_Samsara : DoomImpSpawner replaces Terminator {}
+Actor Toxicaco_Samsara : CacodemonSpawner replaces Toxicaco {}
+Actor Expendable_Samsara : DoomImpSpawner replaces Expendable {}
+Actor PsychoDemon_Samsara : DarkImpSpawner replaces PsychoDemon {}
+Actor BambinoDemon_Samsara : CacolanternSpawner replaces BambinoDemon {}
+Actor DeathMarcher_Samsara : ChaingunGuySpawner replaces DeathMarcher {}
+Actor Napalmer_Samsara : DoomImpSpawner replaces Napalmer {}

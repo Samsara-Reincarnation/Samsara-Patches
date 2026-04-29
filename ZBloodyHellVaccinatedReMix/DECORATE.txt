@@ -1,0 +1,29 @@
+actor ZBloodyHellBloodExBarrel : BloodExBarrel replaces DoomExplosiveBarrel
+{
+	States
+	{
+	Death:
+		BBAR A 5
+		BBAR A 10 bright
+		BAR1 A 0 A_Scream
+	DeathContinue:
+		BAR1 B 0 A_Explode
+		BAR1 B 0 A_SpawnItem("Kaboom",0,-15+random(-2,2))
+		stop
+	Death.ZorchPistol:
+	Death.Zorch:
+	Death.ZorchKamikaze:
+	Death.PhasingZorch:
+	Death.ZorchSpectral:
+		BBAR A 5
+		BBAR A 10 bright
+		BAR1 A 0 A_Scream
+		TNT1 A 0 A_SetDamageType("Zorch")
+		TNT1 A 0 A_ChangeFlag("BLOODLESSIMPACT",true)
+		Goto DeathContinue
+	}
+}
+
+#include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/spawners.dec"
+#include "Decorate/patch/decorations.dec"

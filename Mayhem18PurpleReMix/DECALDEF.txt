@@ -1,0 +1,4 @@
+generator ArachnotronPlasmaMayhem18P_Samsara		ArachnotronScorch
+generator BaronBallMayhem18P_Samsara				BaronScorch
+generator BaronBallMayhem18P_Samsara2				BaronScorch
+generator ChaingunSpider_Samsara					BulletChip

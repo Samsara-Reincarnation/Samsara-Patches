@@ -18,6 +18,9 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Hexen: Scourge of Viscerus | Matt Tropiano | [Link](https://www.doomworld.com/idgames/levels/hexen/v-z/viscerus) |
 | Hordes of Chaos X | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/hocx) |
 | Legacy of Rust | Nightdive Studios & MachineGames | N/A |
+| MAYhem 2018: Orange Edition | Obsidian, various authors | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/mayhem18o) |
+| MAYhem 2018: Purple Edition | Obsidian, various authors | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/mayhem18p) |
+| PUSS VIII: Speed Squared | BluePineapple72, various authors | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/speedsquared) |
 | REKKR | Revae | [Link](https://mockingbirdsoftworks.com/modversion.html) |
 | Ressurection of Chaos | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/hexen/p-r/roc) |
 | Resurgence | Josh Sealy | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/resurge) |
@@ -25,6 +28,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Shadow of the Wool Ball | MSPaintR0cks | [Link](https://forum.zdoom.org/viewtopic.php?t=52301&) |
 | Strife: Absolute Order | Adam Woodmansey | [Link](https://www.doomworld.com/idgames/levels/strife/sabord) |
 | The Darkest Hour + Dawn: A Prelude | Rex Claussen | [Link 1](https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkhour) + [Link 2](https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkpack) |
+| ZBloody Hell V1.9.9 (Vaccinated) | RastaManGames, LordOZ_98, Joseph Otey, J.S Graham | [Link](https://www.moddb.com/mods/zbloody-hell/downloads/zbloody-hell-v199-vaccinated) |
 
 There are also three patches that were designed only for Zandronum that bring the GZDoom player color support to Heretic, Hexen: Beyond Heretic, and Strife: Quest for the Sigil. They can be loaded with the corresponding IWAD and found along with the other prebuilt patches in the releases page.
 

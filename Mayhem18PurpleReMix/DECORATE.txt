@@ -1,0 +1,9 @@
+actor Mayhem18PExplosiveBarrel : DoomExplosiveBarrel replaces DoomExplosiveBarrel { }
+
+#include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/modifiedenemies.dec"
+#include "Decorate/patch/chaingunspider.dec"
+#include "Decorate/patch/evilmarine.dec"
+#include "Decorate/patch/grell.dec"
+#include "Decorate/patch/immolator.dec"
+#include "Decorate/patch/suicidebomber.dec"

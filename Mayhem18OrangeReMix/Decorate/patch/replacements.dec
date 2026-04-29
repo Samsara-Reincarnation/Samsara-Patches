@@ -1,0 +1,2 @@
+actor SamsaraMayhem18OChainsawSpawner : RandomSpawner replaces Chainsaw { DropItem "SamsaraSlotFivePickup" }
+actor SamsaraMayhem18OSpiderMastermindSpawner : SpiderMastermindSpawner replaces BaronOfHell { }

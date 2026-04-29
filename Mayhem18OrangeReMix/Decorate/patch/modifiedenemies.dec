@@ -1,0 +1,3 @@
+actor BaronBallMayhem18O_Samsara : BaronBall2 replaces BaronBall2 { }
+actor BaronBallMayhem18O_Samsara2 : BaronBall3 replaces BaronBall3 { }
+actor CacodemonBallMayhem18O_Samsara : CacodemonBallTwo replaces CacodemonBallTwo { }

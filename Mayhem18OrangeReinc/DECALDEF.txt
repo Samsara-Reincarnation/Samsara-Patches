@@ -1,0 +1,6 @@
+generator ShotgunGuyMayhem18O_Samsara				BulletChip
+generator ArachnotronPlasmaMayhem18O_Samsara		ArachnotronScorch
+generator BaronBallMayhem18O_Samsara				BaronScorch
+generator BaronBallMayhem18O_Samsara2				BaronScorch
+generator CacodemonBallMayhem18O_Samsara			CacoScorch
+generator SpiderMastermindMayhem18O_Samsara			BulletChip

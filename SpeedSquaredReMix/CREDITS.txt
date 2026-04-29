@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: PUSS VIII: Speed Squared
+Authors: BluePineapple72, various authors
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/speedsquared
+
+Resources used:
+---------------
+N/A
