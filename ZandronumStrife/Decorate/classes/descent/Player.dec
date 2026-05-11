@@ -135,9 +135,13 @@ Actor DescentPyroGX_Shrink : DescentPyroGX
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
 		XDeath.ExpanderDMGCoop:
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
