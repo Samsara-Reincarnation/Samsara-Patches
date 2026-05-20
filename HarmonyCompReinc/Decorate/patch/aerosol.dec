@@ -15,26 +15,40 @@ actor Aerosol_Samsara : SamsaraMonsterRobotic replaces Cacodemon
 	DamageFactor "CorvusCrossbow", 1.15
 	DamageFactor "DragonClaw", 1.5
 	DamageFactor "Pistol", 1.25
+	DamageFactor "DoomDamageTypePistol", 1.25
+	DamageFactor "DoomFist", 1.25
+	DamageFactor "DoomDamageTypeFist", 1.25
+	DamageFactor "PunchDagger", 1.25
 	DamageFactor "DukePistol", 1.25
 	DamageFactor "ZorchPistol", 1.25
 	DamageFactor "StrifePistol", 1.25
 	DamageFactor "MarathonPistol", 0.85
 	DamageFactor "Zorch", 1.25
 	DamageFactor "Normal", 1.25
+	DamageFactor "DoomDamageType", 1.25
+	DamageFactor "DoomDamageTypeStunner", 1.25
     DamageFactor "Fire", 1.15
+	DamageFactor "DoomDamageTypeFire", 1.15
     DamageFactor "Ice", 1.15
+	DamageFactor "DoomDamageTypeIce", 1.15
     DamageFactor "Disintegrate", 1.15
     DamageFactor "DukeDamage", 1.2
     DamageFactor "DukeExplosive", 1.1
     DamageFactor "DukeIce", 1.1
     DamageFactor "Explosive", 1.1
+	DamageFactor "DoomDamageTypeExplosive", 1.1
     DamageFactor "DoomPlasma", 1.1
+	DamageFactor "DoomDamageTypePlasma", 1.1
+	DamageFactor "DoomDamageTypeRepeater", 1.1
     DamageFactor "CorvusHellstaff", 1.1
     DamageFactor "CorvusHellstaffTomed", 1.1
 	DamageFactor "PhasingZorch", 1.1
+	DamageFactor "DoomDamageTypeBFG", 1.25
+	DamageFactor "DoomDamageTypeDevastator", 1.25
 	DamageFactor "MarathonPlasma", 1.1
 	DamageFactor "WolfenFlamethrower", 1.1
 	DamageFactor "FireExplosive", 1.1
+	DamageFactor "DoomDamageTypeFireExplosive", 1.1
 	DamageFactor "MightyBoot", 1.5
 	PainChance "MightyBoot", 255
 	Tag "Aerosol"
