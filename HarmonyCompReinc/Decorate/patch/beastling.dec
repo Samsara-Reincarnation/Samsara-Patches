@@ -30,18 +30,18 @@ actor Beastling_Samsara : SamsaraMonsterBeastTotalGib replaces Demon
 	DamageFactor "DoomDamageType", 1.25
 	DamageFactor "DoomDamageTypeStunner", 1.25
     DamageFactor "Fire", 1.15
-	DamageFactor "DoomDamageTypeFire", 1.15
+	DamageFactor "DoomDamageTypeFire", 1.25
     DamageFactor "Ice", 1.15
-	DamageFactor "DoomDamageTypeIce", 1.15
+	DamageFactor "DoomDamageTypeIce", 1.25
     DamageFactor "Disintegrate", 1.15
     DamageFactor "DukeDamage", 1.2
     DamageFactor "DukeExplosive", 1.1
     DamageFactor "DukeIce", 1.1
     DamageFactor "Explosive", 1.1
-	DamageFactor "DoomDamageTypeExplosive", 1.1
+	DamageFactor "DoomDamageTypeExplosive", 1.25
     DamageFactor "DoomPlasma", 1.1
-	DamageFactor "DoomDamageTypePlasma", 1.1
-	DamageFactor "DoomDamageTypeRepeater", 1.1
+	DamageFactor "DoomDamageTypePlasma", 1.25
+	DamageFactor "DoomDamageTypeRepeater", 1.25
     DamageFactor "CorvusHellstaff", 1.1
     DamageFactor "CorvusHellstaffTomed", 1.1
 	DamageFactor "PhasingZorch", 1.1
@@ -50,7 +50,7 @@ actor Beastling_Samsara : SamsaraMonsterBeastTotalGib replaces Demon
 	DamageFactor "MarathonPlasma", 1.1
 	DamageFactor "WolfenFlamethrower", 1.1
 	DamageFactor "FireExplosive", 1.1
-	DamageFactor "DoomDamageTypeFireExplosive", 1.1
+	DamageFactor "DoomDamageTypeFireExplosive", 1.25
 	DamageFactor "MightyBoot", 1.5
 	PainChance "MightyBoot", 255
 	MONSTER
