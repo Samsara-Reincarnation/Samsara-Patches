@@ -131,11 +131,11 @@ actor Leonard : SamsaraPlayerPawnNormalColoredBlood
 	states
 	{
 		Spawn:
-			LEO_ A 0 NoDelay ACS_NamedExecuteWithResult("DisableVoodooDoll")
-			LEO_ A 0 A_JumpIf(waterlevel > 2, "Swimming")
+			LEO_ T 0 NoDelay ACS_NamedExecuteWithResult("DisableVoodooDoll")
+			LEO_ T 0 A_JumpIf(waterlevel > 2, "Swimming")
 			LEO_ TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT 1 A_JumpIf(momz >> 0, "Jumping")
-			LEO_ A 0 A_JumpIfInventory("LeonardWaiting", 15, "LeonardWait")
-			LEO_ A 0 A_GiveInventory("LeonardWaiting", 1)
+			LEO_ T 0 A_JumpIfInventory("LeonardWaiting", 15, "LeonardWait")
+			LEO_ T 0 A_GiveInventory("LeonardWaiting", 1)
 			Loop
 		LeonardWait:
 			LEO_ T 1 A_TakeInventory("LeonardWaiting", 15)
