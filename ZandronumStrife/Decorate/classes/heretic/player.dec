@@ -12,9 +12,6 @@ actor CorvusPlayer : SamsaraPlayerPawnNormalRedBlood
     Player.StartItem "IsSamsaraClass", 1
 	Player.StartItem "SamsaraTipsChecker", 1
     Player.StartItem "Clip", 50
-    Player.StartItem "PermaRemoteBomb", 1
-    Player.StartItem "PermaTimeBomb", 1
-	Player.StartItem "PermaProxyBomb", 1
     Player.Face "CRV"
     Player.SoundClass "CorvusPlayer"
     Player.JumpZ 9//Default is 8
