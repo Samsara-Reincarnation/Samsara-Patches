@@ -714,6 +714,7 @@ actor StrifeguyPlayer : StrifePlayer
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			"####" A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			"####" A -1 A_Jump(256,"Death")
 			Wait
@@ -722,6 +723,7 @@ actor StrifeguyPlayer : StrifePlayer
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			"####" A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 			"####" A 0 A_SpawnItemEx("QuakeGibSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
@@ -896,11 +898,13 @@ Actor StrifeguyPlayer_Shrink : StrifeguyPlayer
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 		XDeath.QuakeDamage:
 		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		Death.RottExplosive:
 		Death.RottFire:
 		Death.RottDisintegrate:
