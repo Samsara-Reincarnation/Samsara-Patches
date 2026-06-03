@@ -1,0 +1,56 @@
+actor Droid_Samsara : SamsaraMonsterRobotic replaces Droid
+{
+	scale 1
+	obituary "%o was knocked out by a security droid."
+	hitobituary "%o was electrified by a security droid."
+	health 150
+	radius 31
+	height 56
+	mass 300
+	speed 16
+	painchance 64
+	seesound "droid/sight"
+	painsound "droid/pain"
+	deathsound "droid/death"
+	activesound "droid/active"
+	attacksound "droid/melee"
+	Missiletype DroidBall
+	MONSTER
+	+FLOAT
+	+NOGRAVITY
+	+NOBLOOD
+	Tag "Droid"
+	states
+	{
+	Spawn:
+		BEAD A 10 A_Look
+		loop
+	See:
+		BEAD A 3 A_Chase
+		loop
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		BEAD BC 5 A_FaceTarget
+		BEAD D 5 bright A_MissileAttack
+		goto See
+	Pain:
+		BEAD E 3
+		BEAD E 3 A_Pain
+		BEAD F 6
+		goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		BEAD G 8
+		BEAD H 8 A_Scream
+		BEAD IJ 8
+		BEAD K 8 A_NoBlocking
+		BEAD L -1 A_SetFloorClip
+		stop
+	Raise:
+		BEAD L 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		BEAD L 8 A_UnSetFloorClip
+		BEAD KJIHG 8
+		goto See
+	}
+}

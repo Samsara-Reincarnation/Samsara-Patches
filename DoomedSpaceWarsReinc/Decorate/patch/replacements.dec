@@ -1,0 +1,5 @@
+actor WolfBackpack_Samsara : AmmoBackpack replaces WolfBackpack { }
+actor WolfClipBox_Samsara : Ammo1Small replaces WolfClipBox {}
+actor WolfShellBox_Samsara : Ammo2Small replaces WolfShellBox {}
+actor WolfRocketBox_Samsara : Ammo3Small replaces WolfRocketBox {}
+actor WolfCellPack_Samsara : Ammo4Small replaces WolfCellPack {}

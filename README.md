@@ -11,6 +11,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Chex Quest: The Penultimate Breakfast | Andrea Rovenski | [Link](https://www.doomworld.com/idgames/themes/chex/chextpb) |
 | Day of the Acolyte | Samuel Villarreal | [Link](https://www.doomworld.com/idgames/levels/strife/kaiser_23) |
 | Doom: The Golden Souls Remastered | Andrea Gori | [Link](https://batandy.itch.io/goldensouls) |
+| Doomed Space Wars | Paul Corfiatis | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/spacwars) |
 | Elf Gets Pissed | Matt Cibulas | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/elfgp) |
 | Eviternity | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity) |
 | Eviternity II | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternityii) |
@@ -27,6 +28,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Satan's Covenant | Unholypimpin | [Link](https://allfearthesentinel.com/zandronum/download.php?file=satanscovenantv5.3.wad) |
 | Shadow of the Wool Ball | MSPaintR0cks | [Link](https://forum.zdoom.org/viewtopic.php?t=52301&) |
 | Strife: Absolute Order | Adam Woodmansey | [Link](https://www.doomworld.com/idgames/levels/strife/sabord) |
+| Terra Incognita | FireSeraphim | [Link](http://www.mediafire.com/download/zd53u11131aazfr/TI_(Version_0.4.0).wad.zip) |
 | The Darkest Hour + Dawn: A Prelude | Rex Claussen | [Link 1](https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkhour) + [Link 2](https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkpack) |
 | ZBloody Hell V1.9.9 (Vaccinated) | RastaManGames, LordOZ_98, Joseph Otey, J.S Graham | [Link](https://www.moddb.com/mods/zbloody-hell/downloads/zbloody-hell-v199-vaccinated) |
 

@@ -1,0 +1,92 @@
+actor ChaosElemental_Samsara : SamsaraMonsterDemonicBoss replaces ChaosElemental
+{
+	Health 6000
+	Radius 24
+	Height 96
+	Speed 22
+	Mass 1250
+	PainChance 40
+	RenderStyle TRANSLUCENT
+	Alpha 1.0
+	MONSTER
+	+FLOORCLIP
+	+NOGRAVITY
+	+FLOAT
+	+BOSS
+	+DONTMORPH
+	+BOSSDEATH
+	+DONTRIP
+	SeeSound "ChaosElemental/Sight"
+	ActiveSound "ChaosElemental/active"
+	PainSound "ChaosElemental/Pain"
+	DeathSound "ChaosElemental/Death"
+	Obituary "%o was demolished by the Chaos Elemental."
+	Tag "Chaos Elemental"
+	states
+	{
+	Spawn:
+		CHAO A 4 A_Look
+		Loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		CHAO A 2 A_Chase
+		Loop
+	Missile:
+		//Attacks
+		CHAO A 0 A_Jump(8,15) //Chance of spawning Pain Elementals
+		CHAO A 0 A_Jump(72,5) //Chance of shooting 3 fireballs
+		Goto Missile+5 //Shoot a single fireball
+
+		//Shoot a single fireball
+		CHAO B 8 A_FaceTarget
+		CHAO C 0 A_CustomMissile("ChaosBall", 32, 25, -5)
+		CHAO C 8 A_CustomMissile("ChaosBall", 32, -45, 5)
+		Goto See2
+
+		//Shoot 3 fireballs
+		CHAO B 6 A_FaceTarget
+		CHAO C 0 A_CustomMissile("ChaosBall", 32, 25, -5)
+		CHAO C 6 A_CustomMissile("ChaosBall", 32, -45, 5)
+		CHAO B 6 A_FaceTarget
+		CHAO C 0 A_CustomMissile("ChaosBall", 32, 25, -10)
+		CHAO C 6 A_CustomMissile("ChaosBall", 32, -45, 10)
+		CHAO B 6 A_FaceTarget
+		CHAO C 0 A_CustomMissile("ChaosBall", 32, 25, -0)
+		CHAO C 6 A_CustomMissile("ChaosBall", 32, -45, 0)
+		Goto See2
+
+		//Pain Elemental Spawn
+		CHAO B 8 A_FaceTarget
+		CHAO C 0 A_CustomMissile("painelemental3", 96, 25, -5)
+		CHAO C 8 A_CustomMissile("painelemental3", 96, -45, 5)
+		Goto See2
+	Pain:
+		CHAO D 3
+		CHAO D 3 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CHAO E 6
+		CHAO F 6 A_Scream
+		CHAO G 6
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		CHAO H 6
+		CHAO I 6
+		CHAO J 6 A_Fall
+		CHAO K 6
+		CHAO L 6
+		Stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CHAO E 6
+		CHAO F 6 A_Scream
+		CHAO G 6
+		CHAO H 6
+		CHAO I 6
+		CHAO J 6 A_Fall
+		CHAO K 6
+		CHAO L 6
+		Stop
+	}
+}

@@ -1,0 +1,14 @@
+actor Afrit_Samsara : AbaddonSpawner replaces Afrit {}
+actor DarkCaco_Samsara : CacolanternSpawner replaces DarkCaco {}
+actor Darktrooper_Samsara : ChaingunGuySpawner replaces Darktrooper {}
+actor Droid_Samsara : LostSoulSpawner replaces Droid {}
+actor GiantCacodemon_Samsara : CacolanternSpawner replaces GiantCacodemon {}
+actor Hectebus_DSW_Samsara : HectebusSpawner 22250 {}
+actor SithKnight_Samsara : HellKnightSpawner replaces SithKnight {}
+actor TorturedSoul_Samsara : PainElementalSpawner replaces TorturedSoul {}
+
+actor WolfBackpack_Samsara : AmmoBackpack replaces WolfBackpack { }
+actor WolfClipBox_Samsara : Ammo1Small replaces WolfClipBox {}
+actor WolfShellBox_Samsara : Ammo2Small replaces WolfShellBox {}
+actor WolfRocketBox_Samsara : Ammo3Small replaces WolfRocketBox {}
+actor WolfCellPack_Samsara : Ammo4Small replaces WolfCellPack {}

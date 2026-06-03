@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Terra Incognita
+Authors: FireSeraphim
+Link: http://www.mediafire.com/download/zd53u11131aazfr/TI_(Version_0.4.0).wad.zip
+
+Resources used:
+---------------
+N/A

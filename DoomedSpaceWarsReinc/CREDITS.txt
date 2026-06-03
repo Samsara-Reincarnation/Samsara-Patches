@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Doomed Space Wars
+Authors: Paul Corfiatis
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/s-u/spacwars
+
+Resources used:
+---------------
+N/A

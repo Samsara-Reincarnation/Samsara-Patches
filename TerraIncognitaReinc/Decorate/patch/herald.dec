@@ -1,0 +1,142 @@
+ACTOR Herald_Samsara : SamsaraMonsterBeastBoss replaces Herald
+{
+	spawnid 114
+	obituary "%o was splattered by a Herald of Doom."
+	health 4000
+	radius 40
+	height 110
+	mass 1000
+	speed 15
+	painchance 20
+	seesound "cyber/sight"
+	painsound "cyber/pain"
+	deathsound "superdemon/death"
+	activesound "cyber/active"
+	MONSTER
+	+FLOORCLIP
+	+NORADIUSDMG
+	+DONTMORPH
+	+MISSILEMORE
+	+BOSS
+	+BOSSDEATH
+	Tag "Herald of Doom"
+	states
+	{
+	Spawn:
+		SUPR AB 10 A_Look
+		loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		SUPR A 3 A_Hoof
+		SUPR ABBCC 3 A_Chase
+		SUPR D 3 A_Hoof
+		SUPR D 3
+		loop
+	Missile:
+		SUPR E 0 A_Jump (63, "Missile2")
+		SUPR E 0 A_Jump (63, "Missile3")
+		SUPR E 6 A_FaceTarget
+		SUPR F 9 A_CustomMissile ("PhoenixFX1", 45, -45, 0)
+		SUPR E 9 A_FaceTarget
+		SUPR F 9 A_CustomMissile ("PhoenixFX1", 45, -45, 0)
+		SUPR E 9 A_FaceTarget
+		SUPR F 9 A_CustomMissile ("PhoenixFX1", 45, -45, 0)
+		goto See2
+	Missile2:
+		SUPR E 6 A_FaceTarget
+		SUPR F 9 A_CustomMissile ("SeekerBall", 45, -45, 0)
+		Goto See2
+	Missile3:
+		SUPR E 6 A_FaceTarget
+		SUPR F 9 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget
+		SUPR F 2 A_CustomMissile ("BeastBall", 45, -45, 0)
+		SUPR E 1 A_FaceTarget	
+		goto See2
+	Pain:
+		SUPR G 10 A_Pain
+		goto See2
+	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SUPR H 3 A_PlaySound ("superdemon/snarl")
+		SUPR H 3 A_CustomMissile("Blood",0,0,random(-80,-100),2,random(45,80))
+		SUPR I 3 A_Scream
+		SUPR I 3 A_CustomMissile("Blood",0,0,random(-80,-100),2,random(45,80))
+		SUPR J 2 A_CustomMissile ("SuperDemonArm", 54, -50, -50)
+		SUPR KL 4 A_CustomMissile("Blood",0,0,random(-80,-100),2,random(45,80))
+		SUPR M 6 A_PlaySound ("superdemon/crash")
+		SUPR N 6 A_CustomMissile("Blood",0,0,random(-80,-100),2,random(45,80))
+		SUPR O 6 A_NoBlocking
+		SUPR O -1 A_BossDeath
+		stop
+	}
+}

@@ -1,0 +1,82 @@
+actor Afrit_Samsara : SamsaraMonsterGhost replaces Afrit
+{
+	Health 2000 
+	Speed 6
+	Radius 24
+	Height 72
+	PainChance 50
+	Mass 500
+	Meleedamage 10 
+	SeeSound "baron/sight"
+	PainSound "baron/pain"
+	DeathSound "baron/death"
+	ActiveSound "baron/active"
+	MeleeSound "baron/melee"
+	Missiletype "AfritBall"
+	MissileHeight 44
+	REACTIONTIME 8
+	MONSTER
+	+NORADIUSDMG
+	+FLOORCLIP
+	+NOGRAVITY
+	+FLOATBOB
+	+FLOAT
+	+NOBLOOD
+	Obituary "%o was scorched by an Afrit" 
+	HitObituary "%o found the Afrit too hot to handle." 
+	Tag "Afrit"
+	states
+	{
+	Spawn:
+		FRIT ABCD 4 Bright A_Look 
+		Loop
+	See:
+		FRIT A 0 A_CustomMissile("OrbitComet", 44, 0, 0)
+		FRIT A 0 A_CustomMissile("OrbitComet2", 44, 0, 180)
+		FRIT AABBCCDD 2 Bright A_Chase 
+		Goto See+2
+	Melee:
+		FRIT S 0 A_Jump(64,4)
+		FRIT ST 6 Bright A_FaceTarget
+		FRIT U 6 Bright A_ComboAttack
+		Goto See +2
+		FRIT E 6 Bright A_FaceTarget
+		FRIT F 6 Bright A_CustomMissile("HellFire", 44, 0, 0)
+		FRIT G 6 Bright A_FaceTarget
+		Goto See +2
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		FRIT ST 6 Bright A_FaceTarget
+		FRIT U 6 Bright A_ComboAttack
+		Goto See+2
+		FRIT EF 6 Bright A_FaceTarget
+		FRIT G 6 Bright A_CustomMissile("Comet", 44, 0, 0)
+		Goto See+2
+		FRIT E 6 Bright A_FaceTarget
+		FRIT F 6 Bright A_CustomMissile("HellFire", 44, 0, 0)
+		FRIT G 6 Bright A_FaceTarget
+		Goto See+2
+	Pain:
+		FRIT HH 4 Bright A_Pain 
+		Goto See+2
+	Pain.DoomDamageTypeStunner:
+		FRIT H 2 A_ChangeFlag("NOPAIN",true)
+		FRIT H 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See+2
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		FRIT H 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(10)
+		FRIT H 16 A_Pain
+		Goto See+2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		FRIT I 0 Bright A_NoGravity
+		FRIT I 6 Bright A_Scream
+		FRIT J 5 Bright A_NoBlocking
+		FRIT KLMNOPQR 4 Bright
+		Stop 
+	}
+}

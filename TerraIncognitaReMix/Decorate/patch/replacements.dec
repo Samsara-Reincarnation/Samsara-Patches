@@ -1,0 +1,37 @@
+actor DoomImp2_Samsara : DoomImpSpawner replaces DoomImp2 { }
+actor LostSoul2_Samsara : LostSoulSpawner replaces LostSoul2 { }
+actor DoomCacodemon2_Samsara : CacodemonSpawner replaces DoomCacodemon2 { }
+actor BaronOfHell2_Samsara : BaronOfHellSpawner replaces BaronOfHell2 { }
+actor Hellknight2_Samsara : HellKnightSpawner replaces Hellknight2 { }
+actor Archvile2_Samsara : ArchvileSpawner replaces Archvile2 { }
+actor DoomDemon_Samsara : DemonSpawner replaces DoomDemon { }
+actor HexenBishop_Samsara : BishopReplacer replaces HexenBishop {}
+actor BuffedSorcerer1_Samsara : Sorcerer1Replacer replaces Sorcerer1 { }
+actor BuffedSorcerer2_Samsara : Sorcerer1Replacer replaces Sorcerer2 { }
+actor Herald_Samsara : MinotaurReplacer replaces Herald { }
+
+actor SuperCrossbow_Samsara : RandomSpawner replaces SuperCrossbow { DropItem "SamsaraSlotThreePickup" }
+
+actor HealthBonus2_Samsara replaces HealthBonus2
+{
+    +NOTIMEFREEZE // allow the scripts to process during time freeze
+    +THRUACTORS // not a pickup, but just in case
+    States
+    {
+      Spawn:
+        TNT1 AA 0 NoDelay ACS_NamedExecuteWithResult("Samsara_SpawnItem", 1, 1, 0)
+        stop
+    }
+}
+
+actor ArmorBonus2_Samsara replaces ArmorBonus2
+{
+    +NOTIMEFREEZE // allow the scripts to process during time freeze
+    +THRUACTORS // not a pickup, but just in case
+    States
+    {
+      Spawn:
+        TNT1 AA 0 NoDelay ACS_NamedExecuteWithResult("Samsara_SpawnItem", 3, 1, 0)
+        stop
+    }
+}
