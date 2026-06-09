@@ -1,9 +1,9 @@
-Actor LostSoulEviternity_Samsara : LostSoul2 replaces LostSoul
+Actor LostSoulEviternity_Samsara : LostSoulTwo replaces LostSoul
 {
 	Health 45
 }
 
-Actor HellKnightEviternity_Samsara : HellKnight2 replaces HellKnight2
+Actor HellKnightEviternity_Samsara : HellKnightTwo replaces HellKnightTwo
 {
 	BloodColor "377F59"
 	States

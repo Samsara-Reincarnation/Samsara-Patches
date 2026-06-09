@@ -22,8 +22,8 @@ actor ArachnotronNew_Samsara : Arachnotron2 replaces ArachnotronNew {}
 actor DoomImpNew_Samsara : DoomImpTwo replaces DoomImpNew {}
 actor DemonNew_Samsara : DoomDemon2 replaces DemonNew {}
 actor CacodemonNew_Samsara : CacodemonTwo replaces CacodemonNew {}
-actor HellKnightNew_Samsara : HellKnight2 replaces HellKnightNew {}
-actor BaronOfHellNew_Samsara : BaronOfHell2 replaces BaronOfHellNew {}
+actor HellKnightNew_Samsara : HellKnightTwo replaces HellKnightNew {}
+actor BaronOfHellNew_Samsara : BaronOfHellTwo replaces BaronOfHellNew {}
 actor CyberdemonNew_Samsara : Cyberdemon2 replaces CyberdemonNew {}
 
 actor RevenantNew_Samsara : RevenantTwo replaces RevenantTwo 

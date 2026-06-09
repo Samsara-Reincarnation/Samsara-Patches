@@ -179,7 +179,7 @@ Actor LostSoulEviternity2_Samsara : LostSoulEviternity_Samsara replaces LostSoul
 	+COUNTKILL
 }
 
-Actor HellKnightEviternity_Samsara : HellKnight2 replaces HellKnight2
+Actor HellKnightEviternity_Samsara : HellKnightTwo replaces HellKnightTwo
 {
 	BloodColor "377F59"
 	States
@@ -413,7 +413,7 @@ actor HellKnightEviternity_Samsara_ShrinkEffect : HellKnightEviternity_Samsara
 	}
 }
 
-Actor BaronOfHellEviternity_Samsara : BaronOfHell2 replaces BaronOfHell2
+Actor BaronOfHellEviternity_Samsara : BaronOfHellTwo replaces BaronOfHellTwo
 {
 	BloodColor "377F59"
 	States

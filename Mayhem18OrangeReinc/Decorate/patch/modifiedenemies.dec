@@ -14,7 +14,7 @@ Actor ShotgunGuyMayhem18O_Samsara : ShotgunGuy2 replaces ShotgunGuy2
 	}
 }
 
-Actor HellKnightMayhem18O_Samsara : HellKnight2 replaces HellKnight2
+Actor HellKnightMayhem18O_Samsara : HellKnightTwo replaces HellKnightTwo
 {
 	BloodColor "72 0f 00"
 	States
@@ -431,4 +431,4 @@ actor CacodemonMayhem18O_ShrinkEffect : CacodemonMayhem18O_Samsara
 
 actor CacodemonBallMayhem18O_Samsara : CacodemonBallTwo replaces CacodemonBallTwo { }
 
-actor SpiderMastermindMayhem18O_Samsara : SpiderMastermind2 replaces BaronOfHell2 { -NORADIUSDMG }
+actor SpiderMastermindMayhem18O_Samsara : SpiderMastermind2 replaces BaronOfHellTwo { -NORADIUSDMG }

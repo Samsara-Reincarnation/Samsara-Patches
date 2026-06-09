@@ -14,7 +14,7 @@ Actor ShotgunGuyMayhem18P_Samsara : ShotgunGuy2 replaces ShotgunGuy2
 	}
 }
 
-Actor HellKnightMayhem18P_Samsara : HellKnight2 replaces HellKnight2
+Actor HellKnightMayhem18P_Samsara : HellKnightTwo replaces HellKnightTwo
 {
 	BloodColor "Purple"
 	States

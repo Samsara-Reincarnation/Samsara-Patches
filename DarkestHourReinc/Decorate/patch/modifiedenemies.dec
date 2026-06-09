@@ -954,7 +954,7 @@ actor SpecialTrooper_Samsara_ShrinkEffect : SpecialTrooper_Samsara
 
 Actor DoomImpBall2_NoGLDEFS : DoomImpBall2 replaces DoomImpBall2 { }
 
-Actor InterrogationDroid_Samsara : LostSoul2 replaces LostSoul2
+Actor InterrogationDroid_Samsara : LostSoulTwo replaces LostSoulTwo
 {
 	Tag "Interrogation Droid"
 }
@@ -1029,7 +1029,7 @@ actor ProbeDroid_Samsara : SamsaraMonsterRobotic replaces CacodemonTwo
 
 Actor CacodemonBallTwo_NoGLDEFS : CacodemonBallTwo replaces CacodemonBallTwo { }
 
-Actor Trandoshan_Samsara : SamsaraMonsterAlienTotalGib replaces HellKnight2
+Actor Trandoshan_Samsara : SamsaraMonsterAlienTotalGib replaces HellKnightTwo
 {
 	Health 500
 	Radius 24
@@ -1325,7 +1325,7 @@ actor Trandoshan_Samsara_ShrinkEffect : Trandoshan_Samsara
 Actor BaronBall2_NoGLDEFS : BaronBall2 replaces BaronBall2 { }
 Actor BaronBall3_NoGLDEFS : BaronBall3 replaces BaronBall3 { }
 
-actor Gran : SamsaraMonsterAlienTotalGib replaces BaronOfHell2
+actor Gran : SamsaraMonsterAlienTotalGib replaces BaronOfHellTwo
 {
 	Health 1000
 	Radius 24
