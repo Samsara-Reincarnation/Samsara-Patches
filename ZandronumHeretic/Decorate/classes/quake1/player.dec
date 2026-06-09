@@ -18,7 +18,7 @@ actor QuakePlayer : SamsaraPlayerPawnNormalRedBlood
     Player.StartItem "IsSamsaraClass", 1
 	Player.StartItem "SamsaraTipsChecker", 1
     Player.StartItem "Shell", 25
-    Player.StartItem "Axe"
+    Player.StartItem "QuakeAxe"
     Player.ColorRange 209, 224
 	BloodType "Quake_NewParticles"	
     BounceFactor 0.35
