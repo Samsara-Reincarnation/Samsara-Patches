@@ -7,6 +7,7 @@ actor Archvile2_Samsara : RandomSpawner replaces Archvile2 { DropItem "ArchvileT
 actor DoomDemon_Samsara : RandomSpawner replaces DoomDemon { DropItem "DoomDemon2" }
 actor HexenBishop_Samsara : RandomSpawner replaces HexenBishop { DropItem "Bishop2" }
 
+actor SamsaraSlotTwo_TerraIncognita : RandomSpawner replaces Crossbow { DropItem "SamsaraSlotTwoPickup" }
 actor SuperCrossbow_Samsara : RandomSpawner replaces SuperCrossbow { DropItem "SamsaraSlotThreePickup" }
 
 actor HealthBonus2_Samsara replaces HealthBonus2
@@ -33,5 +34,5 @@ actor ArmorBonus2_Samsara replaces ArmorBonus2
     }
 }
 
-actor BuffedSorcerer1_Samsara : Sorcerer3 replaces Sorcerer1 { Health 4000 }
-actor BuffedSorcerer2_Samsara : Sorcerer4 replaces Sorcerer2 { Health 5500 }
+actor BuffedSorcerer1_Samsara : Sorcerer3 replaces Sorcerer3 { Health 4000 }
+actor BuffedSorcerer2_Samsara : Sorcerer4 replaces Sorcerer4 { Health 5500 }

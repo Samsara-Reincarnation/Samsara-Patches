@@ -1,0 +1,16 @@
+#library "SAMSCOMP"
+#include "zcommon.acs"
+
+script "SamsaraCompatibilityPatchEnter" ENTER { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff"); }
+script "SamsaraCompatibilityPatchRespawn" RESPAWN { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff"); }
+script "SamsaraCompatibilityPatchReturn" RETURN { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff"); }
+
+script "SamsaraCompatibilityPatchStuff" (void)
+{
+    // Terra Incognita has a higher air supply. Named scripts
+    // apparently can't be overwritten with each other, so
+    // this will have to suffice.
+    GiveInventory("SamsaraUsingCustomAirSupply", 1);
+    TakeInventory("SamsaraCustomAirSupplyMax", 0x7FFFFFFF); // reset
+    GiveInventory("SamsaraCustomAirSupplyMax", 35 * 60);
+}

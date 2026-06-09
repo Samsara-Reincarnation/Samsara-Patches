@@ -7,9 +7,10 @@ actor Archvile2_Samsara : ArchvileSpawner replaces Archvile2 { }
 actor DoomDemon_Samsara : DemonSpawner replaces DoomDemon { }
 actor HexenBishop_Samsara : BishopReplacer replaces HexenBishop {}
 actor BuffedSorcerer1_Samsara : Sorcerer1Replacer replaces Sorcerer1 { }
-actor BuffedSorcerer2_Samsara : Sorcerer1Replacer replaces Sorcerer2 { }
+actor BuffedSorcerer2_Samsara : Sorcerer2Replacer replaces Sorcerer2 { }
 actor Herald_Samsara : MinotaurReplacer replaces Herald { }
 
+actor SamsaraSlotTwo_TerraIncognita : RandomSpawner replaces Crossbow { DropItem "SamsaraSlotTwoPickup" }
 actor SuperCrossbow_Samsara : RandomSpawner replaces SuperCrossbow { DropItem "SamsaraSlotThreePickup" }
 
 actor HealthBonus2_Samsara replaces HealthBonus2
