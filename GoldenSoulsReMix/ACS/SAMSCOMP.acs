@@ -10,18 +10,16 @@ script "SamsaraCompatibilityPatchStuff" (void)
     // Golden Souls has a different air supply for some maps.
     // Named scripts apparently can't be overwritten with each
     // other, so this will have to suffice.
-    str maplump = StrParam(n:PRINTNAME_LEVEL);
-
-    if (!StrCmp(maplump, "MAP05"))
+    if (!StrIcmp(StrParam(n:PRINTNAME_LEVEL), "MAP05"))
     {
         GiveInventory("SamsaraUsingCustomAirSupply", 1);
         TakeInventory("SamsaraCustomAirSupplyMax", 0x7FFFFFFF); // reset
         GiveInventory("SamsaraCustomAirSupplyMax", 35 * 40);
-    } else if (!StrCmp(maplump, "MAP06")) {
+    } else if (!StrIcmp(StrParam(n:PRINTNAME_LEVEL), "MAP06")) {
         GiveInventory("SamsaraUsingCustomAirSupply", 1);
         TakeInventory("SamsaraCustomAirSupplyMax", 0x7FFFFFFF); // reset
         GiveInventory("SamsaraCustomAirSupplyMax", 35 * 1);
-    } else if (!StrCmp(maplump, "MAP16")) {
+    } else if (!StrIcmp(StrParam(n:PRINTNAME_LEVEL), "MAP16")) {
         GiveInventory("SamsaraUsingCustomAirSupply", 1);
         TakeInventory("SamsaraCustomAirSupplyMax", 0x7FFFFFFF); // reset
         GiveInventory("SamsaraCustomAirSupplyMax", 35 * 0);
