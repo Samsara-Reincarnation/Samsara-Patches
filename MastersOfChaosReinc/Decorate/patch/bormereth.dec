@@ -24,7 +24,7 @@ ACTOR Bormereth_Samsara : SamsaraMonsterBeastTotalGib replaces Bormereth
 		ETTN A 10 A_Look
 		Loop
 	See:
-		ETTN AABBCCDD 4 A_VileChase // Re-enabled A_VileChase because screw you I feel like it
+		ETTN AABBCCDD 4 A_Chase("Melee","Missile",CHF_RESURRECT) // Re-enabled A_VileChase because screw you I feel like it
 		Loop
 	Missile:
 		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
