@@ -1,0 +1,9 @@
+object lechuck_Samsara
+{
+    frame CHUC { light CHUCK }
+}
+
+object minichuck_Samsara
+{
+	frame CHUC { light BOLADOCHUCK }
+}

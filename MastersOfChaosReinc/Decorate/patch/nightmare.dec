@@ -1,0 +1,58 @@
+ACTOR KDiZDNightmare_Samsara : SamsaraMonsterGhost replaces KDiZDNightmare
+{
+    Health 100
+    Radius 20
+    Height 56
+    Speed 15
+    PainChance 144
+    MONSTER 
+    +FLOORCLIP
+    +STEALTH
+	+NOBLOOD
+	+GHOST
+    RenderStyle Add
+    Alpha 0.4
+    SeeSound "nightmare/sight"
+    PainSound "nightmare/pain"
+    DeathSound "nightmare/death"
+    ActiveSound "nightmare/active"
+    MeleeSound "nightmare/melee"
+    HitObituary "%o was tormented by a nightmare."
+    MeleeDamage 4
+	Tag "Nightmare"
+	States
+	{
+    Spawn:
+        NMRE AB 10 A_Look
+        Loop
+    See:
+        NMRE A 0 A_UnSetShootable
+        NMRE AABBCCDD 3 A_Chase
+        NMRE D 0 A_Jump(32,1)
+        Loop
+        NMRE D 0 A_SpawnItemEx("NightmareWisp",0,0,0,0,0,0,0,128) 
+        Loop
+    Melee:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+        NMRE E 0 A_SetShootable
+        NMRE EF 9 A_FaceTarget
+        NMRE G 9 A_MeleeAttack
+        Goto See
+    Pain:
+        NMRE H 2 A_SetShootable
+        NMRE H 10 A_Pain
+        Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		NMRE H 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		NMRE H 16 A_Pain
+		Goto See
+    Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+        NMRE I 3 A_ScreamAndUnblock
+        NMRE JKLMNO 3 
+        Stop
+    }
+}

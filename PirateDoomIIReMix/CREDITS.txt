@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Pirate Doom II
+Authors: Darch
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/pd2
+
+Resources used:
+---------------
+N/A

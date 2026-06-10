@@ -1,0 +1,28 @@
+ACTOR PirateDoom2Barrel : DoomExplosiveBarrel replaces ExplosiveBarrel
+{
+	States
+	{
+	Death:
+		BEXP A 10 Bright 
+		BEXP G 5 Bright 
+		BEXP B 10 Bright A_Scream
+	DeathContinue:
+		BEXP C 5 Bright A_Explode
+	DeathLoop:
+		BEXP D 7 A_Fall
+		BEXP E 7 
+		loop
+
+	Death.ZorchPistol:
+	Death.Zorch:
+	Death.ZorchKamikaze:
+	Death.PhasingZorch:
+	Death.ZorchSpectral:
+		BEXP A 10 Bright 
+		BEXP G 5 Bright 
+		BEXP B 10 Bright A_Scream
+		TNT1 A 0 A_SetDamageType("Zorch")
+		TNT1 A 0 A_ChangeFlag("BLOODLESSIMPACT",true)
+		Goto DeathContinue
+	}
+}

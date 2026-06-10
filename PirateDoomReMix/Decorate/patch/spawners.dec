@@ -1,0 +1,93 @@
+actor ZombiePirate_Samsara : ZombiemanSpawner replaces ZombiePirate { }
+actor ImpPirate_Samsara : DoomImpSpawner replaces ImpPirate { }
+actor PirateDemon_Samsara : ClinkReplacer replaces PirateDemon { }
+actor fastdemon_Samsara : ClinkReplacer replaces fastdemon { }
+actor PirateDemoncinza_Samsara : ClinkReplacer replaces PirateDemoncinza { }
+actor RabidDemon_Samsara : ClinkReplacer replaces RabidDemon { }
+actor Rabiddemon2_Samsara : ClinkReplacer replaces Rabiddemon2 { }
+actor PirateSpectre_Samsara : SpectreSpawner replaces PirateSpectre { }
+actor ShotgunPirate_Samsara : ShotgunGuySpawner replaces ShotgunPirate { }
+actor Sawedoffguy_Samsara : ShotgunGuySpawner replaces Sawedoffguy { }
+actor PirateSoul_Samsara : LostSoulSpawner replaces PirateSoul { }
+actor soulfire_Samsara : LostSoulSpawner replaces soulfire { }
+actor ChaingunPirate_Samsara : ChaingunGuySpawner replaces ChaingunPirate { }
+actor gatlingunpirate_Samsara : ChaingunGuySpawner replaces gatlingunpirate { }
+actor PirateSoul2_Samsara : LostSoulSpawner replaces PirateSoul2 { }
+actor PirateRevenant_Samsara : RevenantSpawner replaces PirateRevenant { }
+actor PirateHellKnight_Samsara : HellKnightSpawner replaces PirateHellKnight { }
+actor CacoPirate_Samsara : CacodemonSpawner replaces CacoPirate { }
+actor CacoPiratenoblock_Samsara : CacodemonSpawner replaces CacoPiratenoblock { }
+actor UnderImp_Samsara : DoomImpSpawner replaces UnderImp { }
+actor UnderShotgunguy_Samsara : ShotgunGuySpawner replaces UnderShotgunguy { }
+actor GhostSoul_Samsara : LostSoulSpawner replaces GhostSoul { +GHOST }
+actor GhostDemon_Samsara : ClinkReplacer replaces GhostDemon { +GHOST }
+actor UnderZombie_Samsara : ZombiemanSpawner replaces UnderZombie { }
+actor UnderZombielento_Samsara : ZombiemanSpawner replaces UnderZombielento { }
+actor Impreplicater_Samsara : DoomImpSpawner replaces Impreplicater { }
+actor Impnotrigger_Samsara : DoomImpSpawner replaces Impnotrigger { }
+actor piratepainelemental_Samsara : PainElementalSpawner replaces piratepainelemental { }
+actor CannibalPygmyDartBlower_Samsara : DoomImpSpawner replaces CannibalPygmyDartBlower { }
+actor CannibalPygmysmall_Samsara : DoomImpSpawner replaces CannibalPygmysmall { }
+actor CannibalPygmyheadbutter_Samsara : DoomImpSpawner replaces CannibalPygmyheadbutter { }
+actor CannibalHeadbutternomask_Samsara : DoomImpSpawner replaces CannibalHeadbutternomask { }
+actor CannibalShaman_Samsara : ArchvileSpawner replaces CannibalShaman { }
+actor ritualshaman_Samsara : ArchvileSpawner replaces ritualshaman { }
+actor Cyberpirate_Samsara : CyberdemonSpawner replaces Cyberpirate { }
+actor randomcyberpirate_Samsara : CyberdemonSpawner replaces randomcyberpirate { }
+actor Impcinza_Samsara : DoomImpSpawner replaces Impcinza { }
+actor Impcinzadesdentado_Samsara : DoomImpSpawner replaces Impcinzadesdentado { }
+actor Impvermelho_Samsara : DoomImpSpawner replaces Impvermelho { }
+actor ZombiePirate2_Samsara : ZombiemanSpawner replaces ZombiePirate2 { }
+actor ZombiePirate3_Samsara : ZombiemanSpawner replaces ZombiePirate3 { }
+actor ZombiePirate4_Samsara : ZombiemanSpawner replaces ZombiePirate4 { }
+actor ghostImp_Samsara : DoomImpSpawner replaces ghostImp { +GHOST }
+actor ChaingunPirateDoom_Samsara : ChaingunGuySpawner replaces ChaingunPirateDoom { }
+actor ghostimp2_Samsara : DoomImpSpawner replaces ghostimp2 { +GHOST }
+actor ghostdemon2_Samsara : ClinkReplacer replaces ghostdemon2 { +GHOST }
+actor ghostsoul2_Samsara : LostSoulSpawner replaces ghostsoul2 { +GHOST }
+actor ghostsoul3_Samsara : LostSoulSpawner replaces ghostsoul3 { +GHOST }
+actor PirateBaron_Samsara : BaronOfHellSpawner replaces PirateBaron { }
+actor SpiderMasterPirate_Samsara : SpiderMastermindSpawner replaces SpiderMasterPirate { }
+actor PirateHellKnightstair_Samsara : HellKnightSpawner replaces PirateHellKnightstair { }
+actor PirateBaronstair_Samsara : BaronOfHellSpawner replaces PirateBaronstair { }
+actor spidermaster2_Samsara : SpiderMastermindSpawner replaces spidermaster2 { }
+actor demonfloorpic_Samsara : ClinkReplacer replaces demonfloorpic { }
+actor PirateMancubus_Samsara : FatsoSpawner replaces PirateMancubus { }
+actor stairimp_Samsara : DoomImpSpawner replaces stairimp { }
+actor nosmokingimp_Samsara : DoomImpSpawner replaces nosmokingimp { }
+actor AvastDynamiteImp_Samsara : DoomImpSpawner replaces AvastDynamiteImp { }
+actor DynamiteImp_Samsara : DoomImpSpawner replaces DynamiteImp { }
+actor DynamiteImpnotrigger_Samsara : DoomImpSpawner replaces DynamiteImpnotrigger { }
+
+actor piratedoomimp_Samsara : DoomImpSpawner replaces piratedoomimp { }
+actor piratedoomimptoo_Samsara : DoomImpSpawner replaces piratedoomimptoo { }
+actor Impspawner_Samsara : DoomImpSpawner replaces Impspawner { }
+actor ZOMBIESpawner2_Samsara : ZombiemanSpawner replaces ZOMBIESpawner2 { }
+actor Shotgunspawner_Samsara : ShotgunGuySpawner replaces Shotgunspawner { }
+actor pygmyspawner_Samsara : DoomImpSpawner replaces pygmyspawner { }
+
+actor Revolver_Samsara : Ammo1Small replaces Revolver { }
+actor Dynamite_Samsara : RandomSpawner replaces Dynamite { DropItem "SamsaraSlotOnePickup" }
+actor OldShotgun_Samsara : RandomSpawner replaces OldShotgun { DropItem "SamsaraSlotTwoPickup" }
+actor DoubleShotgun_Samsara : RandomSpawner replaces DoubleShotgun { DropItem "SamsaraSlotThreePickup" }
+actor DualPistol_Samsara : RandomSpawner replaces DualPistol { DropItem "SamsaraSlotFourPickup" }
+actor gatlingun_Samsara : RandomSpawner replaces gatlingun { DropItem "SamsaraSlotFourSkulltagPickup" }
+actor Cannon_Samsara : RandomSpawner replaces Cannon { DropItem "SamsaraSlotFivePickup" }
+actor SCannon1_Samsara : RandomSpawner replaces SCannon1 { DropItem "SamsaraSlotFivePickup" }
+actor SCannon2_Samsara : RandomSpawner replaces SCannon2 { DropItem "SamsaraSlotFivePickup" }
+actor SCannon3_Samsara : RandomSpawner replaces SCannon3 { DropItem "SamsaraSlotFivePickup" }
+actor SCannon4_Samsara : RandomSpawner replaces SCannon4 { DropItem "SamsaraSlotFivePickup" }
+actor SCannon5_Samsara : RandomSpawner replaces SCannon5 { DropItem "SamsaraSlotFivePickup" }
+actor SCannon6_Samsara : RandomSpawner replaces SCannon6 { DropItem "SamsaraSlotFivePickup" }
+actor CANNONCUSTOM1_Samsara : RandomSpawner replaces CANNONCUSTOM1 { DropItem "SamsaraSlotFivePickup" }
+actor CANNONCUSTOM2_Samsara : RandomSpawner replaces CANNONCUSTOM2 { DropItem "SamsaraSlotFivePickup" }
+actor CANNONCUSTOM3_Samsara : RandomSpawner replaces CANNONCUSTOM3 { DropItem "SamsaraSlotFivePickup" }
+actor CANNONCUSTOM4_Samsara : RandomSpawner replaces CANNONCUSTOM4 { DropItem "SamsaraSlotFivePickup" }
+actor CANNONCUSTOM5_Samsara : RandomSpawner replaces CANNONCUSTOM5 { DropItem "SamsaraSlotFivePickup" }
+actor CANNONCUSTOM6_Samsara : RandomSpawner replaces CANNONCUSTOM6 { DropItem "SamsaraSlotFivePickup" }
+actor MiniCannon_Samsara : RandomSpawner replaces MiniCannon { DropItem "SamsaraSlotSixPickup" }
+actor dynamitelauncher_Samsara : RandomSpawner replaces dynamitelauncher { DropItem "SamsaraSlotSevenPickup" }
+
+actor UnderWine_Samsara : Healpack0 replaces UnderWine { }
+actor dynamiteammo_Samsara : Ammo3Small replaces dynamiteammo { }
+actor dynamitesammo_Samsara : Ammo3Big replaces dynamitesammo { }

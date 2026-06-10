@@ -19,8 +19,11 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Hexen: Scourge of Viscerus | Matt Tropiano | [Link](https://www.doomworld.com/idgames/levels/hexen/v-z/viscerus) |
 | Hordes of Chaos X | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/hocx) |
 | Legacy of Rust | Nightdive Studios & MachineGames | N/A |
+| Masters of Chaos | Caleb and Doom_Warrior | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/moc11) |
 | MAYhem 2018: Orange Edition | Obsidian, various authors | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/mayhem18o) |
 | MAYhem 2018: Purple Edition | Obsidian, various authors | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/mayhem18p) |
+| Pirate Doom | Darch | [Link](https://www.moddb.com/mods/pirate-doom/downloads/piratedoom-v-18-fixed) |
+| Pirate Doom II | Darch | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/pd2) |
 | PUSS VIII: Speed Squared | BluePineapple72, various authors | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/speedsquared) |
 | REKKR | Revae | [Link](https://mockingbirdsoftworks.com/modversion.html) |
 | Ressurection of Chaos | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/hexen/p-r/roc) |

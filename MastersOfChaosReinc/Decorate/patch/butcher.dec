@@ -1,0 +1,79 @@
+ACTOR Butcher_Samsara : SamsaraMonsterHumanoidTotalGib replaces Butcher
+{
+	Obituary "%o was mashed by a Butcher"
+	HitObituary "%o was mashed by a Butcher"
+	Health 350
+	Radius 22
+	Height 62
+	Mass 600
+	Speed 12
+	MeleeDamage 8
+	PainChance 32
+	SeeSound "Butcher/Sight"
+	PainSound "Butcher/Pain"
+	DeathSound "Butcher/Death"
+	ActiveSound "Butcher/Active"
+	MeleeSound "Butcher/Melee"
+	Monster
+	+FloorClip
+	Tag "Butcher"
+	States
+	{
+	Spawn:
+		BCHR AAAAAAAAAABBBBBBBBBB 1 A_Look
+		Loop
+	See:
+		BCHR AABB 4 A_Chase
+		BCHR C 0 A_PlaySoundEx("Butcher/Step", "SoundSlot7", 0)
+		BCHR CCDD 4 A_Chase
+		BCHR A 0 A_PlaySoundEx("Butcher/Step", "SoundSlot7", 0)
+		Loop
+	Melee:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		BCHR EF 6 A_FaceTarget
+		BCHR G 0 A_PlaySound("Butcher/Miss")
+		BCHR G 10 A_MeleeAttack
+		Goto See
+	Pain:
+		BCHR H 3
+		BCHR H 3 A_Pain
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		BCHR H 2 A_ChangeFlag("NOPAIN",true)
+		BCHR H 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		BCHR H 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		BCHR H 16 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		BCHR H 12 A_Scream
+		BCHR I 0 A_PlaySound("Butcher/Explode")
+		BCHR IJK 6
+		BCHR L 0 A_FaceTarget
+		BCHR L 6 A_SpawnItemEx("ButcherHammer", 0, -18, 24, 3, 0, 3, -85, 128)
+		BCHR M 6 A_NoBlocking
+		BCHR NOP 6
+		BCHR Q -1
+		Stop
+	Death.CalebFire:
+	Death.LifeLeech:
+		TNT1 A 0 A_Jump(218, 2)
+		TNT1 A 0 A_GiveToTarget("CalebDMTaunt1", 1)
+		TNT1 A 0 A_SpawnItemEx("BloodBurningCorpse_Generic", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_SETMASTER)
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 5 A_NoBlocking
+		TNT1 A -1
+		Stop
+	StakeDeath:
+		BCHR H 2
+		Loop
+    }
+}

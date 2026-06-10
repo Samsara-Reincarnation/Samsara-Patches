@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Pirate Doom
+Authors: Darch
+Link: https://www.moddb.com/mods/pirate-doom/downloads/piratedoom-v-18-fixed
+
+Resources used:
+---------------
+candelabromadeira sprites - N/A

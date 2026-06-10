@@ -1,0 +1,18 @@
+actor Bormereth_Samsara : CentaurLeaderReplacer replaces Bormereth { }
+actor KDiZDNightmare_Samsara : MummyLeaderGhostReplacer replaces KDiZDNightmare { }
+actor KnightArcher_Samsara : KnightReplacer replaces KnightArcher { }
+actor Roach_Samsara : MummyLeaderReplacer replaces Roach { }
+actor Butcher_Samsara : BeastReplacer replaces Butcher { }
+actor invisiblewarrior_Samsara : IronlichReplacer replaces invisiblewarrior { }
+actor Vampire_Samsara : SnakeReplacer replaces Vampire { }
+actor ShadowBeast_Samsara : WraithBuriedReplacer replaces ShadowBeast { }
+
+actor SkullStaff_Samsara : RandomSpawner replaces SkullStaff { DropItem "SamsaraSlotFourPickup" }
+actor FrostFang_Samsara : RandomSpawner replaces FrostFang { DropItem "SamsaraSlotFourPickup" }
+actor BloodScepter_Samsara : RandomSpawner replaces BloodScepter { DropItem "SamsaraSlotFivePickup" }
+actor WandOfEmbers_Samsara : RandomSpawner replaces WandOfEmbers { DropItem "SamsaraSlotSixSkulltagPickup" }
+actor JadeWand_Samsara : RandomSpawner replaces JadeWand { DropItem "SamsaraUniquePickupRandom" }
+
+actor SkullAmmo_Samsara : Ammo1SmallGem replaces SkullAmmo { }
+actor WandOfEmbersAmmo_Samsara : Ammo4SmallGem replaces WandOfEmbersAmmo { }
+actor WandOfEmbersHefty_Samsara : Ammo4BigGem replaces WandOfEmbersHefty { }
