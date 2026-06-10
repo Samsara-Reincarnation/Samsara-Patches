@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Masters of Chaos
+Authors: Caleb and Doom_Warrior
+Link: https://www.doomworld.com/idgames/levels/heretic/Ports/moc11
+
+Resources used:
+---------------
+N/A

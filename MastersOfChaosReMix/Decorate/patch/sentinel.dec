@@ -1,0 +1,144 @@
+actor DESentinel_Samsara : SamsaraMonsterRoboticBoss replaces DESentinel
+{
+	obituary "%o was blasted away by a sentinel."
+	health 3800
+	radius 31
+	height 72
+	mass 1000
+	//DropItem BasicAmmo
+	speed 9
+	painchance 64
+	seesound "monster/sensit"
+	painsound "monster/senpai"
+	deathsound "monster/sendth"
+	activesound "monster/senact"
+	MONSTER
+	+DONTHURTSPECIES
+	+DONTMORPH
+	+BOSS  
+	+FLOAT
+	+NOGRAVITY
+	+NOTARGET
+	+NOBLOOD
+	-DONTFALL
+	Tag "Sentinel"
+	states
+	{
+	Spawn:
+		SENT A 10 A_Look
+		loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		SENT A 3 A_Chase
+		loop
+	Missile:
+		SENT A 0 A_Jump(96,2)
+		SENT A 0 A_Jump(96,11)
+		SENT A 0 A_Jump(96,15)
+		SENT A 8 A_FaceTarget
+		SENT C 0 Bright A_CustomMissile("SentGMissile",52,12,0,1,0)
+		SENT C 8 Bright A_CustomMissile("SentGMissile",52,-12,0,1,0)
+		SENT A 6 A_FaceTarget
+		SENT C 0 Bright A_CustomMissile("SentGMissile",52,12,0,1,0)
+		SENT C 8 Bright A_CustomMissile("SentGMissile",52,-12,0,1,0)
+		SENT A 8 A_FaceTarget
+		SENT C 0 Bright A_CustomMissile("SentGMissile",52,12,0,1,0)
+		SENT C 8 Bright A_CustomMissile("SentGMissile",52,-12,0,1,0)
+		goto See
+		SENT D 4 A_FaceTarget
+		SENT E 0 Bright A_CustomMissile("CubeShot",52,12,0,1,0)
+		SENT E 4 Bright A_CustomMissile("CubeShot",52,-12,0,1,0)
+		SENT D 1 A_SpidRefire
+		goto Missile+13
+		SENT D 4 A_FaceTarget 
+		SENT E 5 Bright A_FaceTarget
+		SENT F 8 Bright A_CustomMissile("SentRMissile",24,0,0,0)
+		goto See2
+	Pain:
+		SENT B 3
+		SENT B 3 A_Pain
+		SENT B 4
+		SENT B 2 A_Jump(128,4)
+		SENT B 0 A_FaceTarget
+		SENT B 0 Bright A_CustomMissile("GCSpawner_Samsara",24,-5,-30,0)
+		SENT B 0 Bright A_CustomMissile("GCSpawner_Samsara",24,5,30,0)
+		SENT B 1
+		goto See2
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SENT G 8 Bright
+		SENT H 7 Bright A_Scream
+		SENT IJ 7 Bright
+		SENT K 7 A_NoBlocking
+		SENT K -1 A_SetFloorClip
+		stop
+	}
+}
+
+actor GCSpawner_Samsara : GCSpawner replaces GCSpawner
+{
+	States
+	{
+	Death:
+		FIRG A 3 Bright
+		FIRG B 3 Bright A_SpawnItem("Guardian_Samsara",0,0)
+		FIRG CDEFGH 3 Bright
+		Stop
+	}
+}
+
+actor Guardian_Samsara : SamsaraMonsterRobotic replaces Guardian 
+{ 
+	Health 80 
+	Radius 16 
+	Height 32 
+	Mass 150 
+	Speed 8 
+	PainChance 64 
+	MONSTER
+	HITOBITUARY "%o got fried by a Guardian Cube."
+	OBITUARY "%o got fried by a Guardian Cube."
+	+NoGravity 
+	+Float
+	+DontFall
+	+NoBlood
+	+DontHurtSpecies
+	SEESOUND "monster/cubsit" 
+	PAINSOUND "weapons/bounc1"
+	ACTIVESOUND "monster/cubfly"
+	DEATHSOUND "monster/cubdth"
+	Tag "Guardian Cube"
+	states 
+	{ 
+	Spawn: 
+		CUBE A 10 A_Look 
+		Loop 
+	See: 
+		CUBE ABC 5 A_Chase
+		Loop 
+	Missile: 
+		CUBE D 5 BRIGHT A_FaceTarget 
+		CUBE E 0 BRIGHT A_CustomMissile("CubeShot",10,4,0,1)
+		CUBE E 4 BRIGHT A_CustomMissile("CubeShot",10,-4,0,1)
+		CUBE D 4 BRIGHT A_FaceTarget 
+		CUBE E 0 BRIGHT A_CustomMissile("CubeShot",10,4,0,1)
+		CUBE E 4 BRIGHT A_CustomMissile("CubeShot",10,-4,0,1)
+		CUBE D 4 BRIGHT A_FaceTarget  
+		CUBE E 0 BRIGHT A_CustomMissile("CubeShot",10,4,0,1)
+		CUBE E 4 BRIGHT A_CustomMissile("CubeShot",10,-4,0,1)
+		CUBE D 4 BRIGHT A_FaceTarget
+		Goto See 
+	Pain: 
+		CUBE D 3 
+		CUBE D 3 A_Pain 
+		Goto See 
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CUBE E 0 BRIGHT A_NoBlocking
+		CUBE E 0 BRIGHT A_SetFloorClip
+		CUBE E 6 BRIGHT A_Scream 
+		CUBE FGH 6 BRIGHT
+		Stop 
+	} 
+}

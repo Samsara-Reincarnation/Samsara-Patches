@@ -1,0 +1,493 @@
+actor LeChuck_Samsara : SamsaraMonsterGhostBoss replaces LeChuck
+{
+	Radius 32
+	Height 130
+	ProjectilePassHeight 100
+	Mass 1000
+	PainChance 30
+	health 15000
+	renderstyle translucent
+	alpha 0.8
+	maxdropoffheight 360
+	speed 12
+	Tag "Lechuck"
+	obituary "%o was killed by Lechuck, the ghost pirate."
+	MONSTER
+	seesound "chuck/sight"
+	deathsound "chuck/death"
+	activesound "chuck/active"
+	painsound "chuck/pain"
+	+BOSS
+	+BOSSDEATH
+	+FLOORCLIP
+	+NOINFIGHTING
+	+NOTARGET
+	+dontrip
+	+FULLVOLACTIVE
+	Gravity .125
+	+NOTELEFRAG
+	+NORADIUSDMG
+	+NOEXTREMEDEATH
+	+DONTTRANSLATE
+	+JUMPDOWN
+	+NOBLOOD
+	var int user_grown;
+	var int user_landed;
+	var int user_landed2;
+	var int user_jumped;
+	var int user_jumped2;
+	scale 0.5
+	states
+	{
+	spawn:
+		CHUC A 4 A_Look
+		loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	SeeActual:
+		CHUC B 0 A_JumpIfHealthLower(14200,"bola2")
+		CHUC BBCC 3 A_chase
+		CHUC A 0 A_playsound("world/rock")
+		CHUC DDEE 3 A_chase
+		CHUC A 0 A_playsound("world/rock")
+		loop
+	melee:
+		CHUC G 8 A_facetarget
+		CHUC HI 4 a_viletarget
+		CHUC I 4 a_vileattack
+		goto seeactual
+	missile:
+	bola1:
+		CHUC AGHI 4 a_facetarget
+		CHUC I 1 a_custommissile("leball",40)
+		CHUC HGA 3
+		goto seeactual
+	bola2:
+		CHUC B 0 A_JumpIfHealthLower(13200,"grow")
+		CHUC AGHI 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",60,-40)
+		CHUC I 1 a_custommissile("leball",60,40)
+		CHUC HGA 3 A_changeflag("MISSILEMORE",1)
+		CHUC H 0 A_changeflag("MISSILEEVENMORE",1)
+		goto seeactual
+	grow:
+		CHUC A 0 A_JumpIf(user_grown==1,"see2")
+		CHUC H 0 A_changeflag("NOPAIN",1)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC GHI 6 A_setscale(0.55,0.55)
+		CHUC GHI 6 A_setscale(0.6,0.6)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC GHI 6 A_setscale(0.65,0.65)
+		CHUC GHI 6 A_setscale(0.7,0.7)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC GHI 6 A_setscale(0.75,0.75)
+		CHUC GHI 6 A_setscale(0.8,0.8)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC GHI 6 A_setscale(0.85,0.85)
+		CHUC GHI 6 A_setscale(0.9,0.9)
+		CHUC A 0 A_playsound("chuck/sight4")
+		CHUC H 0 A_changeflag("NOPAIN",0)
+		CHUC A 0 A_SetUserVar("user_grown",1)
+		goto seeactual
+	see2:
+		CHUC A 0 A_jumpifhealthlower(11700,"jump")
+		CHUC I 0 A_changeflag("MISSILEEVENMORE",0)
+		CHUC A 0 A_jump(128,3)
+		CHUC BBCC 3 A_chase("melee","bola3",0)
+		CHUC A 0 A_jump(256,3)
+		CHUC DDEE 3 A_chase("melee","papagaio",0)
+		CHUC A 0 A_playsound("world/rock")
+		loop
+	bola3:
+		CHUC GHI 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC I 0 a_custommissile("leball",110,-70)
+		CHUC I 1 a_custommissile("leball",110,70)
+		CHUC I 4 a_facetarget
+		CHUC HG 3
+		goto see2
+	papagaio:
+		CHUC GHI 4 a_facetarget
+		CHUC I 0 a_custommissile("revenanttracer",110,-70)
+		CHUC I 1 a_custommissile("revenanttracer",110,70)
+		CHUC HG 3
+		goto see2
+	jump:
+		CHUC H 0 A_JumpIf(user_jumped==1,"see3")
+		CHUC GHI 6 A_ChangeVelocity(14,14,3)
+		CHUC A 0 A_SetUserVar("user_jumped",1)
+		goto see3
+	see3:
+		CHUC A 0 A_jumpifhealthlower(10200,"land")
+		CHUC I 0 A_changeflag("MISSILEEVENMORE",1)
+		CHUC A 0 A_jump(200,2)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC A 0 A_NoGravity
+		CHUC A 0 A_changeflag("FLOATBOB",1)
+		CHUC A 0 A_changeflag("float",1)
+		CHUC A 0 A_jump(128,3)
+		CHUC GHIH 3 A_chase("melee","bola3",CHF_FASTCHASE)
+		CHUC A 0 A_jump(256,2)
+		CHUC GHIH 3 A_chase("melee","papagaio",CHF_FASTCHASE)
+		loop
+	land:
+		CHUC H 0 A_JumpIf(user_landed==1,"see4")
+		CHUC H 0 A_changeflag("NOPAIN",1)
+		CHUC A 0 a_lowgravity
+		CHUC A 0 A_changeflag("FLOATBOB",0)
+		CHUC A 0 A_changeflag("float",0)
+		CHUC A 0 A_ChangeVelocity(14,14,0)
+		CHUC IGHIGHIGHIGH 6 A_setscale(0.95,0.95)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC A 0 A_SetUserVar("user_landed",1)
+		CHUC A 0 A_playsound("chuck/sight4")
+		CHUC H 0 A_changeflag("NOPAIN",0)
+		goto see4
+	see4:
+		CHUC A 0 A_jumpifhealthlower(8200,"see5")
+		CHUC A 0 A_jump(40,3)
+		CHUC BBCCDDEE 3 A_chase("melee","cube",0)
+		CHUC A 0 A_jump(256,5)
+		CHUC A 0 A_jump(128,3)
+		CHUC BBCC 3 A_chase("melee","bola3",0)
+		CHUC A 0 A_jump(256,2)
+		CHUC DDEE 3 A_chase("melee","papagaio",0)
+		CHUC A 0 A_playsound("world/rock")
+		loop
+	cube:
+	    CHUC A 0 A_jump (100, "see4")
+		CHUC GHI 4 A_facetarget
+		CHUC I 1 a_brainspit
+		CHUC I 20
+		CHUC HG 3
+		goto see4
+	see5:
+		CHUC A 0 A_jumpifhealthlower(7200,"see6")
+		CHUC A 0 A_jump(60,3)
+		CHUC BBCCDDEE 3 A_chase("melee","cannonballs",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","cube",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","bola3",0)
+		CHUC BBCCDDEE 3 A_chase("melee","papagaio",0)
+		CHUC A 0 A_playsound("world/rock")
+		loop
+	cannonballs:
+		CHUC AGHI 4 A_facetarget
+		CHUC I 0 A_playsound("skeleton/swing")
+		CHUC IIIIIIIII 1 A_spawnitemex("cannonball2",frandom(-40,40),frandom(-40,40) ,110,frandom(-8,8),frandom(-6,6),frandom(2,8))
+		CHUC I 8
+		CHUC HGA 3
+		goto see5
+	see6:
+		CHUC A 0 A_jumpifhealthlower(6200,"see7")
+		CHUC A 0 A_jump(60,3)
+		CHUC BBCCDDEE 3 A_chase("melee","minichucks",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","cannonballs",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","cube",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","bola3",0)
+		CHUC BBCCDDEE 3 A_chase("melee","papagaio",0)
+		CHUC A 0 A_playsound("world/rock")
+		loop
+	minichucks:
+		CHUC AGHI 4 A_facetarget
+		CHUC I 1 A_spawnitemex("minichuck",frandom(20,40),70,110,frandom(0,5),frandom(0,5),frandom(0,6),0,SXF_NOCHECKPOSITION)
+		CHUC I 1 A_spawnitemex("minichuck",frandom(20,40),-70,110,frandom(0,5),frandom(0,-5),frandom(0,6),0,SXF_NOCHECKPOSITION)
+		CHUC I 6
+		CHUC HGA 3
+		goto see6
+	see7:
+		CHUC A 0 A_jumpifhealthlower(4700,"see8")
+		CHUC H 0 A_changeflag("NOPAIN",1)
+		CHUC M 10
+		CHUC M 1 A_spawnitemex("chuckhead",0,0,90,0,0,0,0,SXF_NOCHECKPOSITION)
+		CHUC M 400
+		CHUC H 0 A_changeflag("NOPAIN",0)
+		loop
+	see8:
+		CHUC A 0 A_jumpifhealthlower(2700,"jump2")
+		CHUC A 0 A_jump(60,2)
+		CHUC BBCCDDEE 3 A_chase("melee","dynamites",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","cube",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","head",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","cannonballs",0)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","bola3",0)
+		CHUC BBCCDDEE 3 A_chase("melee","papagaio",0)
+		CHUC A 0 A_playsound("world/rock")
+		loop
+	dynamites:
+		CHUC AGHI 4 A_facetarget
+		CHUC I 0 A_playsound("skeleton/swing")
+		CHUC I 0 A_jump(128,4)
+		CHUC I 0 A_spawnitemex("dynamitestick2",0,-80,110,frandom(2,10),frandom(-10,0),frandom(2,10))
+		CHUC I 1 A_custommissile("dynamitestick2",110,80)
+		CHUC I 0 A_jump(256,3)
+		CHUC I 0 A_spawnitemex("dynamitestick2",0,80,110,frandom(2,10),frandom(0,10),frandom(2,10))
+		CHUC I 1 A_custommissile("dynamitestick2",110,-80)
+		CHUC HGA 3
+		goto see8
+	head:
+		CHUC H 0 A_changeflag("NOPAIN",1)
+		CHUC M 10
+		CHUC M 1 A_spawnitemex("chuckhead",0,0,90,0,0,0,0,SXF_NOCHECKPOSITION)
+		CHUC M 100
+		CHUC H 0 A_changeflag("NOPAIN",0)
+		goto see8
+	see9:
+		CHUC A 0 A_jumpifhealthlower(1700,"land2")
+		CHUC I 0 A_changeflag("MISSILEEVENMORE",1)
+		CHUC A 0 A_jump(200,2)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC A 0 A_NoGravity
+		CHUC A 0 A_changeflag("FLOATBOB",1)
+		CHUC A 0 A_changeflag("float",1)
+		CHUC A 0 A_jump(100,2)
+		CHUC GHIH 3 A_chase("melee","cube",CHF_FASTCHASE)
+		CHUC A 0 A_jump(128,2)
+		CHUC GHIH 3 A_chase("melee","dynamites",CHF_FASTCHASE)
+		CHUC A 0 A_jump(128,2)
+		CHUC GHIH 3 A_chase("melee","cannonballs",CHF_FASTCHASE)
+		CHUC A 0 A_jump(128,2)
+		CHUC GHIH 3 A_chase("melee","minichucks",CHF_FASTCHASE)
+		CHUC A 0 A_jump(128,2)
+		CHUC GHIH 3 A_chase("melee","bola3",CHF_FASTCHASE)
+		CHUC GHIH 3 A_chase("melee","papagaio",CHF_FASTCHASE)
+		loop
+	jump2:
+		CHUC H 0 A_JumpIf(user_jumped2==1,"see9")
+		CHUC GHI 6 A_ChangeVelocity(14,14,3)
+		CHUC A 0 A_SetUserVar("user_jumped2",1)
+		goto see9
+	land2:
+		CHUC H 0 A_JumpIf(user_landed2==1,"see10")
+		CHUC H 0 A_changeflag("NOPAIN",1)
+		CHUC A 0 a_lowgravity
+		CHUC A 0 A_changeflag("FLOATBOB",0)
+		CHUC A 0 A_changeflag("float",0)
+		CHUC IGHIGHIGHIGH 6 A_ChangeVelocity(20,20,0)
+		CHUC A 0 A_playsound("chuck/sight2")
+		CHUC H 0 A_changeflag("NOPAIN",0)
+		CHUC A 0 A_SetUserVar("user_landed2",1)
+		goto see10
+	see10:
+		CHUC A 0 A_jumpifhealthlower(200,"death")
+		CHUC A 0 A_jump(220,2)
+		CHUC A 0 A_playsound("chuck/sight1")
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","dynamites",CHF_RESURRECT)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","cube",CHF_RESURRECT)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","head",CHF_RESURRECT)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","cannonballs",CHF_RESURRECT)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","minichucks",CHF_RESURRECT)
+		CHUC A 0 A_jump(128,2)
+		CHUC BBCCDDEE 3 A_chase("melee","bola3",CHF_RESURRECT)
+		CHUC BBCCDDEE 3 A_chase("melee","papagaio",CHF_RESURRECT)
+		CHUC A 0 A_playsound("world/rock")
+		loop
+	heal:
+		CHUC AGHI 4 Bright
+		CHUC A 0 A_playsound("vile/raise")
+		CHUC A 0 A_playsound("chuck/active1")
+		CHUC IHGA 4 A_spawnitemex("smoke4",frandom(-40,40),frandom(-40,40),frandom(0,40),0,0,1,0,SXF_NOCHECKPOSITION)
+		Goto See10
+	pain:
+		CHUC J 10 A_Pain
+		goto seeactual
+	death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CHUC H 0 A_changeflag("FLOAT",0)
+		CHUC H 0 A_Gravity
+		CHUC H 0 A_changeflag("SHOOTABLE",0)
+		CHUC H 0 A_quake(5,300,0,1000)
+		CHUC J 20 A_scream
+		CHUC N 8 A_NoBlocking
+		CHUC O 6
+		CHUC PQR 4
+		CHUC S 16
+		CHUC T 8
+		CHUC U 6
+		CHUC V 4 A_playsound("skeleton/death")
+		CHUD ABC 4
+		stop
+	}
+}
+
+actor minichuck_Samsara : SamsaraMonsterGhost replaces minichuck
+{
+	radius 24
+	height 56
+	health 120
+	ProjectilePassHeight 100
+	Mass 1000
+	PainChance 30
+	MONSTER
+	+FLOORCLIP
+	+MISSILEEVENMORE
+	+NOEXTREMEDEATH
+	-FULLVOLACTIVE
+	+VISIBILITYPULSE
+	+NOBLOOD
+	+NOINFIGHTING
+	+NOTARGET
+	+NOTELEFRAG
+	+NORADIUSDMG
+	+DONTTRANSLATE
+	+JUMPDOWN
+	maxdropoffheight 360
+	seesound "lchuck/active"
+    activesound "lchuck/active"
+	painsound "chuck/pain"
+	deathsound "chuck/death"
+	scale 0.4
+	speed 14
+	renderstyle translucent
+	//translation ice
+	alpha 0.5
+	obituary "%o was killed by a LittleChuck!"
+	Tag "LittleChuck"
+	states
+	{
+	spawn:
+		CHUC A 4 A_Look
+		loop
+	see:
+		CHUC BBCCDDEE 2 A_chase
+		CHUC A 0 A_spawnitemex ("smoke4", 0, 0, 0, 0, 0, 1)
+		loop
+	melee:
+		CHUC G 8 A_facetarget
+		CHUC HI 4 a_viletarget
+		CHUC I 4 a_vileattack
+		goto see
+	missile:
+		CHUC AGHI 4 a_facetarget
+		CHUC I 1 a_custommissile("leball",36)
+		CHUC HGA 3
+		goto see
+	pain:
+		CHUC J 10 A_Pain
+		goto see
+	Pain.DoomDamageTypeStunner:
+		CHUC J 2 bright A_ChangeFlag("NOPAIN",true)
+		CHUC J 300 bright A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		CHUC J 2 bright A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		CHUC J 16 bright A_Pain
+		Goto See
+	death:
+		CHUC J 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CHUC J 0 A_playsound("chuck/death")
+		CHUC J 16 A_spawnitemex("smoke4",frandom(-40,40),frandom(-40,40),frandom(0,40),0,0,1,0,SXF_NOCHECKPOSITION)
+		CHUC N 8 A_NoBlocking
+		CHUC O 6
+		CHUC PQ 4
+		CHUC R 4
+		CHUC S 16
+		CHUC T 8
+		CHUC U 6
+		CHUC V 4 A_playsound("skeleton/death")
+		CHUD ABC 4
+		stop
+	}
+}
+
+actor chuckhead_Samsara : SamsaraMonsterGhost replaces chuckhead
+{
+	renderstyle translucent
+	alpha 0.5
+	Health 300
+	Radius 24
+	Height 40
+	Mass 50
+	Speed 8
+	Damage 3
+	PainChance 256
+	Monster
+	AttackSound "skull/melee"
+	obituary "%o was spooked by Lechuck's spooky flying head."
+	+FLOAT
+	+NOGRAVITY
+	+floatbob
+	+dontfall
+	+noINfighting
+	+VISIBILITYPULSE
+	+NOEXTREMEDEATH
+	//+ROCKETTRAIL
+	//+GRENADETRAIL
+	+NOBLOOD
+	Tag "Lechuck's Head"
+	monster
+	activesound "demon/active"
+	speed 6
+	states
+	{
+	spawn:
+		CHED A 10
+		goto see
+	see:
+		CHED A 1 A_chase(0,"missile",CHF_FASTCHASE)
+		CHED A 1 A_spawnitemex ("smoke3")
+		loop
+	missile:
+		CHED A 4 A_FaceTarget
+		CHED A 0 A_jump(128,3)
+		CHED A 8 A_custommissile("leball")
+		CHED A 0 A_jump(128,2)
+		CHED A 8 A_SkullAttack
+		Goto See
+	PAIN:
+		CHED B 10 a_playsound("demon/pain")
+		goto see
+	death:
+		CHED A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		CHED A 1 A_spawnitemex("headdeath",0,0,80,0,0,0,0,0,SXF_NOCHECKPOSITION)
+		stop
+	}
+}

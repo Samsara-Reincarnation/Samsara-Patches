@@ -1,0 +1,14 @@
+Object DESentinel_Samsara
+{
+	Frame SENTG { Light SentinelExplode1 }
+	Frame SENTH { Light SentinelExplode2 }
+	Frame SENTI { Light SentinelExplode3 }
+}
+
+Object Guardian_Samsara
+{
+	Frame CUBEF { Light GuardianExplode1 }
+	Frame CUBEG { Light GuardianExplode2 }
+	Frame CUBEH { Light GuardianExplode3 }
+	Frame CUBEI { Light GuardianExplode4 }
+}

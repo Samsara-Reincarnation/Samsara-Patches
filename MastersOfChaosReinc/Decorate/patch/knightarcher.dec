@@ -1,0 +1,54 @@
+ACTOR KnightArcher_Samsara : SamsaraMonsterDemonicTotalGib replaces KnightArcher
+{
+	Health 150
+	Radius 20
+	Height 56
+	Speed 15
+	PainChance 100
+	MONSTER 
+	+FLOORCLIP
+	SeeSound "archer/sight"
+	AttackSound "archer/attack"
+	PainSound "archer/pain"
+	DeathSound "archer/death"
+	ActiveSound "archer/growl"
+	Obituary "%o was blazed by a Knight Archer."
+	MissileType KnitArrow
+	Tag "Knight Archer"
+	States
+	{
+	Spawn:
+		KNIT A 2 A_Look
+		Loop
+	See:
+		KNIT AABBCCDD 4 A_Chase
+		Loop
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		KNIT E 10 A_FaceTarget
+		KNIT F 5 A_MissileAttack
+		Goto See
+	Pain:
+		KNIT A 3
+		KNIT A 3 A_Pain
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		KNIT A 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		KNIT A 16 A_Pain
+		Goto See
+    Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+        KNIT H 4 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+        KNIT I 4 A_Scream
+        KNIT J 4 A_Fall
+        KNIT K 4
+        KNIT L 4
+        KNIT M 4
+        KNIT N -1
+        Stop
+	}
+}

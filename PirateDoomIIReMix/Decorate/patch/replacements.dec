@@ -1,0 +1,1 @@
+actor TribalMinionsRandomizer_Samsara : DoomImpSpawner replaces MBFHelperDog { }

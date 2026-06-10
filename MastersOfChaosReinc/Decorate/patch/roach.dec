@@ -1,0 +1,192 @@
+ACTOR Roach_Samsara : SamsaraMonsterHumanoid replaces Roach
+{
+	Health 150
+	GibHealth 250
+	Radius 19
+	Height 48
+	Speed 8
+	PainChance 64
+	Mass 200
+	BloodColor "DarkGreen"
+	Monster
+	+DontHurtSpecies
+	SeeSound "Roach/Sight"
+	PainSound "Roach/Pain"
+	DeathSound "Roach/Death"
+	ActiveSound "Roach/Active"
+	MeleeDamage 4
+	Obituary "%o was scalded by a Roach"
+	Tag "Roach"
+	States
+	{
+	Spawn:
+		ROAC A 0
+		ROAC A 0 A_JumpIf(Args[0] == 1, "Spawn2")
+		ROAC A 0 A_JumpIf(Args[0] > 1, "Spawn3")
+		ROAC AAAAAA 1 A_Look
+		ROAC A 0 HealThing(2)
+		Loop
+	Spawn2:
+		ROAC AAAAAA 1 A_LookEx(8, 0, 0, 0, 0, "See")
+		ROAC A 0 HealThing(2)
+		Loop
+	Spawn3:
+		ROAC AAAAAA 1 A_LookEx(0, 0, 0, 0, 0, "SeeAlert")
+		ROAC A 0 HealThing(2)
+		Loop
+	SeeAlert:
+		ROAC A 0 A_AlertMonsters
+		Goto See
+	See:
+		ROAC B 0 A_JumpIfInventory("RoachScared", 1, 2)
+		ROAC B 0 A_Jump(32, "Stand")
+		ROAC B 0 A_JumpIfInventory("RoachScared", 1, 1)
+		Goto See+4
+		ROAC B 0 A_JumpIfHealthLower(120, 1)
+		Goto HealthHigh
+		ROAC B 0 A_JumpIfInventory("RoachScared", 1, 2)
+		ROAC B 0 A_JumpIfHealthLower(40, "HealthLow")
+		ROAC BB 2 A_Chase("Melee", "", 2)
+		ROAC B 2 A_Chase
+		ROAC C 0 HealThing(2)
+		ROAC C 0 A_JumpIfInventory("RoachScared", 1, 1)
+		Goto See+12
+		ROAC C 0 A_JumpIfHealthLower(120, 1)
+		Goto HealthHigh
+		ROAC C 0 A_JumpIfInventory("RoachScared", 1, 2)
+		ROAC C 0 A_JumpIfHealthLower(40, "HealthLow")
+		ROAC CC 2 A_Chase("Melee", "", 2)
+		ROAC C 2 A_Chase
+		ROAC D 0 HealThing(2)
+		ROAC D 0 A_JumpIfInventory("RoachScared", 1, 1)
+		Goto See+20
+		ROAC D 0 A_JumpIfHealthLower(120, 1)
+		Goto HealthHigh
+		ROAC D 0 A_JumpIfInventory("RoachScared", 1, 2)
+		ROAC D 0 A_JumpIfHealthLower(40, "HealthLow")
+		ROAC DD 2 A_Chase("Melee", "", 2)
+		ROAC D 2 A_Chase
+		ROAC E 0 HealThing(2)
+		ROAC E 0 A_JumpIfInventory("RoachScared", 1, 1)
+		Goto See+28
+		ROAC E 0 A_JumpIfHealthLower(120, 1)
+		Goto HealthHigh
+		ROAC E 0 A_JumpIfInventory("RoachScared", 1, 2)
+		ROAC E 0 A_JumpIfHealthLower(40, "HealthLow")
+		ROAC EE 2 A_Chase("Melee", "", 2)
+		ROAC E 2 A_Chase
+		ROAC B 0 HealThing(2)
+		Loop
+	Stand:
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Chase("Melee", "Missile", 18)
+		ROAC A 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC A 0 A_Jump(192, 1)
+		Goto See+1
+		ROAC A 0
+		Loop
+	HealthLow:
+		ROAC A 0 A_GiveInventory("RoachScared", 1)
+		ROAC A 0 A_ChangeFlag("Frightened", 1)
+		Goto See+4
+	HealthHigh:
+		ROAC A 0 A_TakeInventory("RoachScared", 1)
+		ROAC A 0 A_ChangeFlag("Frightened", 0)
+		Goto See+4
+	Melee:
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		ROAC AA 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC AA 3 A_FaceTarget
+		ROAC A 0 HealThing(2)
+		ROAC FF 3 A_FaceTarget
+		ROAC F 0 HealThing(2)
+		ROAC G 0 A_CustomMissile("RoachBall", 32, -4, 1)
+		ROAC G 6 A_CustomMissile("RoachBall", 32, 4, -1)
+		ROAC G 0 HealThing(2)
+		Goto See
+	Pain:
+		ROAC H 3
+		ROAC H 3 A_Pain
+		ROAC H 0 HealThing(2)
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		ROAC H 2 A_ChangeFlag("NOPAIN",true)
+		ROAC H 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		ROAC H 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		ROAC H 16 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		ROAC I 8 A_ScreamAndUnblock
+		ROAC JKL 6
+		ROAC M 0 A_Jump(18, 2)
+		ROAC M -1
+		Loop
+		ROAC MMMMM 70
+		ROAC MMMMM 70
+		ROAC MMMMM 70
+		ROAC M -1 Thing_Raise(0)
+		Wait
+	Death.CalebFire:
+	Death.LifeLeech:
+		TNT1 A 0 A_Jump(218, 2)
+		TNT1 A 0 A_GiveToTarget("CalebDMTaunt1", 1)
+		TNT1 A 0 A_SpawnItemEx("BloodBurningCorpse_Generic_DarkGreen", 0, 0, 0, 0, 0, 0, 0, SXF_NOCHECKPOSITION|SXF_SETMASTER)
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		TNT1 A 5 A_NoBlocking
+		TNT1 A -1
+		Stop
+	StakeDeath:
+		ROAC H 2
+		Loop
+	XDeath:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	XDeath.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		ROAC I 4 A_XScream
+		ROAC NOP 6
+		ROAC Q 6 A_NoBlocking
+		ROAC RS 6
+		ROAC T -1
+		Stop
+	Raise:
+		ROAC A 0
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		ROAC MLKJI 5
+		Goto See
+	}
+}
