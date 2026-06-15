@@ -1,0 +1,22 @@
+MAP E2M5
+{
+	levelname = "Big Baddy On Bazoik"
+	levelpic = "INTER25"
+	partime = 121
+	music = "D_E2M5"
+	skytexture = "sky1"
+	bossaction = Snotfolus_2_PB, 11, 0
+	exitpic = "WIMAP1"
+	enterpic = "WIMAP1"	
+	endgame = true
+	intertext = "Congratulation...!",
+	"",
+	"You have finished the very second episode",
+	"of Chex Quest: The Penultimate Breakfast...",
+	"",
+	"JOURNEY TO PLANET BAZOIK",
+	" Has Been Completed...",
+	"",
+	"...BUT YET THE FLEMOIDS STILL WANDER...again..."
+	interbackdrop = "FLAT94"
+}
