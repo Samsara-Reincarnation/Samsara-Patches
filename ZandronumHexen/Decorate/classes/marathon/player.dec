@@ -503,6 +503,8 @@ actor MarathonPlayer : SamsaraPlayerPawnNormalRedBlood
 		Pain.DoomTheseGuysAreTheBest:
 		Pain.Explosive:
 		Pain.DoomDamageTypeExplosive:
+		Pain.TotenkopfRocket:
+		Pain.TotenkopfFlak:
 		Pain.DukeExplosive:
 		Pain.SpectralNoQuad:
 		Pain.NotQuadded:
