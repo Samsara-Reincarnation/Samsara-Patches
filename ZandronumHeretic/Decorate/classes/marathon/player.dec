@@ -591,6 +591,7 @@ actor MarathonPlayer : SamsaraPlayerPawnNormalRedBlood
 			SOPL Z 4 A_SetBlend("White",0.8,8)
 			SOPL Z 4 A_Pain
 			Goto Spawn
+		Pain.WolfenElectric:
 		Pain.ElectricBolt:
 		Pain.DoomDamageTypeIce:
 		Pain.HexenIce:

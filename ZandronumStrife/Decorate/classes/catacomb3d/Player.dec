@@ -73,6 +73,7 @@ Actor PettonEverhail : SamsaraPlayerPawnTotalGibRedBlood
 	DamageFactor "MarathonFusion", 0.5
 	DamageFactor "ElectricBolt", 0.5
 	DamageFactor "Tesla", 0.5
+	DamageFactor "WolfenElectric", 0.5
 	DamageFactor "QuakeElectric", 0.5
 	DamageFactor "Hexen2Electric", 0.5
 	DamageFactor "Plasma", 0.5
