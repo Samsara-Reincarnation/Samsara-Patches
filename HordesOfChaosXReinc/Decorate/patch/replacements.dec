@@ -6,7 +6,7 @@ actor BaronOfHellHOC_Samsara : RandomSpawner replaces BaronOfHellHOC { Game Here
 actor CentaurHOC_Samsara : RandomSpawner replaces CentaurHOC { Game Heretic DropItem "Centaur2" }
 actor CentaurLeaderHOC_Samsara : RandomSpawner replaces CentaurLeaderHOC { Game Heretic DropItem "CentaurLeader2" }
 actor BishopHOC_Samsara : RandomSpawner replaces BishopHOC { Game Heretic DropItem "Bishop2" }
-actor ArchvileHOC_Samsara : RandomSpawner replaces ArchvileHOC { Game Heretic DropItem "Archvile2" }
+actor ArchvileHOC_Samsara : RandomSpawner replaces ArchvileHOC { Game Heretic DropItem "ArchvileTwo" }
 actor SerpentHOC_Samsara : RandomSpawner replaces SerpentHOC { Game Heretic DropItem "Serpent2" }
 actor SerpentLeaderHOC_Samsara : RandomSpawner replaces SerpentLeaderHOC { Game Heretic DropItem "SerpentLeader2" }
 actor WendigoHOC_Samsara : RandomSpawner replaces WendigoHOC { Game Heretic DropItem "IceGuy2" }
