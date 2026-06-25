@@ -492,6 +492,7 @@ Actor DoomguyPlayer_Shrink : DoomguyPlayer
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

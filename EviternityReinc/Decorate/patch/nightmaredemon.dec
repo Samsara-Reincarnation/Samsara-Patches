@@ -164,6 +164,7 @@ Actor NightmareDemon_Samsara : SamsaraMonsterDemonicTotalGib replaces MBFHelperD
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Disintegrate:
+		Death.StrifeMauler:
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 			"####" "#" 0 A_Stop

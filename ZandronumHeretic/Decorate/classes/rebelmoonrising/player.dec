@@ -41,6 +41,7 @@ Actor RebelMoonCommando : SamsaraPlayerPawnTotalGibRedBlood
     DamageFactor "MarathonPlasmaFire", 0.843
     DamageFactor "Slime", 0.807
     DamageFactor "Disintegrate", 0.900
+    DamageFactor "StrifeMauler", 0.900
     DamageFactor "Poison", 0.924
     DamageFactor "WolfenFlamethrower", 0.800
     DamageFactor "DukeDamage", 1.15
@@ -285,6 +286,7 @@ Actor RebelMoonCommando_Shrink : RebelMoonCommando
         Death.Tesla:
         Death.CalebBullet:
         Disintegrate:
+        Death.StrifeMauler:
         Death.EradExplosive:
         Death.EradNova:
         Death.EradShock:

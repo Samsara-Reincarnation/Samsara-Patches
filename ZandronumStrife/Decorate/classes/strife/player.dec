@@ -42,6 +42,7 @@ actor StrifeguyPlayer : StrifePlayer
 	DamageFactor "MarathonPlasmaFire", 1.0
 	DamageFactor "Slime", 1.0
 	DamageFactor "Disintegrate", 1.0
+	DamageFactor "StrifeMauler", 1.0
 	DamageFactor "Poison", 1.0
 	DamageFactor "WolfenFlamethrower", 1.0
 	DamageFactor "DukeDamage", 1.0
@@ -247,6 +248,7 @@ actor StrifeguyPlayer : StrifePlayer
 		CBGS A 8 A_Pain
 		Goto See
 	Disintegrate:
+	Death.StrifeMauler:
 		SDIS A 5 A_PlaySound("strife/disruptdeath", CHAN_VOICE)
 		SDIS BC 5
 		SDIS D 5 A_NoBlocking
@@ -919,6 +921,7 @@ Actor StrifeguyPlayer_Shrink : StrifeguyPlayer
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

@@ -36,6 +36,7 @@ actor Caleb : SamsaraPlayerPawnNormalRedBlood
 	DamageFactor "MarathonPlasmaFire", 1.069
 	DamageFactor "Slime", 1.049
 	DamageFactor "Disintegrate", 1.1
+	DamageFactor "StrifeMauler", 1.1
 	DamageFactor "Poison", 1.054
 	DamageFactor "WolfenFlamethrower", 1.1
 	DamageFactor "DukeDamage", 1.051
@@ -396,6 +397,7 @@ Actor Caleb_Shrink : Caleb
 	Death.Tesla:
 	Death.CalebBullet:
 	Disintegrate:
+	Death.StrifeMauler:
 	Death.EradExplosive:
 	Death.EradNova:
 	Death.EradShock:

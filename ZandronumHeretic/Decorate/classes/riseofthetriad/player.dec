@@ -53,6 +53,7 @@ Actor IPFreeley : SamsaraPlayerPawnNormalRedBlood
     DamageFactor "MarathonPlasmaFire", 0.999
     DamageFactor "Slime", 0.964
     DamageFactor "Disintegrate", 0.9
+    DamageFactor "StrifeMauler", 0.9
     DamageFactor "Poison", 0.921
     DamageFactor "WolfenFlamethrower", 0.9
     DamageFactor "DukeDamage", 0.9
@@ -565,6 +566,7 @@ Actor IPFreeley_Shrink : IPFreeley
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

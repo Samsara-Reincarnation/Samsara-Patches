@@ -46,6 +46,7 @@ actor PSPlayer : SamsaraPlayerPawnNormalRedBlood
     DamageFactor "MarathonPlasmaFire", 0.912
     DamageFactor "Slime", 0.929
     DamageFactor "Disintegrate", 0.94
+    DamageFactor "StrifeMauler", 0.94
     DamageFactor "Poison", 0.938
     DamageFactor "WolfenFlamethrower", 0.91
     DamageFactor "DukeDamage", 1.15
@@ -345,6 +346,7 @@ Actor PSPlayer_Shrink : PSPlayer
         Death.Tesla:
         Death.CalebBullet:
         Disintegrate:
+        Death.StrifeMauler:
         Death.EradExplosive:
         Death.EradNova:
         Death.EradShock:

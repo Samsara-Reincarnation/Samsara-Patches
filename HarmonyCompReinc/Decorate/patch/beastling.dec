@@ -34,6 +34,7 @@ actor Beastling_Samsara : SamsaraMonsterBeastTotalGib replaces Demon
     DamageFactor "Ice", 1.15
 	DamageFactor "DoomDamageTypeIce", 1.25
     DamageFactor "Disintegrate", 1.15
+    DamageFactor "StrifeMauler", 1.15
     DamageFactor "DukeDamage", 1.2
     DamageFactor "DukeExplosive", 1.1
     DamageFactor "DukeIce", 1.1

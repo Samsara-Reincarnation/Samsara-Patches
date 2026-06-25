@@ -39,7 +39,8 @@ Actor POGreedPlayer : SamsaraPlayerPawnTotalGibRedBlood
 	damagefactor "slime", 1.080
 	damagefactor "bfg", 1.0
 	damagefactor "bfgspray", 1.0
-	damagefactor "disintegrate", 1.0
+	damagefactor "Disintegrate", 1.0
+	damagefactor "StrifeMauler", 1.0
 	damagefactor "electric", 1.011
 	DamageFactor "BFG", 1.0
 	DamageFactor "BFGSpray", 1.0
@@ -509,6 +510,7 @@ Actor POGreedPlayer_Shrink : POGreedPlayer
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

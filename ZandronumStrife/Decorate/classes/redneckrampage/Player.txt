@@ -43,6 +43,7 @@ actor Leonard : SamsaraPlayerPawnNormalColoredBlood
 	DamageFactor "MarathonPlasmaFire", 0.92
 	DamageFactor "Slime", 0.94
 	DamageFactor "Disintegrate", 0.94
+	DamageFactor "StrifeMauler", 0.94
 	DamageFactor "Poison", 0.91
 	DamageFactor "WolfenFlamethrower", 0.91
 	DamageFactor "DukeDamage", 1.15
@@ -393,6 +394,7 @@ Actor Leonard_Shrink : Leonard
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

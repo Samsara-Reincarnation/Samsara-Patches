@@ -36,6 +36,7 @@ actor Corridor7Player : SamsaraPlayerPawnTotalGibRedBlood
     DamageFactor "MarathonPlasmaFire", 1.005
     DamageFactor "Slime", 1.05
     DamageFactor "Disintegrate", 1.05
+    DamageFactor "StrifeMauler", 1.05
     DamageFactor "Poison", 1.05
     DamageFactor "WolfenFlamethrower", 1.05
     DamageFactor "DukeDamage", 1.05
@@ -233,6 +234,7 @@ Actor Corridor7Player_Shrink : Corridor7Player
         Death.Tesla:
         Death.CalebBullet:
         Disintegrate:
+        Death.StrifeMauler:
         Death.EradExplosive:
         Death.EradNova:
         Death.EradShock:

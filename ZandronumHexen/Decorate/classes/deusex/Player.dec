@@ -16,16 +16,16 @@ Actor JCDenton : SamsaraPlayerPawnNormalRedBlood
 	Player.StartItem "SamsaraTipsChecker", 1
 	Player.StartItem "Clip", 50
 	Player.StartItem "DeusEx_BioEnergy", 100
-	Player.StartItem "DeusEx_GlockMagazine", 6
-	Player.StartItem "DeusEx_MiniXBowMagazine", 8
-	Player.StartItem "DeusEx_ShotgunMagazine", 5
+	Player.StartItem "DeusEx_GlockMagazine", 4
+	Player.StartItem "DeusEx_MiniXBowMagazine", 6
+	Player.StartItem "DeusEx_ShotgunMagazine", 4
 	Player.StartItem "DeusEx_AssShotgunMagazine", 12
 	Player.StartItem "DeusEx_AssaultGunMagazine", 30
 	Player.StartItem "DeusEx_GEPGunMagazine", 1
 	Player.StartItem "DeusEx_FlamethrowerMagazine", 100
 	Player.StartItem "DeusEx_PlasmaRifleMagazine", 16
 	Player.StartItem "DeusEx_SniperMagazine", 6
-	Player.StartItem "DeusEx_StealthMagazine", 10
+	Player.StartItem "DeusEx_StealthMagazine", 7
 	Player.StartItem "DeusEx_Augmentation_InfoLink", 1
 	Player.StartItem "DeusEx_Augmentation_IFF", 1
 	Player.StartItem "DeusEx_Augmentation_Light", 1
@@ -5592,6 +5592,7 @@ Actor JCDenton_Shrink : JCDenton
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

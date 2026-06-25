@@ -59,6 +59,7 @@ actor HalfLifePlayer : SamsaraPlayerPawnNormalRedBlood
 	DamageFactor "MarathonPlasmaFire", 1.075
 	DamageFactor "Slime", 1.075
 	DamageFactor "Disintegrate", 1.075
+	DamageFactor "StrifeMauler", 1.075
 	DamageFactor "Poison", 1.075
 	DamageFactor "WolfenFlamethrower", 1.075
 	DamageFactor "DukeDamage", 1.075
@@ -10716,6 +10717,7 @@ actor HalfLifePlayer : SamsaraPlayerPawnNormalRedBlood
 		Pain.EradNova:
 		Pain.Vodoo:
 		Pain.Disintegrate:
+		Pain.StrifeMauler:
 			TNT1 A 0 A_TakeInventory("Hexen2EnemyFireDetector", 1)
 			TNT1 A 0 ACS_NamedExecuteAlways("HL2685",0,1)
 			Goto Spawn
@@ -11214,6 +11216,7 @@ Actor HalfLifePlayer_Shrink : HalfLifePlayer
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

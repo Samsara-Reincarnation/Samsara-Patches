@@ -40,6 +40,7 @@ actor ChexWarrior : SamsaraPlayerPawnNormalNoBlood
     DamageFactor "MarathonPlasmaFire", 0.8
     DamageFactor "Slime", 0.8
     DamageFactor "Disintegrate", 0.8
+    DamageFactor "StrifeMauler", 0.8
     DamageFactor "Poison", 0.8
     DamageFactor "WolfenFlamethrower", 0.8
     DamageFactor "DukeDamage", 0.8
@@ -348,6 +349,7 @@ Actor ChexWarrior_Shrink : ChexWarrior
 		Death.Tesla:
 		Death.CalebBullet:
 		Disintegrate:
+		Death.StrifeMauler:
 		Death.EradExplosive:
 		Death.EradNova:
 		Death.EradShock:

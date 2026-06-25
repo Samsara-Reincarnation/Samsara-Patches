@@ -125,6 +125,7 @@ Actor REKKRFormerKing_Samsara : SamsaraMonsterDemonicBoss replaces ChaingunGuy 6
 			TNT1 A -1 A_SpawnItemEx("REKKRFormerKing2_Samsara",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_TRANSFERPOINTERS|SXF_TRANSFERSPECIAL|SXF_TRANSFERAMBUSHFLAG,0,tid)
 			Stop
 		Disintegrate:
+		Death.StrifeMauler:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound", 1)
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
