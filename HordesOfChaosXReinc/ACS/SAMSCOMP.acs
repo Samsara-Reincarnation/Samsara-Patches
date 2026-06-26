@@ -1,0 +1,32 @@
+#library "SAMSCOMP"
+#include "zcommon.acs"
+
+script "SamsaraCompatibilityPatchEnter" ENTER { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff"); }
+script "SamsaraCompatibilityPatchRespawn" RESPAWN { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff"); }
+script "SamsaraCompatibilityPatchReturn" RETURN { ACS_NamedExecuteWithResult("SamsaraCompatibilityPatchStuff"); }
+
+script "SamsaraCompatibilityPatchStuff" (void)
+{
+    // Ressurection of Chaos' final map has a delay for its
+    // monster spawner based on the class the player chose.
+    // It checks for the starter weapon, and without any of
+    // them, it causes a runaway script.
+    if (!StrIcmp(StrParam(n:PRINTNAME_LEVEL), "MAP07"))
+    {
+        if (CheckInventory("FWeapFist") || CheckInventory("CWeapMace") || CheckInventory("MWeapWand")) { terminate; } // do not execute more than once
+
+        //GiveInventory("FWeapFist", 1); // 47 tics
+        GiveInventory("CWeapMace", 1); // 13 tics
+        //GiveInventory("MWeapWand", 1); // 23 tics
+
+        while (true)
+        {
+            str curweapon;
+
+            if (CheckWeapon("FWeapFist") || CheckWeapon("CWeapMace") || CheckWeapon("MWeapWand")) { SetWeapon(curweapon); }
+            else { curweapon = GetWeapon(); }
+
+            Delay(1);
+        }
+    }
+}
