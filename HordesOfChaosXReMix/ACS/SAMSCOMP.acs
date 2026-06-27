@@ -17,7 +17,7 @@ script "SamsaraCompatibilityPatchStuff" (void)
 
         if (GameSkill() <= SKILL_EASY) { GiveInventory("FWeapFist", 1); } // 47 tics
         else if (GameSkill() == SKILL_NORMAL) { GiveInventory("MWeapWand", 1); } // 23 tics
-        else if (GameSkill() >= SKILL_HARD) {GiveInventory("CWeapMace", 1); } // 13 tics
+        else if (GameSkill() >= SKILL_HARD) { GiveInventory("CWeapMace", 1); } // 13 tics
 
         while (true)
         {
