@@ -10688,6 +10688,7 @@ actor HalfLifePlayer : SamsaraPlayerPawnNormalRedBlood
 			TNT1 A 0 ACS_NamedExecuteAlways("HL2685",0,6)
 			Goto Spawn
 		Pain.Crush:
+		Pain.HexenJavelinSpike:
 			TNT1 A 0 A_TakeInventory("Hexen2EnemyFireDetector", 1)
 			TNT1 A 0 ACS_NamedExecuteAlways("HL2685",0,7)
 			Goto Spawn

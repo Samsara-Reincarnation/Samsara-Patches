@@ -120,6 +120,7 @@ actor StrifeguyPlayer : StrifePlayer
 	+NOSKIN
 	Player.ColorRange 96, 111
 	Player.RunHealth 0
+	CrushPainSound "strife/crush"
 	BloodType "SamsaraBloodyHellBlood"
 	var int user_scalex;
 	var int user_scaley;
