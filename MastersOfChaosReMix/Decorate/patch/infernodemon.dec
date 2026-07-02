@@ -23,7 +23,7 @@ ACTOR InfernoDemon_Samsara : SamsaraMonsterGenericBoss replaces InfernoDemon
 	DeathSound "Infdem/death"
 	ActiveSound "Infdem/active"
 	Obituary "%o was sent to burn in the fires of hell for an eternity."
-	Tag "Inferno Demon"
+	Tag "Voltrog"
 	States
 	{
 	Spawn:
