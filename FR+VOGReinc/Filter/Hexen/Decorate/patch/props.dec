@@ -1,6 +1,7 @@
 actor SamsaraLushXmasTree : SamsaraZXmasTree
 {
     DeathSound "TreeExplode"
+    Tag "LushXmasTree"
     States
 	{
 	Spawn:
@@ -56,6 +57,7 @@ actor SamsaraLushXmasTree : SamsaraZXmasTree
 actor SamsaraLushShrub1 : SamsaraZShrub1
 {
     DeathSound "TreeExplode"
+    Tag "LushShrub1"
     States
 	{
 	Spawn:
@@ -102,6 +104,7 @@ actor SamsaraLushShrub1 : SamsaraZShrub1
 actor SamsaraLushShrub2 : SamsaraZShrub2
 {
     DeathSound "TreeExplode"
+    Tag "LushShrub2"
     States
 	{
 	Spawn:
