@@ -1,0 +1,56 @@
+[enu default]
+
+TAG_ARTIPUZZCRESTDRAGON = "Dragon Crest";
+TAG_ARTIPUZZCRESTWOLF = "Wolf Crest";
+TAG_ARTIPUZZCRESTGRIFFIN = "Griffin Crest";
+TAG_ARTIPUZZMASKICE = "Death Mask";
+TAG_ARTIPUZZMASKSWAMP = "Fetid Mask";
+TAG_ARTIPUZZCHALICE1 = "Coiled Chalice";
+TAG_ARTIPUZZCHALICE2 = "Gilded Chalice";
+TAG_ARTIPUZZCHALICE3 = "Earthen Chalice";
+TAG_ARTIPUZZCHALICE4 = "Molten Chalice";
+TAG_ARTIPUZZCHALICE5 = "Rimed Chalice";
+TAG_ARTIPUZZIDOL1 = "Skull Idol";
+TAG_ARTIPUZZIDOL2 = "Demon Idol";
+TAG_ARTIPUZZIDOL3 = "Dragon Idol";
+TAG_ARTIPUZZBOOK3 = "Lurid Atlas";
+TAG_ARTIPUZZBOOK4 = "Malum Vulgata";
+TXT_ARTIPUZZCRESTDRAGON = "$$TAG_ARTIPUZZCRESTDRAGON";
+TXT_ARTIPUZZCRESTWOLF = "$$TAG_ARTIPUZZCRESTWOLF";
+TXT_ARTIPUZZCRESTGRIFFIN = "$$TAG_ARTIPUZZCRESTGRIFFIN";
+TXT_ARTIPUZZMASKICE = "$$TAG_ARTIPUZZMASKICE";
+TXT_ARTIPUZZMASKSWAMP = "$$TAG_ARTIPUZZMASKSWAMP";
+TXT_ARTIPUZZCHALICE1 = "$$TAG_ARTIPUZZCHALICE1";
+TXT_ARTIPUZZCHALICE2 = "$$TAG_ARTIPUZZCHALICE2";
+TXT_ARTIPUZZCHALICE3 = "$$TAG_ARTIPUZZCHALICE3";
+TXT_ARTIPUZZCHALICE4 = "$$TAG_ARTIPUZZCHALICE4";
+TXT_ARTIPUZZCHALICE5 = "$$TAG_ARTIPUZZCHALICE5";
+TXT_ARTIPUZZIDOL1 = "$$TAG_ARTIPUZZIDOL1";
+TXT_ARTIPUZZIDOL2 = "$$TAG_ARTIPUZZIDOL2";
+TXT_ARTIPUZZIDOL3 = "$$TAG_ARTIPUZZIDOL3";
+TXT_ARTIPUZZBOOK3 = "$$TAG_ARTIPUZZBOOK3";
+TXT_ARTIPUZZBOOK4 = "$$TAG_ARTIPUZZBOOK4";
+
+acs_hexnew_secret_1  = "One fourth of the secret has been discovered";
+acs_hexnew_secret_2 = "Two fourths of the secret have been discovered";
+acs_hexnew_secret_3 = "Three fourths of the secret have been discovered";
+acs_hexnew_secret_4 = "A mysterious magical realm is now accessible...";
+acs_hexnew_mausoleum = "The mausoleum to the southwest has opened";
+acs_hexnew_ready_to_fly_1 = "Greetings, mortal";
+acs_hexnew_ready_to_fly_2 = "Are you ready to fly?";
+acs_hexnew_exit_open_1 = "The exit has opened to the south";
+acs_hexnew_exit_open_2 = "beneath the circle of glass";
+acs_hexnew_winches_grind_1 = "Winches begin to grind in the distance";
+acs_hexnew_winches_grind_2 = "The winches continue to grind";
+acs_hexnew_winches_grind_3 = "The machinery has stopped";
+acs_hexnew_door_open_west = "The doors have opened in the west";
+acs_hexnew_pedestal_progress_1 = "One third of the pedestals are active";
+acs_hexnew_pedestal_progress_2 = "Two thirds of the pedestals are active";
+acs_hexnew_pedestal_complete_1 = "The elemental pedestals are active";
+acs_hexnew_pedestal_complete_2 = "The wings have lowered in the south";
+acs_hexnew_chosen_poorly = "You have chosen poorly.";
+acs_hexnew_kind_soul = "A kind soul smiles down upon you...";
+
+intertext_hexnew_finale1 = "Korax is dead. Again. His shredded\ncorpse left behind, bereft of any\nsemblance of life that it may have\nhad. Rebirth has certainly taken its\ntoll on him, you think - this\nencounter with him was more difficult,\nyet his body more frail than previous\ntimes. Good riddance. His grip on\ncronos is once more released, and you\nbreathe a sigh of relief.";
+intertext_hexnew_finale2 = "Yet, a nagging, gnawing thought is\ngrowing in your mind. If this new\nritual of his was able to bring him\nback to this plane, then there must\nbe other forces at work enabling\nthe cycle to continue. Forces, you\nsurmise, that are outside of your\ncontrol, and are conspiring to keep\nthe struggle alive. An invisible\nhand puppeteering both him and you,\nweaving a star-crossed destiny that\nwill never die.";
+intertext_hexnew_finale3 = "\nAnd if that hand touches the board\nagain, then what surprises are yet\nin store for you?";

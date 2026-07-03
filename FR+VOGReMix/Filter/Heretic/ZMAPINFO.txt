@@ -1,0 +1,8 @@
+DoomEdNums
+{
+    3101 = Draugr_SamsaraReMixer
+    3102 = Troll_SamsaraReMixer
+    3103 = SuperDemon_SamsaraReMixer
+    3104 = SamsaraSlotSixSkulltagPickup
+    3105 = SamsaraSlotSevenPickup
+}

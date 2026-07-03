@@ -1,0 +1,34 @@
+DoomEdNums
+{
+    112 = LittleFly
+    3101 = SamsaraLushXmasTree
+    3102 = SamsaraLushShrub1
+    3103 = SamsaraLushShrub2
+    3104 = SamsaraUniquePickupRandom //HexenChronicle_Samsara
+    3105 = BloodFont_Samsara
+    3117 = PuzzCrestDragon
+    3118 = PuzzCrestWolf
+    3119 = PuzzCrestGriffin
+    3120 = PuzzMaskIce
+    3121 = PuzzMaskSwamp
+    3122 = PuzzChalice1
+    3123 = PuzzChalice2
+    3124 = PuzzChalice3
+    3125 = PuzzChalice4
+    3126 = PuzzChalice5
+    3127 = PuzzIdol1
+    3128 = PuzzIdol2
+    3129 = PuzzIdol3
+    3130 = PuzzBook3
+    3131 = PuzzBook4
+    3200 = MapMarkerGeneric_Samsara
+    3222 = PedestalChalice1
+    3223 = PedestalChalice2
+    3224 = PedestalChalice3
+    3225 = PedestalChalice4
+    3226 = PedestalChalice5
+    3227 = PedestalIdol1
+    3228 = PedestalIdol2
+    3229 = PedestalIdol3
+    3300 = TelOtherSpot_Samsara
+}

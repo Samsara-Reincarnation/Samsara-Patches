@@ -1,0 +1,2 @@
+generator DraugrFX1_Samsara     WizardScorch
+generator SuperDemonFX1_Samsara RevenantScorch

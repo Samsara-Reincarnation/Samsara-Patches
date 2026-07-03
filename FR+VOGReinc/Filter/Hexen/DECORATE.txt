@@ -1,0 +1,3 @@
+#include "decorate/patch/props.dec"
+#include "decorate/patch/puzzles.dec"
+#include "decorate/patch/miscellaneous.dec"

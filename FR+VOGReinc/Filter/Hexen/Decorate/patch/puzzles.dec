@@ -1,0 +1,315 @@
+actor PuzzCrestDragon : PuzzSkull
+{
+    PuzzleItem.Number 17
+    Inventory.Icon ARTIACRD
+    Inventory.PickupMessage "$TXT_ARTIPUZZCRESTDRAGON"
+    Tag "$TAG_ARTIPUZZCRESTDRAGON"
+    States
+	{
+        Spawn:
+            ACRD A -1
+            Stop
+    }
+}
+
+actor PuzzCrestWolf : PuzzSkull
+{
+    PuzzleItem.Number 18
+    Inventory.Icon ARTIACRW
+    Inventory.PickupMessage "$TXT_ARTIPUZZCRESTWOLF"
+    Tag "$TAG_ARTIPUZZCRESTWOLF"
+    States
+	{
+        Spawn:
+            ACRW A -1
+            Stop
+    }
+}
+
+actor PuzzCrestGriffin : PuzzSkull
+{
+    PuzzleItem.Number 19
+    Inventory.Icon ARTIACRG
+    Inventory.PickupMessage "$TXT_ARTIPUZZCRESTGRIFFIN"
+    Tag "$TAG_ARTIPUZZCRESTGRIFFIN"
+    States
+	{
+        Spawn:
+            ACRG A -1
+            Stop
+    }
+}
+
+actor PuzzMaskIce : PuzzSkull
+{
+    PuzzleItem.Number 20
+    Inventory.Icon ARTIAMSI
+    Inventory.PickupMessage "$TXT_ARTIPUZZMASKICE"
+    Tag "$TAG_ARTIPUZZMASKICE"
+    States
+	{
+        Spawn:
+            AMSI A -1
+            Stop
+    }
+}
+
+actor PuzzMaskSwamp : PuzzSkull
+{
+    PuzzleItem.Number 21
+    Inventory.Icon ARTIAMSS
+    Inventory.PickupMessage "$TXT_ARTIPUZZMASKSWAMP"
+    Tag "$TAG_ARTIPUZZMASKSWAMP"
+    States
+	{
+        Spawn:
+            AMSS A -1
+            Stop
+    }
+}
+
+actor PuzzChalice1 : PuzzSkull
+{
+    PuzzleItem.Number 22
+    Inventory.Icon ARTIACH1
+    Inventory.PickupMessage "$TXT_ARTIPUZZCHALICE1"
+    Tag "$TAG_ARTIPUZZCHALICE1"
+    States
+	{
+        Spawn:
+            ACH1 A -1
+            Stop
+    }
+}
+
+actor PuzzChalice2 : PuzzSkull
+{
+    PuzzleItem.Number 23
+    Inventory.Icon ARTIACH2
+    Inventory.PickupMessage "$TXT_ARTIPUZZCHALICE2"
+    Tag "$TAG_ARTIPUZZCHALICE2"
+    States
+	{
+        Spawn:
+            ACH2 A -1
+            Stop
+    }
+}
+
+actor PuzzChalice3 : PuzzSkull
+{
+    PuzzleItem.Number 24
+    Inventory.Icon ARTIACH3
+    Inventory.PickupMessage "$TXT_ARTIPUZZCHALICE3"
+    Tag "$TAG_ARTIPUZZCHALICE3"
+    States
+	{
+        Spawn:
+            ACH3 A -1
+            Stop
+    }
+}
+
+actor PuzzChalice4 : PuzzSkull
+{
+    PuzzleItem.Number 25
+    Inventory.Icon ARTIACH4
+    Inventory.PickupMessage "$TXT_ARTIPUZZCHALICE4"
+    Tag "$TAG_ARTIPUZZCHALICE4"
+    States
+	{
+        Spawn:
+            ACH4 A -1
+            Stop
+    }
+}
+
+actor PuzzChalice5 : PuzzSkull
+{
+    PuzzleItem.Number 26
+    Inventory.Icon ARTIACH5
+    Inventory.PickupMessage "$TXT_ARTIPUZZCHALICE5"
+    Tag "$TAG_ARTIPUZZCHALICE5"
+    States
+	{
+        Spawn:
+            ACH5 A -1
+            Stop
+    }
+}
+
+actor PuzzIdol1 : PuzzSkull
+{
+    PuzzleItem.Number 27
+    Inventory.Icon ARTIAID1
+    Inventory.PickupMessage "$TXT_ARTIPUZZIDOL1"
+    Tag "$TAG_ARTIPUZZIDOL1"
+    States
+	{
+        Spawn:
+            AID1 A -1
+            Stop
+    }
+}
+
+actor PuzzIdol2 : PuzzSkull
+{
+    PuzzleItem.Number 28
+    Inventory.Icon ARTIAID2
+    Inventory.PickupMessage "$TXT_ARTIPUZZIDOL2"
+    Tag "$TAG_ARTIPUZZIDOL2"
+    States
+	{
+        Spawn:
+            AID2 A -1
+            Stop
+    }
+}
+
+actor PuzzIdol3 : PuzzSkull
+{
+    PuzzleItem.Number 29
+    Inventory.Icon ARTIAID3
+    Inventory.PickupMessage "$TXT_ARTIPUZZIDOL3"
+    Tag "$TAG_ARTIPUZZIDOL3"
+    States
+	{
+        Spawn:
+            AID3 A -1
+            Stop
+    }
+}
+
+actor PuzzBook3 : PuzzSkull
+{
+    PuzzleItem.Number 30
+    Inventory.Icon ARTIBOK3
+    Inventory.PickupMessage "$TXT_ARTIPUZZBOOK3"
+    Tag "$TAG_ARTIPUZZBOOK3"
+    States
+	{
+        Spawn:
+            ABK3 A -1
+            Stop
+    }
+}
+
+actor PuzzBook4 : PuzzSkull
+{
+    PuzzleItem.Number 31
+    Inventory.Icon ARTIBOK4
+    Inventory.PickupMessage "$TXT_ARTIPUZZBOOK4"
+    Tag "$TAG_ARTIPUZZBOOK4"
+    States
+	{
+        Spawn:
+            ABK4 A -1
+            Stop
+    }
+}
+
+actor PedestalChalice1 : SwitchingDecoration
+{
+    Radius 12
+    Height 24
+    States
+	{
+        Spawn:
+            PCH1 A -1
+            Stop
+        Active:
+            PCH1 B -1
+            Stop
+    }
+}
+
+actor PedestalChalice2 : PedestalChalice1
+{
+    States
+	{
+        Spawn:
+            PCH2 A -1
+            Stop
+        Active:
+            PCH2 B -1
+            Stop
+    }
+}
+
+actor PedestalChalice3 : PedestalChalice1
+{
+    States
+	{
+        Spawn:
+            PCH3 A -1
+            Stop
+        Active:
+            PCH3 B -1
+            Stop
+    }
+}
+
+actor PedestalChalice4 : PedestalChalice1
+{
+    States
+	{
+        Spawn:
+            PCH4 A -1
+            Stop
+        Active:
+            PCH4 B -1
+            Stop
+    }
+}
+
+actor PedestalChalice5 : PedestalChalice1
+{
+    States
+	{
+        Spawn:
+            PCH5 A -1
+            Stop
+        Active:
+            PCH5 B -1
+            Stop
+    }
+}
+
+actor PedestalIdol1 : ZGemPedestal
+{
+    States
+	{
+        Spawn:
+            PID1 A -1
+            Stop
+        Active:
+            PID1 B -1
+            Stop
+    }
+}
+
+actor PedestalIdol2 : ZGemPedestal
+{
+    States
+	{
+        Spawn:
+            PID2 A -1
+            Stop
+        Active:
+            PID2 B -1
+            Stop
+    }
+}
+
+actor PedestalIdol3 : ZGemPedestal
+{
+    States
+	{
+        Spawn:
+            PID3 A -1
+            Stop
+        Active:
+            PID3 B -1
+            Stop
+    }
+}

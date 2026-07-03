@@ -1,0 +1,3 @@
+Actor Draugr_SamsaraReMixer : LegacyOfRustShocktrooperSpawner {}
+Actor Troll_SamsaraReMixer : LegacyOfRustVassagoSpawner {}
+Actor SuperDemon_SamsaraReMixer : LegacyOfRustMindweaverSpawner {}

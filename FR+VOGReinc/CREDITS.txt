@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Faith Renewed + Vestiges of Grandeur
+Authors: Nightdive Studios
+Link: N/A
+
+Resources used:
+---------------
+Heretic + Hexen (2025) Patches for GZDoom - Josh Trzebiatowski (trzejos)

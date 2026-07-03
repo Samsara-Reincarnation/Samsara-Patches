@@ -1,0 +1,3 @@
+#include "decorate/patch/draugr.dec"
+#include "decorate/patch/superdemon.dec"
+#include "decorate/patch/troll.dec"
