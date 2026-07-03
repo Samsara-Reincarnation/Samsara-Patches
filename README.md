@@ -15,6 +15,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Elf Gets Pissed | Matt Cibulas | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/elfgp) |
 | Eviternity | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternity) |
 | Eviternity II | Joshua O'Sullivan et al. | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/eviternityii) |
+| Faith Renewed + Vestiges of Grandeur | Nightdive Studios, basis for patch by Josh Trzebiatowski (trzejos) | N/A |
 | Harmony Compatible | Thomas van der Velden | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/g-i/harmonyc) |
 | Hexen: Scourge of Viscerus | Matt Tropiano | [Link](https://www.doomworld.com/idgames/levels/hexen/v-z/viscerus) |
 | Hordes of Chaos X | Udderdude, Vermil, and Hobomaster | [Link](https://www.doomworld.com/idgames/levels/heretic/Ports/hocx) |
@@ -39,6 +40,20 @@ There are also three patches that were designed only for Zandronum that bring th
 
 ## Special Requirements/Notes For Some Patches
 Some popular mapsets such as Ancient Aliens will not have patches created for them because of their availability on [The Sentinal's Lexicon](https://github.com/Mythotic-Tinker-Station/lexicon), a mapset compilation that aims to have compatibility with many gameplay mods such as Samsara Reincarnation. If they are already included in Lexicon, they will likely not have patches made for them.
+
+For Faith Renewed and Vestiges of Grandeur, you will need to load both the Heretic or Hexen wad from Heretic + Hexen and the respective mapset you want to play Samsara with. If you want to run Faith Renewed, the mapsets loaded should be the following:
+```
+heretic.wad
+heretic_fr.wad
+```
+
+For Vestiges of Grandeur, the mapsets should be ordered like this:
+```
+hexen.wad
+hexen_vog.wad
+```
+
+GZDoom and UZDoom doesn't support loading the remaster's wads an an IWAD, so you'll have to make sure that the IWADs are for the latest retail versions, which is [v1.3](https://doomwiki.org/wiki/HERETIC.WAD) for Heretic and [v1.1](https://doomwiki.org/wiki/HEXEN.WAD) for Hexen.
 
 ## How to Play
 To use the patch correctly with Samsara Reincarnation & ReMixer, the mods will need to be loaded in a certain order. Using a launcher such as ZDL or Doomseeker is highly recommended as it allows the user to easily configure what files to load. It should be noted that even without a needed patch, it's still recommended to load the mods as followed:
