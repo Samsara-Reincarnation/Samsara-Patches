@@ -299,3 +299,13 @@ ACTOR SpiderCatLaser_Samsara : ArachnotronPlasma Replaces ArachnotronPlasma
 		Stop
 	}
 }
+
+ACTOR DiscoBall_Samsara : DiscoBall replaces DiscoBall
+{
+	States
+	{
+	Spawn:
+		PUPP YZ 5
+		Loop
+	}
+}
