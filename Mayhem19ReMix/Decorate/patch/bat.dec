@@ -1,0 +1,44 @@
+actor Bat_Samsara : SamsaraMonsterBeast replaces DeadLostSoul
+{
+	Health 10
+	Radius 20
+	Height 32
+	Mass 1000
+	Speed 24
+	Damage 3
+	PainChance 256
+	Monster
+	+FLOAT +NOGRAVITY +NOICEDEATH +SPAWNCEILING -SOLID
+	SeeSound "skull/melee"
+	AttackSound "skull/melee"
+	PainSound "misc/chat"
+	DeathSound "misc/chat"
+	ActiveSound "skull/active"
+	Tag "Bat"
+	states
+	{
+	Spawn:
+		SKUL KK 10 A_Look
+		Loop
+	See:
+		SKUL ABCB 3 A_Chase
+		Loop
+	Melee:
+		SKUL C 8 A_FaceTarget
+		SKUL B 8 A_CustomMeleeAttack(2)
+		Goto See
+	Pain:
+		SKUL D 3 A_Pain
+		Goto See
+	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SKUL D 4 A_Scream
+		SKUL EFG 4
+		SKUL H 2 A_NoBlocking
+		Stop
+	}
+}
+
+// I don't feel like making a shrink state for the bat.

@@ -1,0 +1,72 @@
+actor ChainsawManiac_Samsara : DarkImpSpawner replaces MBFHelperDog { }
+actor ShadowImp_Samsara : DoomImpSpawner replaces Spectre { }
+actor Skellie_Samsara : DarkImpSpawner replaces Demon { }
+actor PistolCultist_Samsara : ChaingunGuySpawner replaces WolfensteinSS { }
+actor Hellhound_Samsara : DemonSpawner replaces HangTSkull { }
+actor Shadowhound_Samsara : SpectreSpawner replaces CommanderKeen { }
+actor PainElementalMayhem19_Samsara : LostSoulSpawner replaces PainElemental { }
+actor Vampire_Samsara : CacodemonSpawner replaces Revenant { }
+actor Mummy_Samsara : HellKnightSpawner replaces HangBNoBrain { }
+actor Satyr_Samsara : HellKnightSpawner replaces Stalagtite { }
+actor Arachnorb_Samsara : LostSoulSpawner replaces HellKnight { }
+actor Motherbrain_Samsara : AbaddonSpawner replaces BaronOfHell { }
+actor DeepOne_Samsara : BaronOfHellSpawner replaces HangTNoBrain { }
+actor Ghost_Samsara : LostSoulSpawner replaces HangTLookingDown { }
+actor Lich_Samsara : ArchvileSpawner replaces UnholyBible { }
+
+actor Spooklord_Samsara : SpiderMastermindSpawner replaces SpiderMastermind
+{
+	States
+	{
+	Death:
+		TNT1 A 5 A_BrainDie
+		Stop
+	}
+}
+
+actor RouletteSphere_Samsara : SamsaraRandomPowerup replaces Infrared { }
+
+Actor SamsaraMayhem19CellPackSpawner replaces CellPack
+{
+    +NOTIMEFREEZE // allow the scripts to process during time freeze
+    +THRUACTORS // not a pickup, but just in case
+    States
+    {
+      Spawn:
+        TNT1 AA 0 NoDelay ACS_NamedExecuteWithResult("Samsara_SpawnItem", 4, 1, 0)
+        stop
+    }
+}
+
+actor SamsaraMayhem19RocketLauncherSpawner replaces RocketLauncher
+{
+    +NOTIMEFREEZE // allow the scripts to process during time freeze
+    +THRUACTORS // not a pickup, but just in case
+    States
+    {
+      Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteWithResult("Samsara_SpawnSlot", 5, 1)
+        TNT1 A 0 ACS_NamedExecuteWithResult("Samsara_SpawnSlot", 6, 1)
+        stop
+    }
+}
+actor SamsaraMayhem19PlasmaRifleSpawner : RandomSpawner replaces PlasmaRifle { DropItem "SamsaraSlotSevenPickup" }
+
+actor NecronomiconReplacement : SamsaraPowerupGiver replaces BFG9000
+{
+    Inventory.PickupMessage "You got the Necronomicon.\nBut maybe you shouldn't..."
+    Inventory.PickupSound "misc/p_pkup"
+	Powerup.Type "NecronomiconDamage"
+	States
+	{
+	Spawn:
+		BFUG A -1
+		Stop
+	}
+}
+
+actor PowerNecronomiconDamage : PowerDamage
+{
+    Powerup.Duration 0x7FFFFFFD
+    DamageFactor "Normal", 2
+}

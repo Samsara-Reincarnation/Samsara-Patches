@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: MAYhem 2019
+Authors: Obsidian, various authors
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/mayhem19
+
+Resources used:
+---------------
+N/A

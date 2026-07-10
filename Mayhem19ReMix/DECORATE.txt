@@ -1,0 +1,6 @@
+actor Mayhem19ExplosiveBarrel : DoomExplosiveBarrel replaces DoomExplosiveBarrel { }
+
+#include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/balloflightning.dec"
+#include "Decorate/patch/bat.dec"
+#include "Decorate/patch/deathcube.dec"
