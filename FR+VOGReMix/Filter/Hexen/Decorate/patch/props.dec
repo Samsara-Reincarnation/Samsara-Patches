@@ -38,6 +38,10 @@ actor SamsaraLushXmasTree : SamsaraZXmasTree
 	Death.FireExplosive:
 	Death.DoomDamageTypeFireExplosive:
 	Death.PainkillerFire:
+	Death.KingpinFire:
+	Death.SoFFire:
+	Death.SoFPhosphorus:
+	Death.SoFFlameGlob:
 		XMS2 B 6 bright
 		XMS2 C 6 bright A_Scream
 		XMS2 D 5 bright
@@ -94,6 +98,10 @@ actor SamsaraLushShrub1 : SamsaraZShrub1
 	Death.FireExplosive:
 	Death.DoomDamageTypeFireExplosive:
 	Death.PainkillerFire:
+	Death.KingpinFire:
+	Death.SoFFire:
+	Death.SoFPhosphorus:
+	Death.SoFFlameGlob:
 		SHB3 B 7 bright
 		SHB1 C 6 bright A_Scream
 		SHB1 D 5 bright
@@ -141,6 +149,10 @@ actor SamsaraLushShrub2 : SamsaraZShrub2
 	Death.FireExplosive:
 	Death.DoomDamageTypeFireExplosive:
 	Death.PainkillerFire:
+	Death.KingpinFire:
+	Death.SoFFire:
+	Death.SoFPhosphorus:
+	Death.SoFFlameGlob:
 		SHB4 B 7 bright
 		SHB2 C 6 bright A_Scream
 		TNT1 A 0 A_SetDamageType("Fire")
