@@ -1,0 +1,80 @@
+actor Dhole_Samsara : SamsaraMonsterBeastBoss replaces Dhole
+{
+	//$Category SEMonsters
+	Health 2000
+	Speed 25
+	Radius 50
+	Height 110
+	Mass 1000
+	scale 2.0
+	Monster
+	+FLOORCLIP +LOOKALLAROUND +NOTARGET +NORADIUSDMG +BOSS +BOSSDEATH
+	SeeSound "dholsee"
+	DeathSound "dholdie"
+	Obituary "%o was flattened by a dhole."
+	Tag "Dhole"
+	States
+	{
+	Spawn:
+		DHOL A 0 NoDelay A_GiveInventory("SamsaraMonsterForceBossDeath")
+		DHOL A 0 A_Look
+		NULL A 0 A_UnSetShootable
+		NULL A 1 A_Look
+		Goto Spawn+2
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		NULL A 0 A_ChangeFlag("NOTARGET",0)
+		NULL A 0 A_JumpIfInventory("RiseCheck",1,"Walk")
+		NULL A 0 A_GiveInventory("RiseCheck",1)
+		NULL A 0 A_UnSetShootable
+		Loop
+	Walk:
+		NULL A 0 A_UnSetShootable
+		NULL A 0 A_ChangeFlag("NOTARGET",1)
+		NULL A 0 Radius_Quake(4,8,0,16,0)
+		NULL AA 2 A_Chase
+		Loop
+	Missile:
+		NULL A 0 A_ChangeFlag("NOTARGET",0)
+		NULL A 0 A_SetShootable
+		DHOL A 4 A_Explode
+		DHOL BCDEFGHIJ 4
+		DHOL K 2 A_CustomMeleeAttack (20, "dholbite", "dholbite", Normal, 1)
+		DHOL K 2 A_custommissile("Grellball", 80, 0, -8, 0)
+		DHOL K 2 A_custommissile("Grellball", 90, 0, 0, 0)
+		DHOL K 2 A_custommissile("Grellball", 80, 0, 8, 0)
+		DHOL MNIHGFEDCBA 4
+		Goto Walk
+	Melee:
+		NULL A 0 A_ChangeFlag("NOTARGET",0)
+		NULL A 0 A_SetShootable
+		DHOL A 4 A_Explode
+		DHOL BDCEFGHIJK 4
+		DHOL L 6 A_CustomMeleeAttack (20, "dholbite", "dholbite", Normal, 1)
+		DHOL MNIHGFEDCBA 4
+		Goto Walk
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		DHOL O 1 A_NoBlocking
+		DHOL OOOOOOOOOOOOOOOOOOOOO 5 Bright A_CustomMissile("DholeDeathExplosion",0+random(20,120),0,0+random(0,370),0)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		DHOL OO 5 Bright A_CustomMissile("DholeDeathExplosion",0+random(20,120),0,0+random(0,370),0)
+		DHOL O 3 A_Scream
+		DHOL O 2 A_BossDeath
+		NULL AAAAAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("DholeGibber",50,0,random(0,359))
+		NULL A 0 A_CustomMissile("DholeBigExplosion",0,0,0)
+		TNT1 A 0 Radius_Quake(8,40,0,35,0)
+		Stop
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		DHOL O 1 A_NoBlocking
+		DHOL OOOOOOOOOOOOOOOOOOOOOOO 5 Bright A_CustomMissile("DholeDeathExplosion",0+random(20,120),0,0+random(0,370),0)
+		DHOL O 3 A_Scream
+		DHOL O 2 A_BossDeath
+		NULL AAAAAAAAAAAAAAAAAAAAAAA 0 A_CustomMissile("DholeGibber",50,0,random(0,359))
+		NULL A 0 A_CustomMissile("DholeBigExplosion",0,0,0)
+		TNT1 A 0 Radius_Quake(8,40,0,35,0)
+		Stop
+	}
+}

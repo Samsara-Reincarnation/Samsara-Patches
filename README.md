@@ -32,6 +32,7 @@ Samsara Reincarnation was designed to work with many different IWADs and mapsets
 | Resurgence | Josh Sealy | [Link](https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/resurge) |
 | Satan's Covenant | Unholypimpin | [Link](https://allfearthesentinel.com/zandronum/download.php?file=satanscovenantv5.3.wad) |
 | Shadow of the Wool Ball | MSPaintR0cks | [Link](https://forum.zdoom.org/viewtopic.php?t=52301&) |
+| Strange Aeons | Mike MacDee | [Link](https://mikestoybox.net/2017/01/04/strange-aeons/) |
 | Strife: Absolute Order | Adam Woodmansey | [Link](https://www.doomworld.com/idgames/levels/strife/sabord) |
 | Terra Incognita | FireSeraphim | [Link](http://www.mediafire.com/download/zd53u11131aazfr/TI_(Version_0.4.0).wad.zip) |
 | The Darkest Hour + Dawn: A Prelude | Rex Claussen | [Link 1](https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkhour) + [Link 2](https://www.doomworld.com/idgames/levels/doom2/Ports/d-f/darkpack) |

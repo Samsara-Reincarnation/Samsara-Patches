@@ -1,0 +1,6 @@
+#include "Decorate/patch/replacements.dec"
+#include "Decorate/patch/childofcthulhu.dec"
+#include "Decorate/patch/dhole.dec"
+#include "Decorate/patch/nyarlathotep.dec"
+#include "Decorate/patch/purpletentacle.dec"
+#include "Decorate/patch/spawnofglaaki.dec"

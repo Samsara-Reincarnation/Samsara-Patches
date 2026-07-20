@@ -1,0 +1,30 @@
+actor ScepterofSouls_Samsara : DoomAmmo1SmallReplacingPistol replaces ScepterofSouls { }
+actor ImpalerXBow_Samsara : RandomSpawner replaces ImpalerXBow { DropItem "SamsaraSlotOnePickup" }
+actor AK47_Samsara : RandomSpawner replaces AK47 { DropItem "SamsaraSlotFourPickup" }
+actor Yithgun_Samsara : RandomSpawner replaces Yithgun { DropItem "SamsaraSlotSixPickup" }
+actor DShambler_Samsara : RevenantSpawner replaces DShambler { }
+actor Vulgar_Samsara : DoomImpSpawner replaces Vulgar { }
+actor Roach_Samsara : DarkImpSpawner replaces Roach { }
+actor RapidFireTrooper_Samsara : ChaingunGuySpawner replaces RapidFireTrooper { }
+actor UndeadHunter_Samsara : ShotgunGuySpawner replaces UndeadHunter { }
+actor Devil_Samsara : DoomImpSpawner replaces Devil { }
+actor Grell_Samsara : LostSoulSpawner replaces Grell { }
+actor Fleshspawn_Samsara : LostSoulSpawner replaces Fleshspawn { }
+actor KDiZDNightmare_Samsara : DoomImpSpawner replaces KDiZDNightmare { }
+actor HellWarrior_Samsara : HellKnightSpawner replaces HellWarrior { }
+actor Incarnate_Samsara : RevenantSpawner replaces Incarnate { }
+actor SlimeWorm_Samsara : DemonSpawner replaces SlimeWorm { }
+actor DemonWizard_Samsara : CacodemonSpawner replaces DemonWizard { }
+actor ShadowBeast_Samsara : BaronOfHellSpawner replaces ShadowBeast { }
+actor BeamRevenant_Samsara : RevenantSpawner replaces BeamRevenant { }
+actor Spiderbaby_Samsara : RevenantSpawner replaces Spiderbaby { }
+actor SpiderGod_Samsara : SpiderMastermindSpawner replaces SpiderGod { }
+actor SpiderGodling_Samsara : BaronOfHellSpawner replaces SpiderGodling { }
+actor LengSpider_Samsara : SpectreSpawner replaces LengSpider { }
+actor LengSpiderling_Samsara : DoomImpSpawner replaces LengSpiderling { }
+actor StarVampire_Samsara : LostSoulSpawner replaces StarVampire { }
+actor Skeleton_Samsara : DemonSpawner replaces Skeleton { }
+actor UndeadPriest_Samsara : SuperShotgunguySpawner replaces UndeadPriest { }
+actor MutantSphere_Samsara : SamsaraUniquePickupRandom replaces MutantSphere { }
+
+// Ammosphere and Ragesphere needs a Samsara equivalent before it can be replaced.
