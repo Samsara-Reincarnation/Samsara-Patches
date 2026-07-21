@@ -1,0 +1,29 @@
+actor BigHead1_Samsara : BigHead1 replaces BigHead1
+{
+	States
+	{
+	Spawn:
+		EHED X -1
+		Stop
+	}
+}
+
+actor BigHead2_Samsara : BigHead2 replaces BigHead3
+{
+	States
+	{
+	Spawn:
+		EHED Y -1
+		Stop
+	}
+}
+
+actor BigHead3_Samsara : BigHead2 replaces BigHead3
+{
+	States
+	{
+	Spawn:
+		EHED Z -1
+		Stop
+	}
+}

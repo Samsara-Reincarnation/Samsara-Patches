@@ -21,7 +21,6 @@ actor Spiderbaby_Samsara : RevenantSpawner replaces Spiderbaby { }
 actor SpiderGod_Samsara : SpiderMastermindSpawner replaces SpiderGod { }
 actor SpiderGodling_Samsara : BaronOfHellSpawner replaces SpiderGodling { }
 actor LengSpider_Samsara : SpectreSpawner replaces LengSpider { }
-actor LengSpiderling_Samsara : DoomImpSpawner replaces LengSpiderling { }
 actor StarVampire_Samsara : LostSoulSpawner replaces StarVampire { }
 actor Skeleton_Samsara : DemonSpawner replaces Skeleton { }
 actor UndeadPriest_Samsara : SuperShotgunguySpawner replaces UndeadPriest { }
