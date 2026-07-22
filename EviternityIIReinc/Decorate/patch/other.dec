@@ -10,6 +10,7 @@ Actor EffectTrigger1_Samsara : EffectTrigger1 replaces EffectTrigger1
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -43,6 +44,7 @@ Actor EffectTrigger2_Samsara : EffectTrigger2 replaces EffectTrigger2
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -76,6 +78,7 @@ Actor EffectTrigger3_Samsara : EffectTrigger3 replaces EffectTrigger3
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity

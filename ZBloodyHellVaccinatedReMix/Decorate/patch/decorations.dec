@@ -8,6 +8,7 @@ Actor DeadACultist_Samsara : DeadACultist replaces DeadACultist
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -40,6 +41,7 @@ Actor DeadCultist_Samsara : DeadCultist replaces DeadCultist
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -72,6 +74,7 @@ Actor DeadZombie_Samsara : DeadZombie replaces DeadZombie
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -104,6 +107,7 @@ Actor HangingMeat_Samsara : HangingMeat replaces HangingMeat
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -150,6 +154,7 @@ Actor FrozenJohnny_Samsara : FrozenJohnny replaces FrozenJohnny
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -182,6 +187,7 @@ Actor Cacoon_Samsara : Cacoon replaces Cacoon
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -214,6 +220,7 @@ Actor HangingShark_Samsara : HangingShark replaces HangingShark
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
@@ -246,6 +253,7 @@ Actor BloodWolf_Samsara : BloodWolf replaces BloodWolf
 	Death.PhasingZorch:
 	Death.ZorchSpectral:
 		"####" "#" 0 A_Stop
+		"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 		"####" "#" 0 A_PlaySound("chex/zorch",CHAN_5)
 		"####" "#" 0 A_NoGravity
