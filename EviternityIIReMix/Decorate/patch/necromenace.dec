@@ -208,12 +208,11 @@ Actor NecromenaceA_Samsara : SamsaraMonsterDemonicBoss replaces NecromenaceA
 			Stop
 		Death.DukeIce:
 			"####" "#" 0 A_GiveToTarget("DukeBossKillTaunt",1)
-		Ice:
 		Death.HexenIce:
 		Death.WTMeleeIce:
 		Death.WTRangedIce:
 		Death.DoomDamageTypeIce:
-		Death.Ice:
+		Ice:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
@@ -221,6 +220,8 @@ Actor NecromenaceA_Samsara : SamsaraMonsterDemonicBoss replaces NecromenaceA
 			"####" "#" 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 100)
 			"####" "#" 0 A_SpawnItemEx("UniversalBloodyHellIceDeathSoundForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 			"####" "#" 0 A_Scream
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",true)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",true)
 			"####" "#" 209 A_UnsetSolid
 			"####" "#" 1 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 16)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellIceDeathEffect2ForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
@@ -400,12 +401,11 @@ Actor NecromenaceB_Samsara : NecromenaceA_Samsara replaces NecromenaceB
 			Stop
 		Death.DukeIce:
 			"####" "#" 0 A_GiveToTarget("DukeBossKillTaunt",1)
-		Ice:
 		Death.HexenIce:
 		Death.WTMeleeIce:
 		Death.WTRangedIce:
 		Death.DoomDamageTypeIce:
-		Death.Ice:
+		Ice:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
@@ -413,6 +413,8 @@ Actor NecromenaceB_Samsara : NecromenaceA_Samsara replaces NecromenaceB
 			"####" "#" 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 100)
 			"####" "#" 0 A_SpawnItemEx("UniversalBloodyHellIceDeathSoundForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 			"####" "#" 0 A_Scream
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",true)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",true)
 			"####" "#" 209 A_UnsetSolid
 			"####" "#" 1 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 16)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellIceDeathEffect2ForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
@@ -592,12 +594,11 @@ Actor NecromenaceC_Samsara : NecromenaceA_Samsara replaces NecromenaceC
 			Stop
 		Death.DukeIce:
 			"####" "#" 0 A_GiveToTarget("DukeBossKillTaunt",1)
-		Ice:
 		Death.HexenIce:
 		Death.WTMeleeIce:
 		Death.WTRangedIce:
 		Death.DoomDamageTypeIce:
-		Death.Ice:
+		Ice:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
@@ -605,6 +606,8 @@ Actor NecromenaceC_Samsara : NecromenaceA_Samsara replaces NecromenaceC
 			"####" "#" 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 100)
 			"####" "#" 0 A_SpawnItemEx("UniversalBloodyHellIceDeathSoundForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 			"####" "#" 0 A_Scream
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",true)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",true)
 			"####" "#" 209 A_UnsetSolid
 			"####" "#" 1 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 16)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellIceDeathEffect2ForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
@@ -784,12 +787,11 @@ Actor NecromenaceD_Samsara : NecromenaceA_Samsara replaces NecromenaceD
 			Stop
 		Death.DukeIce:
 			"####" "#" 0 A_GiveToTarget("DukeBossKillTaunt",1)
-		Ice:
 		Death.HexenIce:
 		Death.WTMeleeIce:
 		Death.WTRangedIce:
 		Death.DoomDamageTypeIce:
-		Death.Ice:
+		Ice:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			"####" "#" 0 A_GiveInventory("EnemyZorched",1)
@@ -797,6 +799,8 @@ Actor NecromenaceD_Samsara : NecromenaceA_Samsara replaces NecromenaceD
 			"####" "#" 0 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 100)
 			"####" "#" 0 A_SpawnItemEx("UniversalBloodyHellIceDeathSoundForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION)
 			"####" "#" 0 A_Scream
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",true)
+			"####" "#" 0 A_ChangeFlag("DONTGIB",true)
 			"####" "#" 209 A_UnsetSolid
 			"####" "#" 1 ACS_NamedExecuteAlways("SamsaraDeathEffects", 0, 16)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellIceDeathEffect2ForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
