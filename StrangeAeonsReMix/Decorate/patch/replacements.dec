@@ -24,6 +24,18 @@ actor LengSpider_Samsara : SpectreSpawner replaces LengSpider { }
 actor StarVampire_Samsara : LostSoulSpawner replaces StarVampire { }
 actor Skeleton_Samsara : DemonSpawner replaces Skeleton { }
 actor UndeadPriest_Samsara : SuperShotgunguySpawner replaces UndeadPriest { }
-actor MutantSphere_Samsara : SamsaraUniquePickupRandom replaces MutantSphere { }
+
+actor MutantSphere_Samsara replaces MutantSphere
+{
+    +NOTIMEFREEZE // allow the scripts to process during time freeze
+    +THRUACTORS // not a pickup, but just in case
+    States
+    {
+      Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteWithResult("Samsara_SpawnItem", 5, 0, 0)
+		TNT1 A 0 ACS_NamedExecuteWithResult("Samsara_SpawnItem", 6, 1, 0)
+        stop
+    }
+}
 
 // Ammosphere and Ragesphere needs a Samsara equivalent before it can be replaced.
