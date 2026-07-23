@@ -136,6 +136,7 @@ Actor NecromenaceA_Samsara : SamsaraMonsterDemonicBoss replaces NecromenaceA
 		Death.DukePlasma:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 			"####" "#" 0 A_Stop
 			"####" "#" 0 A_NoGravity
@@ -368,6 +369,7 @@ Actor NecromenaceB_Samsara : NecromenaceA_Samsara replaces NecromenaceB
 		Death.DukePlasma:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 			"####" "#" 0 A_Stop
 			"####" "#" 0 A_NoGravity
@@ -600,6 +602,7 @@ Actor NecromenaceC_Samsara : NecromenaceA_Samsara replaces NecromenaceC
 		Death.DukePlasma:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 			"####" "#" 0 A_Stop
 			"####" "#" 0 A_NoGravity
@@ -832,6 +835,7 @@ Actor NecromenaceD_Samsara : NecromenaceA_Samsara replaces NecromenaceD
 		Death.DukePlasma:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			"####" "#" 0 A_ChangeFlag("DONTCORPSE",1)
 			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 			"####" "#" 0 A_Stop
 			"####" "#" 0 A_NoGravity
