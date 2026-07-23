@@ -68,8 +68,11 @@ ACTOR SuperClown : SamsaraMonsterHumanoidTotalGib replaces Meat3 51
 		Goto Pain
 	Death.ExpanderDMG:
 	XDeath.ExpanderDMG:
+		"####" "#" 0 A_JumpIf(!CallACS("SamsaraDecorate", 73), "Death.DukeDamage")
+		Goto Super::Death.ExpanderDMG
 	Death.ExpanderDMGCoop:
 	XDeath.ExpanderDMGCoop:
-		Goto Death.DukeDamage
+		"####" "#" 0 A_JumpIf(!CallACS("SamsaraDecorate", 73), "Death.DukeDamage")
+		Goto Super::Death.ExpanderDMGCoop
 	}
 }
