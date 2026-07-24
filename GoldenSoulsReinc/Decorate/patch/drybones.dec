@@ -47,7 +47,7 @@ ACTOR Drybones_Samsara : SamsaraMonsterGhost replaces Drybones
 		INCA Q -1
 		Stop
 	Raise:
-		INCA A 0
+		INCA A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		INCA Q 5
 		INCA PONML 5

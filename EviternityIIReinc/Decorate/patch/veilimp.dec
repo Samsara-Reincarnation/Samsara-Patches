@@ -91,7 +91,7 @@ Actor Veilimp_Samsara : SamsaraMonsterHumanoidTotalGib replaces Veilimp
 		SP02 M 2
 		Loop
 	Raise:
-		SP02 A 0
+		SP02 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP02 SRQPONM 5
 		goto See

@@ -138,7 +138,7 @@ Actor AstralArachno_Samsara : SamsaraMonsterCyberneticTotalGib replaces AstralAr
 		SP07 P -1 
 		stop
 	Raise:
-		SP07 A 0
+		SP07 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP07 PONMLKJ 5 
 		goto See

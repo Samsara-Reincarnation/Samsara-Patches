@@ -65,7 +65,7 @@ actor GlaakiSpawn_Samsara : SamsaraMonsterBeastTotalGib replaces GlaakiSpawn
 		SLGM U -1
 		Stop
 	Raise:
-		SLGW A 0
+		SLGW A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SLGW N 5
 		SLGW MLKJI 5

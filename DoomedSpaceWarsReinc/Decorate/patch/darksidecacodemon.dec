@@ -63,7 +63,7 @@ actor DarkCaco_Samsara : SamsaraMonsterDemonicTotalGib replaces DarkCaco
 		CACB E 2
 		Loop
 	Raise:
-		CACB A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 38)
+		CACB A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		CACB L 8 A_UnSetFloorClip
 		CACB KJIHG 8

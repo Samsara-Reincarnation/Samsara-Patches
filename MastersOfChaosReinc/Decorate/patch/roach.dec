@@ -184,7 +184,7 @@ ACTOR Roach_Samsara : SamsaraMonsterHumanoid replaces Roach
 		ROAC T -1
 		Stop
 	Raise:
-		ROAC A 0
+		ROAC A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		ROAC MLKJI 5
 		Goto See

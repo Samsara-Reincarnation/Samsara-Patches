@@ -294,7 +294,7 @@ actor GamorreanGuard_Samsara : SamsaraMonsterAlienTotalGib replaces Demon
 		SARG I 2
 		Loop
 	Raise:
-		SARG A 0
+		SARG A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SARG N 5
 		SARG MLKJI 5
@@ -1019,7 +1019,7 @@ actor ProbeDroid_Samsara : SamsaraMonsterRobotic replaces CacodemonTwo
 		HEAD E 2
 		Loop
 	Raise:
-		HEAD A 0
+		HEAD A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		HEAD L 8 A_UnSetFloorClip
 		HEAD KJIHG 8
@@ -1089,7 +1089,7 @@ Actor Trandoshan_Samsara : SamsaraMonsterAlienTotalGib replaces HellKnightTwo
 		BOS2 O -1
 		Stop
 	Raise:
-		BOS2 A 0
+		BOS2 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		BOS2 ONMLKJI 8
 		Goto See
@@ -1386,7 +1386,7 @@ actor Gran : SamsaraMonsterAlienTotalGib replaces BaronOfHellTwo
 		BOSS O -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 		Stop
 	Raise:
-		BOSS A 0
+		BOSS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		BOSS ONMLKJI 8
 		Goto See
@@ -1682,7 +1682,7 @@ actor PhaseOneDarkTrooper_Samsara : SamsaraMonsterRobotic replaces Arachnotron2
 		BSPI P -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 		Stop
 	Raise:
-		BSPI A 0
+		BSPI A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		BSPI PONMLKJ 5
 		Goto See+1
@@ -1747,7 +1747,7 @@ actor PhaseTwoDarkTrooper_Samsara : SamsaraMonsterRobotic replaces PainElemental
 		PAIN M 8 bright
 		Stop
 	Raise:
-		PAIN A 0
+		PAIN A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise") // just in case
 		PAIN MLKJIH 8
 		Goto See
@@ -1881,7 +1881,7 @@ actor ShockTrooperDarkestHour_Samsara : SamsaraMonsterHumanoidTotalGib replaces 
 		FATT T -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 		Stop
 	Raise:
-		FATT A 0
+		FATT A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		FATT RQPONMLK 5
 		Goto See
@@ -2272,7 +2272,7 @@ actor Jawa_Samsara : SamsaraMonsterAlien replaces Nazi2
 		SSWV V -1
 		Stop
 	Raise:
-		SSWV A 0
+		SSWV A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SSWV MLKJI 5
 		Goto See

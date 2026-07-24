@@ -61,7 +61,7 @@ Actor NightmareDemon_Samsara : SamsaraMonsterDemonicTotalGib replaces NightmareD
 		SP04 I 2
 		Loop
 	Raise:
-		SP04 A 0
+		SP04 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP04 NMLKJI 5
 		goto See

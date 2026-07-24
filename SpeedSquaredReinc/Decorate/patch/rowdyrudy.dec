@@ -49,6 +49,8 @@ Actor ContractDemon_Samsara : SamsaraMonsterHumanoid replaces ContractDemon
 		SOSS AABBCCDD 3 A_Chase
 		goto See
 	Raise:
+		SOSS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SOSS KJIH 5 
 		SOSS AABBCCDD 3 A_Chase
 		goto See
@@ -373,7 +375,7 @@ ACTOR Commando_Samsara : SamsaraMonsterHumanoid replaces Commando
 		ZPOS U -1
 		Stop
 	Raise:
-		ZPOS A 0
+		ZPOS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		ZPOS K 5
 		ZPOS JIH 5
@@ -667,7 +669,7 @@ ACTOR Predator_Samsara : SamsaraMonsterHumanoid replaces Predator
     TRO3 U -1
     Stop
   Raise:
-	TRO3 A 0
+	TRO3 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 	"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 	TRO3 ML 8
 	TRO3 KJI 6
@@ -959,7 +961,7 @@ Actor Minime_Samsara : SamsaraMonsterCyberneticTotalGib replaces Minime
 		MINS S -1 A_BossDeath
 		stop
 	Raise:
-		MINS A 0
+		MINS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		MINS SONMLKJ 7
 		Goto See+1
@@ -1294,7 +1296,7 @@ Actor Speeddemon_Samsara : SamsaraMonsterDemonicTotalGib replaces Speeddemon
 		SAR2 N -1
 		Stop
 	Raise:
-		SAR2 A 0
+		SAR2 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SAR2 N 5
 		SAR2 MLKJI 5
@@ -1587,7 +1589,7 @@ Actor Terminator_Samsara : SamsaraMonsterHumanoid replaces Terminator
 		SOSS U -1 
 		stop
 	Raise:
-		SOSS A 0
+		SOSS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SOSS K 5
 		SOSS JIH 5
@@ -1862,7 +1864,7 @@ Actor Toxicaco_Samsara : SamsaraMonsterDemonicTotalGib replaces Toxicaco
 		TOXI L -1 A_SetFloorClip
 		Stop
 	Raise:
-		TOXI A 0
+		TOXI A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		TOXI L 8 A_UnSetFloorClip
 		TOXI KJIHG 8
@@ -2729,7 +2731,7 @@ Actor BambinoDemon_Samsara : SamsaraMonsterDemonicTotalGib replaces BambinoDemon
 		HED2 E 2
 		Loop
 	Raise:
-		HED2 A 0
+		HED2 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		HED2 L 8 A_UnSetFloorClip
 		HED2 KJIHGF 8
@@ -2983,7 +2985,7 @@ Actor DeathMarcher_Samsara : SamsaraMonsterHumanoid replaces DeathMarcher
 		PCMD T -1 
 		stop
 	Raise:
-		PCMD A 0
+		PCMD A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		PCMD NMLKJIH 5 
 		Goto See
@@ -3280,7 +3282,7 @@ Actor Napalmer_Samsara : SamsaraMonsterHumanoid replaces Napalmer
 		FLAM U -1 
 		stop
 	Raise:
-		FLAM A 0
+		FLAM A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		FLAM MLKJI 5 
 		Goto See

@@ -55,7 +55,7 @@ Actor AstralCaco_Samsara : SamsaraMonsterGhost replaces CommanderKeen
 		KEEN S -1 
 		stop
 	Raise:
-		KEEN A 0
+		KEEN A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		KEEN SQPOMLK 5 
 		goto See

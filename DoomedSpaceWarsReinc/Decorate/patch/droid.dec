@@ -47,7 +47,7 @@ actor Droid_Samsara : SamsaraMonsterRobotic replaces Droid
 		BEAD L -1 A_SetFloorClip
 		stop
 	Raise:
-		BEAD L 0
+		BEAD A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		BEAD L 8 A_UnSetFloorClip
 		BEAD KJIHG 8

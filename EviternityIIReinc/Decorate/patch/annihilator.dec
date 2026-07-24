@@ -60,7 +60,7 @@ Actor Annihilator_Samsara : SamsaraMonsterCyberneticTotalGib replaces Annihilato
 		SP05 R -1
 		stop
 	Raise:
-		SP05 A 0
+		SP05 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP05 QPONMLK 5 
 		goto See

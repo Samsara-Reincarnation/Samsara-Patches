@@ -68,6 +68,8 @@ ACTOR SquidwardsSoul_Samsara : SamsaraMonsterDemonicBoss replaces SquidwardsSoul
 		SQID Q -1
 		Stop
 	Raise:
+		SQID A 0 A_GiveInventory("SamsaraSOFXFlipReset")
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SQID Q 5
 		SQID PONML 5
 		Goto See

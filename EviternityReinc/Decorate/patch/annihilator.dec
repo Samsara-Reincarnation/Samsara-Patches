@@ -53,7 +53,7 @@ Actor Annihilator_Samsara : SamsaraMonsterCyberneticTotalGib replaces BaronOfHel
 		BOSS R -1 A_KeenDie
 		stop
 	Raise:
-		BOSS A 0
+		BOSS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		BOSS RQPONMLK 5 
 		goto See

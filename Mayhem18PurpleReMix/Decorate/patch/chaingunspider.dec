@@ -57,7 +57,7 @@ Actor ChaingunSpider_Samsara : SamsaraMonsterCyberneticTotalGib replaces GibbedM
 		BSPI P -1 A_BossDeath
 		stop
 	Raise:
-		SPID A 0
+		SPID A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SPID PONMLKJ 5 
 		Goto See+1

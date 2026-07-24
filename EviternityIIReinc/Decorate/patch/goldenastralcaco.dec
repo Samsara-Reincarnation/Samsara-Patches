@@ -62,7 +62,7 @@ Actor GoldenAstralCaco_Samsara : SamsaraMonsterGhost replaces GoldenAstralCaco
 		SP09 S -1 Bright A_KeenDie
 		stop
 	Raise:
-		SP09 A 0
+		SP09 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP09 RQPONMLK 5 Bright
 		goto See
@@ -134,7 +134,7 @@ Actor GoldenAstralCacoBoss_Samsara : SamsaraMonsterGhost replaces GoldenAstralCa
 		SP09 S -1 Bright A_KeenDie
 		stop
 	Raise:
-		SP09 A 0
+		SP09 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP09 RQPONMLK 5 Bright
 		goto See

@@ -64,6 +64,8 @@ ACTOR Patrick_Samsara : SamsaraMonsterDemonicBoss replaces Patrick
 		PATR M -1
 		Stop
 	Raise:
+		PATR A 0 A_GiveInventory("SamsaraSOFXFlipReset")
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		PATR ML 8
 		PATR KJI 6
 		Goto See

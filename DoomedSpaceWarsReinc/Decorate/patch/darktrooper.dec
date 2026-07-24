@@ -79,7 +79,7 @@ actor Darktrooper_Samsara : SamsaraMonsterHumanoid replaces Darktrooper
 		DPOS T -1
 		Stop
 	Raise:
-		DPOS A 0
+		DPOS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		DPOS NMLKJIH 5
 		Goto See

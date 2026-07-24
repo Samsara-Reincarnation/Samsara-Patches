@@ -62,7 +62,7 @@ Actor NightmareCacodemon_Samsara : SamsaraMonsterGhost replaces NightmareCacodem
 		SP17 S -1 A_KeenDie
 		stop
 	Raise:
-		SP17 A 0
+		SP17 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP17 RQPONMLK 5 
 		goto See

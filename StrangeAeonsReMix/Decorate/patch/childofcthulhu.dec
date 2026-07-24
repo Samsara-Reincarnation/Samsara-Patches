@@ -94,6 +94,8 @@ actor StarSpawn_Samsara : SamsaraMonsterDemonicBoss replaces StarSpawn
 	/*
 	// I don't think this is necessary
 	Raise:
+	CUTH A 0 A_GiveInventory("SamsaraSOFXFlipReset")
+	"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
     CUTH PONM 8
     goto See
 	*/

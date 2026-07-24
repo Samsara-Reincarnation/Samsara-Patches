@@ -67,7 +67,7 @@ Actor DukeOfHell_Samsara : SamsaraMonsterDemonicTotalGib replaces DukeOfHell
 		SP10 Z -1
 		stop
 	Raise:
-		SP10 "[" 0
+		SP10 "[" 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP10 ZYWUTSRQPO 5
 		goto See
@@ -364,7 +364,7 @@ Actor GrandDukeofHell_Samsara : SamsaraMonsterDemonicTotalGib replaces GrandDuke
 		SP58 Z -1
 		stop
 	Raise:
-		SP58 A 0
+		SP58 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP58 ZYWUTSRQPO 5
 		goto Hide

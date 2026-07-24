@@ -93,7 +93,7 @@ Actor FormerCorporal_Samsara : SamsaraMonsterHumanoid replaces FormerCorporal
 		SSWV U -1 
 		stop
 	Raise:
-		SP03 A 0
+		SP03 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP03 LKJIH 6 
 		goto See
@@ -456,7 +456,7 @@ Actor FormerCaptain_Samsara : SamsaraMonsterHumanoid replaces FormerCaptain
 		SP57 U -1
 		stop
 	Raise:
-		SP57 A 0
+		SP57 A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		SP57 LKJIH 6
 		goto See

@@ -50,7 +50,7 @@ Actor Grell_Samsara : SamsaraMonsterDemonicTotalGib replaces BaronOfHell
 		BOSS M -1 
 		stop
 	Raise:
-		BOSS A 0
+		BOSS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		BOSS MLKJIHG 4
 		goto See
