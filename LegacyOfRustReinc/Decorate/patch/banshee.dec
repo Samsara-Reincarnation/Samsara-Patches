@@ -1,4 +1,4 @@
-Actor Banshee_Samsara : SamsaraMonsterGhost replaces ID24Banshee
+Actor Banshee_Samsara : SamsaraMonsterGhost replaces Deh_Actor_151
 {
 	Health 100
 	Speed 8

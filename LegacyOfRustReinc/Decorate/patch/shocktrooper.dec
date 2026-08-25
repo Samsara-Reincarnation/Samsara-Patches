@@ -1,4 +1,4 @@
-Actor Shocktrooper_Samsara : SamsaraMonsterHumanoid replaces ID24PlasmaGuy
+Actor Shocktrooper_Samsara : SamsaraMonsterHumanoid replaces Deh_Actor_153
 {
 	Health 100
 	Speed 10
