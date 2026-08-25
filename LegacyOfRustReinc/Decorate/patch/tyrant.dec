@@ -1,4 +1,4 @@
-Actor Tyrant_Samsara : SamsaraMonsterDemonicBoss replaces Deh_Actor_155
+Actor Tyrant_Samsara : SamsaraMonsterDemonicBoss replaces ID24Tyrant
 {
 	Health 1000
 	Radius 40
@@ -206,5 +206,5 @@ Actor Tyrant_Samsara : SamsaraMonsterDemonicBoss replaces Deh_Actor_155
 	}
 }
 
-Actor TyrantBoss1_Samsara : Tyrant_Samsara replaces Deh_Actor_156 { }
-Actor TyrantBoss2_Samsara : Tyrant_Samsara replaces Deh_Actor_157 { }
+Actor TyrantBoss1_Samsara : Tyrant_Samsara replaces ID24TyrantBoss1 { }
+Actor TyrantBoss2_Samsara : Tyrant_Samsara replaces ID24TyrantBoss2 { }

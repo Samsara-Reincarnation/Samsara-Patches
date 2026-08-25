@@ -1,4 +1,4 @@
-Actor Vassago_Samsara : SamsaraMonsterGhost replaces Deh_Actor_154
+Actor Vassago_Samsara : SamsaraMonsterGhost replaces ID24Vassago
 {
 	Health 1000
 	Speed 8

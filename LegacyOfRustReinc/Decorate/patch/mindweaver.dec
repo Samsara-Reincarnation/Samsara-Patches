@@ -1,4 +1,4 @@
-Actor Mindweaver_Samsara : SamsaraMonsterCyberneticTotalGib replaces Deh_Actor_152
+Actor Mindweaver_Samsara : SamsaraMonsterCyberneticTotalGib replaces ID24Mindweaver
 {
 	Health 500
 	Speed 12
