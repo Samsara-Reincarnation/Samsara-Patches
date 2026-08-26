@@ -43,6 +43,8 @@ There are also three patches that were designed only for Zandronum that bring th
 ## Special Requirements/Notes For Some Patches
 Some popular mapsets such as Ancient Aliens will not have patches created for them because of their availability on [The Sentinal's Lexicon](https://github.com/Mythotic-Tinker-Station/lexicon), a mapset compilation that aims to have compatibility with many gameplay mods such as Samsara Reincarnation. If they are already included in Lexicon, they will likely not have patches made for them.
 
+Legacy of Rust has two different patches, one for UZDoom, and the other for the latest version of GZDoom. GZDoom did not include the actor definitions for the LOR monsters and had to be replaced through the DEHACKED actors they occupied, so players using that source port will need to load the patch meant for GZDoom. [WadFusion](https://github.com/Owlet7/wadfusion) users do not need to load either patches if LOR is included during installation.
+
 For Faith Renewed and Vestiges of Grandeur, you will need to load both the Heretic or Hexen wad from Heretic + Hexen and the respective mapset you want to play Samsara with. If you want to run Faith Renewed, the mapsets loaded should be the following:
 ```
 heretic.wad

@@ -1,4 +1,4 @@
-Actor Ghoul_Samsara : SamsaraMonsterGhost replaces ID24Ghoul
+Actor Ghoul_Samsara : SamsaraMonsterGhost replaces Deh_Actor_150
 {
 	Health 50
 	Speed 12
