@@ -60,7 +60,7 @@ hexen_vog.wad
 GZDoom and UZDoom doesn't support loading the remaster's wads an an IWAD, so you'll have to make sure that the IWADs are for the latest retail versions, which is [v1.3](https://doomwiki.org/wiki/HERETIC.WAD) for Heretic and [v1.1](https://doomwiki.org/wiki/HEXEN.WAD) for Hexen.
 
 ## How to Play
-To use the patch correctly with Samsara Reincarnation & ReMixer, the mods will need to be loaded in a certain order. Using a launcher such as ZDL or Doomseeker is highly recommended as it allows the user to easily configure what files to load. It should be noted that even without a needed patch, it's still recommended to load the mods as followed:
+To use the patch correctly with Samsara Reincarnation & ReMixer, the mods will need to be loaded in a certain order. Using a launcher such as the [Samsara Reincarnation Launcher](https://github.com/ShinyMetagross/Samsara-Reincarnation-Launcher), ZDL, or Doomseeker is highly recommended as it allows the user to easily configure what files to load. It should be noted that even without a needed patch, it's still recommended to load the mods as followed:
 
 1. *any mapsets*
 2. *Samsara Reincarnation*
