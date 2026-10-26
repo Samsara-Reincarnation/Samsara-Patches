@@ -1,7 +1,20 @@
 actor ScepterofSouls_Samsara : DoomAmmo1SmallReplacingPistol replaces ScepterofSouls { }
 actor ImpalerXBow_Samsara : RandomSpawner replaces ImpalerXBow { DropItem "SamsaraSlotOnePickup" }
 actor AK47_Samsara : RandomSpawner replaces AK47 { DropItem "SamsaraSlotFourPickup" }
-actor Yithgun_Samsara : RandomSpawner replaces Yithgun { DropItem "SamsaraSlotSixPickup" }
+actor Yithgun_Samsara : RandomSpawner replaces Yithgun { DropItem "SamsaraSlotSevenPickup" }
+actor SamsaraStrangeAeonsRocketLauncherSpawner replaces RocketLauncher
+{
+    +NOTIMEFREEZE // allow the scripts to process during time freeze
+    +THRUACTORS // not a pickup, but just in case
+    States
+    {
+      Spawn:
+        TNT1 A 0 NoDelay ACS_NamedExecuteWithResult("Samsara_SpawnSlot", 5, 1)
+        TNT1 A 0 ACS_NamedExecuteWithResult("Samsara_SpawnSlot", 6, 1)
+        stop
+    }
+}
+
 actor DShambler_Samsara : RevenantSpawner replaces DShambler { }
 actor Vulgar_Samsara : DoomImpSpawner replaces Vulgar { }
 actor Roach_Samsara : DarkImpSpawner replaces Roach { }
@@ -16,7 +29,6 @@ actor Incarnate_Samsara : RevenantSpawner replaces Incarnate { }
 actor SlimeWorm_Samsara : DemonSpawner replaces SlimeWorm { }
 actor DemonWizard_Samsara : CacodemonSpawner replaces DemonWizard { }
 actor ShadowBeast_Samsara : BaronOfHellSpawner replaces ShadowBeast { }
-actor BeamRevenant_Samsara : RevenantSpawner replaces BeamRevenant { }
 actor Spiderbaby_Samsara : RevenantSpawner replaces Spiderbaby { }
 actor SpiderGod_Samsara : SpiderMastermindSpawner replaces SpiderGod { }
 actor SpiderGodling_Samsara : BaronOfHellSpawner replaces SpiderGodling { }
