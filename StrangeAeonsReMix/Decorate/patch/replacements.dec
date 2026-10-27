@@ -1,6 +1,7 @@
 actor ScepterofSouls_Samsara : DoomAmmo1SmallReplacingPistol replaces ScepterofSouls { }
 actor ImpalerXBow_Samsara : RandomSpawner replaces ImpalerXBow { DropItem "SamsaraSlotOnePickup" }
 actor AK47_Samsara : RandomSpawner replaces AK47 { DropItem "SamsaraSlotFourPickup" }
+actor YithGun_Samsara : RandomSpawner replaces YithGun { DropItem "SamsaraSlotSevenPickup" }
 actor SamsaraStrangeAeonsPlasmaRifleSpawner : RandomSpawner replaces PlasmaRifle { DropItem "SamsaraSlotSevenPickup" }
 actor SamsaraStrangeAeonsRocketLauncherSpawner replaces RocketLauncher
 {
