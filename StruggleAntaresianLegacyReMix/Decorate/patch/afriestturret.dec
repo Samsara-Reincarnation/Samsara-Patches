@@ -1,0 +1,27 @@
+Actor AfriestTurret_Samsara : BossEye replaces BossEye
+{
+	Health 28500
+	Radius 2
+	Height 64
+	+INVULNERABLE
+	+NOPAIN
+	+SOLID
+	-NOSECTOR
+	-NOBLOCKMAP
+	Tag "Afriest Turret"
+	States
+	{
+	Spawn:
+		SSWV R 3 Bright A_Look
+		loop
+	See:
+		SSWV R 1 Bright A_Chase
+		loop
+	Missile:
+		SSWV R 20 Bright A_HeadAttack
+		SSWV R 20 Bright A_BspiAttack
+		SSWV R 20 Bright A_BruisAttack
+		SSWV R 4 Bright A_CPosRefire
+		loop
+	}
+}

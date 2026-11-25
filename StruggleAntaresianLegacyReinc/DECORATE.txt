@@ -1,0 +1,7 @@
+#include "Decorate/patch/modifiedenemies.dec"
+#include "Decorate/patch/afriest.dec"
+#include "Decorate/patch/antaresia.dec"
+#include "Decorate/patch/chaingunelite.dec"
+#include "Decorate/patch/inquisitor.dec"
+#include "Decorate/patch/leviathan.dec"
+#include "Decorate/patch/spectrecacodemon.dec"

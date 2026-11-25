@@ -1,0 +1,56 @@
+Actor Inquisitor_Samsara : SamsaraMonsterRoboticBoss replaces BossBrain
+{
+	Health 22400
+	Speed 25
+	Radius 64
+	Height 96
+	ReactionTime 2
+	PainChance 4
+	Mass 100000
+	Monster
+	+BOSS
+	+BOSSDEATH
+	+JUSTHIT
+	+SPAWNCEILING
+	+NOGRAVITY
+	+FLOAT
+	+COUNTKILL
+	+SOLID
+	+SHOOTABLE
+	+NOICEDEATH
+	+OLDRADIUSDMG
+	+DONTRIP
+	+NOBLOOD
+	PainSound "brain/pain"
+	DeathSound "brain/death"
+	AttackSound "brain/sight"
+	Tag "Inquisitor"
+	DropItem "SamsaraDropItemBrainDie"
+	States
+	{
+	Spawn:
+		BBRN A 1 Bright A_Look
+		loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		BBRN A 1 Bright A_Chase
+		loop
+	Pain:
+		BBRN A 20 Bright A_BrainPain
+		goto See2
+	Missile:
+		BBRN A 1 Bright A_FaceTarget
+		BBRN B 0 Bright A_FatAttack1
+		BBRN B 0 Bright A_FatAttack2
+		BBRN B 1 Bright A_Chase
+		goto Missile+1
+	Death:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		BBRN C 8 Bright A_BrainScream
+		BBRN DEFGH 8 Bright 
+		BBRN I 100 Bright 
+		BBRN I -1 Bright A_BrainDie
+		stop
+	}
+}

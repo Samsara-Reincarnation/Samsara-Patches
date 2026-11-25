@@ -1,0 +1,32 @@
+Actor ArachnotronPlasmaAntaresia_Samsara : ArachnotronPlasma replaces ArachnotronPlasma
+{
+	Speed 27
+	Damage 4
+	SeeSound "misc/unused"
+	DeathSound "world/barrelx"
+	States
+	{
+	Spawn:
+		APLS A 1 Bright 
+		loop
+	Death:
+		APBX ABC 3 Bright 
+		PUFF D 3 Bright 
+		stop
+	}
+}
+
+Actor SpectreCacodemon_Samsara : CacodemonSpawner replaces Spectre {}
+Actor Afriest_Samsara : HellKnightSpawner replaces Meat2 {}
+Actor Antaresia_Samsara : BaronOfHellSpawner replaces BaronOfHell {}
+Actor AntaresiaElite_Samsara : BaronOfHellSpawner replaces BloodyTwitch
+{
+	States
+	{
+		Death:
+			TNT1 A 6 A_KeenDie
+			Stop
+	}
+}
+
+Actor ChaingunElite_Samsara : ChaingunGuySpawner replaces WolfensteinSS {}

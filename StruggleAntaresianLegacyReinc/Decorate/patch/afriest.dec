@@ -1,0 +1,95 @@
+actor Afriest_Samsara : SamsaraMonsterGhost replaces Meat2
+{
+	Health 500
+	Speed 12
+	Radius 20
+	Height 56
+	ReactionTime 4
+	PainChance 48
+	Mass 1000
+	Monster
+	+SHOOTABLE
+	-SPAWNCEILING
+	+FLOAT
+	+NOBLOOD
+	+COUNTKILL
+	SeeSound "wolfss/sight"
+	AttackSound "wolfss/sight"
+	PainSound "keen/pain"
+	DeathSound "wolfss/death"
+	ActiveSound "misc/chat2"
+	Tag "Afriest"
+	States
+	{
+	Spawn:
+		SSWV A 10 A_Look
+		Loop
+	See:
+		SSWV AB 2 A_Chase
+		Loop
+	Missile:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
+		SSWV E 14 Bright A_FaceTarget
+		SSWV F 0 Bright A_CustomComboAttack("BaronBall3", 32, 10 * random(1, 8), "baron/melee")
+		SSWV F 0 Bright A_HeadAttack
+		SSWV F 0 Bright A_BspiAttack
+		SSWV F 12 Bright A_FaceTarget
+		Goto See
+	Pain:
+		SSWV C 3 
+		SSWV C 5 A_Pain
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		SSWV C 2 A_ChangeFlag("NOPAIN",true)
+		SSWV C 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_ChangeFlag("NOPAIN",1)
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		SSWV C 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(10)
+		SSWV C 16 A_Pain
+		Goto See
+	Death:
+		SSWV G 5 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SSWV H 5 A_Scream
+		SSWV I 5 A_Fall
+		SSWV JKLMNOP 5 
+		SSWV P -1
+		Stop
+	Raise:
+		BOSS A 0 A_GiveInventory("SamsaraSOFXFlipReset")
+		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
+		BOSS MLKJIHG 2
+		Goto See
+	}
+}
+
+Actor AfriestTurret_Samsara : BossEye replaces BossEye
+{
+	Health 28500
+	Radius 2
+	Height 64
+	+INVULNERABLE
+	+NOPAIN
+	+SOLID
+	-NOSECTOR
+	-NOBLOCKMAP
+	Tag "Afriest Turret"
+	States
+	{
+	Spawn:
+		SSWV R 3 Bright A_Look
+		loop
+	See:
+		SSWV R 1 Bright A_Chase
+		loop
+	Missile:
+		SSWV R 20 Bright A_HeadAttack
+		SSWV R 20 Bright A_BspiAttack
+		SSWV R 20 Bright A_BruisAttack
+		SSWV R 4 Bright A_CPosRefire
+		loop
+	}
+}

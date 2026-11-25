@@ -1,0 +1,11 @@
+*************************************************
+Samsara Reincarnation Compatibility Patch Credits
+*************************************************
+
+Mapset/Total Conversion: Struggle - Antaresian Legacy
+Authors: Seongbae Park
+Link: https://www.doomworld.com/idgames/levels/doom2/Ports/megawads/strg
+
+Resources used:
+---------------
+N/A

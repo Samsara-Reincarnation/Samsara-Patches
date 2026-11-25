@@ -1,0 +1,4 @@
+#include "Decorate/patch/spawners.dec"
+#include "Decorate/patch/afriestturret.dec"
+#include "Decorate/patch/inquisitor.dec"
+#include "Decorate/patch/leviathan.dec"

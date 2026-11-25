@@ -1,0 +1,64 @@
+Actor Leviathan_Samsara : SamsaraMonsterDemonicBoss replaces CommanderKeen
+{
+	Health 10000
+	Speed 24
+	Radius 40
+	Height 96
+	Mass 1000
+	PainChance 16
+	Monster
+	+BOSS
+	+BOSSDEATH
+	+DONTRIP
+	+SOLID 
+	+SHOOTABLE 
+	+COUNTKILL 
+	+NOICEDEATH
+	+ISMONSTER
+	SeeSound "weapons/bfgx"
+	PainSound "keen/pain"
+	DeathSound "keen/death"
+	Tag "Leviathan"
+	Bloodcolor "0045b3"
+	DropItem "SamsaraDropItemKeenDie"
+	States
+	{
+	Spawn:
+		KEEN A 6 A_Look
+		loop
+	See:
+		TNT1 A 0 A_GiveInventory("SamsaraBossSightTaunt")
+	See2:
+		KEEN AABBCCDD 2 A_Chase
+		loop
+	Pain:
+		KEEN G 2 
+		KEEN G 8 A_Pain
+		KEEN F 8 A_FaceTarget
+		KEEN E 0 A_BrainSpit
+		KEEN E 14 A_BrainSpit
+		goto See2
+	Missile:
+		KEEN F 10 Bright A_FaceTarget
+		KEEN E 0 Bright A_FatAttack1
+		KEEN E 0 Bright A_FatAttack2
+		KEEN E 0 Bright A_FatAttack3
+		KEEN E 4 Bright A_FaceTarget
+		KEEN E 1 A_SpidRefire
+		goto See2
+	Death:
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		KEEN H 4 Bright 
+		KEEN I 4 Bright A_Scream
+		KEEN JKLMNO 4 Bright 
+		KEEN P 4 Bright A_KeenDie
+		KEEN QRSTUVWXY 4 Bright 
+		KEEN Z -1 
+		stop
+	}
+}
+
+Actor Leviathan2_Samsara : Leviathan_Samsara replaces NonsolidMeat5 { +NOPAIN }
+Actor Leviathan3_Samsara : Leviathan_Samsara replaces HeadOnAStick { Speed 16 Health 2800 +NOPAIN +SHADOW Tag "Spectroviathan" }
