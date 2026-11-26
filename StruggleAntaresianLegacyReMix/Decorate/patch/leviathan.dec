@@ -35,8 +35,16 @@ Actor Leviathan_Samsara : SamsaraMonsterDemonicBoss replaces CommanderKeen
 		KEEN G 2 
 		KEEN G 8 A_Pain
 		KEEN F 8 A_FaceTarget
-		KEEN E 0 A_BrainSpit
-		KEEN E 14 A_BrainSpit
+		//KEEN E 0 A_BrainSpit // Engine limitations strike yet again
+		//KEEN E 14 A_BrainSpit
+		KEEN E 0 A_FatAttack1
+		KEEN E 0 A_FatAttack2
+		KEEN E 3 A_FatAttack3
+		KEEN F 4 A_FaceTarget
+		KEEN E 0 A_FatAttack1
+		KEEN E 0 A_FatAttack2
+		KEEN E 3 A_FatAttack3
+		KEEN F 4
 		goto See2
 	Missile:
 		KEEN F 10 Bright A_FaceTarget

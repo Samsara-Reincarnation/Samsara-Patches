@@ -1,3 +1,34 @@
+Actor RandomSpawnerAntaresia_Samsara : Meat4 replaces Meat4
+{
+	-SPAWNCEILING
+	-NOGRAVITY
+	SeeSound "brain/sight"
+	DeathSound "world/barrelx"
+	DropItem "DoomImpSpawner", 255, 50
+	DropItem "DemonSpawner", 255, 40
+	DropItem "SpectreSpawner", 255, 30
+	DropItem "PainElementalSpawner", 255, 10
+	DropItem "CacodemonSpawner", 255, 30
+	DropItem "ArchvileSpawnerForBossEye", 255, 2
+	DropItem "RevenantSpawner", 255, 10
+	DropItem "ArachnotronSpawnerForBossEye", 255, 20
+	DropItem "FatsoSpawnerForBossEye", 255, 30
+	DropItem "HellKnightSpawnerForBossEye", 255, 24
+	DropItem "BaronOfHellSpawnerForBossEye", 255, 10
+	States
+	{
+	Spawn:
+		SSWV Q 2 A_Look
+		loop
+	See:
+		SSWV S 105 Bright A_FaceTarget
+		BOSF C 4 Bright A_BrainSpit
+		BOSF D 4 Bright A_UnsetSolid
+		BOSF E 4 Bright 
+		stop
+	}
+}
+
 #include "Decorate/patch/spawners.dec"
 #include "Decorate/patch/afriestturret.dec"
 #include "Decorate/patch/inquisitor.dec"

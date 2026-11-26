@@ -1,6 +1,6 @@
 Actor Inquisitor_Samsara : SamsaraMonsterRoboticBoss replaces BossBrain
 {
-	Health 22400
+	Health 10000 // Lowered from 22400
 	Speed 25
 	Radius 64
 	Height 96
